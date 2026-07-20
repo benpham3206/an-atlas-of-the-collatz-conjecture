@@ -1,0 +1,1331 @@
+{
+  "bit_length_cap": 64,
+  "classification": {
+    "all-converge": "all tested seeds reached 1 within the explicit caps",
+    "apparent-divergence": "at least one tested seed was unresolved at an explicit cap",
+    "cycles": "all tested seeds resolved and at least one entered a cycle not containing 1"
+  },
+  "finite_bound_caveat": "No row proves convergence or divergence beyond the tested seeds and caps.",
+  "grid_a": [
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "grid_b": [
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "map": "T(n)=n/2 if n even; T(n)=(a*n+b)/2 if n odd",
+  "memo_value_cap": 1000000000,
+  "rows": [
+    {
+      "a": 1,
+      "b": 1,
+      "cycles": [],
+      "hit_one_count": 999999,
+      "label": "all-converge",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "cycles": [
+        {
+          "length": 1,
+          "values": [
+            3
+          ]
+        }
+      ],
+      "hit_one_count": 666666,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 333333,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "cycles": [
+        {
+          "length": 1,
+          "values": [
+            5
+          ]
+        }
+      ],
+      "hit_one_count": 800000,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 199999,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 1,
+      "b": 7,
+      "cycles": [
+        {
+          "length": 3,
+          "values": [
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "length": 1,
+          "values": [
+            7
+          ]
+        }
+      ],
+      "hit_one_count": 428571,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 571428,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 1,
+      "b": 9,
+      "cycles": [
+        {
+          "length": 2,
+          "values": [
+            3,
+            6
+          ]
+        },
+        {
+          "length": 1,
+          "values": [
+            9
+          ]
+        }
+      ],
+      "hit_one_count": 666666,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 333333,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "cycles": [],
+      "hit_one_count": 999999,
+      "label": "all-converge",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "cycles": [
+        {
+          "length": 2,
+          "values": [
+            3,
+            6
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 999979,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "cycles": [
+        {
+          "length": 2,
+          "values": [
+            5,
+            10
+          ]
+        },
+        {
+          "length": 5,
+          "values": [
+            19,
+            31,
+            49,
+            76,
+            38
+          ]
+        },
+        {
+          "length": 5,
+          "values": [
+            23,
+            37,
+            58,
+            29,
+            46
+          ]
+        },
+        {
+          "length": 27,
+          "values": [
+            187,
+            283,
+            427,
+            643,
+            967,
+            1453,
+            2182,
+            1091,
+            1639,
+            2461,
+            3694,
+            1847,
+            2773,
+            4162,
+            2081,
+            3124,
+            1562,
+            781,
+            1174,
+            587,
+            883,
+            1327,
+            1993,
+            2992,
+            1496,
+            748,
+            374
+          ]
+        },
+        {
+          "length": 27,
+          "values": [
+            347,
+            523,
+            787,
+            1183,
+            1777,
+            2668,
+            1334,
+            667,
+            1003,
+            1507,
+            2263,
+            3397,
+            5098,
+            2549,
+            3826,
+            1913,
+            2872,
+            1436,
+            718,
+            359,
+            541,
+            814,
+            407,
+            613,
+            922,
+            461,
+            694
+          ]
+        }
+      ],
+      "hit_one_count": 140991,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 859008,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 3,
+      "b": 7,
+      "cycles": [
+        {
+          "length": 4,
+          "values": [
+            5,
+            11,
+            20,
+            10
+          ]
+        },
+        {
+          "length": 2,
+          "values": [
+            7,
+            14
+          ]
+        }
+      ],
+      "hit_one_count": 689910,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 310089,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 3,
+      "b": 9,
+      "cycles": [
+        {
+          "length": 2,
+          "values": [
+            9,
+            18
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "cycles",
+      "nontrivial_cycle_basin_count": 999979,
+      "seed_count": 999999,
+      "unresolved_count": 0,
+      "unresolved_witnesses": []
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "cycles": [
+        {
+          "length": 7,
+          "values": [
+            13,
+            33,
+            83,
+            208,
+            104,
+            52,
+            26
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            17,
+            43,
+            108,
+            54,
+            27,
+            68,
+            34
+          ]
+        }
+      ],
+      "hit_one_count": 4324,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 8998,
+      "seed_count": 999999,
+      "unresolved_count": 986677,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 20792241994709032708,
+          "peak": 20792241994709032708,
+          "reason": "bit_length_cap",
+          "seed": 7,
+          "steps": 496
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 20792241994709032708,
+          "peak": 20792241994709032708,
+          "reason": "bit_length_cap",
+          "seed": 9,
+          "steps": 494
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 20792241994709032708,
+          "peak": 20792241994709032708,
+          "reason": "bit_length_cap",
+          "seed": 11,
+          "steps": 499
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "cycles": [
+        {
+          "length": 5,
+          "values": [
+            3,
+            9,
+            24,
+            12,
+            6
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            39,
+            99,
+            249,
+            624,
+            312,
+            156,
+            78
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            43,
+            109,
+            274,
+            137,
+            344,
+            172,
+            86
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            51,
+            129,
+            324,
+            162,
+            81,
+            204,
+            102
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            53,
+            134,
+            67,
+            169,
+            424,
+            212,
+            106
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            61,
+            154,
+            77,
+            194,
+            97,
+            244,
+            122
+          ]
+        }
+      ],
+      "hit_one_count": 1216,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 10389,
+      "seed_count": 999999,
+      "unresolved_count": 988394,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 34778599078970729999,
+          "peak": 34778599078970729999,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 170
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 34778599078970729999,
+          "peak": 34778599078970729999,
+          "reason": "bit_length_cap",
+          "seed": 7,
+          "steps": 168
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 34778599078970729999,
+          "peak": 34778599078970729999,
+          "reason": "bit_length_cap",
+          "seed": 10,
+          "steps": 171
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "cycles": [
+        {
+          "length": 5,
+          "values": [
+            5,
+            15,
+            40,
+            20,
+            10
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            65,
+            165,
+            415,
+            1040,
+            520,
+            260,
+            130
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            85,
+            215,
+            540,
+            270,
+            135,
+            340,
+            170
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 23793,
+      "seed_count": 999999,
+      "unresolved_count": 976186,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41584483989418065415,
+          "peak": 41584483989418065415,
+          "reason": "bit_length_cap",
+          "seed": 13,
+          "steps": 496
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41584483989418065415,
+          "peak": 41584483989418065415,
+          "reason": "bit_length_cap",
+          "seed": 17,
+          "steps": 494
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41584483989418065415,
+          "peak": 41584483989418065415,
+          "reason": "bit_length_cap",
+          "seed": 21,
+          "steps": 499
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 7,
+      "cycles": [
+        {
+          "length": 5,
+          "values": [
+            7,
+            21,
+            56,
+            28,
+            14
+          ]
+        },
+        {
+          "length": 5,
+          "values": [
+            9,
+            26,
+            13,
+            36,
+            18
+          ]
+        },
+        {
+          "length": 42,
+          "values": [
+            57,
+            146,
+            73,
+            186,
+            93,
+            236,
+            118,
+            59,
+            151,
+            381,
+            956,
+            478,
+            239,
+            601,
+            1506,
+            753,
+            1886,
+            943,
+            2361,
+            5906,
+            2953,
+            7386,
+            3693,
+            9236,
+            4618,
+            2309,
+            5776,
+            2888,
+            1444,
+            722,
+            361,
+            906,
+            453,
+            1136,
+            568,
+            284,
+            142,
+            71,
+            181,
+            456,
+            228,
+            114
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            91,
+            231,
+            581,
+            1456,
+            728,
+            364,
+            182
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            119,
+            301,
+            756,
+            378,
+            189,
+            476,
+            238
+          ]
+        }
+      ],
+      "hit_one_count": 30941,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 13785,
+      "seed_count": 999999,
+      "unresolved_count": 955273,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 42737299218590718831,
+          "peak": 42737299218590718831,
+          "reason": "bit_length_cap",
+          "seed": 19,
+          "steps": 320
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 37419054157896891281,
+          "peak": 37419054157896891281,
+          "reason": "bit_length_cap",
+          "seed": 25,
+          "steps": 525
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 42737299218590718831,
+          "peak": 42737299218590718831,
+          "reason": "bit_length_cap",
+          "seed": 29,
+          "steps": 323
+        }
+      ]
+    },
+    {
+      "a": 5,
+      "b": 9,
+      "cycles": [
+        {
+          "length": 3,
+          "values": [
+            3,
+            12,
+            6
+          ]
+        },
+        {
+          "length": 5,
+          "values": [
+            9,
+            27,
+            72,
+            36,
+            18
+          ]
+        },
+        {
+          "length": 63,
+          "values": [
+            29,
+            77,
+            197,
+            497,
+            1247,
+            3122,
+            1561,
+            3907,
+            9772,
+            4886,
+            2443,
+            6112,
+            3056,
+            1528,
+            764,
+            382,
+            191,
+            482,
+            241,
+            607,
+            1522,
+            761,
+            1907,
+            4772,
+            2386,
+            1193,
+            2987,
+            7472,
+            3736,
+            1868,
+            934,
+            467,
+            1172,
+            586,
+            293,
+            737,
+            1847,
+            4622,
+            2311,
+            5782,
+            2891,
+            7232,
+            3616,
+            1808,
+            904,
+            452,
+            226,
+            113,
+            287,
+            722,
+            361,
+            907,
+            2272,
+            1136,
+            568,
+            284,
+            142,
+            71,
+            182,
+            91,
+            232,
+            116,
+            58
+          ]
+        },
+        {
+          "length": 21,
+          "values": [
+            89,
+            227,
+            572,
+            286,
+            143,
+            362,
+            181,
+            457,
+            1147,
+            2872,
+            1436,
+            718,
+            359,
+            902,
+            451,
+            1132,
+            566,
+            283,
+            712,
+            356,
+            178
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            117,
+            297,
+            747,
+            1872,
+            936,
+            468,
+            234
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            129,
+            327,
+            822,
+            411,
+            1032,
+            516,
+            258
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            153,
+            387,
+            972,
+            486,
+            243,
+            612,
+            306
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            159,
+            402,
+            201,
+            507,
+            1272,
+            636,
+            318
+          ]
+        },
+        {
+          "length": 7,
+          "values": [
+            183,
+            462,
+            231,
+            582,
+            291,
+            732,
+            366
+          ]
+        }
+      ],
+      "hit_one_count": 17411,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 38762,
+      "seed_count": 999999,
+      "unresolved_count": 943826,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41734318894764875997,
+          "peak": 41734318894764875997,
+          "reason": "bit_length_cap",
+          "seed": 15,
+          "steps": 169
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41734318894764875997,
+          "peak": 41734318894764875997,
+          "reason": "bit_length_cap",
+          "seed": 21,
+          "steps": 167
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 41734318894764875997,
+          "peak": 41734318894764875997,
+          "reason": "bit_length_cap",
+          "seed": 30,
+          "steps": 170
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 1,
+      "cycles": [],
+      "hit_one_count": 291,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999708,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 37440588738881858072,
+          "peak": 37440588738881858072,
+          "reason": "bit_length_cap",
+          "seed": 3,
+          "steps": 136
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 37440588738881858072,
+          "peak": 37440588738881858072,
+          "reason": "bit_length_cap",
+          "seed": 6,
+          "steps": 137
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 37440588738881858072,
+          "peak": 37440588738881858072,
+          "reason": "bit_length_cap",
+          "seed": 7,
+          "steps": 140
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 3,
+      "cycles": [
+        {
+          "length": 3,
+          "values": [
+            3,
+            12,
+            6
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 217,
+      "seed_count": 999999,
+      "unresolved_count": 999762,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 21111487734825885815,
+          "peak": 21111487734825885815,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 118
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 22626927237820307029,
+          "peak": 22626927237820307029,
+          "reason": "bit_length_cap",
+          "seed": 7,
+          "steps": 138
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 32091933204755878347,
+          "peak": 32091933204755878347,
+          "reason": "bit_length_cap",
+          "seed": 9,
+          "steps": 135
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 5,
+      "cycles": [
+        {
+          "length": 6,
+          "values": [
+            3,
+            13,
+            48,
+            24,
+            12,
+            6
+          ]
+        },
+        {
+          "length": 3,
+          "values": [
+            5,
+            20,
+            10
+          ]
+        },
+        {
+          "length": 31,
+          "values": [
+            27,
+            97,
+            342,
+            171,
+            601,
+            2106,
+            1053,
+            3688,
+            1844,
+            922,
+            461,
+            1616,
+            808,
+            404,
+            202,
+            101,
+            356,
+            178,
+            89,
+            314,
+            157,
+            552,
+            276,
+            138,
+            69,
+            244,
+            122,
+            61,
+            216,
+            108,
+            54
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 2490,
+      "seed_count": 999999,
+      "unresolved_count": 997489,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 24419659589325802136,
+          "peak": 24419659589325802136,
+          "reason": "bit_length_cap",
+          "seed": 9,
+          "steps": 99
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 40114707932475432416,
+          "peak": 40114707932475432416,
+          "reason": "bit_length_cap",
+          "seed": 11,
+          "steps": 121
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 22237305628125617840,
+          "peak": 22237305628125617840,
+          "reason": "bit_length_cap",
+          "seed": 15,
+          "steps": 111
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 7,
+      "cycles": [
+        {
+          "length": 3,
+          "values": [
+            7,
+            28,
+            14
+          ]
+        }
+      ],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 1284,
+      "seed_count": 999999,
+      "unresolved_count": 998695,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 31132227879375864976,
+          "peak": 31132227879375864976,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 112
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 31132227879375864976,
+          "peak": 31132227879375864976,
+          "reason": "bit_length_cap",
+          "seed": 10,
+          "steps": 113
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 31132227879375864976,
+          "peak": 31132227879375864976,
+          "reason": "bit_length_cap",
+          "seed": 11,
+          "steps": 113
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 9,
+      "cycles": [
+        {
+          "length": 3,
+          "values": [
+            9,
+            36,
+            18
+          ]
+        }
+      ],
+      "hit_one_count": 121,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 166,
+      "seed_count": 999999,
+      "unresolved_count": 999712,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 63334463204477657445,
+          "peak": 63334463204477657445,
+          "reason": "bit_length_cap",
+          "seed": 3,
+          "steps": 119
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 20059124720517800345,
+          "peak": 20059124720517800345,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 110
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 63334463204477657445,
+          "peak": 63334463204477657445,
+          "reason": "bit_length_cap",
+          "seed": 6,
+          "steps": 120
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "b": 1,
+      "cycles": [],
+      "hit_one_count": 248,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999751,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 26711117999993500025,
+          "peak": 26711117999993500025,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 90
+        },
+        {
+          "cutoff_bit_length": 67,
+          "cutoff_value": 76301006555797032470,
+          "peak": 76301006555797032470,
+          "reason": "bit_length_cap",
+          "seed": 9,
+          "steps": 121
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 26711117999993500025,
+          "peak": 26711117999993500025,
+          "reason": "bit_length_cap",
+          "seed": 10,
+          "steps": 91
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "b": 3,
+      "cycles": [],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999979,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 67,
+          "cutoff_value": 80133353999980500075,
+          "peak": 80133353999980500075,
+          "reason": "bit_length_cap",
+          "seed": 3,
+          "steps": 91
+        },
+        {
+          "cutoff_bit_length": 67,
+          "cutoff_value": 80133353999980500075,
+          "peak": 80133353999980500075,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 95
+        },
+        {
+          "cutoff_bit_length": 67,
+          "cutoff_value": 80133353999980500075,
+          "peak": 80133353999980500075,
+          "reason": "bit_length_cap",
+          "seed": 6,
+          "steps": 92
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "b": 5,
+      "cycles": [],
+      "hit_one_count": 226,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999773,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 29679019999992777805,
+          "peak": 29679019999992777805,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 90
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 59696803380277063159,
+          "peak": 59696803380277063159,
+          "reason": "bit_length_cap",
+          "seed": 7,
+          "steps": 137
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 22153085483223568903,
+          "peak": 22153085483223568903,
+          "reason": "bit_length_cap",
+          "seed": 9,
+          "steps": 69
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "b": 7,
+      "cycles": [],
+      "hit_one_count": 93,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999906,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 28885418476648797797,
+          "peak": 28885418476648797797,
+          "reason": "bit_length_cap",
+          "seed": 3,
+          "steps": 93
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 28885418476648797797,
+          "peak": 28885418476648797797,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 87
+        },
+        {
+          "cutoff_bit_length": 65,
+          "cutoff_value": 28885418476648797797,
+          "peak": 28885418476648797797,
+          "reason": "bit_length_cap",
+          "seed": 6,
+          "steps": 94
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "b": 9,
+      "cycles": [],
+      "hit_one_count": 20,
+      "label": "apparent-divergence",
+      "nontrivial_cycle_basin_count": 0,
+      "seed_count": 999999,
+      "unresolved_count": 999979,
+      "unresolved_witnesses": [
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 53422235999987000049,
+          "peak": 53422235999987000049,
+          "reason": "bit_length_cap",
+          "seed": 3,
+          "steps": 92
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 53422235999987000049,
+          "peak": 53422235999987000049,
+          "reason": "bit_length_cap",
+          "seed": 5,
+          "steps": 99
+        },
+        {
+          "cutoff_bit_length": 66,
+          "cutoff_value": 53422235999987000049,
+          "peak": 53422235999987000049,
+          "reason": "bit_length_cap",
+          "seed": 6,
+          "steps": 93
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "seed_interval": [
+    1,
+    1000000
+  ],
+  "seed_interval_right_open": true,
+  "step_cap": 10000
+}
