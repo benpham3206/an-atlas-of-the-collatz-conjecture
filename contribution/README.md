@@ -1,21 +1,22 @@
 # Fold program
 
-Original results on the first-return structure of the Terras-accelerated Collatz
-map. Not progress on the Collatz conjecture; the conjecture remains open.
+Definitions, proofs, exact-arithmetic programs, and verification records for the
+first-return systems studied in this repository. These results do not prove or
+disprove the Collatz conjecture.
 
-## Contents
+## Files
 
-| Path | Contents | Status |
+| Path | Contents | Evidentiary status |
 |---|---|---|
-| [`note/NOTE.md`](note/NOTE.md) | Theorem, proof, scope | write-up |
-| [`proofs/LEMMA2_PROOF.md`](proofs/LEMMA2_PROOF.md) | Counting-law lemma, all k, t | proved |
-| [`proofs/PARTIAL_THEOREMS.md`](proofs/PARTIAL_THEOREMS.md) | Realizability criterion Φ(q); decidable islands; (n+b)/2 family | proved |
-| [`proofs/FENCE.md`](proofs/FENCE.md) | Undecidability boundary for the fixed 3n+1 map | analysis |
-| [`proofs/FORMALIZATION.md`](proofs/FORMALIZATION.md) | H_T, R_T, arithmetical hierarchy | formalization |
-| [`proofs/LIFT_COCYCLE.md`](proofs/LIFT_COCYCLE.md) | ε-lift; binary digits of Φ(q) | probe |
-| [`code/`](code/) | Exact-arithmetic implementations and tests | reproducible |
-| [`reports/`](reports/) | Run logs and evidence | evidence |
-| [`DEFINITIONS.md`](DEFINITIONS.md) | Primitives: drift, inertia, fold, realizability | definitions |
+| [`note/NOTE.md`](note/NOTE.md) | Fold theorem, proof outline, and limitations | theorem write-up |
+| [`proofs/LEMMA2_PROOF.md`](proofs/LEMMA2_PROOF.md) | Counting-law lemma for all k and t | proof |
+| [`proofs/PARTIAL_THEOREMS.md`](proofs/PARTIAL_THEOREMS.md) | Realizability criterion, eventually periodic transcripts, and the (n+b)/2 family | proofs |
+| [`proofs/FENCE.md`](proofs/FENCE.md) | Distinction between generalized undecidability results and the fixed 3n+1 map | boundary analysis |
+| [`proofs/FORMALIZATION.md`](proofs/FORMALIZATION.md) | Definitions of H_T and R_T and their arithmetical-hierarchy form | formal specification |
+| [`proofs/LIFT_COCYCLE.md`](proofs/LIFT_COCYCLE.md) | Lift recurrence and finite transcript experiments | proved recurrence; bounded experiments |
+| [`code/`](code/) | Exact-arithmetic implementations and executable checks | executable evidence |
+| [`reports/`](reports/) | Recorded outputs and independent verification | verification records |
+| [`DEFINITIONS.md`](DEFINITIONS.md) | Definitions used by the fold program | definitions |
 
 ## Code
 
@@ -27,7 +28,7 @@ map. Not progress on the Collatz conjecture; the conjecture remains open.
 | `code/f4_feature_regression.py` | Feature vs mod-2^k baseline (null result) | test ~2 s |
 | `code/fence/` | Fence phase scan; transcript-lift oracle | fast |
 
-Each `test_*.py` recomputes its claims from scratch.
+Each `test_*.py` recomputes the values it checks.
 
 ## Results
 
@@ -35,6 +36,6 @@ Each `test_*.py` recomputes its claims from scratch.
    `proofs/LEMMA2_PROOF.md`. Screen: `code/f2b_analytic_screen.py`.
 2. Realizability criterion Φ(q) ∈ ℤ_{>0} and consequences.
    `proofs/PARTIAL_THEOREMS.md`.
-3. Null results (closed approach families): `reports/F4_REPORT.md`.
+3. Negative feature-regression results: `reports/F4_REPORT.md`.
 
 Independent verification: `reports/VERIFICATION.md` (GPT-5.6 Sol).
