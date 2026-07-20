@@ -1,13 +1,13 @@
 # Exploratory drafts
 
-Speculative sketches produced during the project. Not results; no theorems, no
-claims. Included for provenance. The results are in
-[`../contribution/`](../contribution/).
+Draft terminology and reformulations considered during the project. These files
+are not cited as evidence for the results in
+[`../contribution/README.md`](../contribution/README.md).
 
-| File | Contents |
+| Path | Contents |
 |---|---|
-| `ELEMENTS.md` | Definitions-first seed; provisional axioms |
-| `METADYNAMICAL_GEOMETRY.md` | State and governing law as joint coordinates |
-| `ARCHITECTURE.md` | Structural sketch |
-| `LANGUAGE.md` | Vocabulary experiments |
-| `LENSES.md` | Reframings |
+| [`ELEMENTS.md`](ELEMENTS.md) | Provisional definitions and axioms |
+| [`METADYNAMICAL_GEOMETRY.md`](METADYNAMICAL_GEOMETRY.md) | Proposed coordinates for states and governing laws |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Proposed research-system structure |
+| [`LANGUAGE.md`](LANGUAGE.md) | Candidate terminology and symbolic formulations |
+| [`LENSES.md`](LENSES.md) | Alternative reformulations |
