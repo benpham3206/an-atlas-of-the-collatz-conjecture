@@ -1,17 +1,18 @@
 # An Atlas of the Collatz Conjecture
 
-Reference map of the 3n+1 problem: principal results with source links, and one
-original result on the first-return ("fold") structure of the map.
+Literature references and reproducible exact-arithmetic analysis of
+first-return systems for the Terras-accelerated Collatz map. The Collatz
+conjecture remains open.
 
 ## Status
 
-| Item | Status |
+| Statement | Evidence |
 |---|---|
-| Fold non-conjugacy theorem, depths k ≤ 10 | proved; machine-checked; independently verified |
-| Realizability criterion Φ(q) ∈ ℤ_{>0} | proved |
-| Bearing on the Collatz conjecture itself | none (see [Scope](#scope)) |
+| No folds at distinct depths k, k′ ≤ 10 are affinely conjugate | proof, exact-arithmetic screen, and independent reimplementation |
+| A parity transcript q is realized by a positive integer iff Φ(q) ∈ ℤ_{>0} | derivation in `contribution/proofs/PARTIAL_THEOREMS.md` |
+| Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
 
-## Definition
+## Maps and notation
 
 Collatz map, standard form:
 
@@ -30,19 +31,20 @@ T(n) = (3n+1)/2   if n odd
 Conjecture: for every integer n ≥ 1, some iterate reaches 1. Verified for
 n < 2^68.
 
-## Contents
+## Repository layout
 
-- [Landmarks](#landmarks) — principal results, with source links.
-- [Structural obstruction](#structural-obstruction) — the 2-adic/3-adic conflict.
-- [Original result](#original-result) — fold theorem and realizability criterion;
-  full material in [`contribution/`](contribution/).
-- [Scope](#scope) — claimed and not claimed.
-- [Reproduction](#reproduction) — commands.
-- [`exploratory/`](exploratory/) — speculative drafts; not results.
+| Path | Contents |
+|---|---|
+| [`contribution/README.md`](contribution/README.md) | Index of definitions, proofs, programs, and verification reports |
+| [`contribution/note/NOTE.md`](contribution/note/NOTE.md) | Fold theorem, proof outline, and limitations |
+| [`contribution/proofs/`](contribution/proofs/) | Detailed proofs and formal statements |
+| [`contribution/code/`](contribution/code/) | Exact-arithmetic implementations and executable checks |
+| [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
+| [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 
-Papers are linked, not reproduced.
+External papers are linked below and are not included in the repository.
 
-## Landmarks
+## Literature references
 
 ### Surveys and bibliography
 
@@ -102,19 +104,20 @@ is a finite certificate; divergence is not.
 Decidability of the fixed 3n+1 map is open. See
 [`contribution/proofs/FENCE.md`](contribution/proofs/FENCE.md).
 
-## Structural obstruction
+## Constraint retained by reformulations
 
-The 2-adic (halving) and 3-adic (3n+1) structures do not reconcile under known
-reformulations. Each reformulation attempted in this repository reduces to a
-free object plus one constraint: parity feedback assigns each integer exactly
-one infinite word. On the 2-adic integers the map is the full shift
-(Bernstein–Lagarias), so topological conjugacy carries no arithmetic
-information. A reformulation preserves the problem only if it preserves this
-constraint.
+In every reformulation tested in this repository, the symbolic system can be
+described independently of the condition that a transcript come from a
+positive integer. Parity feedback assigns each positive integer exactly one
+infinite word. On the 2-adic integers the map is conjugate to the full shift
+(Bernstein–Lagarias), but that conjugacy alone does not preserve membership in
+the positive integers. A reformulation of the Collatz conjecture must therefore
+retain the positive-integer realizability condition.
 
-## Original result
+## Fold non-conjugacy theorem
 
-Material: [`contribution/`](contribution/). Write-up:
+Definitions and proof details are indexed in
+[`contribution/README.md`](contribution/README.md). The consolidated write-up is
 [`contribution/note/NOTE.md`](contribution/note/NOTE.md).
 
 **Fold operator.** For a residue class mod 2^k, the first-return map of T on the
@@ -144,30 +147,34 @@ d₀ < d₁ < … is realized by a positive integer iff
 transcripts are decidable and cannot carry an infinite computation; the family
 n/2, (n+b)/2 for odd b > 0 is non-universal by descent.
 
-**Verification.** Numeric claims are computed in exact arithmetic. The
-counting-law screen was independently reimplemented; Lemma 2 matched enumeration
-in 196/196 tested positions. See
+**Verification.** The programs use exact integer and rational arithmetic. An
+independent implementation reproduced the counting-law screen, and direct
+enumeration matched Lemma 2 in 196 of 196 tested positions. See
 [`contribution/reports/VERIFICATION.md`](contribution/reports/VERIFICATION.md).
 
-## Scope
+## Claim boundaries
 
-Claimed:
+Established in the repository:
+
 - The fold non-conjugacy theorem (k ≤ 10).
 - The realizability criterion and its two consequences.
 
-Not claimed:
-- No result bears on the Collatz conjecture. All results concern the free side
-  of the realizability constraint.
-- Fibonacci growth of aggregate residue-tree level counts is prior/folklore. The
-  result is the per-class counting law and its use as a conjugacy invariant.
-- Divergent trajectories admit no finite certificate.
+Not established:
 
-Closed with certificates: self-similarity shortcuts (the theorem); feature
-grammars predicting stopping behavior beyond mod-2^k residues (none exceed the
-baseline at matched information budget); sustained divergence-critical density
-below 2^20 (longest run 217 steps).
+- These results do not imply that every positive integer reaches 1.
+- The appearance of Fibonacci growth in aggregate residue-tree counts is not
+  new. The repository derives a per-class counting law and uses it as an affine
+  conjugacy invariant.
+- The computations do not exclude a divergent trajectory; no finite search can
+  certify the absence of a later return.
 
-## Reproduction
+The negative computational results are recorded in `contribution/reports/`:
+the tested affine self-similarity condition fails across distinct depths up to
+10; tested feature grammars do not outperform the mod-2^k baseline at equal
+information budget; and the longest observed divergence-critical density run
+below 2^20 is 217 steps.
+
+## Verification commands
 
 Python 3, standard library only, exact integer/rational arithmetic.
 
@@ -178,11 +185,12 @@ python3 contribution/code/f2b_analytic_screen.py 8    # counting-law screen (~1 
 python3 contribution/code/test_f4.py                  # feature-regression null result
 ```
 
-## Authorship
+## Attribution
 
-Direction and problem selection: Ben Pham. Formalization and computation: Claude
-Fable 5. Independent verification: GPT-5.6 Sol. Each claim carries a status
-label and traces to a committed artifact and a runnable check.
+Direction and problem selection: Ben Pham. Formalization and computation:
+Claude Fable 5. Independent verification: GPT-5.6 Sol. The files supporting
+each stated result are listed above, and the executable checks are listed under
+Verification commands.
 
 ## License
 
