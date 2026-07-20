@@ -1,50 +1,40 @@
-# The fold program — original contribution
+# Fold program
 
-The question: **is the Collatz map self-similar under folding?** Take the map's
-first-return behavior on a residue class mod 2^k, renormalize it, and you get
-another system of the same kind — the map examining itself at depth k. If two
-depths produced conjugate systems, that would be a self-similar structure worth
-exploiting. This work proves they do not, for all depths ≤ 10, and along the way
-gives an exact formula for the obstruction the whole conjecture rests on.
+Original results on the first-return structure of the Terras-accelerated Collatz
+map. Not progress on the Collatz conjecture; the conjecture remains open.
 
-## Folder guide
+## Contents
 
-| Path | What it holds | Status |
+| Path | Contents | Status |
 |---|---|---|
-| [`note/NOTE.md`](note/NOTE.md) | The result written for a reader: theorem, proof sketch, scope | main write-up |
-| [`proofs/LEMMA2_PROOF.md`](proofs/LEMMA2_PROOF.md) | The counting-law lemma, full proof (`PROVEN`, all k, t) | proof |
-| [`proofs/PARTIAL_THEOREMS.md`](proofs/PARTIAL_THEOREMS.md) | Realizability formula Φ(q); decidable islands; the (n+b)/2 family | proofs |
-| [`proofs/FENCE.md`](proofs/FENCE.md) | Where the undecidability boundary sits for the fixed 3n+1 map | map + obligations |
-| [`proofs/FORMALIZATION.md`](proofs/FORMALIZATION.md) | Computability framing (H_T, R_T, arithmetical hierarchy) | formalization |
-| [`proofs/LIFT_COCYCLE.md`](proofs/LIFT_COCYCLE.md) | The ε-lift: binary digits of Φ(q); first realizability probe | probe |
-| [`code/`](code/) | Exact-arithmetic implementations + tests (stdlib only) | reproducible |
-| [`reports/`](reports/) | Run logs and evidence for every numeric claim | evidence |
-| [`DEFINITIONS.md`](DEFINITIONS.md) | The primitives ledger: drift, inertia, fold, realizability | vocabulary |
+| [`note/NOTE.md`](note/NOTE.md) | Theorem, proof, scope | write-up |
+| [`proofs/LEMMA2_PROOF.md`](proofs/LEMMA2_PROOF.md) | Counting-law lemma, all k, t | proved |
+| [`proofs/PARTIAL_THEOREMS.md`](proofs/PARTIAL_THEOREMS.md) | Realizability criterion Φ(q); decidable islands; (n+b)/2 family | proved |
+| [`proofs/FENCE.md`](proofs/FENCE.md) | Undecidability boundary for the fixed 3n+1 map | analysis |
+| [`proofs/FORMALIZATION.md`](proofs/FORMALIZATION.md) | H_T, R_T, arithmetical hierarchy | formalization |
+| [`proofs/LIFT_COCYCLE.md`](proofs/LIFT_COCYCLE.md) | ε-lift; binary digits of Φ(q) | probe |
+| [`code/`](code/) | Exact-arithmetic implementations and tests | reproducible |
+| [`reports/`](reports/) | Run logs and evidence | evidence |
+| [`DEFINITIONS.md`](DEFINITIONS.md) | Primitives: drift, inertia, fold, realizability | definitions |
 
-## Code map
+## Code
 
-| File | Role | Runtime |
+| File | Function | Runtime |
 |---|---|---|
 | `code/f1_word_calculus.py` | Composite affine forms; Terras bijection; cycle sweep | test ~58 s |
-| `code/f2_fold_operator.py` | Exact induced first-return maps (the fold operator) | test ~11 min |
-| `code/f2b_analytic_screen.py` | Counting-law screen — the theorem's decisive computation | 0.64 s |
-| `code/f4_feature_regression.py` | Null result: features vs mod-2^k baseline | test ~2 s |
-| `code/fence/` | Fence phase scan + transcript-lift oracle | fast |
+| `code/f2_fold_operator.py` | Exact induced first-return maps | test ~11 min |
+| `code/f2b_analytic_screen.py` | Counting-law screen | ~1 s |
+| `code/f4_feature_regression.py` | Feature vs mod-2^k baseline (null result) | test ~2 s |
+| `code/fence/` | Fence phase scan; transcript-lift oracle | fast |
 
-Each `test_*.py` re-derives its claims from scratch — no cached results trusted.
+Each `test_*.py` recomputes its claims from scratch.
 
-## Reading order
+## Results
 
-1. [`note/NOTE.md`](note/NOTE.md) — the whole result in a few pages.
-2. [`reports/F2_REPORT.md`](reports/F2_REPORT.md) — where Fibonacci first appeared, in the data.
-3. [`proofs/LEMMA2_PROOF.md`](proofs/LEMMA2_PROOF.md) — why (pattern-avoidance counting).
-4. [`reports/VERIFICATION.md`](reports/VERIFICATION.md) — independent check (GPT-5.6 Sol).
-5. [`proofs/PARTIAL_THEOREMS.md`](proofs/PARTIAL_THEOREMS.md) — the realizability wall, made exact.
+1. Fold non-conjugacy theorem, depths k ≤ 10. Proof in `note/NOTE.md` and
+   `proofs/LEMMA2_PROOF.md`. Screen: `code/f2b_analytic_screen.py`.
+2. Realizability criterion Φ(q) ∈ ℤ_{>0} and consequences.
+   `proofs/PARTIAL_THEOREMS.md`.
+3. Null results (closed approach families): `reports/F4_REPORT.md`.
 
-## Honesty note
-
-This is a structural result about the fold operator. It is **not** progress on
-the Collatz conjecture, which remains open. The value is a certified negative
-(no small self-similar shortcut), an exact statement of the central obstruction
-(the Φ formula), and a demonstration that an analytic invariant can decide a
-question that exact enumeration provably cannot reach.
+Independent verification: `reports/VERIFICATION.md` (GPT-5.6 Sol).
