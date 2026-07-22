@@ -1,0 +1,438 @@
+{
+  "all_checks_passed": true,
+  "claim_scope": {
+    "not_claimed": "a positive-integer counterexample, irrationality from finite data, or resolution of eventual lift stabilization",
+    "proved_symbolically": "every finite parity word has an exact periodic rational shadow",
+    "verified_finitely": "three independent identities for every word through the configured bound"
+  },
+  "exhaustive": {
+    "failures": [],
+    "max_length": 10,
+    "words_checked": 2046
+  },
+  "fibonacci_coherence": [
+    {
+      "difference_v2": 3,
+      "left_length": 2,
+      "matches": true,
+      "required_v2": 2,
+      "right_length": 3
+    },
+    {
+      "difference_v2": 6,
+      "left_length": 3,
+      "matches": true,
+      "required_v2": 3,
+      "right_length": 5
+    },
+    {
+      "difference_v2": 11,
+      "left_length": 5,
+      "matches": true,
+      "required_v2": 5,
+      "right_length": 8
+    },
+    {
+      "difference_v2": 19,
+      "left_length": 8,
+      "matches": true,
+      "required_v2": 8,
+      "right_length": 13
+    },
+    {
+      "difference_v2": 32,
+      "left_length": 13,
+      "matches": true,
+      "required_v2": 13,
+      "right_length": 21
+    },
+    {
+      "difference_v2": 53,
+      "left_length": 21,
+      "matches": true,
+      "required_v2": 21,
+      "right_length": 34
+    },
+    {
+      "difference_v2": 87,
+      "left_length": 34,
+      "matches": true,
+      "required_v2": 34,
+      "right_length": 55
+    }
+  ],
+  "fibonacci_periodic_shadows": [
+    {
+      "divisibility_remainder": 0,
+      "fixed_point": "2",
+      "fixed_point_denominator": 1,
+      "fixed_point_numerator": 2,
+      "is_ordinary_integer": true,
+      "length": 2,
+      "offset": 2,
+      "ones": 1,
+      "parity_matches": true,
+      "pow2": 4,
+      "pow3": 3,
+      "raw_cycle_denominator": 1,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 2,
+      "shadow_residue": 2,
+      "word": "01"
+    },
+    {
+      "divisibility_remainder": 2,
+      "fixed_point": "2/5",
+      "fixed_point_denominator": 5,
+      "fixed_point_numerator": 2,
+      "is_ordinary_integer": false,
+      "length": 3,
+      "offset": 2,
+      "ones": 1,
+      "parity_matches": true,
+      "pow2": 8,
+      "pow3": 3,
+      "raw_cycle_denominator": 5,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 2,
+      "shadow_residue": 2,
+      "word": "010"
+    },
+    {
+      "divisibility_remainder": 22,
+      "fixed_point": "22/23",
+      "fixed_point_denominator": 23,
+      "fixed_point_numerator": 22,
+      "is_ordinary_integer": false,
+      "length": 5,
+      "offset": 22,
+      "ones": 2,
+      "parity_matches": true,
+      "pow2": 32,
+      "pow3": 9,
+      "raw_cycle_denominator": 23,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 26,
+      "shadow_residue": 26,
+      "word": "01001"
+    },
+    {
+      "divisibility_remainder": 130,
+      "fixed_point": "130/229",
+      "fixed_point_denominator": 229,
+      "fixed_point_numerator": 130,
+      "is_ordinary_integer": false,
+      "length": 8,
+      "offset": 130,
+      "ones": 3,
+      "parity_matches": true,
+      "pow2": 256,
+      "pow3": 27,
+      "raw_cycle_denominator": 229,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 90,
+      "shadow_residue": 90,
+      "word": "01001010"
+    },
+    {
+      "divisibility_remainder": 6802,
+      "fixed_point": "6802/7949",
+      "fixed_point_denominator": 7949,
+      "fixed_point_numerator": 6802,
+      "is_ordinary_integer": false,
+      "length": 13,
+      "offset": 6802,
+      "ones": 5,
+      "parity_matches": true,
+      "pow2": 8192,
+      "pow3": 243,
+      "raw_cycle_denominator": 7949,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 4186,
+      "shadow_residue": 4186,
+      "word": "0100101001001"
+    },
+    {
+      "divisibility_remainder": 1248614,
+      "fixed_point": "1248614/2090591",
+      "fixed_point_denominator": 2090591,
+      "fixed_point_numerator": 1248614,
+      "is_ordinary_integer": false,
+      "length": 21,
+      "offset": 1248614,
+      "ones": 8,
+      "parity_matches": true,
+      "pow2": 2097152,
+      "pow3": 6561,
+      "raw_cycle_denominator": 2090591,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 1962074,
+      "shadow_residue": 1962074,
+      "word": "010010100100101001010"
+    },
+    {
+      "divisibility_remainder": 14568241106,
+      "fixed_point": "14568241106/17178274861",
+      "fixed_point_denominator": 17178274861,
+      "fixed_point_numerator": 14568241106,
+      "is_ordinary_integer": false,
+      "length": 34,
+      "offset": 14568241106,
+      "ones": 13,
+      "parity_matches": true,
+      "pow2": 17179869184,
+      "pow3": 1594323,
+      "raw_cycle_denominator": 17178274861,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 9663541338,
+      "shadow_residue": 9663541338,
+      "word": "0100101001001010010100100101001001"
+    },
+    {
+      "divisibility_remainder": 21546607411207442,
+      "fixed_point": "21546607411207442/36028786558610765",
+      "fixed_point_denominator": 36028786558610765,
+      "fixed_point_numerator": 21546607411207442,
+      "is_ordinary_integer": false,
+      "length": 55,
+      "offset": 21546607411207442,
+      "ones": 21,
+      "parity_matches": true,
+      "pow2": 36028797018963968,
+      "pow3": 10460353203,
+      "raw_cycle_denominator": 36028786558610765,
+      "residue_matches": true,
+      "returns_after_period": true,
+      "series_residue": 1923691155681370,
+      "shadow_residue": 1923691155681370,
+      "word": "0100101001001010010100100101001001010010100100101001010"
+    }
+  ],
+  "fibonacci_recurrent_height_bounds": [
+    {
+      "block_length": 1,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "4/9",
+      "mismatch_offset": 1,
+      "right_position": 2
+    },
+    {
+      "block_length": 2,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "16/27",
+      "mismatch_offset": 3,
+      "right_position": 3
+    },
+    {
+      "block_length": 3,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "32/27",
+      "mismatch_offset": 3,
+      "right_position": 3
+    },
+    {
+      "block_length": 4,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "256/243",
+      "mismatch_offset": 6,
+      "right_position": 5
+    },
+    {
+      "block_length": 5,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "512/243",
+      "mismatch_offset": 6,
+      "right_position": 5
+    },
+    {
+      "block_length": 6,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "1024/243",
+      "mismatch_offset": 6,
+      "right_position": 5
+    },
+    {
+      "block_length": 7,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "16384/6561",
+      "mismatch_offset": 11,
+      "right_position": 8
+    },
+    {
+      "block_length": 8,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "32768/6561",
+      "mismatch_offset": 11,
+      "right_position": 8
+    },
+    {
+      "block_length": 9,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "65536/6561",
+      "mismatch_offset": 11,
+      "right_position": 8
+    },
+    {
+      "block_length": 10,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "131072/6561",
+      "mismatch_offset": 11,
+      "right_position": 8
+    },
+    {
+      "block_length": 11,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "262144/6561",
+      "mismatch_offset": 11,
+      "right_position": 8
+    },
+    {
+      "block_length": 12,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "16777216/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 13,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "33554432/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 14,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "67108864/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 15,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "134217728/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 16,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "268435456/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 17,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "536870912/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 18,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "1073741824/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 19,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "2147483648/1594323",
+      "mismatch_offset": 19,
+      "right_position": 13
+    },
+    {
+      "block_length": 20,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "1099511627776/10460353203",
+      "mismatch_offset": 32,
+      "right_position": 21
+    },
+    {
+      "block_length": 21,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "2199023255552/10460353203",
+      "mismatch_offset": 32,
+      "right_position": 21
+    },
+    {
+      "block_length": 22,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "4398046511104/10460353203",
+      "mismatch_offset": 32,
+      "right_position": 21
+    },
+    {
+      "block_length": 23,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "8796093022208/10460353203",
+      "mismatch_offset": 32,
+      "right_position": 21
+    },
+    {
+      "block_length": 24,
+      "bound_holds": true,
+      "height": 57575393969818207,
+      "left_position": 0,
+      "lower_bound": "17592186044416/10460353203",
+      "mismatch_offset": 32,
+      "right_position": 21
+    }
+  ],
+  "object": "periodic_rational_collatz_shadows",
+  "schema_version": 1
+}

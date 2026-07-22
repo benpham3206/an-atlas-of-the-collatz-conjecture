@@ -1,0 +1,23 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad=0.25, nodesep=0.35, ranksep=0.55, fontname="DejaVu Sans"];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, margin="0.14,0.09", color="#374151", fillcolor="#f8fafc"];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#475569", arrowsize=0.75];
+
+  H [label="Hypothetical Collatz survivor", fillcolor="#fee2e2", color="#b91c1c", penwidth=1.5];
+  E [label="Enlarged exact state\nparity language + pressure + affine offset\n2-adic lift + 3-adic residue", fillcolor="#e0f2fe", color="#0369a1"];
+  L [label="Structured / low-complexity branch", fillcolor="#fef3c7", color="#b45309"];
+  R [label="High-complexity / spreading branch", fillcolor="#ede9fe", color="#6d28d9"];
+  C [label="PROVED HERE\ncomplexity-pressure congruence collision\nSturmian and golden/Fibonacci classes excluded", fillcolor="#dcfce7", color="#15803d", penwidth=1.5];
+  M [label="MISSING POINTWISE BRIDGE\nhigh spreading forces infinitely many\nnonzero ordinary lift digits", fillcolor="#fae8ff", color="#a21caf", penwidth=1.5];
+  P [label="No positive-integer survivor", fillcolor="#dcfce7", color="#15803d"];
+  X [label="Alternative: finite expanding grammar\n+ eventual-zero lift + invariant cone\n(machine-checkable counterexample)", fillcolor="#ffe4e6", color="#be123c"];
+
+  H -> E [label="FLT / Perelman move:\ntranslate and enlarge"];
+  E -> L [label="rigidity / recurrence"];
+  E -> R [label="entropy / mixing"];
+  L -> C;
+  C -> P;
+  R -> M;
+  M -> P [label="would complete proof"];
+  E -> X [style=dashed, label="DGG / Jacobian move:\nsearch the negation"];
+}

@@ -1,0 +1,16 @@
+d_max = 15
+fractional cost = 58
+fractional loads = {'s_t1': 10, 's_u': 24, 'u_v': 14, 'v_t1': 5, 's_t2': 6, 'v_w': 9, 'w_t2': 4, 'u_t3': 10, 'w_t3': 5}
+
+All unsplittable choices:
+{'choices': {'t1': 'direct', 't2': 'direct', 't3': 'direct'}, 'cost': 90, 'feasible': True, 'max_excess': 5, 'violating_arcs': ()}
+{'choices': {'t1': 'direct', 't2': 'direct', 't3': 'long'}, 'cost': 60, 'feasible': True, 'max_excess': 10, 'violating_arcs': ()}
+{'choices': {'t1': 'direct', 't2': 'long', 't3': 'direct'}, 'cost': 60, 'feasible': True, 'max_excess': 6, 'violating_arcs': ()}
+{'choices': {'t1': 'direct', 't2': 'long', 't3': 'long'}, 'cost': 30, 'feasible': False, 'max_excess': 16, 'violating_arcs': ('v_w',)}
+{'choices': {'t1': 'long', 't2': 'direct', 't3': 'direct'}, 'cost': 60, 'feasible': True, 'max_excess': 10, 'violating_arcs': ()}
+{'choices': {'t1': 'long', 't2': 'direct', 't3': 'long'}, 'cost': 30, 'feasible': False, 'max_excess': 16, 'violating_arcs': ('u_v',)}
+{'choices': {'t1': 'long', 't2': 'long', 't3': 'direct'}, 'cost': 30, 'feasible': False, 'max_excess': 16, 'violating_arcs': ('s_u',)}
+{'choices': {'t1': 'long', 't2': 'long', 't3': 'long'}, 'cost': 0, 'feasible': False, 'max_excess': 26, 'violating_arcs': ('s_u', 'u_v', 'v_w')}
+
+minimum feasible unsplittable cost = 60
+certificate verified

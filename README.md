@@ -10,7 +10,12 @@ conjecture remains open.
 |---|---|
 | No folds at distinct depths k, k′ ≤ 10 are affinely conjugate | proof, exact-arithmetic screen, and independent reimplementation |
 | A parity transcript q is realized by a positive integer iff Φ(q) ∈ ℤ_{>0} | derivation in `contribution/proofs/PARTIAL_THEOREMS.md` |
+| No nontrivial positive cycle with ≤ 18 odd members | exact search + independent oracle: `contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md` |
+| Rational Φ with odd denominator forces complexity pressure; Sturmian excluded | pointwise memo in `contribution/packets/2026-07-22-landmark-pointwise/` |
 | Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
+
+**Start here for agent handoff:** [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md)  
+**Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
 
 ## Maps and notation
 
@@ -35,10 +40,12 @@ n < 2^68.
 
 | Path | Contents |
 |---|---|
+| [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md) | One-page attack brief (proved toolkit + open targets) |
 | [`contribution/README.md`](contribution/README.md) | Index of definitions, proofs, programs, and verification reports |
 | [`contribution/note/NOTE.md`](contribution/note/NOTE.md) | Fold theorem, proof outline, and limitations |
 | [`contribution/proofs/`](contribution/proofs/) | Detailed proofs and formal statements |
 | [`contribution/code/`](contribution/code/) | Exact-arithmetic implementations and executable checks |
+| [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/) | Landmark strategy, strategy machine, resonance lattice, prefix-return barrier, rational finite verifier |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 
@@ -158,6 +165,11 @@ Established in the repository:
 
 - The fold non-conjugacy theorem (k ≤ 10).
 - The realizability criterion and its two consequences.
+- Exact exclusion of nontrivial positive cycles with at most 18 odd members
+  (local finite window; not the global cycle bound from the literature).
+- Pointwise complexity-pressure consequences for rational Φ, prefix-return
+  barrier, rational-shadow deletion, and a primitive-uniform subcritical
+  obstruction class (see packet + fence proofs).
 
 Not established:
 
@@ -167,6 +179,7 @@ Not established:
   conjugacy invariant.
 - The computations do not exclude a divergent trajectory; no finite search can
   certify the absence of a later return.
+- No unconditional positive-integer counterexample is present.
 
 The negative computational results are recorded in `contribution/reports/`:
 the tested affine self-similarity condition fails across distinct depths up to
@@ -183,6 +196,8 @@ python3 contribution/code/test_f1.py                  # word calculus
 python3 contribution/code/test_f2.py                  # fold operator (~11 min)
 python3 contribution/code/f2b_analytic_screen.py 8    # counting-law screen (~1 s)
 python3 contribution/code/test_f4.py                  # feature-regression null result
+python3 -m pytest contribution/code/fence/test_exact_cycle_search.py -q
+python3 contribution/packets/2026-07-22-landmark-pointwise/verify_rational_complexity_finite.py
 ```
 
 ## Attribution

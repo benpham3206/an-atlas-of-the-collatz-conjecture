@@ -1,0 +1,85 @@
+digraph CollatzStrategy {
+  graph [rankdir=TB, splines=polyline, nodesep=0.42, ranksep=0.55, pad=0.25, bgcolor="white"];
+  node [shape=box, style="rounded", fontname="DejaVu Sans", fontsize=12, margin="0.13,0.09"];
+  edge [fontname="DejaVu Sans", fontsize=10, arrowsize=0.75];
+
+  subgraph cluster_landmarks {
+    label="LANDMARK PROOF ARCHITECTURES";
+    fontsize=15;
+    style="rounded";
+    {rank=same;
+      flt [label="FLT\nBridge object\n+ incompatibility"];
+      perelman [label="Poincare / Perelman\nMonotone entropy\n+ boundary surgery"];
+      kepler [label="Kepler / four-color\nMinimal counterexample\n+ finite reducibility"];
+    }
+    {rank=same;
+      via [label="E8 sphere packing\nSharp dual witness"];
+      mss [label="Kadison-Singer\nAlgebraic shadow\n+ interlacing"];
+      smale [label="Smale 11, 14, 17\nRigidity + validated numerics\n+ continuation"];
+      dgg [label="DGG disproof\nTiny integrality-gap\ncertificate"];
+    }
+  }
+
+  synth [label="COMBINED PROTOCOL\nNormalize -> enlarge -> classify the boundary\nStructure/randomness split -> finite certificate", shape=box3d, fontsize=14];
+
+  flt -> synth;
+  perelman -> synth;
+  kepler -> synth;
+  via -> synth;
+  mss -> synth;
+  smale -> synth;
+  dgg -> synth;
+
+  xi [label="ENLARGED COLLATZ STATE\nXi_L = (r_L, z_L, m_L, s_L, D_L, epsilon_L, factor language)", shape=box3d, fontsize=13];
+  synth -> xi;
+
+  least [label="Assume a least counterexample N\nor propose an exact certificate candidate", fontsize=13];
+  xi -> least;
+
+  {rank=same;
+    cycle [label="BOUNDED BRANCH\nNontrivial cycle"];
+    diverge [label="UNBOUNDED BRANCH\nDivergent orbit"];
+  }
+  least -> cycle;
+  least -> diverge;
+
+  cyclecert [label="FINITE DIOPHANTINE CERTIFICATE\nn = c / (2^L - 3^a)\nExact parity checks + SMT / Lean"];
+  cycle -> cyclecert;
+
+  blowup [label="TAIL-MINIMUM BLOW-UP\nEvery limiting prefix satisfies 3^a > 2^L", fontsize=13];
+  diverge -> blowup;
+
+  {rank=same;
+    low [label="LOW / ZERO ENTROPY"];
+    high [label="HIGH / POSITIVE ENTROPY"];
+  }
+  blowup -> low;
+  blowup -> high;
+
+  barrier [label="EXACT PROGRESS\nFactor-complexity barrier\nComplexity-pressure inequality"];
+  low -> barrier;
+
+  rigidity [label="MISSING RIGIDITY LEMMA\nOrdinary lift stabilization\ncontradicts structured survival"];
+  barrier -> rigidity;
+
+  tao [label="TAO-STYLE TRANSPORT\nScale-residue mixing controls typical mass"];
+  high -> tao;
+
+  amplify [label="MISSING AMPLIFICATION LEMMA\nOne survivor generates positive\nlog-density exceptional mass"];
+  tao -> amplify;
+
+  {rank=same;
+    proof [label="UNIVERSAL PROOF\nEliminate cycles + prove rigidity + amplification", shape=doubleoctagon, fontsize=13];
+    counter [label="COUNTEREXAMPLE\nFinite cycle, or nonperiodic inductive invariant\nwith an eventual-zero lift certificate", shape=doubleoctagon, fontsize=13];
+  }
+
+  cyclecert -> proof [label="eliminate all cycles"];
+  rigidity -> proof;
+  amplify -> proof;
+  cyclecert -> counter [label="find one cycle"];
+  blowup -> counter [label="construct exact divergent lift"];
+
+  natural [label="DIAGNOSTIC PROBES\nCritical slope log_2 3 and continued fractions\nSturmian / Fibonacci / golden-angle words\nMersenne and Fermat run structures", shape=note];
+  natural -> cyclecert [style=dashed];
+  natural -> barrier [style=dashed];
+}

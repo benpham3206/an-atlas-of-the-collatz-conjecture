@@ -1,0 +1,635 @@
+{
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        1,
+        2
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        5,
+        8
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        8,
+        13
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        10,
+        16
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        11,
+        18
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        13,
+        21
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        14,
+        23
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        15,
+        24
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        16,
+        26
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        17,
+        27
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        17,
+        28
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "after_symmetry_le_before": true,
+      "composition_count_matches_formula": true,
+      "every_candidate_verified": true,
+      "pair": [
+        18,
+        29
+      ],
+      "trivial_only_when_orbit_is_one": true
+    },
+    {
+      "name": "pair_1_2_exactly_trivial_one",
+      "passed": true
+    }
+  ],
+  "counts_per_pair": [
+    {
+      "compositions_after_symmetry": 1,
+      "compositions_before_symmetry": 1,
+      "denom_positive": true,
+      "integral_candidate_count": 1,
+      "k": 2,
+      "m": 1,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 7,
+      "compositions_before_symmetry": 35,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 8,
+      "m": 5,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 99,
+      "compositions_before_symmetry": 792,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 13,
+      "m": 8,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 504,
+      "compositions_before_symmetry": 5005,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 16,
+      "m": 10,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 1768,
+      "compositions_before_symmetry": 19448,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 18,
+      "m": 11,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 9690,
+      "compositions_before_symmetry": 125970,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 21,
+      "m": 13,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 35530,
+      "compositions_before_symmetry": 497420,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 23,
+      "m": 14,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 54484,
+      "compositions_before_symmetry": 817190,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 24,
+      "m": 15,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 204347,
+      "compositions_before_symmetry": 3268760,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 26,
+      "m": 16,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 312455,
+      "compositions_before_symmetry": 5311735,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 27,
+      "m": 17,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 766935,
+      "compositions_before_symmetry": 13037895,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 28,
+      "m": 17,
+      "nontrivial_counterexample_count": 0
+    },
+    {
+      "compositions_after_symmetry": 1193010,
+      "compositions_before_symmetry": 21474180,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "k": 29,
+      "m": 18,
+      "nontrivial_counterexample_count": 0
+    }
+  ],
+  "direct_verification_summary": {
+    "candidates_all_odd_positive": 1,
+    "candidates_returning_to_start": 1,
+    "candidates_with_valuation_verified": 1,
+    "total_integral_candidates": 1,
+    "total_nontrivial_counterexamples": 0
+  },
+  "errors": [],
+  "every_integral_candidate": [
+    {
+      "all_states_odd_positive": true,
+      "c_m": 1,
+      "denom": 1,
+      "exponents": [
+        2
+      ],
+      "is_nontrivial_counterexample": false,
+      "is_trivial": true,
+      "k": 2,
+      "m": 1,
+      "n0": 1,
+      "orbit": [
+        1
+      ],
+      "returns_to_start": true,
+      "valuation_verified": true
+    }
+  ],
+  "exact_scope": {
+    "arithmetic": "Python arbitrary-precision ints only; no floats in decisions",
+    "composition_domain": "all ordered m-tuples of positive integers summing to K",
+    "enumerated_pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        11,
+        18
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        14,
+        23
+      ],
+      [
+        15,
+        24
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        17,
+        27
+      ],
+      [
+        17,
+        28
+      ],
+      [
+        18,
+        29
+      ]
+    ],
+    "symmetry_filter": "lexicographically minimal cyclic rotation; compositions_before_symmetry counts all ordered compositions; compositions_after_symmetry counts only canonical representatives"
+  },
+  "limitations": [
+    "Results hold only for the explicitly enumerated (m, K) pairs.",
+    "No claim of completeness over all m, K or over all Collatz cycles.",
+    "No claim of a Collatz proof, independence result, or divergent orbit.",
+    "Absence of a nontrivial counterexample in a finite (m, K) box does not prove the odd-only map has only the cycle {1}.",
+    "Generalized Collatz parameters and non-positive starts are excluded."
+  ],
+  "nontrivial_counterexamples": [],
+  "pairs": [
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 1,
+      "compositions_before_symmetry": 1,
+      "denom": 1,
+      "denom_positive": true,
+      "integral_candidate_count": 1,
+      "integral_candidates": [
+        {
+          "all_states_odd_positive": true,
+          "c_m": 1,
+          "denom": 1,
+          "exponents": [
+            2
+          ],
+          "is_nontrivial_counterexample": false,
+          "is_trivial": true,
+          "k": 2,
+          "m": 1,
+          "n0": 1,
+          "orbit": [
+            1
+          ],
+          "returns_to_start": true,
+          "valuation_verified": true
+        }
+      ],
+      "k": 2,
+      "m": 1,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 4,
+      "pow3_m": 3
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 7,
+      "compositions_before_symmetry": 35,
+      "denom": 13,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 8,
+      "m": 5,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 256,
+      "pow3_m": 243
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 99,
+      "compositions_before_symmetry": 792,
+      "denom": 1631,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 13,
+      "m": 8,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 8192,
+      "pow3_m": 6561
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 504,
+      "compositions_before_symmetry": 5005,
+      "denom": 6487,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 16,
+      "m": 10,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 65536,
+      "pow3_m": 59049
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 1768,
+      "compositions_before_symmetry": 19448,
+      "denom": 84997,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 18,
+      "m": 11,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 262144,
+      "pow3_m": 177147
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 9690,
+      "compositions_before_symmetry": 125970,
+      "denom": 502829,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 21,
+      "m": 13,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 2097152,
+      "pow3_m": 1594323
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 35530,
+      "compositions_before_symmetry": 497420,
+      "denom": 3605639,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 23,
+      "m": 14,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 8388608,
+      "pow3_m": 4782969
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 54484,
+      "compositions_before_symmetry": 817190,
+      "denom": 2428309,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 24,
+      "m": 15,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 16777216,
+      "pow3_m": 14348907
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 204347,
+      "compositions_before_symmetry": 3268760,
+      "denom": 24062143,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 26,
+      "m": 16,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 67108864,
+      "pow3_m": 43046721
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 312455,
+      "compositions_before_symmetry": 5311735,
+      "denom": 5077565,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 27,
+      "m": 17,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 134217728,
+      "pow3_m": 129140163
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 766935,
+      "compositions_before_symmetry": 13037895,
+      "denom": 139295293,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 28,
+      "m": 17,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 268435456,
+      "pow3_m": 129140163
+    },
+    {
+      "composition_count_policy": {
+        "after_symmetry_filter": "only compositions that equal their lexicographically minimal cyclic rotation; each valuation cycle counted once",
+        "before_symmetry_filter": "all ordered positive compositions of K into m parts; count = binom(K-1, m-1)"
+      },
+      "compositions_after_symmetry": 1193010,
+      "compositions_before_symmetry": 21474180,
+      "denom": 149450423,
+      "denom_positive": true,
+      "integral_candidate_count": 0,
+      "integral_candidates": [],
+      "k": 29,
+      "m": 18,
+      "nontrivial_counterexample_count": 0,
+      "nontrivial_counterexamples": [],
+      "pow2_K": 536870912,
+      "pow3_m": 387420489
+    }
+  ],
+  "parameters": {
+    "acceptance": [
+      "2^K > 3^m",
+      "exact integer divisibility C_m % (2^K-3^m) == 0",
+      "n > 0 and n odd",
+      "direct orbit: v2(3*n_j+1)=a_j for all j and n_m=n_0",
+      "counterexample only if verified orbit is not {1}"
+    ],
+    "affine_recurrence": {
+      "C_0": 0,
+      "C_next": "C_{j+1}=3*C_j+2^{S_j}",
+      "S_0": 0,
+      "S_next": "S_{j+1}=S_j+a_j",
+      "fixed_point": "n=C_m/(2^K-3^m)"
+    },
+    "map": "U(n)=(3n+1)/2^{v2(3n+1)} on positive odd integers",
+    "pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        11,
+        18
+      ],
+      [
+        13,
+        21
+      ],
+      [
+        14,
+        23
+      ],
+      [
+        15,
+        24
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        17,
+        27
+      ],
+      [
+        17,
+        28
+      ],
+      [
+        18,
+        29
+      ]
+    ],
+    "symmetry": "cyclic rotations of the exponent tuple identify the same valuation cycle; reported under lex-min rotation"
+  }
+}
