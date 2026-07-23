@@ -184,7 +184,24 @@ One Diophantine obstruction, two shadows: symbolic (cycle equation
    proved \(n^{-A}\), hence impossible; the interesting regime is
    therefore exactly the measured one.
 
-## 7. Reproduce
+## 7. Related work
+
+Moment methods appear to be absent from both existing treatments of the
+Syracuse measure: Tao (arXiv:1909.03562) bounds the characteristic
+function through a two-dimensional renewal process on triangles, and
+Siegel (arXiv:2412.02902) develops non-Archimedean Tauberian spectral
+theory rather than Archimedean decay estimates. The escape-weight
+formulation (S3) reframes uniform decay as a one-sided small-set
+condition, which we have not found in the literature. The measured
+resonance chain \(\pm2^k\) is the Fourier shadow of the classical
+\(2\)–\(3\) Diophantine lattice that drives the cycle-equation
+literature (Eliahou 1993; Simons–de Weger 2005), where the continued
+fraction of \(\log_3 2\) is the critical object; the same lattice
+appears in the bbchallenge "Antihydra" cryptid, a \(BB(6)\) holdout
+Turing machine whose behavior reduces to a Collatz-like odd/even count
+race — the computability-side shadow of the same obstruction.
+
+## 8. Reproduce
 
 ```bash
 python3 contribution/packets/2026-07-22-scalar-phase-second-moment/verify_scalar_phase.py

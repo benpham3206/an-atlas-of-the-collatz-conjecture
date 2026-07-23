@@ -183,7 +183,23 @@ pointwise control (total-variation errors, again).
 - Nothing here re-proves Tao's theorem, strengthens his density
   statement, or touches the all-\(N\) question.
 
-## 7. Reproduce
+## 7. Related work
+
+The base text is Tao (arXiv:1909.03562; *Forum of Mathematics, Pi* 10,
+2022); the density-zero lineage is Terras (1976), Everett (1977), Korec
+(1994), Krasikov–Lagarias (2003). Observation B — that Proposition 1.17
+of Tao is a decay statement for the Fourier transform \(\varphi_3\) of
+the self-affine Syracuse measure on \(\mathbb Z_3\) — coincides with
+Siegel's identification (arXiv:2412.02902, eq. (2.167); distilled in
+*p-Adic Numbers Ultrametric Anal. Appl.* 16 (2024) 143–199 and 17
+(2025) 187–232). Siegel explicitly names the Archimedean study of
+\(\varphi_H\) as "a natural next step for furthering both this paper
+and Tao's" but does not carry it out; this packet and its two
+successors begin that quantitative study. New here: the Type P / Type D
+taxonomy of the exceptional set and the measured stretched-exponential
+law \(\exp(-1.06\sqrt n)\) for the maximal characteristic function.
+
+## 8. Reproduce
 
 ```bash
 python3 contribution/packets/2026-07-22-tao-structural-refinement/verify_syracuse_mixing.py

@@ -291,7 +291,25 @@ nevertheless eventually zero.
 
 ---
 
-## 8. Reproduce
+## 8. Related work
+
+The density tradition — Terras (1976), Everett (1977), Korec (1994),
+Krasikov–Lagarias (*Math. Comp.* 72, 2003), and Tao
+(arXiv:1909.03562; *Forum of Mathematics, Pi* 10, 2022) — proves
+statistical statements about almost all orbits. The realizability map
+\(\Phi(q)\) is classical in form (it is the inverse of the
+Bernstein–Lagarias \(3x+1\) conjugacy map, *Canad. J. Math.* 48, 1996),
+and the words we eliminate are classified by automatic-sequence theory
+(Cobham 1972; Allouche–Shallit, *Automatic Sequences*, 2003), which
+does not address Collatz-realizability. The periodic-word side is the
+cycle-equation literature (Steiner 1977; Eliahou, *Discrete Math.* 118,
+1993; Simons–de Weger, *Acta Arith.* 117, 2005), where the continued
+fraction of \(\log_3 2\) is already the critical object. This packet is
+complementary to all of the above: the eliminations here are pointwise
+(per-word, aperiodic, subcritical), not density results and not
+cycle results.
+
+## 9. Reproduce
 
 ```bash
 python3 contribution/packets/2026-07-22-pointwise-drift-wall/verify_drift_wall.py
