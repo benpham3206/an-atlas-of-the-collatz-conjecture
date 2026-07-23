@@ -1,0 +1,1 @@
+{"M_ratio": 0.8673871224176041, "bad_counts_last_layer": {"bad_count_0.05": 2, "bad_count_0.1": 6, "bad_count_0.2": 6}, "dilution": 0.9114879067080037, "escape_avg_last": 0.9999999999990905, "n_max": 14, "peak_chain_k": 17, "phase_factor": 0.9516167093761261, "s1_max_err": 5.204170427930421e-18, "s3_min_escape_weight": 0.1249999999990905, "status": "ok"}

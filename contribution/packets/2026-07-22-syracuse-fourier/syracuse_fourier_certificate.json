@@ -1,0 +1,188 @@
+{
+  "char_recursion_check": [
+    {
+      "max_abs_err": 3.3766115072321297e-16,
+      "n": 3
+    },
+    {
+      "max_abs_err": 5.69180325632064e-17,
+      "n": 5
+    },
+    {
+      "max_abs_err": 6.321930712049743e-18,
+      "n": 9
+    }
+  ],
+  "packet": "2026-07-22-syracuse-fourier",
+  "parseval_l2_mixing": [
+    {
+      "bound_holds": true,
+      "n": 3,
+      "parseval_abs_err": 1.3877787807814457e-17,
+      "rms_bound_sqrt_r_n": 0.4214868080325096,
+      "rms_char": 0.31058080735328625,
+      "sum_P2": 0.09646043789621911,
+      "two_thirds_half_power": 0.5443310539518174
+    },
+    {
+      "bound_holds": true,
+      "n": 6,
+      "parseval_abs_err": 0.0,
+      "rms_bound_sqrt_r_n": 0.15056811907711906,
+      "rms_char": 0.07407712875516284,
+      "sum_P2": 0.005487421004608974,
+      "two_thirds_half_power": 0.2962962962962962
+    },
+    {
+      "bound_holds": true,
+      "n": 9,
+      "parseval_abs_err": 0.0,
+      "rms_bound_sqrt_r_n": 0.05337565568283195,
+      "rms_char": 0.016561014939159444,
+      "sum_P2": 0.00027426721581506224,
+      "two_thirds_half_power": 0.16128327524498287
+    },
+    {
+      "bound_holds": true,
+      "n": 12,
+      "parseval_abs_err": 5.082197683525802e-21,
+      "rms_bound_sqrt_r_n": 0.018887925949266256,
+      "rms_char": 0.003577828214666437,
+      "sum_P2": 1.2800854733663224e-05,
+      "two_thirds_half_power": 0.08779149519890257
+    }
+  ],
+  "primitive_root_2_mod_3^n": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+  },
+  "r_1_exact": "2/3",
+  "r_2_exact": "22/63",
+  "r_n_table": [
+    {
+      "n": 1,
+      "r_n": 0.6666666666666666
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 2,
+      "r_n": 0.3492063492063492,
+      "ratio": 0.5238095238095238
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 3,
+      "r_n": 0.1776511293454336,
+      "ratio": 0.5087282340346507
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 4,
+      "r_n": 0.08973504552055782,
+      "ratio": 0.5051194768712817
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 5,
+      "r_n": 0.04517603881999564,
+      "ratio": 0.5034380777089599
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 6,
+      "r_n": 0.0226707584824215,
+      "ratio": 0.5018314813468563
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 7,
+      "r_n": 0.01136195671259316,
+      "ratio": 0.5011723238727551
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 8,
+      "r_n": 0.005690413007175837,
+      "ratio": 0.500830372014074
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 9,
+      "r_n": 0.002848960619572231,
+      "ratio": 0.5006597264521184
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 10,
+      "r_n": 0.0014255438240665462,
+      "ratio": 0.5003732990456675
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 11,
+      "r_n": 0.0007131898842317056,
+      "ratio": 0.5002932019285385
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 12,
+      "r_n": 0.00035675374666496555,
+      "ratio": 0.5002226679775245
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 13,
+      "r_n": 0.0001784230736678374,
+      "ratio": 0.5001295020326668
+    },
+    {
+      "lemma2_bound_holds": true,
+      "n": 14,
+      "r_n": 8.922396140713467e-05,
+      "ratio": 0.5000696354622782
+    }
+  ],
+  "scope": "float64 controls; proved statements live in memo",
+  "spectral_barrier": [
+    {
+      "N": 2,
+      "asymptotic_gap_pi2_over_2x9^(n-1)": 4.934802200544679,
+      "formula_max_abs_err": 9.094947017729282e-13,
+      "gap_ratio_measured_over_asymptotic": 0.13509491152317848,
+      "n": 1,
+      "spectral_gap": 0.6666666666669698,
+      "top_nontrivial_eigenvalue": 0.33333333333303017
+    },
+    {
+      "N": 6,
+      "asymptotic_gap_pi2_over_2x9^(n-1)": 0.5483113556160755,
+      "formula_max_abs_err": 9.094947017729282e-13,
+      "gap_ratio_measured_over_asymptotic": 0.770820677852327,
+      "n": 2,
+      "spectral_gap": 0.4226497308101116,
+      "top_nontrivial_eigenvalue": 0.5773502691898884
+    },
+    {
+      "N": 18,
+      "asymptotic_gap_pi2_over_2x9^(n-1)": 0.06092348395734171,
+      "formula_max_abs_err": 9.094947017729282e-13,
+      "gap_ratio_measured_over_asymptotic": 1.6810984800517745,
+      "n": 3,
+      "spectral_gap": 0.10241837628014583,
+      "top_nontrivial_eigenvalue": 0.8975816237198542
+    },
+    {
+      "N": 54,
+      "asymptotic_gap_pi2_over_2x9^(n-1)": 0.006769275995260191,
+      "formula_max_abs_err": 9.094947017729282e-13,
+      "gap_ratio_measured_over_asymptotic": 1.9581127528530213,
+      "n": 4,
+      "spectral_gap": 0.013255005653900809,
+      "top_nontrivial_eigenvalue": 0.9867449943460992
+    }
+  ]
+}
