@@ -182,8 +182,9 @@ sense; no finite computation can certify an eventually-zero tail.**
 ## 9. Related work
 
 The structure/randomness framing follows Tao's program (*Structure and
-randomness in combinatorics*, arXiv:0707.4269) and its Collatz instance
-(arXiv:1909.03562). The word \(q^*\) is a Champernowne-type normal word;
+randomness in combinatorics*, arXiv:0707.4269v2; *Structure and
+randomness in the prime numbers*, 2009 expository) and its Collatz
+instance (arXiv:1909.03562). The word \(q^*\) is a Champernowne-type normal word;
 its complexity and density properties are standard facts of symbolic
 dynamics (Allouche–Shallit, 2003). What appears to be new is the use of
 such a word as a *delimiting witness*: \(q^*\) passes every symbolic
