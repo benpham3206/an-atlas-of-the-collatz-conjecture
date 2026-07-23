@@ -51,6 +51,8 @@ n < 2^68.
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
+| [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
+| [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes |
 
 External papers are linked below and are not included in the repository.
 
