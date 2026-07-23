@@ -1,0 +1,18 @@
+layer  1 done in    0.0s  M_n=5.773503e-01
+layer  2 done in    0.0s  M_n=3.779236e-01
+layer  3 done in    0.0s  M_n=2.522368e-01
+layer  4 done in    0.0s  M_n=1.769989e-01
+layer  5 done in    0.0s  M_n=1.292736e-01
+layer  6 done in    0.0s  M_n=9.610639e-02
+layer  7 done in    0.0s  M_n=7.587004e-02
+layer  8 done in    0.0s  M_n=6.089074e-02
+layer  9 done in    0.0s  M_n=4.802615e-02
+layer 10 done in    0.0s  M_n=3.827832e-02
+layer 11 done in    0.0s  M_n=3.194419e-02
+layer 12 done in    0.0s  M_n=2.645817e-02
+layer 13 done in    0.0s  M_n=2.205243e-02
+layer 14 done in    0.1s  M_n=1.912799e-02
+layer 15 done in    0.4s  M_n=1.628448e-02
+layer 16 done in    1.1s  M_n=1.440949e-02
+layer 17 done in    3.5s  M_n=1.251069e-02
+{"M_n_last": 0.012510686731279164, "bad_counts_last_layer": {"bad_count_0.05": 4, "bad_count_0.1": 4, "bad_count_0.2": 8}, "c_fit_through_origin": 1.0393750962950186, "chain_k_slope": 1.342657342657342, "chain_law_first_violation": 16, "chain_law_holds": false, "escape_avg_last": 0.9999999999990905, "kc1_fired": false, "n_max": 17, "peak_chain_k_last": 21, "s1_max_err": 5.204170427930421e-18, "status": "ok", "wall_clock_seconds_total": 80.4}
