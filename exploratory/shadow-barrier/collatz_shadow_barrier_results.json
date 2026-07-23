@@ -1,0 +1,29 @@
+{
+  "all_checks_passed": true,
+  "claim_scope": {
+    "not_claimed": "a Collatz proof, a counterexample, or an infinite-path exclusion",
+    "proved_symbolically": "the periodic rational shadow is the exact real descent barrier",
+    "verified_finitely": "direct integer and rational iteration for every word through length 12"
+  },
+  "contractive_words": 6423,
+  "contractive_words_with_strict_candidates": {
+    "1": 0,
+    "10": 0,
+    "11": 1,
+    "12": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 1,
+    "6": 0,
+    "7": 1,
+    "8": 5,
+    "9": 1
+  },
+  "expansive_words": 1767,
+  "failures": [],
+  "max_length": 12,
+  "object": "collatz_periodic_shadow_barrier",
+  "schema_version": 1,
+  "words_checked": 8190
+}
