@@ -64,9 +64,18 @@ conjecture remains open; nothing here proves or disproves it. Updated
 
 - **formal-conjectures contribution.** Target: the Collatz section of
   google-deepmind/formal-conjectures (one file today: bare `collatzStep` +
-  conjecture). Route: port the zero-sorry Lean proofs (Terras bijection
-  first, then two-branch family) into their mathlib-based style and open
-  the required pre-PR issue. [`formal/`](formal/)
+  conjecture). Route (corrected 2026-07-23 after external review): port
+  STATEMENTS only — their CONTRIBUTING caps in-repo proofs at ~25–50 lines;
+  longer proofs are hosted here and linked via
+  `@[formal_proof using lean4 at "<commit url>"]`, which our zero-sorry
+  proofs satisfy. Lead with the **two-branch family** (`research solved`;
+  "solved variants of open conjectures" are explicitly welcomed), then ask
+  in the pre-PR issue whether the Terras bijection is in scope as `API`
+  support or belongs in mathlib. The stronger long-term contribution is a
+  Terras-accelerated equivalent formulation of Collatz (`research open`),
+  which first needs a Lean proof of
+  `collatzStep reaches 1 ↔ T reaches 1` — not yet formalized. Gates: Google
+  CLA; pre-PR issue posted by the repo owner. [`formal/`](formal/)
 - **Shadow-barrier exploratory integration.** Exact two-metric barrier for
   rational shadows (real divergence vs 2-adic convergence along near-neutral
   contractive subsequences), integrated under exploratory/ with verbatim
