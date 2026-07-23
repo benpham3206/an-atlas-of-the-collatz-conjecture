@@ -179,7 +179,25 @@ sense; no finite computation can certify an eventually-zero tail.**
   heuristic; no Collatz progress on the all-integers statement is
   claimed.
 
-## 9. Reproduce
+## 9. Related work
+
+The structure/randomness framing follows Tao's program (*Structure and
+randomness in combinatorics*, arXiv:0707.4269v2; *Structure and
+randomness in the prime numbers*, 2009 expository) and its Collatz
+instance (arXiv:1909.03562). The word \(q^*\) is a Champernowne-type normal word;
+its complexity and density properties are standard facts of symbolic
+dynamics (Allouche–Shallit, 2003). What appears to be new is the use of
+such a word as a *delimiting witness*: \(q^*\) passes every symbolic
+wall the atlas can compute while \(\Phi(q^*)\notin\mathbb Z_{>0}\), so
+no purely symbolic screen of this type can separate genuine integers
+from non-integers. This is the symbolic analogue of the fence question
+in the computability literature: Conway's generalized Collatz maps
+encode universal computation (1972) and Kurtz–Simon (2007) prove a
+\(\Pi^0_2\)-completeness result that explicitly does not apply to the
+\(3n+1\) map itself — which side of the encoding fence \(3n+1\) sits on
+is open, and is the subject of the atlas's fence program.
+
+## 10. Reproduce
 
 ```bash
 python3 contribution/packets/2026-07-22-structure-randomness-transfer/verify_structure_randomness.py
