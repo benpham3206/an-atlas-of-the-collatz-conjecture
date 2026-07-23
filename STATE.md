@@ -14,8 +14,10 @@ conjecture remains open; nothing here proves or disproves it. Updated
 - **Realizability criterion Φ(q).** A parity transcript q is realized by a
   positive integer iff Φ(q) = −Σ 2^(d_j)/3^(j+1) ∈ ℤ_{>0}; eventually-periodic
   transcripts decidable, (n+b)/2 family non-universal. [`contribution/proofs/PARTIAL_THEOREMS.md`](contribution/proofs/PARTIAL_THEOREMS.md)
-- **Cycle exclusion, ≤ 18 odd members.** No nontrivial positive cycle with at
-  most 18 odd members; exact search with independent oracle. [`contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md`](contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md)
+- **Cycle exclusion, ≤ 20 odd members.** No nontrivial positive cycle with at
+  most 20 odd members; exact search with independent oracle (m ≤ 18), extended
+  to m ≤ 20 by a dual-enumerator scan of 1.24 × 10⁹ valuation words with
+  zero hits. [`contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md`](contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md), [`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/)
 - **Automatic-transcript trichotomy.** Subcritical and critical strata of
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
@@ -29,6 +31,16 @@ conjecture remains open; nothing here proves or disproves it. Updated
   6 ≤ n ≤ 17 (exact base-2 discrete logs); the measured window law
   k(n) ∈ [n, n+3] falsified at n = 16 and restated as
   k(n) ≈ 1.343n − 1.774 (float64 measurement, not a theorem). [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/)
+- **Lean 4 certificates (zero sorry).** `formal/` (plain Lean 4 core, no
+  mathlib, toolchain v4.31.0): the Terras bijection (Theorem 1) and the
+  two-branch-family non-universality (Theorem 4) compile with empty axiom
+  bases beyond the classical triple. First artifacts toward a
+  google-deepmind/formal-conjectures contribution. [`formal/`](formal/)
+- **Plateau drift test to n = 20.** C-kernel layer recursion (n=17: 80 s →
+  2.3 s); certified depth n = 20 with exact full-sweep escape weights. The
+  n ≈ 22 p₂ > 0.95 crossing prediction **falsified on schedule** (p₂(20) =
+  0.8013 vs extrapolated 0.94); new parity alternation of w_n(0.05);
+  decay and chain laws intact (float64 measurements). [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/)
 
 ## BLOCKED
 
@@ -39,18 +51,22 @@ conjecture remains open; nothing here proves or disproves it. Updated
 - **Supercritical automatic stratum.** Open; shown density-proof — no
   density argument can close it (Theorem 3 of the rigidity packet). [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
 - **No bound on L(n).** No proved bound on L(n) beyond n ≤ 13; measurements
-  run to n = 14. [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
-- **n = 18 layer construction (Python verifier).** Engineering wall:
-  layer-18 construction exceeded the 300 s foreground budget and was killed;
-  n = 17 is the certified depth of the Python scan. [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/)
+  run to n = 20 (drift-test packet). [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
+- **Cycle exclusion wall at m = 21.** The next layer (21, 34) has
+  5.7 × 10⁸ valuation words — feasible but not worthwhile: Hercher/Bařina
+  dominate the atlas bound by ~11 orders of magnitude. [`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/)
+- **Full formalization.** Only Theorems 1 and 4 carry Lean certificates;
+  the realizability criterion Φ(q) needs 2-adic machinery (mathlib
+  `PadicInt`), and the fold non-conjugacy screen needs KMP-automaton
+  formalization — both future work. [`formal/`](formal/)
 
 ## NEXT
 
-- **Plateau-drift-test packet.** C-kernel rebuild of the layer recursion;
-  depth certified to n = 19 in 48.2 s wall clock (n = 19: p2 = 0.721,
-  k = 24). Remaining: extend depth past n = 19 and test the p2 > 0.95
-  crossing — the n ≤ 14 fit predicted n ≈ 18.9; the refit through n = 19
-  moves the crossing to n ≈ 32.2 (float64 measurements). [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/)
+- **formal-conjectures contribution.** Target: the Collatz section of
+  google-deepmind/formal-conjectures (one file today: bare `collatzStep` +
+  conjecture). Route: port the zero-sorry Lean proofs (Terras bijection
+  first, then two-branch family) into their mathlib-based style and open
+  the required pre-PR issue. [`formal/`](formal/)
 - **Shadow-barrier exploratory integration.** Exact two-metric barrier for
   rational shadows (real divergence vs 2-adic convergence along near-neutral
   contractive subsequences), integrated under exploratory/ with verbatim
