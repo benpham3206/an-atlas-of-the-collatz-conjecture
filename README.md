@@ -46,6 +46,9 @@ n < 2^68.
 | [`contribution/proofs/`](contribution/proofs/) | Detailed proofs and formal statements |
 | [`contribution/code/`](contribution/code/) | Exact-arithmetic implementations and executable checks |
 | [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/) | Landmark strategy, strategy machine, resonance lattice, prefix-return barrier, rational finite verifier |
+| [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/) | Automatic-transcript trichotomy, density-wall impossibility witnesses, 514-word exact hunt |
+| [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
+| [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 
@@ -79,6 +82,18 @@ External papers are linked below and are not included in the repository.
 
 Statistical methods control almost all orbits and do not reach a measure-zero
 exceptional set.
+
+### Structure and randomness (methodology)
+
+| Work | Author, year | Link |
+|---|---|---|
+| Structure and randomness in combinatorics | Tao, 2007 | [arXiv:0707.4269](https://arxiv.org/abs/0707.4269) |
+| Structure and randomness in the prime numbers | Tao, 2009 | [PDF](https://terrytao.wordpress.com/wp-content/uploads/2009/09/primes_paper.pdf) |
+
+These two expository papers frame the structure/randomness dichotomy used by
+the 2026-07-22 packets: model an orbit statistic as a structured component
+plus a pseudorandom residual, then bound each part separately. They are method
+references, not results about the 3n+1 map.
 
 ### Cycles
 
