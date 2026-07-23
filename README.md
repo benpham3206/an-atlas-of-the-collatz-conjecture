@@ -15,6 +15,7 @@ conjecture remains open.
 | Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
 
 **Start here for agent handoff:** [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md)  
+**Repo frontier (established / blocked / next):** [`STATE.md`](STATE.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
 
 ## Maps and notation
@@ -41,6 +42,7 @@ n < 2^68.
 | Path | Contents |
 |---|---|
 | [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md) | One-page attack brief (proved toolkit + open targets) |
+| [`STATE.md`](STATE.md) | Repository frontier: established results, blocked routes, next packets |
 | [`contribution/README.md`](contribution/README.md) | Index of definitions, proofs, programs, and verification reports |
 | [`contribution/note/NOTE.md`](contribution/note/NOTE.md) | Fold theorem, proof outline, and limitations |
 | [`contribution/proofs/`](contribution/proofs/) | Detailed proofs and formal statements |
@@ -51,6 +53,7 @@ n < 2^68.
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
+| [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier (exploratory; provenance chatgpt-thread-1784792218410; not cited as a result) |
 | [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
 | [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes |
 
