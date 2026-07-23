@@ -1,0 +1,104 @@
+{
+  "critical_line": {
+    "63_over_100_lt_log3_2": true,
+    "log3_2_lt_2_over_3": true,
+    "log3_2_lt_631_over_1000": true
+  },
+  "density": {
+    "N": 1048576,
+    "above_631_over_1000": true,
+    "density": "716855/1048576",
+    "ones": 716855,
+    "two_thirds_gap": "-53413/3145728"
+  },
+  "full_complexity": {
+    "full_complexity_certified": true,
+    "k_max": 12,
+    "per_k": {
+      "1": {
+        "distinct_factors": 2,
+        "expected": 2
+      },
+      "10": {
+        "distinct_factors": 1024,
+        "expected": 1024
+      },
+      "11": {
+        "distinct_factors": 2048,
+        "expected": 2048
+      },
+      "12": {
+        "distinct_factors": 4096,
+        "expected": 4096
+      },
+      "2": {
+        "distinct_factors": 4,
+        "expected": 4
+      },
+      "3": {
+        "distinct_factors": 8,
+        "expected": 8
+      },
+      "4": {
+        "distinct_factors": 16,
+        "expected": 16
+      },
+      "5": {
+        "distinct_factors": 32,
+        "expected": 32
+      },
+      "6": {
+        "distinct_factors": 64,
+        "expected": 64
+      },
+      "7": {
+        "distinct_factors": 128,
+        "expected": 128
+      },
+      "8": {
+        "distinct_factors": 256,
+        "expected": 256
+      },
+      "9": {
+        "distinct_factors": 512,
+        "expected": 512
+      }
+    },
+    "source_numbers": 592761,
+    "symbols_examined": 6908733
+  },
+  "lift_digits": {
+    "fibonacci_control": {
+      "N": 65536,
+      "has_set_digit_above_N_over_2": true,
+      "highest_set_digit": 65534,
+      "longest_one_run": 17,
+      "longest_zero_run": 14,
+      "one_digits": 32881,
+      "one_fraction": "32881/65536",
+      "prefix_ones": 25032,
+      "word": "Fibonacci word (aperiodic control)",
+      "zero_digits": 32655
+    },
+    "interpretation": "hypothesis generator only; finite lift windows cannot certify eventually-zero tails",
+    "periodic_control": {
+      "highest_set_digit": 0,
+      "phi_equals_1": true,
+      "word": "(10)^inf (parity transcript of n=1)"
+    },
+    "test_object": {
+      "N": 65536,
+      "has_set_digit_above_N_over_2": true,
+      "highest_set_digit": 65533,
+      "longest_one_run": 15,
+      "longest_zero_run": 15,
+      "one_digits": 32625,
+      "one_fraction": "32625/65536",
+      "prefix_ones": 44227,
+      "word": "q* = phi(base-3 Champernowne)",
+      "zero_digits": 32911
+    }
+  },
+  "packet": "2026-07-22-structure-randomness-transfer",
+  "scope": "finite controls; Theorem 1 proved in memo; lift statistics heuristic"
+}
