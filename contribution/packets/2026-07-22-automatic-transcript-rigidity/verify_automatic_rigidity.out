@@ -1,0 +1,30 @@
+{
+  "L_MAX": 512,
+  "aperiodic_candidates": 0,
+  "enumeration": {
+    "binary_ell<=MAXLEN": {
+      "killed_subcritical_primitive": 174,
+      "nonprimitive_numeric": 16,
+      "periodic_exact": 30,
+      "periodic_numeric": 10,
+      "survivor_supercritical_primitive": 56
+    },
+    "ternary_ell2_coded": {
+      "killed_subcritical_primitive": 95,
+      "nonprimitive_numeric": 48,
+      "periodic_numeric": 32,
+      "survivor_supercritical_primitive": 53
+    }
+  },
+  "gap_example_last_change": 507,
+  "max_zero_run": 512,
+  "named_families_killed": 5,
+  "orbit_cross_checks": 2000,
+  "periodic_integral_phi_values": [
+    "1",
+    "2"
+  ],
+  "status": "ok",
+  "supercritical_oscillator_last_change": 511,
+  "supercritical_primitive_survivors": 109
+}
