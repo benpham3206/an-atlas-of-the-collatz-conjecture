@@ -1,517 +1,572 @@
 {
   "contribution/code/f1_word_calculus.py": {
-    "mtime": 1784793745.7898426,
+    "mtime": 1784763866.9949722,
     "ast_hash": "ef226451ff7316bd68ec6176060375d0",
     "semantic_hash": "ef226451ff7316bd68ec6176060375d0"
   },
   "contribution/code/f2_fold_operator.py": {
-    "mtime": 1784793745.789968,
+    "mtime": 1784763866.995338,
     "ast_hash": "9c3b35cf82cab8cf9bc81dc483cf0db2",
     "semantic_hash": "9c3b35cf82cab8cf9bc81dc483cf0db2"
   },
   "contribution/code/f2b_analytic_screen.py": {
-    "mtime": 1784793745.7900746,
+    "mtime": 1784763866.9957552,
     "ast_hash": "fd6ba38deba9e5855573133fb9e1829c",
     "semantic_hash": "fd6ba38deba9e5855573133fb9e1829c"
   },
   "contribution/code/f4_feature_regression.py": {
-    "mtime": 1784793745.7901845,
+    "mtime": 1784763866.9959395,
     "ast_hash": "18b10787440504329745e8ed6f5370d2",
     "semantic_hash": "18b10787440504329745e8ed6f5370d2"
   },
   "contribution/code/fence/exact_cycle_search.py": {
-    "mtime": 1784793745.7906551,
+    "mtime": 1784763866.9961958,
     "ast_hash": "e93b11ce76a0adbc53aff76a58ba827c",
     "semantic_hash": "e93b11ce76a0adbc53aff76a58ba827c"
   },
   "contribution/code/fence/exact_cycle_search_results.json": {
-    "mtime": 1784793745.7907956,
+    "mtime": 1784763866.996407,
     "ast_hash": "d6a19820019eb5089d0f39996d71101d",
     "semantic_hash": "d6a19820019eb5089d0f39996d71101d"
   },
   "contribution/code/fence/fence_phase.py": {
-    "mtime": 1784793745.7909307,
+    "mtime": 1784763866.996623,
     "ast_hash": "eed66af273bd2e6f6fcb383524550b86",
     "semantic_hash": "eed66af273bd2e6f6fcb383524550b86"
   },
   "contribution/code/fence/lift_results.json": {
-    "mtime": 1784793745.7910523,
+    "mtime": 1784763866.9967859,
     "ast_hash": "c7ab3c564016c900c85e8e5bc0e5ea81",
     "semantic_hash": "c7ab3c564016c900c85e8e5bc0e5ea81"
   },
   "contribution/code/fence/phase_results.json": {
-    "mtime": 1784793745.7911656,
+    "mtime": 1784763866.9969604,
     "ast_hash": "1404291f374c4045621c15a9362480e4",
     "semantic_hash": "1404291f374c4045621c15a9362480e4"
   },
   "contribution/code/fence/primitive_uniform_obstruction.py": {
-    "mtime": 1784793745.7912767,
+    "mtime": 1784763866.997134,
     "ast_hash": "a403672f6fb56e8b41fadad8703d6702",
     "semantic_hash": "a403672f6fb56e8b41fadad8703d6702"
   },
   "contribution/code/fence/primitive_uniform_results.json": {
-    "mtime": 1784793745.7913659,
+    "mtime": 1784763866.997302,
     "ast_hash": "e10220eb2b29a8c4c423275145b30bd8",
     "semantic_hash": "e10220eb2b29a8c4c423275145b30bd8"
   },
   "contribution/code/fence/rational_shadow.py": {
-    "mtime": 1784793745.7914855,
+    "mtime": 1784763866.9974725,
     "ast_hash": "ff18833c466a4ebe5c04f08b615839ba",
     "semantic_hash": "ff18833c466a4ebe5c04f08b615839ba"
   },
   "contribution/code/fence/rational_shadow_results.json": {
-    "mtime": 1784793745.7916048,
+    "mtime": 1784763866.9976315,
     "ast_hash": "33571309314e7131342bf1d1039ad640",
     "semantic_hash": "33571309314e7131342bf1d1039ad640"
   },
   "contribution/code/fence/test_exact_cycle_search.py": {
-    "mtime": 1784793745.7917185,
+    "mtime": 1784763866.9978068,
     "ast_hash": "c9fd540e753965ba23fda7d06cc5776e",
     "semantic_hash": "c9fd540e753965ba23fda7d06cc5776e"
   },
   "contribution/code/fence/test_fence_phase.py": {
-    "mtime": 1784793745.7918007,
+    "mtime": 1784763866.9979253,
     "ast_hash": "8984050ac5170a798027afc1ba1a5ceb",
     "semantic_hash": "8984050ac5170a798027afc1ba1a5ceb"
   },
   "contribution/code/fence/test_primitive_uniform_obstruction.py": {
-    "mtime": 1784793745.7919204,
+    "mtime": 1784763866.9981098,
     "ast_hash": "0c45c6d3201385d9290fd55b7579aaa5",
     "semantic_hash": "0c45c6d3201385d9290fd55b7579aaa5"
   },
   "contribution/code/fence/test_rational_shadow.py": {
-    "mtime": 1784793745.7920082,
+    "mtime": 1784763866.9982114,
     "ast_hash": "d3969698b8b27c9c632f68cb82f16d14",
     "semantic_hash": "d3969698b8b27c9c632f68cb82f16d14"
   },
   "contribution/code/fence/test_transcript_lift_oracle.py": {
-    "mtime": 1784793745.7920816,
+    "mtime": 1784763866.9983177,
     "ast_hash": "5ac65caf187e319e919f9f9795481acb",
     "semantic_hash": "5ac65caf187e319e919f9f9795481acb"
   },
   "contribution/code/fence/transcript_lift_oracle.py": {
-    "mtime": 1784793745.792332,
+    "mtime": 1784763866.998609,
     "ast_hash": "afb3a09ba8a7c0d684fcb8f81bfc48fe",
     "semantic_hash": "afb3a09ba8a7c0d684fcb8f81bfc48fe"
   },
   "contribution/code/test_f1.py": {
-    "mtime": 1784793745.792437,
+    "mtime": 1784763866.9988062,
     "ast_hash": "0bb541e520074d0fbd61a1f61d5200b1",
     "semantic_hash": "0bb541e520074d0fbd61a1f61d5200b1"
   },
   "contribution/code/test_f2.py": {
-    "mtime": 1784793745.7925472,
+    "mtime": 1784763866.9989762,
     "ast_hash": "59e9279b3acf91fa273a05a6ce14a266",
     "semantic_hash": "59e9279b3acf91fa273a05a6ce14a266"
   },
   "contribution/code/test_f4.py": {
-    "mtime": 1784793745.7926319,
+    "mtime": 1784763866.9991157,
     "ast_hash": "e4eeb32453895f1117f884d2c0192e70",
     "semantic_hash": "e4eeb32453895f1117f884d2c0192e70"
   },
   "contribution/packets/2026-07-22-automatic-transcript-rigidity/automatic_rigidity_certificate.json": {
-    "mtime": 1784793745.7933018,
+    "mtime": 1784787790.3392851,
     "ast_hash": "7a8f4508aaaae0d498feb81c2bd46ca4",
     "semantic_hash": "7a8f4508aaaae0d498feb81c2bd46ca4"
   },
   "contribution/packets/2026-07-22-automatic-transcript-rigidity/test_verify_automatic_rigidity.py": {
-    "mtime": 1784793745.7937722,
+    "mtime": 1784787790.3399756,
     "ast_hash": "4f43593a7cae4362c8ad9631e9ac4e55",
     "semantic_hash": "4f43593a7cae4362c8ad9631e9ac4e55"
   },
   "contribution/packets/2026-07-22-automatic-transcript-rigidity/verify_automatic_rigidity.py": {
-    "mtime": 1784793745.7939544,
+    "mtime": 1784787790.3407326,
     "ast_hash": "d2aeb7c26c6f37eb4e889f64e69c39e6",
     "semantic_hash": "d2aeb7c26c6f37eb4e889f64e69c39e6"
   },
   "contribution/packets/2026-07-22-deep-fourier-scan/deep_fourier_scan_certificate.json": {
-    "mtime": 1784793745.7942207,
+    "mtime": 1784787790.3414323,
     "ast_hash": "61aac7bf3dac1ab3b66278f798ff81fc",
     "semantic_hash": "61aac7bf3dac1ab3b66278f798ff81fc"
   },
   "contribution/packets/2026-07-22-deep-fourier-scan/test_verify_deep_fourier_scan.py": {
-    "mtime": 1784793745.794301,
+    "mtime": 1784787790.3416357,
     "ast_hash": "b9a082e9255d54f1da3d30d5c2f1e0fd",
     "semantic_hash": "b9a082e9255d54f1da3d30d5c2f1e0fd"
   },
   "contribution/packets/2026-07-22-deep-fourier-scan/verify_deep_fourier_scan.py": {
-    "mtime": 1784793745.7944603,
+    "mtime": 1784787790.3421576,
     "ast_hash": "acd159cc73d051d8fceb22bc4d32f140",
     "semantic_hash": "acd159cc73d051d8fceb22bc4d32f140"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/verify_complexity_pressure.py": {
-    "mtime": 1784793745.7978485,
+    "mtime": 1784763867.0047925,
     "ast_hash": "774e6f00ecfc4572f1080cf437fc3589",
     "semantic_hash": "774e6f00ecfc4572f1080cf437fc3589"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/verify_dgg_counterexample.py": {
-    "mtime": 1784793745.797999,
+    "mtime": 1784763867.0050142,
     "ast_hash": "2979c7e365afc613d8ce7f351450283e",
     "semantic_hash": "2979c7e365afc613d8ce7f351450283e"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/verify_rational_complexity_finite.py": {
-    "mtime": 1784793745.798138,
+    "mtime": 1784763867.0052252,
     "ast_hash": "380f10763ba075637f4293767a670988",
     "semantic_hash": "380f10763ba075637f4293767a670988"
   },
   "contribution/packets/2026-07-22-plateau-escape-weight/plateau_escape_weight_certificate.json": {
-    "mtime": 1784793745.7984414,
+    "mtime": 1784787790.3428903,
     "ast_hash": "58865c5427ff4eb3b789c13dbfcfa4c9",
     "semantic_hash": "58865c5427ff4eb3b789c13dbfcfa4c9"
   },
   "contribution/packets/2026-07-22-plateau-escape-weight/test_verify_plateau_escape_weight.py": {
-    "mtime": 1784793745.798539,
+    "mtime": 1784787790.3433254,
     "ast_hash": "367c5b338ad10befebfff50416db1344",
     "semantic_hash": "367c5b338ad10befebfff50416db1344"
   },
   "contribution/packets/2026-07-22-plateau-escape-weight/verify_plateau_escape_weight.py": {
-    "mtime": 1784793745.7987072,
+    "mtime": 1784787790.34373,
     "ast_hash": "5cfa53d0d6f2ef5c7fbb45d457c50dd1",
     "semantic_hash": "5cfa53d0d6f2ef5c7fbb45d457c50dd1"
   },
   "contribution/packets/2026-07-22-pointwise-drift-wall/drift_wall_certificate.json": {
-    "mtime": 1784793745.7989933,
+    "mtime": 1784777294.892944,
     "ast_hash": "e161fcead6670493b57db1f7cb41eace",
     "semantic_hash": "e161fcead6670493b57db1f7cb41eace"
   },
   "contribution/packets/2026-07-22-pointwise-drift-wall/test_verify_drift_wall.py": {
-    "mtime": 1784793745.799063,
+    "mtime": 1784777294.8934689,
     "ast_hash": "a52effcb6b3eea5bf9019007c7251c04",
     "semantic_hash": "a52effcb6b3eea5bf9019007c7251c04"
   },
   "contribution/packets/2026-07-22-pointwise-drift-wall/verify_drift_wall.py": {
-    "mtime": 1784793745.7992418,
+    "mtime": 1784777294.8945467,
     "ast_hash": "ccdf7a3579bd3d1648d622bc0e69f237",
     "semantic_hash": "ccdf7a3579bd3d1648d622bc0e69f237"
   },
   "contribution/packets/2026-07-22-scalar-phase-second-moment/scalar_phase_certificate.json": {
-    "mtime": 1784793745.7995327,
+    "mtime": 1784777294.8957305,
     "ast_hash": "3929f2c25122f199da1bbfdfed387a7d",
     "semantic_hash": "3929f2c25122f199da1bbfdfed387a7d"
   },
   "contribution/packets/2026-07-22-scalar-phase-second-moment/test_verify_scalar_phase.py": {
-    "mtime": 1784793745.7996094,
+    "mtime": 1784777294.8960114,
     "ast_hash": "c5f5e8475bf629433a2c37d852d1b2fe",
     "semantic_hash": "c5f5e8475bf629433a2c37d852d1b2fe"
   },
   "contribution/packets/2026-07-22-scalar-phase-second-moment/verify_scalar_phase.py": {
-    "mtime": 1784793745.799796,
+    "mtime": 1784777294.896728,
     "ast_hash": "9ba60c6299164e106350c6b677feb623",
     "semantic_hash": "9ba60c6299164e106350c6b677feb623"
   },
   "contribution/packets/2026-07-22-structure-randomness-transfer/structure_randomness_certificate.json": {
-    "mtime": 1784793745.8000543,
+    "mtime": 1784777294.8973663,
     "ast_hash": "4d8ab399b4d3b66fd6c2bbafda7cc878",
     "semantic_hash": "4d8ab399b4d3b66fd6c2bbafda7cc878"
   },
   "contribution/packets/2026-07-22-structure-randomness-transfer/test_verify_structure_randomness.py": {
-    "mtime": 1784793745.8001232,
+    "mtime": 1784777294.8979535,
     "ast_hash": "5c848e8070f9f90e4b80e64c8fb2ef24",
     "semantic_hash": "5c848e8070f9f90e4b80e64c8fb2ef24"
   },
   "contribution/packets/2026-07-22-structure-randomness-transfer/verify_structure_randomness.py": {
-    "mtime": 1784793745.8002782,
+    "mtime": 1784777294.8986018,
     "ast_hash": "e224493501655102e16ddd94cc21c1c4",
     "semantic_hash": "e224493501655102e16ddd94cc21c1c4"
   },
   "contribution/packets/2026-07-22-syracuse-fourier/syracuse_fourier_certificate.json": {
-    "mtime": 1784793745.8005104,
+    "mtime": 1784777294.8996649,
     "ast_hash": "4e1a43bbae8040e01ee5d0902de69366",
     "semantic_hash": "4e1a43bbae8040e01ee5d0902de69366"
   },
   "contribution/packets/2026-07-22-syracuse-fourier/test_verify_syracuse_fourier.py": {
-    "mtime": 1784793745.8005831,
+    "mtime": 1784777294.9002268,
     "ast_hash": "dde7a32bf834eb631f2876e6b5469291",
     "semantic_hash": "dde7a32bf834eb631f2876e6b5469291"
   },
   "contribution/packets/2026-07-22-syracuse-fourier/verify_syracuse_fourier.py": {
-    "mtime": 1784793745.8007274,
+    "mtime": 1784777294.9014068,
     "ast_hash": "f86252b806cd9a346455294c0dc48494",
     "semantic_hash": "f86252b806cd9a346455294c0dc48494"
   },
   "contribution/packets/2026-07-22-tao-structural-refinement/syracuse_mixing_certificate.json": {
-    "mtime": 1784793745.8011694,
+    "mtime": 1784777294.9035301,
     "ast_hash": "09fb5daa6c2410da28d2fbcf4ec07c24",
     "semantic_hash": "09fb5daa6c2410da28d2fbcf4ec07c24"
   },
   "contribution/packets/2026-07-22-tao-structural-refinement/test_verify_syracuse_mixing.py": {
-    "mtime": 1784793745.801246,
+    "mtime": 1784777294.9038756,
     "ast_hash": "a39bb8d3e9cf66cbd4f8042b14b57cfa",
     "semantic_hash": "a39bb8d3e9cf66cbd4f8042b14b57cfa"
   },
   "contribution/packets/2026-07-22-tao-structural-refinement/verify_syracuse_mixing.py": {
-    "mtime": 1784793745.8014026,
+    "mtime": 1784777294.9044693,
     "ast_hash": "920b2a40106e5eca6dc5571ac94db48e",
     "semantic_hash": "920b2a40106e5eca6dc5571ac94db48e"
   },
   "contribution/reports/exact_cycle_search_results.json": {
-    "mtime": 1784793745.8032103,
+    "mtime": 1784763867.0079417,
     "ast_hash": "d6a19820019eb5089d0f39996d71101d",
     "semantic_hash": "d6a19820019eb5089d0f39996d71101d"
   },
   "contribution/reports/primitive_uniform_results.json": {
-    "mtime": 1784793745.803296,
+    "mtime": 1784763867.008099,
     "ast_hash": "e10220eb2b29a8c4c423275145b30bd8",
     "semantic_hash": "e10220eb2b29a8c4c423275145b30bd8"
   },
   "contribution/reports/rational_shadow_results.json": {
-    "mtime": 1784793745.8035274,
+    "mtime": 1784763867.0082614,
     "ast_hash": "33571309314e7131342bf1d1039ad640",
     "semantic_hash": "33571309314e7131342bf1d1039ad640"
   },
   "COLLATZ_ONE_PAGE.md": {
-    "mtime": 1784793745.7890832,
+    "mtime": 1784763866.9937859,
     "ast_hash": "0374b5e6c948387c5652fb8f95cb8bad",
     "semantic_hash": "0374b5e6c948387c5652fb8f95cb8bad"
   },
   "README.md": {
-    "mtime": 1784794076.810683,
-    "ast_hash": "d6c320c36d70a3f5a18e27cb5c1e9ba6",
-    "semantic_hash": "d6c320c36d70a3f5a18e27cb5c1e9ba6"
+    "mtime": 1784795062.7099874,
+    "ast_hash": "651756b178cd04a0bc61f7c64851b4fc",
+    "semantic_hash": ""
   },
   "contribution/DEFINITIONS.md": {
-    "mtime": 1784793745.7895093,
+    "mtime": 1784763866.9942892,
     "ast_hash": "a7d623d5ddec35be1c3a65ad55717565",
     "semantic_hash": "a7d623d5ddec35be1c3a65ad55717565"
   },
   "contribution/README.md": {
-    "mtime": 1784793745.789608,
+    "mtime": 1784763866.9944,
     "ast_hash": "be9255f15e813d9e954bcea971d12d60",
     "semantic_hash": "be9255f15e813d9e954bcea971d12d60"
   },
   "contribution/code/F1_REPORT.md": {
-    "mtime": 1784793745.7897408,
+    "mtime": 1784763866.9946737,
     "ast_hash": "1e14e5ec55709fb1b7ebea5cde443880",
     "semantic_hash": "1e14e5ec55709fb1b7ebea5cde443880"
   },
   "contribution/note/NOTE.md": {
-    "mtime": 1784793745.7927794,
+    "mtime": 1784763866.999474,
     "ast_hash": "0b880f81efbed7659325f0bd5a3187ae",
     "semantic_hash": "0b880f81efbed7659325f0bd5a3187ae"
   },
   "contribution/packets/2026-07-22-automatic-transcript-rigidity/COLLATZ_AUTOMATIC_TRANSCRIPT_RIGIDITY.md": {
-    "mtime": 1784793745.7929933,
+    "mtime": 1784787790.3384848,
     "ast_hash": "a022855f622fd841dc4e377640ad8b6e",
     "semantic_hash": "a022855f622fd841dc4e377640ad8b6e"
   },
   "contribution/packets/2026-07-22-deep-fourier-scan/COLLATZ_DEEP_FOURIER_SCAN.md": {
-    "mtime": 1784793745.794125,
+    "mtime": 1784787790.3411608,
     "ast_hash": "fd261729ffa9b9cde71eb11d0c80920f",
     "semantic_hash": "fd261729ffa9b9cde71eb11d0c80920f"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md": {
-    "mtime": 1784793745.7946947,
+    "mtime": 1784763866.9997838,
     "ast_hash": "4477ea3dd8d1f80054c511fb2dd5acc2",
     "semantic_hash": "4477ea3dd8d1f80054c511fb2dd5acc2"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/COLLATZ_PREFIX_RETURN_BARRIER.md": {
-    "mtime": 1784793745.7947824,
+    "mtime": 1784763866.9999142,
     "ast_hash": "48e70f7c24c52541b8faa8e0c277e345",
     "semantic_hash": "48e70f7c24c52541b8faa8e0c277e345"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/COLLATZ_RATIONAL_COMPLEXITY_LEAN_BLUEPRINT.md": {
-    "mtime": 1784793745.7948596,
+    "mtime": 1784763867.0000203,
     "ast_hash": "4a8d2c4266287407925856ae8c380851",
     "semantic_hash": "4a8d2c4266287407925856ae8c380851"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/LANDMARK_STRATEGIES_AND_COLLATZ_CONTINUATION.md": {
-    "mtime": 1784793745.7949607,
+    "mtime": 1784763867.0001798,
     "ast_hash": "d34f8c1126e10e0e89c0d4f3e33801c6",
     "semantic_hash": "d34f8c1126e10e0e89c0d4f3e33801c6"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/README.md": {
-    "mtime": 1784793745.7950342,
+    "mtime": 1784763867.0006783,
     "ast_hash": "e5e03270e8b006a99880c615b14396fe",
     "semantic_hash": "e5e03270e8b006a99880c615b14396fe"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_resonance_table.txt": {
-    "mtime": 1784793745.7959247,
+    "mtime": 1784763867.002068,
     "ast_hash": "d6270c8efe7c6ce031ff73a59382bf5e",
     "semantic_hash": "d6270c8efe7c6ce031ff73a59382bf5e"
   },
   "contribution/packets/2026-07-22-plateau-escape-weight/COLLATZ_PLATEAU_ESCAPE_WEIGHT.md": {
-    "mtime": 1784793745.7983143,
+    "mtime": 1784787790.3425446,
     "ast_hash": "f2ba08e408df1e76581f7e7e0d294e22",
     "semantic_hash": "f2ba08e408df1e76581f7e7e0d294e22"
   },
   "contribution/packets/2026-07-22-pointwise-drift-wall/COLLATZ_POINTWISE_DRIFT_WALL.md": {
-    "mtime": 1784793745.7988994,
+    "mtime": 1784787790.3447154,
     "ast_hash": "543e432d1adc39833c2dea4038a18bc5",
     "semantic_hash": "543e432d1adc39833c2dea4038a18bc5"
   },
   "contribution/packets/2026-07-22-scalar-phase-second-moment/COLLATZ_SCALAR_PHASE_SECOND_MOMENT.md": {
-    "mtime": 1784793745.7994275,
+    "mtime": 1784787790.3453445,
     "ast_hash": "eb2ce5a635b41b0b69d8175ba524cd91",
     "semantic_hash": "eb2ce5a635b41b0b69d8175ba524cd91"
   },
   "contribution/packets/2026-07-22-structure-randomness-transfer/COLLATZ_STRUCTURE_RANDOMNESS_TRANSFER.md": {
-    "mtime": 1784793745.7999773,
+    "mtime": 1784787790.3457322,
     "ast_hash": "fcaaa339a0a07991f27dbadf3617802d",
     "semantic_hash": "fcaaa339a0a07991f27dbadf3617802d"
   },
   "contribution/packets/2026-07-22-syracuse-fourier/COLLATZ_SYRACUSE_FOURIER.md": {
-    "mtime": 1784793745.8004293,
+    "mtime": 1784787790.3461328,
     "ast_hash": "2e93346088343acc7a1f27fbf717445a",
     "semantic_hash": "2e93346088343acc7a1f27fbf717445a"
   },
   "contribution/packets/2026-07-22-tao-structural-refinement/COLLATZ_TAO_STRUCTURAL_REFINEMENT.md": {
-    "mtime": 1784793745.8010702,
+    "mtime": 1784787790.3465703,
     "ast_hash": "331a9dd24934906c96ecdc359b8f9593",
     "semantic_hash": "331a9dd24934906c96ecdc359b8f9593"
   },
   "contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md": {
-    "mtime": 1784793745.8015456,
+    "mtime": 1784763867.0054536,
     "ast_hash": "5b83720c8a2d2ab28551e67d826c8962",
     "semantic_hash": "5b83720c8a2d2ab28551e67d826c8962"
   },
   "contribution/proofs/FENCE.md": {
-    "mtime": 1784793745.8016534,
+    "mtime": 1784763867.0055902,
     "ast_hash": "41b05be423dee6ac2d6e099f838db03f",
     "semantic_hash": "41b05be423dee6ac2d6e099f838db03f"
   },
   "contribution/proofs/FORMALIZATION.md": {
-    "mtime": 1784793745.801755,
+    "mtime": 1784763867.0057602,
     "ast_hash": "c3b4ec9fa1af3f8d721dc560639f7880",
     "semantic_hash": "c3b4ec9fa1af3f8d721dc560639f7880"
   },
   "contribution/proofs/LEMMA2_PROOF.md": {
-    "mtime": 1784793745.801835,
+    "mtime": 1784763867.0059125,
     "ast_hash": "34fc7b5e2011602f88b241de7649d71b",
     "semantic_hash": "34fc7b5e2011602f88b241de7649d71b"
   },
   "contribution/proofs/LIFT_COCYCLE.md": {
-    "mtime": 1784793745.8019493,
+    "mtime": 1784763867.0060697,
     "ast_hash": "e72dd8d5ffa07814c29902eed24e9884",
     "semantic_hash": "e72dd8d5ffa07814c29902eed24e9884"
   },
   "contribution/proofs/PARTIAL_THEOREMS.md": {
-    "mtime": 1784793745.8020365,
+    "mtime": 1784763867.0062196,
     "ast_hash": "e9cd72c9a57c31d7b12fd9ee6b6cab2c",
     "semantic_hash": "e9cd72c9a57c31d7b12fd9ee6b6cab2c"
   },
   "contribution/proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md": {
-    "mtime": 1784793745.8021255,
+    "mtime": 1784763867.00636,
     "ast_hash": "95dcb9860e64ba24e746b06593dfef25",
     "semantic_hash": "95dcb9860e64ba24e746b06593dfef25"
   },
   "contribution/proofs/RATIONAL_IRRATIONAL_SHADOW.md": {
-    "mtime": 1784793745.8022327,
+    "mtime": 1784763867.006534,
     "ast_hash": "415cb09fef62b58a22a453e9a2b5971b",
     "semantic_hash": "415cb09fef62b58a22a453e9a2b5971b"
   },
   "contribution/reports/F1_REPORT.md": {
-    "mtime": 1784793745.8023493,
+    "mtime": 1784763867.0067365,
     "ast_hash": "18ff3a622d317957e9453379959346df",
     "semantic_hash": "18ff3a622d317957e9453379959346df"
   },
   "contribution/reports/F2B_REPORT.md": {
-    "mtime": 1784793745.802422,
+    "mtime": 1784763867.0068245,
     "ast_hash": "9ba7e00899cab0f9c857ef3a5b2afb18",
     "semantic_hash": "9ba7e00899cab0f9c857ef3a5b2afb18"
   },
   "contribution/reports/F2_REPORT.md": {
-    "mtime": 1784793745.8025088,
+    "mtime": 1784763867.0069616,
     "ast_hash": "990388d9b72dd8b6dc1a50f24c2554cb",
     "semantic_hash": "990388d9b72dd8b6dc1a50f24c2554cb"
   },
   "contribution/reports/F4_REPORT.md": {
-    "mtime": 1784793745.8026772,
+    "mtime": 1784763867.0072446,
     "ast_hash": "2c463b4404d0d6c6653961ff65d12098",
     "semantic_hash": "2c463b4404d0d6c6653961ff65d12098"
   },
   "contribution/reports/F4_supplement_t33.md": {
-    "mtime": 1784793745.8027506,
+    "mtime": 1784763867.0073843,
     "ast_hash": "77e32fa5638fea8c382deb4f754d880d",
     "semantic_hash": "77e32fa5638fea8c382deb4f754d880d"
   },
   "contribution/reports/GROK_PACKET_RESULT.md": {
-    "mtime": 1784793745.8028257,
+    "mtime": 1784763867.0074832,
     "ast_hash": "a4b90d71510bad9c034ed4586eec657e",
     "semantic_hash": "a4b90d71510bad9c034ed4586eec657e"
   },
   "contribution/reports/PHASE_TABLE.md": {
-    "mtime": 1784793745.8030336,
+    "mtime": 1784763867.0076275,
     "ast_hash": "bc4a2086133a0279a6d6d71d392bab3d",
     "semantic_hash": "bc4a2086133a0279a6d6d71d392bab3d"
   },
   "contribution/reports/VERIFICATION.md": {
-    "mtime": 1784793745.8031225,
+    "mtime": 1784763867.0077853,
     "ast_hash": "8015b88a4d264074a4768393fbce7619",
     "semantic_hash": "8015b88a4d264074a4768393fbce7619"
   },
   "contribution/reports/screen_k10_results.md": {
-    "mtime": 1784793745.8036156,
+    "mtime": 1784763867.0084038,
     "ast_hash": "bceb00ebc61b27302a664911218be482",
     "semantic_hash": "bceb00ebc61b27302a664911218be482"
   },
   "exploratory/ARCHITECTURE.md": {
-    "mtime": 1784793745.8037407,
+    "mtime": 1784763867.0085826,
     "ast_hash": "1b027c5f608da94a6b16734431da3fee",
     "semantic_hash": "1b027c5f608da94a6b16734431da3fee"
   },
   "exploratory/ELEMENTS.md": {
-    "mtime": 1784793745.8038394,
+    "mtime": 1784763867.008732,
     "ast_hash": "c67809046ddc815ed8ae5310b2c5f928",
     "semantic_hash": "c67809046ddc815ed8ae5310b2c5f928"
   },
   "exploratory/LANGUAGE.md": {
-    "mtime": 1784793745.8039706,
+    "mtime": 1784763867.0089083,
     "ast_hash": "de12a2dc7d7473089d59564b7223db3c",
     "semantic_hash": "de12a2dc7d7473089d59564b7223db3c"
   },
   "exploratory/LENSES.md": {
-    "mtime": 1784793745.8040779,
+    "mtime": 1784763867.009089,
     "ast_hash": "1f43c3171beb38a2650ff30dca9243ef",
     "semantic_hash": "1f43c3171beb38a2650ff30dca9243ef"
   },
   "exploratory/METADYNAMICAL_GEOMETRY.md": {
-    "mtime": 1784793745.8042157,
+    "mtime": 1784763867.0093107,
     "ast_hash": "4623b9bbe944cf3c03d417067be4028d",
     "semantic_hash": "4623b9bbe944cf3c03d417067be4028d"
   },
   "exploratory/README.md": {
-    "mtime": 1784793745.8043,
+    "mtime": 1784763867.0098493,
     "ast_hash": "b120c39f134e27b8ed8209ff29dbd5e3",
     "semantic_hash": "b120c39f134e27b8ed8209ff29dbd5e3"
   },
   "quarantine/README.md": {
-    "mtime": 1784794076.774225,
+    "mtime": 1784794736.0889566,
     "ast_hash": "01c4de84fbd627dfb7255fd411ae5da1",
     "semantic_hash": "01c4de84fbd627dfb7255fd411ae5da1"
   },
   "contribution/reports/F3-literature-map.md": {
-    "mtime": 1784793745.802598,
+    "mtime": 1784763867.0071063,
     "ast_hash": "e099bda285ac12547cf25fdc831675d1",
     "semantic_hash": "e099bda285ac12547cf25fdc831675d1"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_resonance_lattice.png": {
-    "mtime": 1784793745.795514,
+    "mtime": 1784763867.0013697,
     "ast_hash": "7be4376b17bc65f1ef375c46eb63f739",
     "semantic_hash": "7be4376b17bc65f1ef375c46eb63f739"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_resonance_lattice.svg": {
-    "mtime": 1784793745.79565,
+    "mtime": 1784763867.0018313,
     "ast_hash": "2454fa9a2bd14e4aa246d92264ef6fab",
     "semantic_hash": "2454fa9a2bd14e4aa246d92264ef6fab"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_strategy_flow.png": {
-    "mtime": 1784793745.7962966,
+    "mtime": 1784763867.0027387,
     "ast_hash": "b561810d1d4345d550c0d92398639d19",
     "semantic_hash": "b561810d1d4345d550c0d92398639d19"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_strategy_flow.svg": {
-    "mtime": 1784793745.7964568,
+    "mtime": 1784763867.0032358,
     "ast_hash": "cd5744410e8d554322ff334d8f745103",
     "semantic_hash": "cd5744410e8d554322ff334d8f745103"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_strategy_machine.png": {
-    "mtime": 1784793745.7972465,
+    "mtime": 1784763867.0043125,
     "ast_hash": "854d955b017fc2a110a0b8713b9959f1",
     "semantic_hash": "854d955b017fc2a110a0b8713b9959f1"
   },
   "contribution/packets/2026-07-22-landmark-pointwise/collatz_strategy_machine.svg": {
-    "mtime": 1784793745.7976747,
+    "mtime": 1784763867.0044873,
     "ast_hash": "5c76082f544cbf2f1119f2a263998ee0",
     "semantic_hash": "5c76082f544cbf2f1119f2a263998ee0"
+  },
+  "contribution/packets/2026-07-23-plateau-drift-test/plateau_drift_certificate.json": {
+    "mtime": 1784823177.1562066,
+    "ast_hash": "154f1c2ba816c9beccf7f2b0bd3725e5",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-07-23-plateau-drift-test/plateau_drift_kernel.c": {
+    "mtime": 1784792670.1381972,
+    "ast_hash": "d0595af58bd5f8ed0e276bd04be657a5",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-07-23-plateau-drift-test/test_verify_plateau_drift_test.py": {
+    "mtime": 1784822996.8736513,
+    "ast_hash": "03cf3996b82581a8439950011ef5777d",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-07-23-plateau-drift-test/verify_plateau_drift_test.py": {
+    "mtime": 1784822888.4427187,
+    "ast_hash": "dd56b3fc97768d38d542c05612c69e38",
+    "semantic_hash": ""
+  },
+  "exploratory/shadow-barrier/collatz_shadow_barrier_results.json": {
+    "mtime": 1784794385.1100712,
+    "ast_hash": "0ad1b6edc94322bca7ca3aae1cbe6a27",
+    "semantic_hash": ""
+  },
+  "exploratory/shadow-barrier/collatz_shadow_barrier_verify.py": {
+    "mtime": 1784794385.109455,
+    "ast_hash": "de121e299b6a7a1e1053455c1ffa9fd1",
+    "semantic_hash": ""
+  },
+  "STATE.md": {
+    "mtime": 1784794976.426037,
+    "ast_hash": "f13e975f6c00d7131faa7325b2023476",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-07-23-plateau-drift-test/COLLATZ_PLATEAU_DRIFT_TEST.md": {
+    "mtime": 1784822927.5580618,
+    "ast_hash": "8b598d5be02389b00a569b4f299e437c",
+    "semantic_hash": ""
+  },
+  "exploratory/compression-framework-notes.md": {
+    "mtime": 1784795577.7189176,
+    "ast_hash": "4613637a4ebae94ddd0799ef98cc53e1",
+    "semantic_hash": ""
+  },
+  "exploratory/shadow-barrier/COLLATZ_TWO_METRIC_SHADOW_BARRIER.md": {
+    "mtime": 1784794385.1086385,
+    "ast_hash": "8725d949f767b2e1d3b0f89032ded941",
+    "semantic_hash": ""
+  },
+  "exploratory/shadow-barrier/PROVENANCE.md": {
+    "mtime": 1784794508.4749389,
+    "ast_hash": "1afba81a0ffd3a1844e8518e825d0011",
+    "semantic_hash": ""
   }
 }
