@@ -265,8 +265,8 @@
     "semantic_hash": "0374b5e6c948387c5652fb8f95cb8bad"
   },
   "README.md": {
-    "mtime": 1784828694.5878873,
-    "ast_hash": "48aa13279c102d8aba8d9fc48ef34d89",
+    "mtime": 1784795062.7099874,
+    "ast_hash": "651756b178cd04a0bc61f7c64851b4fc",
     "semantic_hash": ""
   },
   "contribution/DEFINITIONS.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "STATE.md": {
-    "mtime": 1784828632.556529,
-    "ast_hash": "13c59bbc81b6d20e6875b86fd15cc3e4",
+    "mtime": 1784794976.426037,
+    "ast_hash": "f13e975f6c00d7131faa7325b2023476",
     "semantic_hash": ""
   },
   "contribution/packets/2026-07-23-plateau-drift-test/COLLATZ_PLATEAU_DRIFT_TEST.md": {
@@ -567,36 +567,6 @@
   "exploratory/shadow-barrier/PROVENANCE.md": {
     "mtime": 1784794508.4749389,
     "ast_hash": "1afba81a0ffd3a1844e8518e825d0011",
-    "semantic_hash": ""
-  },
-  "contribution/packets/2026-07-23-cycle-exclusion-extension/cycle_exclusion_extension_results.json": {
-    "mtime": 1784826655.5272238,
-    "ast_hash": "8b64a0410c6e8c1d6db74257cbb18004",
-    "semantic_hash": ""
-  },
-  "contribution/packets/2026-07-23-cycle-exclusion-extension/run_cycle_exclusion_extension.py": {
-    "mtime": 1784826070.6680434,
-    "ast_hash": "fd1e1d3a135d021d1cd899c5ba45fb3f",
-    "semantic_hash": ""
-  },
-  "contribution/packets/2026-07-23-cycle-exclusion-extension/test_cycle_exclusion_extension.py": {
-    "mtime": 1784826511.8128712,
-    "ast_hash": "0c2a7d3d532176c9de98424fd5f31e5e",
-    "semantic_hash": ""
-  },
-  "formal/lake-manifest.json": {
-    "mtime": 1784824977.9216373,
-    "ast_hash": "644eeeda0cae89fca808db56ffa3b720",
-    "semantic_hash": ""
-  },
-  "contribution/packets/2026-07-23-cycle-exclusion-extension/CYCLE_EXCLUSION_EXTENSION.md": {
-    "mtime": 1784826783.2748897,
-    "ast_hash": "0082dbc259d5c5377d70e590540a470c",
-    "semantic_hash": ""
-  },
-  "formal/README.md": {
-    "mtime": 1784828506.915468,
-    "ast_hash": "6c05ad0a586ce627221734841c4f6d55",
     "semantic_hash": ""
   }
 }

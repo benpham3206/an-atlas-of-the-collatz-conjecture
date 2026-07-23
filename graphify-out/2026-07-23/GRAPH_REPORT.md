@@ -1,16 +1,16 @@
 # Graph Report - collatz-atlas  (2026-07-23)
 
 ## Corpus Check
-- 112 files · ~186,309 words
+- 106 files · ~178,014 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1424 nodes · 2178 edges · 80 communities (77 shown, 3 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 53 edges (avg confidence: 0.52)
+- 1353 nodes · 2085 edges · 75 communities (72 shown, 3 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 49 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `04efaa25`
+- Built from commit: `6541c485`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -88,11 +88,6 @@
 - Repository state
 - plateau_drift_kernel.c
 - Provenance — shadow-barrier packet
-- run_cycle_exclusion_extension.py
-- Cycle exclusion extension: no nontrivial positive cycle with at most 20 odd members
-- formal/ — Lean 4 certificates for the Collatz atlas
-- CycleSearchError
-- test_cli_subprocess_default_output_path
 
 ## God Nodes (most connected - your core abstractions)
 1. `Landmark Proof Architectures and a Collatz Continuation` - 37 edges
@@ -121,7 +116,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (80 total, 3 thin omitted)
+## Communities (75 total, 3 thin omitted)
 
 ### Community 0 - "test_f2.py"
 Cohesion: 0.06
@@ -145,7 +140,7 @@ Nodes (40): all_sigmas(), all_words(), block_oscillator(), classify_word(), cmp_
 
 ### Community 5 - "COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md"
 Cohesion: 0.04
-Nodes (46): 2. Near-neutral resonance tiles, Phase 4: globalize, 6. Smale 17: use the right condition metric and the right output notion, Part X. Parallel research programs, Lemma 2. Height-complexity collision principle, Part V. Consequences, 1. The true critical constants, Corollary 7. Balanced supercritical words require large complexity (+38 more)
+Nodes (47): 2. Near-neutral resonance tiles, Phase 4: globalize, 6. Smale 17: use the right condition metric and the right output notion, Part X. Parallel research programs, Lemma 2. Height-complexity collision principle, Part V. Consequences, 1. The true critical constants, Corollary 7. Balanced supercritical words require large complexity (+39 more)
 
 ### Community 6 - "rational_shadow.py"
 Cohesion: 0.15
@@ -180,8 +175,8 @@ Cohesion: 0.18
 Nodes (23): canonical_cycle(), classify_system(), contains_float(), main(), markdown_table(), Path, Exact finite phase scan for two-branch maps T_{a,b}.  This is an empirical class, Classify every seed in [1, seed_stop) under explicit finite caps. (+15 more)
 
 ### Community 14 - "test_exact_cycle_search.py"
-Cohesion: 0.19
-Nodes (19): canonical_composition_count(), canonical_rotation(), composition_count(), compositions_of(), is_canonical_rotation(), Stream all ordered compositions of K into m positive integer parts.      Count o, Lexicographically minimal cyclic rotation (unique cycle representative)., Number of positive compositions of K into m parts (before symmetry). (+11 more)
+Cohesion: 0.13
+Nodes (23): canonical_composition_count(), composition_count(), compositions_of(), fixed_point_fraction(), Fraction, Return C_m / (2^K - 3^m) when 2^K != 3^m; else None., Stream all ordered compositions of K into m positive integer parts.      Count o, Number of positive compositions of K into m parts (before symmetry). (+15 more)
 
 ### Community 15 - "An Atlas of the Collatz Conjecture"
 Cohesion: 0.09
@@ -212,12 +207,12 @@ Cohesion: 0.15
 Nodes (11): char_function_max(), decay_table(), main(), oscillation(), One step of Lemma 1.12: P on Z/3^n -> Q on Z/3^{n+1}, exact., Yield (n, P) float64 distributions for n = 1..n_max., max |sum_x P(x) e^{-2πi ξ x / 3^n}| over ξ not divisible by 3., Osc_{m,n} of the distribution tuple (Tao's (1.27)).      Coset of Y is {Y' == Y (+3 more)
 
 ### Community 22 - "CycleSearchError"
-Cohesion: 0.24
-Nodes (10): odd_only_step(), Odd-only accelerated Collatz map on positive odd integers., Direct exact orbit check for U under prescribed valuations.      Returns     ---, 2-adic valuation of a positive even integer; rejects non-positive., One step of U on a positive odd integer.      Returns ``(U(n), a)`` where ``a =, U(), v2(), verify_valuation_orbit() (+2 more)
+Cohesion: 0.14
+Nodes (15): CycleSearchError, odd_only_step(), parse_pair(), Direct exact orbit check for U under prescribed valuations.      Returns     ---, Machine-checkable failure record., Parse ``m:K`` into integers., Raised for invalid CLI / parameter input with a structured payload., 2-adic valuation of a positive even integer; rejects non-positive. (+7 more)
 
 ### Community 23 - "exact_cycle_search.py"
-Cohesion: 0.33
-Nodes (5): CycleCandidate, evaluate_exponents(), One verified integral odd cycle for a valuation word (canonical form)., Build a CycleCandidate if the valuation word yields a verified integral cycle., rotations()
+Cohesion: 0.18
+Nodes (14): canonical_rotation(), CycleCandidate, evaluate_exponents(), is_canonical_rotation(), is_positive_composition(), is_trivial_cycle(), Exact positive-cycle search for the fixed odd-only 3n+1 map.  Map (odd positives, True iff a is a length-m composition of K into positive parts. (+6 more)
 
 ### Community 24 - "test_verify_syracuse_fourier.py"
 Cohesion: 0.16
@@ -244,8 +239,8 @@ Cohesion: 0.14
 Nodes (15): Elements of Metadynamical Geometry, Book 0 — Postulates, Book 0 — Common notions, Book III — Founding problems, Book 0 — Definitions, Proposition 2 — Finite observational collision is an equivalence relation, How to read this, Exploratory drafts (+7 more)
 
 ### Community 30 - "affine_CS"
-Cohesion: 0.15
-Nodes (16): affine_CS(), affine_fixed_point_via_direct_formula(), fixed_point_fraction(), Fraction, Compute (C_m, S_m) for exponent tuple a via the packet recurrence.      S_0 = 0,, Return C_m / (2^K - 3^m) when 2^K != 3^m; else None., If a yields an exact positive odd integer fixed point, return (n, C_m, denom)., Apply the composite odd-only map assuming valuations a hold: (3^m n + C_m) / 2^K (+8 more)
+Cohesion: 0.18
+Nodes (14): affine_CS(), affine_fixed_point_via_direct_formula(), Odd-only accelerated Collatz map on positive odd integers., Compute (C_m, S_m) for exponent tuple a via the packet recurrence.      S_0 = 0,, If a yields an exact positive odd integer fixed point, return (n, C_m, denom)., Apply the composite odd-only map assuming valuations a hold: (3^m n + C_m) / 2^K, try_integral_fixed_point(), U() (+6 more)
 
 ### Community 31 - "Automatic transcript rigidity: the subcritical and critical strata are closed, the supercritical stratum is provably the"
 Cohesion: 0.15
@@ -260,8 +255,8 @@ Cohesion: 0.17
 Nodes (13): Pointwise drift wall — subcritical aperiodic words are not positive-integer Collatz states, 5. Corollary — the two-wall screen for any counterexample transcript, Lemma 3 — unconditional upper envelope, 6. Named-class eliminations, 3. Theorem 1 — pointwise drift wall, 9. Reproduce, 8. Related work, 4. Theorem 2 — subcritical realizability obstruction (+5 more)
 
 ### Community 34 - "main"
-Cohesion: 0.15
-Nodes (18): build_arg_parser(), build_report(), dumps_report(), is_positive_composition(), is_trivial_cycle(), main(), PairResult, parse_pair() (+10 more)
+Cohesion: 0.21
+Nodes (11): ArgumentParser, build_arg_parser(), build_report(), dumps_report(), main(), PairResult, Path, Run the search on each pair and assemble a deterministic JSON report. (+3 more)
 
 ### Community 35 - "F1 Report — Collatz word-fold calculus"
 Cohesion: 0.18
@@ -403,42 +398,22 @@ Nodes (4): BLOCKED, ESTABLISHED, NEXT, Repository state
 Cohesion: 0.50
 Nodes (3): Adversarial read-back: gaps between this theorem and Collatz progress, Independent rerun verdict, Provenance — shadow-barrier packet
 
-### Community 75 - "run_cycle_exclusion_extension.py"
-Cohesion: 0.06
-Nodes (43): affine_cs_closed_form(), assemble_pair_record(), build_arg_parser(), build_chunks(), cmd_finalize(), cmd_plan(), cmd_scan(), exact_window() (+35 more)
-
-### Community 76 - "Cycle exclusion extension: no nontrivial positive cycle with at most 20 odd members"
-Cohesion: 0.15
-Nodes (12): Counterexample watch, Cross-validation evidence, Cycle exclusion extension: no nontrivial positive cycle with at most 20 odd members, Dominance note (why the enumeration stops being the frontier), Feasibility assessment (before running), Files, Limitations, Method (+4 more)
-
-### Community 77 - "formal/ — Lean 4 certificates for the Collatz atlas"
-Cohesion: 0.22
-Nodes (8): Counterexample watch, formal/ — Lean 4 certificates for the Collatz atlas, How to build, Layout, Provenance: relationship to the formal-conjectures draft, Remaining `sorry`s, What is proved (plain language), What is proved (plain language) — Terras bijection
-
-### Community 78 - "CycleSearchError"
-Cohesion: 0.29
-Nodes (5): CycleSearchError, Machine-checkable failure record., Raised for invalid CLI / parameter input with a structured payload., StructuredError, Exception
-
-### Community 79 - "test_cli_subprocess_default_output_path"
-Cohesion: 0.50
-Nodes (4): Path, Subprocess run of the module writing the package default results path., test_cli_subprocess_default_output_path(), test_cli_writes_results_and_stdout_match()
-
 ## Knowledge Gaps
-- **534 isolated node(s):** `Route`, `Commodity`, `ESTABLISHED`, `BLOCKED`, `NEXT` (+529 more)
+- **517 isolated node(s):** `Route`, `Commodity`, `ESTABLISHED`, `BLOCKED`, `NEXT` (+512 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Complete research packet — 2026-07-22` connect `Complete research packet — 2026-07-22` to `main`, `COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, `Landmark Proof Architectures and a Collatz Continuation`, `EXACT_COUNTEREXAMPLE_SEARCH.md`, `COLLATZ_PREFIX_RETURN_BARRIER.md`, `RATIONAL_IRRATIONAL_SHADOW.md`, `verify_dgg_counterexample.py`, `verify_complexity_pressure.py`, `verify_rational_complexity_finite.py`, `Lean blueprint: rational-lift complexity obstruction`, `PRIMITIVE_UNIFORM_OBSTRUCTION.md`, `Collatz attack packet — one page for Kimi K3 (and peers)`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `Complete research packet — 2026-07-22` connect `Complete research packet — 2026-07-22` to `COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, `Landmark Proof Architectures and a Collatz Continuation`, `EXACT_COUNTEREXAMPLE_SEARCH.md`, `COLLATZ_PREFIX_RETURN_BARRIER.md`, `RATIONAL_IRRATIONAL_SHADOW.md`, `verify_dgg_counterexample.py`, `verify_complexity_pressure.py`, `verify_rational_complexity_finite.py`, `exact_cycle_search.py`, `Lean blueprint: rational-lift complexity obstruction`, `PRIMITIVE_UNIFORM_OBSTRUCTION.md`, `Collatz attack packet — one page for Kimi K3 (and peers)`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **Why does `Collatz attack packet — one page for Kimi K3 (and peers)` connect `Collatz attack packet — one page for Kimi K3 (and peers)` to `Complete research packet — 2026-07-22`, `COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, `NOTE.md`, `contribution/README.md`, `EXACT_COUNTEREXAMPLE_SEARCH.md`, `COLLATZ_PREFIX_RETURN_BARRIER.md`, `An Atlas of the Collatz Conjecture`, `RATIONAL_IRRATIONAL_SHADOW.md`, `LEMMA2_PROOF.md`, `PARTIAL_THEOREMS.md`, `PRIMITIVE_UNIFORM_OBSTRUCTION.md`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
 - **Why does `An Atlas of the Collatz Conjecture` connect `An Atlas of the Collatz Conjecture` to `Architecture — Collatz Atlas + MoO v0`, `NOTE.md`, `contribution/README.md`, `VERIFICATION.md`, `FENCE.md`, `Collatz attack packet — one page for Kimi K3 (and peers)`, `quarantine/README.md`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **What connects `Route`, `Commodity`, `ESTABLISHED` to the rest of the system?**
-  _534 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _517 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `test_f2.py` be split into smaller, more focused modules?**
   _Cohesion score 0.05980861244019139 - nodes in this community are weakly interconnected._
 - **Should `f4_feature_regression.py` be split into smaller, more focused modules?**
