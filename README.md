@@ -36,7 +36,7 @@ T(n) = (3n+1)/2   if n odd
 ```
 
 Conjecture: for every integer n ≥ 1, some iterate reaches 1. Verified for
-n < 2^68.
+n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 
 ## Repository layout
 
@@ -53,13 +53,19 @@ n < 2^68.
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
-| [`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/) | Exact cycle exclusion extended to ≤ 20 odd members (1.24 × 10⁹ words) |
+| [`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/) | Exact cycle exclusion extended to ≤ 20 odd members (6.20 × 10⁸ words per phase; 1.24 × 10⁹ word-scans across both phases) |
+| [`contribution/packets/2026-07-24-streaming-depth-21/`](contribution/packets/2026-07-24-streaming-depth-21/) | Streaming layer engine (breaks the n = 20 memory ceiling at 4× lower footprint, bit-identity gated) + direct P6 branch discrimination on the M_n decay law |
+| [`contribution/packets/2026-07-22-tao-structural-refinement/`](contribution/packets/2026-07-22-tao-structural-refinement/) | Structural refinement of Tao's exceptional set — description, **not** size; explicitly not a stronger density statement |
+| [`contribution/packets/2026-07-22-syracuse-fourier/`](contribution/packets/2026-07-22-syracuse-fourier/) | Exact Syracuse Fourier recursion, exponential L² mixing, computed spectral barrier to "all" |
+| [`contribution/packets/2026-07-22-scalar-phase-second-moment/`](contribution/packets/2026-07-22-scalar-phase-second-moment/) | Three exact reductions; uniform Fourier decay reduced to one 1-parameter profile on the 2–3 resonance chain |
+| [`contribution/packets/2026-07-22-structure-randomness-transfer/`](contribution/packets/2026-07-22-structure-randomness-transfer/) | Structure–randomness crosswalk; one proved theorem plus an isolated open test object |
+| [`contribution/packets/2026-07-22-pointwise-drift-wall/`](contribution/packets/2026-07-22-pointwise-drift-wall/) | Pointwise exclusion at critical drift α = log₃2, no structural hypothesis; two-wall transcript screen |
 | [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras bijection; two-branch family) |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 | [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier (exploratory; provenance chatgpt-thread-1784792218410; not cited as a result) |
 | [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
-| [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes |
+| [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes. **Read [`graphify-out/README.md`](graphify-out/README.md) first** — the map does not separate `contribution/` from `exploratory/` and `quarantine/`, so its connectivity ranking puts non-evidence drafts near the top |
 
 External papers are linked below and are not included in the repository.
 
@@ -189,8 +195,9 @@ Established in the repository:
 
 - The fold non-conjugacy theorem (k ≤ 10).
 - The realizability criterion and its two consequences.
-- Exact exclusion of nontrivial positive cycles with at most 18 odd members
-  (local finite window; not the global cycle bound from the literature).
+- Exact exclusion of nontrivial positive cycles with at most 20 odd members
+  (local finite window; not the global cycle bound from the literature, which
+  dominates this bound — Hercher 2023 excludes ≤ 91 local minima).
 - Pointwise complexity-pressure consequences for rational Φ, prefix-return
   barrier, rational-shadow deletion, and a primitive-uniform subcritical
   obstruction class (see packet + fence proofs).
@@ -213,7 +220,12 @@ below 2^20 is 217 steps.
 
 ## Verification commands
 
-Python 3, standard library only, exact integer/rational arithmetic.
+Python 3. The core fold programs (`contribution/code/`, including
+`code/fence/`) use the standard library only and exact integer/rational
+arithmetic. The packet verifiers under `contribution/packets/` additionally
+require `numpy` for their float64 *measurements*; no proved statement depends
+on it. Running the `test_*.py` files requires `pytest`. The plateau-drift
+kernel uses `clang` when available and falls back to numpy otherwise.
 
 ```
 python3 contribution/code/test_f1.py                  # word calculus

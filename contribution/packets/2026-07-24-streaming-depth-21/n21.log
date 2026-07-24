@@ -1,0 +1,24 @@
+target n=21, threads=12, chunk=2^24
+resident peak  ~17.3 GiB  (vs 69.3 GiB for the resident engine)
+  built layer 15 ( 0.07 GiB) in    0.2s
+  built layer 16 ( 0.21 GiB) in    0.7s
+  built layer 17 ( 0.64 GiB) in    2.3s
+  built layer 18 ( 1.92 GiB) in    7.4s
+  built layer 19 ( 5.77 GiB) in   23.3s
+  built layer 20 (17.32 GiB) in   82.2s
+resident layers done in 116.0s
+    max pass  25.0%
+    max pass  50.0%
+    max pass  75.1%
+    max pass 100.0%
+    bad pass  25.0%
+    bad pass  50.0%
+    bad pass  75.1%
+    bad pass 100.0%
+streamed layer 21 in 532.4s
+
+layer 21: M_n=0.0078721330 k=28 p2=0.887281 w05=0.250000 L02=4
+
+n=21 is beyond the certificate: NEW RESULT
+wrote /Users/benjaminpham/Projects/an-atlas-of-the-collatz-conjecture/contribution/packets/2026-07-24-streaming-depth-21/streaming_depth_certificate.json
+total 649.2s

@@ -1,0 +1,85 @@
+{
+  "comparisons": [
+    {
+      "branch_i_exponential_fit": {
+        "intercept": 1.5443384313589323,
+        "max_abs_resid": 0.1903517405267352,
+        "r2": 0.9825159919631155,
+        "slope": 0.16471879432774636,
+        "ssr": 0.16415971751922825
+      },
+      "branch_ii_sqrt_fit": {
+        "intercept": -0.5015791385328694,
+        "max_abs_resid": 0.0639522555200207,
+        "r2": 0.9973167833908048,
+        "slope": 1.1805495386580147,
+        "ssr": 0.025193083855781926
+      },
+      "delta_aic_favouring_sqrt": 29.988325352549356,
+      "favoured_branch": "ii (sqrt, Tao-strength)",
+      "n_points": 16,
+      "n_range": [
+        6,
+        21
+      ],
+      "ssr_ratio_exp_over_sqrt": 6.516062839268201,
+      "window": "full"
+    },
+    {
+      "branch_i_exponential_fit": {
+        "intercept": 2.1770773601429263,
+        "max_abs_resid": 0.028141124180786736,
+        "r2": 0.9967232497096461,
+        "slope": 0.12810741596400574,
+        "ssr": 0.003237192686444175
+      },
+      "branch_ii_sqrt_fit": {
+        "intercept": 0.03155836024810058,
+        "max_abs_resid": 0.01360204238464835,
+        "r2": 0.9992233276989955,
+        "slope": 1.0516372978295945,
+        "ssr": 0.0007672961531359502
+      },
+      "delta_aic_favouring_sqrt": 12.956300394591416,
+      "favoured_branch": "ii (sqrt, Tao-strength)",
+      "n_points": 9,
+      "n_range": [
+        13,
+        21
+      ],
+      "ssr_ratio_exp_over_sqrt": 4.218961183649524,
+      "window": "tail n>=13"
+    }
+  ],
+  "packet": "2026-07-24-streaming-depth-21",
+  "points": {
+    "10": 0.03827831719153209,
+    "11": 0.03194418903668633,
+    "12": 0.026458169230385273,
+    "13": 0.02205242637426014,
+    "14": 0.01912799065509558,
+    "15": 0.01628448424842392,
+    "16": 0.014409493140715645,
+    "17": 0.01251068673127918,
+    "18": 0.011187266418073646,
+    "19": 0.009815709861076138,
+    "20": 0.008884592751140003,
+    "21": 0.007872132965024493,
+    "6": 0.09610639145904683,
+    "7": 0.0758700380399607,
+    "8": 0.06089073926143174,
+    "9": 0.048026153634701994
+  },
+  "quantity": "M_n decay law, P6 branch discrimination",
+  "status": "float64 measurement; not a theorem",
+  "tail_diagnostics": {
+    "c_lin_monotone_decreasing": true,
+    "c_lin_tail_max": 0.2934102033457088,
+    "c_lin_tail_min": 0.23068696326155513,
+    "c_lin_tail_spread": 0.06272324008415364,
+    "c_sqrt_tail_max": 1.0631449048529986,
+    "c_sqrt_tail_min": 1.0561925445704055,
+    "c_sqrt_tail_spread": 0.006952360282593162
+  },
+  "verdict": "Over the measured window the sqrt law fits decisively better and the exponential constant has not stabilised. Direction of evidence: branch (ii), Tao-strength. This is a finite window and proves neither branch."
+}

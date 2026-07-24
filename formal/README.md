@@ -151,7 +151,22 @@ valid for every positive `b`.
 **None.** All four TwoBranchFamily theorems, all six support lemmas, and
 the Terras bijection (`terras_bijection`, `rho_correct`, `terras_affine`
 plus the induction chain) compile with empty axiom bases beyond the
-classical triple. Not-yet-formalized parts of
+classical triple.
+
+This is now **machine-checked rather than asserted**: every one of the 13
+public declarations carries a `#print axioms` line, so `lake build` prints
+the full audit and any future `sorry` would surface as `sorryAx` in the
+build log. Measured on toolchain v4.31.0, 2026-07-24:
+
+| Axiom base | Declarations |
+|---|---|
+| none at all | `orbit_add`, `orbit_succ` |
+| `[propext, Quot.sound]` | `terras_bijection`, `rho_correct`, `terras_affine`, `S_lt_of_lt`, `S_pos`, `twoBranch_invariant`, `orbit_in_band`, `twoBranch_enters_finite_set` |
+| full classical triple | `twoBranch_eventually_periodic`, `twoBranch_periodic_tail`, `exists_eq_of_forall_lt` |
+
+Note that most of the file is *stronger* than the README previously
+claimed: only the three pigeonhole-dependent results reach for
+`Classical.choice` at all, and two results use no axioms whatsoever. Not-yet-formalized parts of
 Theorem 4's prose (decidability of point-to-point reachability; the
 machine-simulation definition behind "step-faithfully simulates") are
 documentation-level claims, not statements in the draft file; they are

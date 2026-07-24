@@ -7,20 +7,20 @@
 | 1. Independent re-verification | **MATCH** | 510/510 classes at `k <= 8`; zero sequence or minimal-recurrence mismatches |
 | 2. Extension through `k = 10` | **MATCH** | 2,046 classes; 85 exact laws; zero cross-depth law buckets |
 | 3. Avoiding-language / first-return cross-check | **CORRECTION-DERIVED** | Naive avoidance counts are not branch counts; corrected first-return counts match 196/196 terms for all 14 classes, `t=1..14` |
-| 4. Reports and read-back | **MATCH** | Both required reports created under `fold/verify/`; no existing file changed |
+| 4. Reports and read-back | **MATCH** | Both required reports created under `fold/contribution/code/fence/`; no existing file changed |
 
 ## What ran
 
-1. Read `fold/F2B_REPORT.md`, `fold/f2b_analytic_screen.py`, `fold/f2_fold_operator.py`, `fold/f1_word_calculus.py`, and `CLAUDE.md` section 3.
+1. Read `contribution/reports/F2B_REPORT.md`, `contribution/code/f2b_analytic_screen.py`, `contribution/code/f2_fold_operator.py`, `contribution/code/f1_word_calculus.py`, and `CLAUDE.md` section 3.
 2. Ran one inline Python exact verifier. Its independent side built the avoiding automaton by direct suffix/prefix comparison, formed its integer transfer matrix `Q`, generated 100 exact terms, and recovered the scalar minimal recurrence with exact rational Berlekamp–Massey. Its comparison side separately coded the screen's KMP transitions and exact Hankel/Gaussian recurrence recovery, without importing or executing `f2b_analytic_screen.py`.
-3. Ran `python3 fold/f2b_analytic_screen.py 8` as a black-box aggregate read-back.
+3. Ran `python3 contribution/code/f2b_analytic_screen.py 8` as a black-box aggregate read-back.
 4. Called `fold.f2_fold_operator.induced_first_return(k, r, max_s=14, node_budget=2_000_000)` for every `k=1..3`, `0 <= r < 2^k`, and grouped resolved branches by exact return time `t`.
 
 Measured runtimes on this machine:
 
 - independent 2,046-class law computation, including all 510 oracle comparisons: **11.6675 s**;
 - 14-class first-return cross-check at cap 14: **0.1255 s**;
-- existing screen reports its own runtime as approximately **0.64 s** in `fold/F2B_REPORT.md` (the fresh black-box run completed normally).
+- existing screen reports its own runtime as approximately **0.64 s** in `contribution/reports/F2B_REPORT.md` (the fresh black-box run completed normally).
 
 Grok contribution: none. The exact requested delegate invocation failed before task execution with `{component: codex-grok-delegate, root cause: EPERM opening the Grok plugin job log under ~/.claude/plugins/data, failure type: delegate runtime failure}`. No permission bypass or alternate invocation was used.
 
@@ -38,7 +38,7 @@ Aggregate black-box agreement: the existing screen prints `510 classes`, `47 dis
 
 ## Extension result
 
-The complete 85-row law table is in `fold/verify/screen_k10_results.md`. Its member counts sum to 2,046. Every law bucket has exactly one depth, so no counting law is shared across depths through `k=10`.
+The complete 85-row law table is in `contribution/reports/screen_k10_results.md`. Its member counts sum to 2,046. Every law bucket has exactly one depth, so no counting law is shared across depths through `k=10`.
 
 ## Exact first-return correction
 
@@ -85,7 +85,7 @@ The cap leaves unresolved mass for returns after the tested range; this does not
 
 ## Discrepancy with existing framing
 
-`fold/F2B_REPORT.md` says the paranoia check found no distinct laws with dominant rates equal within `1e-9`. The current `python3 fold/f2b_analytic_screen.py 8` output instead prints six rate collisions, including the Fibonacci/tribonacci-style inherited rates already described elsewhere in that report. The independent table confirms those collisions and extends the pattern (for example IDs 035/064 and 048/085).
+`contribution/reports/F2B_REPORT.md` says the paranoia check found no distinct laws with dominant rates equal within `1e-9`. The current `python3 contribution/code/f2b_analytic_screen.py 8` output instead prints six rate collisions, including the Fibonacci/tribonacci-style inherited rates already described elsewhere in that report. The independent table confirms those collisions and extends the pattern (for example IDs 035/064 and 048/085).
 
 This does **not** change the exact-law or no-cross-depth-law verdict. It does invalidate any framing that different recurrence laws always have different dominant rates. Exact recurrence comparison, not growth rate alone, is the sound discriminator used here.
 

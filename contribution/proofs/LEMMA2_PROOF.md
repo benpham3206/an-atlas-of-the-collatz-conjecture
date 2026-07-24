@@ -2,7 +2,7 @@
 
 **Status: PROVEN.** The statement is true for every `k >= 1` and `t >= 1`
 when “branch” has the meaning used by the fold implementation and by
-`fold/note/NOTE.md`: a symbolic first-return cylinder in the index `m`.
+`contribution/note/NOTE.md`: a symbolic first-return cylinder in the index `m`.
 
 ## Statement with all conventions fixed
 
@@ -110,7 +110,7 @@ T^t(n)=\frac{3^a n+c}{2^t}.
 
 Substituting `m=u+2^t q` makes the returned class index an affine integer
 function of the free parameter `q`. This is precisely a resolved branch in
-`fold/f2_fold_operator.py`.
+`contribution/code/f2_fold_operator.py`.
 
 No two accepted extensions give the same symbolic branch: they give distinct
 residues `u mod 2^t`. Nor can a coarser index cylinder determine that extension,

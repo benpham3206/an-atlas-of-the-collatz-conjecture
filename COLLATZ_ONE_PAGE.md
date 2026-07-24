@@ -1,6 +1,6 @@
 # Collatz attack packet — one page for Kimi K3 (and peers)
 
-**Date:** 2026-07-22  
+**Date:** 2026-07-22 (cycle-exclusion figures updated 2026-07-23)  
 **Repo:** [an-atlas-of-the-collatz-conjecture](https://github.com/benpham3206/an-atlas-of-the-collatz-conjecture)  
 **Status:** Collatz on positive integers remains **open**. Nothing below is a full proof or a counterexample.
 
@@ -103,22 +103,30 @@ Proof: [`contribution/proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md`](contribution/pro
 3^m < 2^K ≤ (22/7)^m
 ```
 
-for nontrivial cycles (states ≥ 7). Exhaustive check for all admissible valuation words with **m ≤ 18** odd members:
+for nontrivial cycles (states ≥ 7). Exhaustive check for all admissible valuation words with **m ≤ 20** odd members (originally m ≤ 18; extended 2026-07-23):
 
 | Quantity | Value |
 |---|---|
-| Ordered valuation words | 44,558,430 |
-| Cyclic classes (Burnside) | 2,578,829 |
+| Ordered valuation words, m ≤ 18 | 44,558,430 |
+| Cyclic classes (Burnside), m ≤ 18 | 2,578,829 |
+| Ordered valuation words, m ≤ 20 (per phase) | 619,545,781 |
+| Word-scans across both enumerator phases | 1,239,091,562 |
 | Nontrivial integral cycles found | **0** |
 | Control | trivial `n=1`, word `(2)` |
 
 **Durable box:**
 
-> There is no nontrivial positive Collatz cycle with at most **18** odd members.
+> There is no nontrivial positive Collatz cycle with at most **20** odd members.
 
-This is a verified **bounded** exclusion, not a global proof. Literature (Hercher + Bařina verification through `2^71`) already forces any hypothetical nontrivial cycle to have more than `~1.375×10^11` odd members — so extending m from 18→19 is dominated work.
+This is a verified **bounded** exclusion, not a global proof, and it is
+**dominated by the literature** by roughly eleven orders of magnitude:
+Hercher 2023 plus Bařina's `2^71` verification already force any hypothetical
+nontrivial cycle to have more than `~1.375×10^11` odd members. Treat this
+search as an exact-arithmetic oracle for the fold machinery, not as a frontier
+bound. Extending m further is dominated work.
 
-Write-up: [`contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md`](contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md)  
+Write-up: [`contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md`](contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md) (m ≤ 18) ·
+[`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/) (m ≤ 20)  
 Engine / tests / JSON: `contribution/code/fence/exact_cycle_search*`
 
 ---
@@ -157,7 +165,7 @@ Directory: [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/
 
 **Delete (low EV / already closed here):**
 
-- Short-cycle search with m ≤ 18  
+- Short-cycle search with m ≤ 20 (and any further extension — dominated)  
 - Forbidding finite parity words  
 - Treating 2-adic / rational shadow orbits as positive-integer counterexamples  
 - “Looks high for a long time” as divergence  

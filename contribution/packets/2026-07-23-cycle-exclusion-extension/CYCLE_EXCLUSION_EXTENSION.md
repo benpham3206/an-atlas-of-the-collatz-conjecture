@@ -119,7 +119,9 @@ JSON carries `counterexample_watch.fired = false` and an empty
 ## The next wall, quantified (m = 21)
 
 The m = 21 window is the single layer \((21,34)\) with
-\(\binom{33}{20}=573{,}166{,}440\) words — 1.17× the entire m ≤ 20 corpus.
+\(\binom{33}{20}=573{,}166{,}440\) words — 1.17× the m = 20 layers
+(488,494,125 words), and 0.93× this packet's full per-phase corpus
+(619,545,781 words).
 At this packet's measured throughput that is ≈ 3.1 min wall (≈ 17
 single-core-minutes) per phase, so m = 21 is computationally feasible with
 the same machinery.  It is not mathematically worthwhile (see below) and

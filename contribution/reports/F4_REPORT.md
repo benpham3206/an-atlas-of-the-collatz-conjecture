@@ -85,9 +85,9 @@ A divergent orbit would need density `≥ log 2 / log 3 ≈ 0.630930` forever.
 
 ## Files
 
-- `fold/f4_feature_regression.py` — experiment
-- `fold/test_f4.py` — verification
-- `fold/F4_REPORT.md` — this report
+- `contribution/code/f4_feature_regression.py` — experiment
+- `contribution/code/test_f4.py` — verification
+- `contribution/reports/F4_REPORT.md` — this report
 
 ## Runtime note
 
