@@ -8,7 +8,11 @@ Plain Lean 4 core only; no mathlib.  Modules:
   non-universal (PARTIAL_THEOREMS.md, Theorem 4), fully proved.
 * `Formal.TerrasBijection` — parity words of length `k` biject with
   residues mod `2^k` (PARTIAL_THEOREMS.md, Theorem 1), fully proved.
+* `Formal.CollisionPrinciple` — a repeated length-`k` parity block in an
+  orbit that is not eventually periodic forces a state `≥ 2^k`
+  (landmark packet, Lemmas 1–2 / Theorem 4.1), fully proved.
 -/
 import Formal.Pigeonhole
 import Formal.TwoBranchFamily
 import Formal.TerrasBijection
+import Formal.CollisionPrinciple

@@ -93,6 +93,17 @@ Proof + verifier: [`contribution/proofs/RATIONAL_IRRATIONAL_SHADOW.md`](contribu
 Primitive constant-length binary substitutions that are non-eventually-periodic with one-density `β < log₃ 2` cannot have `Φ(q)` in the odd-denominator rationals (hence not positive-integer transcripts).  
 Proof: [`contribution/proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md`](contribution/proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md).
 
+### 2.9 Supercritical primitive uniform words: complexity, not density
+
+The supercritical half of that class is attacked with factor complexity instead. For aperiodic `q` with `Φ(q) ∈ ℚ_odd`,
+
+```
+C := limsup_k p_q(k)/k  ≥  α/(β − α)   for any β with  f(ℓ) ≤ βℓ + O(1)
+```
+
+(landmark memo Corollary 7; `β = 1` recovers Corollary 4's `C ≥ κ = 1.7095…`). `C` is *finitely computable* for a coding of a uniform-morphism fixed point, from the exact factor language — that is the whole content of the 2026-07-24 packet. It closes **99 of the 109** enumerated supercritical 2-automatic survivors, all 56 binary ones; **10 named ternary-coded automata remain**, and their complexity constants are exactly computed and genuinely above threshold.  
+Proof + certificates: [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/).
+
 ---
 
 ## 3. Best computational assault this arc (Codex, 2026-07-22)
@@ -159,7 +170,7 @@ Directory: [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/
 ## 6. What to attempt (highest EV)
 
 1. **Parser-density amplification:** if one positive survivor exists, force a positive log-density set of survivors → contradict Tao.
-2. **Realizability for one named nonperiodic class** beyond eventual periodicity and beyond the subcritical primitive substitutions already excluded — prove `Φ(q) ∉ ℤ_{>0}`.
+2. **Realizability for one named nonperiodic class** beyond eventual periodicity and beyond the subcritical primitive substitutions already excluded — prove `Φ(q) ∉ ℤ_{>0}`. Sharpest concrete target: the **ten** ternary-coded automata left open in §2.9. They need a mechanism that *consumes* high factor complexity rather than requiring it; sharpening the complexity bound provably cannot reach them.
 3. **Divergence certificate** for a single explicit positive integer (infinite invariant / monotone certificate) — if you claim a counterexample.
 4. **Cycle certificate** as a finite positive list verified under the acceptance gate in `EXACT_COUNTEREXAMPLE_SEARCH.md` — if you claim a counterexample.
 

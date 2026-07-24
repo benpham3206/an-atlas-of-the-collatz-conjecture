@@ -1,0 +1,35 @@
+{
+  "cross_reference_rigidity_packet": {
+    "binary_still_open": [],
+    "closed_here_self_contained": 97,
+    "closed_here_with_unique_ergodicity": 99,
+    "reproduced_by_this_sweep": 109,
+    "still_open_count": 10,
+    "their_supercritical_survivors": 109
+  },
+  "env": {
+    "VSAC_ELL_DENS": 512,
+    "VSAC_M0": 192,
+    "VSAC_MAXLEN": 4,
+    "VSAC_NCHECK": 2000,
+    "VSAC_PREFIX": 8192,
+    "VSAC_TERNARY": true
+  },
+  "phi_orbits_cross_checked": 2000,
+  "result": {
+    "headline": "99 of the 109 supercritical survivors of 2026-07-22-automatic-transcript-rigidity are proved to have Phi(q) not in Z_{>0}; 10 remain open.",
+    "killed_by_corollary4_kappa": 30,
+    "killed_by_density_selfcontained": 114,
+    "killed_by_density_unique_ergodicity": 116,
+    "killed_self_contained_total": 114,
+    "killed_with_unique_ergodicity_total": 116,
+    "not_killed": 10,
+    "supercritical_primitive_words": 126
+  },
+  "status": "ok",
+  "stratum": {
+    "binary_ell<=4": 64,
+    "ternary_ell2_coded": 62,
+    "total_supercritical_primitive": 126
+  }
+}

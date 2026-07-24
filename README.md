@@ -12,7 +12,8 @@ conjecture remains open.
 | A parity transcript q is realized by a positive integer iff Φ(q) ∈ ℤ_{>0} | derivation in `contribution/proofs/PARTIAL_THEOREMS.md` |
 | No nontrivial positive cycle with ≤ 20 odd members | exact search + independent oracle: `contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md` and `contribution/packets/2026-07-23-cycle-exclusion-extension/` |
 | Rational Φ with odd denominator forces complexity pressure; Sturmian excluded | pointwise memo in `contribution/packets/2026-07-22-landmark-pointwise/` |
-| Terras bijection and two-branch-family non-universality | zero-sorry Lean 4 certificates: `formal/` |
+| 99 of the 109 enumerated supercritical 2-automatic survivors have Φ(q) ∉ ℤ_{>0} | proved, one exact integer certificate per word: `contribution/packets/2026-07-24-supercritical-automatic-closure/` |
+| Terras bijection, two-branch-family non-universality, parity-block collision principle | zero-sorry Lean 4 certificates: `formal/` |
 | Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
 
 **Start here for agent handoff:** [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md)  
@@ -50,6 +51,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/code/`](contribution/code/) | Exact-arithmetic implementations and executable checks |
 | [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/) | Landmark strategy, strategy machine, resonance lattice, prefix-return barrier, rational finite verifier |
 | [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/) | Automatic-transcript trichotomy, density-wall impossibility witnesses, 514-word exact hunt |
+| [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) | Exact factor-language complexity bound (Lemma D); 99 of the 109 supercritical survivors proved non-realizable; frontier reduced to 10 named automata |
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
@@ -60,7 +62,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/packets/2026-07-22-scalar-phase-second-moment/`](contribution/packets/2026-07-22-scalar-phase-second-moment/) | Three exact reductions; uniform Fourier decay reduced to one 1-parameter profile on the 2–3 resonance chain |
 | [`contribution/packets/2026-07-22-structure-randomness-transfer/`](contribution/packets/2026-07-22-structure-randomness-transfer/) | Structure–randomness crosswalk; one proved theorem plus an isolated open test object |
 | [`contribution/packets/2026-07-22-pointwise-drift-wall/`](contribution/packets/2026-07-22-pointwise-drift-wall/) | Pointwise exclusion at critical drift α = log₃2, no structural hypothesis; two-wall transcript screen |
-| [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras bijection; two-branch family) |
+| [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras bijection; two-branch family; parity-block collision principle) |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 | [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier (exploratory; provenance chatgpt-thread-1784792218410; not cited as a result) |
@@ -201,6 +203,10 @@ Established in the repository:
 - Pointwise complexity-pressure consequences for rational Φ, prefix-return
   barrier, rational-shadow deletion, and a primitive-uniform subcritical
   obstruction class (see packet + fence proofs).
+- Non-realizability of 99 of the 109 enumerated supercritical 2-automatic
+  words, via an exact computable bound on factor complexity. This shrinks a
+  listed-open stratum; it does not close it (10 named words remain) and does
+  not settle the general 2-automatic question.
 
 Not established:
 
@@ -234,6 +240,14 @@ python3 contribution/code/f2b_analytic_screen.py 8    # counting-law screen (~1 
 python3 contribution/code/test_f4.py                  # feature-regression null result
 python3 -m pytest contribution/code/fence/test_exact_cycle_search.py -q
 python3 contribution/packets/2026-07-22-landmark-pointwise/verify_rational_complexity_finite.py
+python3 contribution/packets/2026-07-24-supercritical-automatic-closure/verify_supercritical_closure.py       # ~16 s
+python3 contribution/packets/2026-07-24-supercritical-automatic-closure/test_verify_supercritical_closure.py  # runs standalone or under pytest
+```
+
+Lean certificates (toolchain pinned in `formal/lean-toolchain`; no mathlib):
+
+```
+cd formal && lake build
 ```
 
 ## Attribution
