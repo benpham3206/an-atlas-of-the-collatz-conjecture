@@ -86,6 +86,16 @@ it is decided by depth measurements, not by a new idea.
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
   2-automatic orbit. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
+- **Supercritical stratum: 99 of 109 closed.** The enumerated supercritical
+  survivors are excluded by a *proved* upper bound on the factor-complexity
+  constant C = limsup p_q(k)/k, computed from the exact factor language of
+  each fixed point (Lemma D) and fed into the landmark packet's existing
+  Corollaries 4 and 7. 97/109 need no cited input; 99/109 with the unique
+  ergodicity of primitive substitutions. All 56 binary-morphism survivors
+  closed; the 10 that remain are ternary-coded and are **not** bound slack —
+  their exact p(1537)/1537 already exceeds α/(ρ−α). Witness 1 of the
+  rigidity packet (σ(0)=11, σ(1)=10, ρ=2/3) dies on the single integer
+  comparison 3²⁷ < 2⁴³. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
 - **Plateau-escape-weight reduction.** Uniform decay of M_n reduced, with a
   proved tight rate, to the integer length L(n) of the bad chain interval per
   layer (P1–P4, P6); bounds on L(n) of log type imply decay past Tao's
@@ -138,8 +148,14 @@ it is decided by depth measurements, not by a new idea.
   finite-check-at-one-layer plus phase-blind propagation argument can
   establish w_n(ε) ≥ w > 0; the missing input is the intrinsic chain phase
   pattern at every layer. [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
-- **Supercritical automatic stratum.** Open; shown density-proof — no
-  density argument can close it (Theorem 3 of the rigidity packet). [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
+- **Supercritical automatic stratum.** Still open as a *class* statement —
+  "no divergent Collatz orbit has a 2-automatic parity word" is unproved,
+  and no density argument can close it (Theorem 3 of the rigidity packet).
+  What changed 2026-07-24: the *enumerated* part of the stratum is no longer
+  109 words but **10 named ternary-coded automata**, because the obstruction
+  there was complexity, not density. The general statement needs a bound on
+  C for automata that are not codings of uniform-morphism fixed points; no
+  such bound exists here. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/), [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
 - **No bound on L(n).** No proved bound on L(n) beyond n ≤ 13; measurements
   run to n = 20 (drift-test packet). [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
 - **Cycle exclusion wall at m = 21.** The next layer (21, 34) has
@@ -155,8 +171,13 @@ it is decided by depth measurements, not by a new idea.
 - **formal-conjectures contribution.** Target: the Collatz section of
   google-deepmind/formal-conjectures (one file today: bare `collatzStep` +
   conjecture). Route: port the zero-sorry Lean proofs (Terras bijection
-  first, then two-branch family) into their mathlib-based style and open
-  the required pre-PR issue. [`formal/`](formal/)
+  first, then two-branch family, now also the collision principle) into
+  their mathlib-based style and open the required pre-PR issue. [`formal/`](formal/)
+- **The ten remaining supercritical automata.** Each needs a genuinely
+  different argument: their factor-complexity constants are exactly computed
+  and sit *above* α/(ρ−α), so no sharpening of Lemma D reaches them. Either
+  find a second inequality that consumes complexity rather than requiring it,
+  or decide the lift-digit question for these ten words directly. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
 - **Shadow-barrier exploratory integration.** Exact two-metric barrier for
   rational shadows (real divergence vs 2-adic convergence along near-neutral
   contractive subsequences), integrated under exploratory/ with verbatim

@@ -16,6 +16,7 @@ formal/
     Pigeonhole.lean           # bespoke pigeonhole for Nat sequences
     TwoBranchFamily.lean      # Theorem 4 of contribution/proofs/PARTIAL_THEOREMS.md
     TerrasBijection.lean      # Theorem 1 of contribution/proofs/PARTIAL_THEOREMS.md
+    CollisionPrinciple.lean   # Lemmas 1-2 / Theorem 4.1 of the landmark packet
 ```
 
 ## How to build
@@ -122,6 +123,35 @@ This is the classical Terras (1976) bijection; the Lean proof is the
 atlas's own formalization and matches the repository's `k ≤ 20`
 computational verification (`contribution/code/F1_REPORT.md`, D2).
 
+## What is proved (plain language) — collision principle
+
+Source: `contribution/packets/2026-07-22-landmark-pointwise/`
+`COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, Lemmas 1–2, and
+Theorem 4.1 of the strategy memo. The file `Formal/CollisionPrinciple.lean`
+proves, in namespace `CollatzAtlas.Collision`:
+
+1. **`states_eq_of_block_eq`** — if positions `i` and `j` of a Terras orbit
+   carry the same length-`k` parity block and *both* states are below `2^k`,
+   the two states are equal. Immediate from `Terras.parityWord_eq_iff` plus
+   `Nat.mod_eq_of_lt`; this is the arithmetic content of Lemma 1 together
+   with the small-height half of Lemma 2.
+2. **`orbit_shift_eq`** — equal states make the two orbit tails identical
+   (via `iterT_add`, proved here).
+3. **`collision_forces_large_state`** — the form actually used downstream:
+   if the tails from `i` and `j` differ anywhere, a repeated length-`k`
+   parity block forces `2^k ≤ iterT i n` or `2^k ≤ iterT j n`.
+
+This is the step that turns *symbolic repetition* into a *height excursion*,
+and it is what the factor-complexity lower bounds
+(`limsup p_q(k)/k ≥ κ`, and the density-refined version) are built on. It is
+consumed by `contribution/packets/2026-07-24-supercritical-automatic-closure/`.
+
+**Not formalized, and deliberately so:** the terminal statements of those
+packets are asymptotic inequalities involving `limsup` and `log_3 2`. Plain
+Lean 4 core has no reals, no limits and no logarithms, so they cannot be
+stated here at all. The finite step above is the part with arithmetic
+content. Axiom base: `[propext, Quot.sound]`.
+
 ## Provenance: relationship to the formal-conjectures draft
 
 `Formal/TwoBranchFamily.lean` is a port of
@@ -148,12 +178,12 @@ valid for every positive `b`.
 
 ## Remaining `sorry`s
 
-**None.** All four TwoBranchFamily theorems, all six support lemmas, and
-the Terras bijection (`terras_bijection`, `rho_correct`, `terras_affine`
-plus the induction chain) compile with empty axiom bases beyond the
-classical triple.
+**None.** All four TwoBranchFamily theorems, all six support lemmas, the
+Terras bijection (`terras_bijection`, `rho_correct`, `terras_affine` plus
+the induction chain) and the three collision-principle theorems compile with
+empty axiom bases beyond the classical triple.
 
-This is now **machine-checked rather than asserted**: every one of the 13
+This is now **machine-checked rather than asserted**: every one of the 16
 public declarations carries a `#print axioms` line, so `lake build` prints
 the full audit and any future `sorry` would surface as `sorryAx` in the
 build log. Measured on toolchain v4.31.0, 2026-07-24:
@@ -161,7 +191,7 @@ build log. Measured on toolchain v4.31.0, 2026-07-24:
 | Axiom base | Declarations |
 |---|---|
 | none at all | `orbit_add`, `orbit_succ` |
-| `[propext, Quot.sound]` | `terras_bijection`, `rho_correct`, `terras_affine`, `S_lt_of_lt`, `S_pos`, `twoBranch_invariant`, `orbit_in_band`, `twoBranch_enters_finite_set` |
+| `[propext, Quot.sound]` | `terras_bijection`, `rho_correct`, `terras_affine`, `states_eq_of_block_eq`, `orbit_shift_eq`, `collision_forces_large_state`, `S_lt_of_lt`, `S_pos`, `twoBranch_invariant`, `orbit_in_band`, `twoBranch_enters_finite_set` |
 | full classical triple | `twoBranch_eventually_periodic`, `twoBranch_periodic_tail`, `exists_eq_of_forall_lt` |
 
 Note that most of the file is *stronger* than the README previously

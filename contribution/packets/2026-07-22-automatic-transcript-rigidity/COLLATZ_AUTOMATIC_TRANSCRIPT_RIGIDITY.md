@@ -361,6 +361,18 @@ Results (certificate, full mode; 514 distinct words):
   These are exact finite-window certificates, **not** proofs of
   non-realizability — the Gap of Theorem 1 is precisely that no such
   proof currently exists.
+  **Superseded 2026-07-24 for 99 of these 109 words.**
+  [`../2026-07-24-supercritical-automatic-closure/`](../2026-07-24-supercritical-automatic-closure/)
+  computes a *proved* upper bound on each word's factor-complexity constant
+  from its exact factor language, and feeds it into Corollaries 4 and 7 of
+  the landmark packet; that yields `Φ(q) ∉ ℤ_{>0}` outright (not a window)
+  for 99 of the 109, including Witness 1 of Theorem 3 below (which dies on
+  the single comparison `3^27 < 2^43`). All 56 binary-morphism survivors are
+  closed; 10 ternary-coded words remain, and their complexity constants are
+  exactly computed and sit above the threshold, so the remaining obstruction
+  there is genuine. **Witness 2 is untouched**: it contains arbitrarily long
+  all-ones runs, so its maximal factor density is 1 and the density route
+  degenerates to the plain \(\kappa\) threshold there.
 - **Named families (confirming and extending packet 1).** Thue–Morse
   (\(1/2\)), period-doubling (\(1/3\)), Rudin–Shapiro (\(1/2\)),
   paperfolding (\(1/2\)): subcritical kills confirmed with exact
