@@ -292,13 +292,13 @@ gate.
 
 ### 5. Automate last
 
-`verify/rational_shadow.py` automates three independent checks:
+`contribution/code/fence/rational_shadow.py` automates three independent checks:
 
 1. the affine fixed-point identity;
 2. direct rational Terras iteration and return;
 3. agreement with the modular inverse-conjugacy series.
 
-`verify/test_rational_shadow.py` exhausts every word through length nine and
+`contribution/code/fence/test_rational_shadow.py` exhausts every word through length nine and
 checks 2-adic coherence of Fibonacci shadows. The next Lean target is
 Proposition 1 plus the nested-cylinder convergence statement—not the Collatz
 conjecture.

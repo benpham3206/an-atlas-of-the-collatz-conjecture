@@ -5,7 +5,7 @@
 *Draft v2 — 2026-07-18. Authors: B. Pham (program, questions, direction) and
 Claude Fable 5 (formalization, computation, this text); independent
 verification and the exact first-return formula by GPT-5.6 Sol
-(`fold/verify/`). Status: internal draft; machine-verified throughout; one
+(`fold/contribution/code/fence/`). Status: internal draft; machine-verified throughout; one
 written proof outstanding (Lemma 2's general case); NOT submitted anywhere.*
 
 ---
@@ -42,12 +42,12 @@ Two classical facts anchor everything (Terras 1976; Everett 1977):
 
 **Fact 1 (Terras bijection).** The length-$k$ parity word of $n$ depends only
 on $n \bmod 2^k$, and the induced map $\mathbb{Z}/2^k \to \{0,1\}^k$ is a
-bijection. *(Machine-verified for $k \le 20$ in `fold/test_f1.py`.)*
+bijection. *(Machine-verified for $k \le 20$ in `contribution/code/test_f1.py`.)*
 
 **Fact 2 (composite affine form).** Applying a fixed word $w$ of length $L$
 containing $a$ ones computes $n \mapsto (3^a n + c_w)/2^L$ with
 $c_w \in \mathbb{Z}_{\ge 0}$ determined by $w$.
-*(Machine-verified against $10^4$ random orbits in `fold/test_f1.py`.)*
+*(Machine-verified against $10^4$ random orbits in `contribution/code/test_f1.py`.)*
 
 By Fact 1, the residue of $T^t(n)$ mod $2^k$ is determined by the length-$k$
 window of the parity word at offset $t$: residue trajectories mod $2^k$ are
@@ -66,7 +66,7 @@ is an arithmetic progression in $m$ and its action is affine,
 $$ m \;\longmapsto\; \frac{3^{a_w}\, m + c'_w}{2^{L_w}} \cdot 2^{\,\text{(normalization)}},
 \qquad \text{slope} = \frac{3^{a_w}}{2^{L_w}}, $$
 
-with all data exact integers (implementation: `fold/f2_fold_operator.py`; the
+with all data exact integers (implementation: `contribution/code/f2_fold_operator.py`; the
 branch-predicted image agrees with direct simulation of $T$ to first return on
 1000/1000 random samples, and branch-domain masses sum to exactly $1$ per
 class in $\mathbb{Q}$).
@@ -77,7 +77,7 @@ between the index sets with $h \circ R_{k,r} = R_{k',r'} \circ h$.
 
 The question — does the Collatz map ever reproduce itself under folding? — is
 a renormalization question. We found no prior literature treating it
-(see `fold/F3-literature-map.md`; nearest neighbors are residue-decomposition
+(see `contribution/reports/F3-literature-map.md`; nearest neighbors are residue-decomposition
 studies without induced-map conjugacy).
 
 ## 3. The slope invariant
@@ -104,7 +104,7 @@ prefix, hence the same automaton state before the final bit, and from any
 state at most one bit completes the window ($h_i \in \{0,1\}$) — so at most
 one sibling is a first-return branch at time $t$. Merging is impossible, and
 the symbolic partition is exactly the maximal-piece partition. *(Flagged as a
-proof obligation by independent verification — `fold/fence/FENCE.md` §8.4 —
+proof obligation by independent verification — `contribution/proofs/FENCE.md` §8.4 —
 and discharged here.)*
 
 So the **branch-count sequence** $\beta_{k,r}(L)$ — a purely combinatorial
@@ -135,7 +135,7 @@ steps) yield the Fibonacci law: the enumerated fold has exactly
 $F_{24} = 46368$ resolved branches and $F_{25} = 75025$ unresolved leaves at
 truncation depth $24$, while the non-self-overlapping windows (`01`, `10`)
 yield the degenerate linear law (276 branches, 25 leaves). Both predictions
-and both mirror-symmetries come out exactly (`fold/F2_REPORT.md`).
+and both mirror-symmetries come out exactly (`contribution/reports/F2_REPORT.md`).
 
 **Lemma 2 (window law — exact form; general proof outstanding).** Let $Q$ be
 the window's KMP transfer matrix with completion transitions deleted, $b$ the
@@ -147,7 +147,7 @@ $$ \beta_{k,r}(t) \;=\; e_b\, Q^{\,t-1}\, h. $$
 The *naive* avoidance count $e_0 Q^n \mathbf{1}$ is **not** the branch count —
 the fold starts immediately after an occurrence of the window (state $b$, not
 state $0$) and counts completions, not survivors. The corrected formula was
-derived in independent verification (`fold/verify/VERIFICATION.md`) and
+derived in independent verification (`contribution/reports/VERIFICATION.md`) and
 matches the exact fold enumeration in **196/196 positions** across all 14
 classes with $k \le 3$. Both count families share the annihilating structure
 of $Q$, which is why the avoidance-law screen and the corrected-count screen
@@ -159,10 +159,10 @@ argument, machine-checked exhaustively at small scale, not yet written out.
 ## 5. The screen and the theorem
 
 Three screens were run, in escalating rigor: (i) avoidance-law recurrences,
-all 510 classes $k \le 8$ (`fold/f2b_analytic_screen.py`, 0.64 s); (ii) an
+all 510 classes $k \le 8$ (`contribution/code/f2b_analytic_screen.py`, 0.64 s); (ii) an
 independent reimplementation (different automaton construction, exact
 Berlekamp–Massey), all 2,046 classes $k \le 10$, agreeing with (i) on every
-class (`fold/verify/`, 11.7 s); (iii) the **corrected first-return sequences**
+class (`fold/contribution/code/fence/`, 11.7 s); (iii) the **corrected first-return sequences**
 $\beta_{k,r}$ of Lemma 2 for all 2,046 classes, bucketed by exact 80-term
 sequence equality.
 
@@ -217,9 +217,9 @@ certificate; repository `Collatz Conjecture`, directory `fold/`.
 | `f2_fold_operator.py` + `test_f2.py` | exact fold enumeration, 62 classes $k \le 5$; simulation cross-check 1000/1000; mass partition $=1$ exact | ~11 min warm |
 | `f2b_analytic_screen.py` | the counting-law screen of §5 | 0.64 s |
 | `F2_REPORT.md`, `F2B_REPORT.md`, `F3-literature-map.md` | results and literature | — |
-| `verify/` | independent re-verification (GPT-5.6 Sol): 510/510 law match; $k \le 10$ extension; exact first-return formula, 196/196 term match | 11.7 s |
+| `contribution/code/fence/` | independent re-verification (GPT-5.6 Sol): 510/510 law match; $k \le 10$ extension; exact first-return formula, 196/196 term match | 11.7 s |
 
-**References** (status per `fold/F3-literature-map.md`): Terras 1976 *Acta
+**References** (status per `contribution/reports/F3-literature-map.md`): Terras 1976 *Acta
 Arith.*; Everett 1977 *Adv. Math.*; Lagarias 1985 *Amer. Math. Monthly*;
 Guibas–Odlyzko 1981 *J. Combin. Theory A* (string overlaps, pattern matching);
 Applegate–Lagarias 2006 (3x+1 semigroup); Hercher 2023 *J. Integer Seq.*;

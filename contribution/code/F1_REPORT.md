@@ -33,10 +33,10 @@ Packet F1 calibration: exact-arithmetic compositions of the Terras map.
 
 | Section | Status | Runtime (s) | Detail |
 |---------|--------|-------------|--------|
-| D1 composite calculus | PASS | 0.078 | samples=10000 property_t=0.075s |
-| D2 Terras bijection | PASS | 4.677 | For each k≤20, φ_k : Z/2^k Z → {0,1}^k, φ_k([n]) = length-k parity word of a positive lift of [n], is bijective. |
-| D3 cycle-candidate sweep | PASS | 54.139 | max_L=24 examined=1321649 pruned_growth=3254690 skipped_necklace=28978091 integral=12 verified=12 ns=[2] |
-| D4 stopping-time spectrum | PASS | 1.007 | limit=1048576 stop_max=183@n=1027431 p50=1 p99=32 total_max=329@n=837799 tp50=85 tp99=181 |
+| D1 composite calculus | PASS | 0.072 | samples=10000 property_t=0.070s |
+| D2 Terras bijection | PASS | 4.417 | For each k≤20, φ_k : Z/2^k Z → {0,1}^k, φ_k([n]) = length-k parity word of a positive lift of [n], is bijective. |
+| D3 cycle-candidate sweep | PASS | 50.130 | max_L=24 examined=1321649 pruned_growth=3254690 skipped_necklace=28978091 integral=12 verified=12 ns=[2] |
+| D4 stopping-time spectrum | PASS | 1.045 | limit=1048576 stop_max=183@n=1027431 p50=1 p99=32 total_max=329@n=837799 tp50=85 tp99=181 |
 | D5 extremal-word atlas | PASS | 0.000 | k=1..30 all verified; e.g. T^5(31)=242 |
 
 ## Cycle-candidate certificate detail
@@ -75,7 +75,7 @@ Verified cycle points:
 - min / max / argmax: 1 / 183 / n=1027431
 - mean: 3.484463
 - percentiles (50, 90, 99, 99.9): 1, 8, 32, 70
-- section runtime: 0.390s
+- section runtime: 0.387s
 
 ### Total stopping time (to 1)
 
@@ -83,7 +83,7 @@ Verified cycle points:
 - min / max / argmax: 0 / 329 / n=837799
 - mean: 88.134213
 - percentiles (50, 90, 99, 99.9): 85, 134, 181, 221
-- section runtime: 0.517s
+- section runtime: 0.556s
 
 ## Extremal-word atlas
 
@@ -106,6 +106,6 @@ An anomaly is a noteworthy result, not a test failure.
 
 ## Files
 
-- `fold/f1_word_calculus.py` — library
-- `fold/test_f1.py` — tests + report emitter
-- `fold/F1_REPORT.md` — this report
+- `contribution/code/f1_word_calculus.py` — library
+- `contribution/code/test_f1.py` — tests + report emitter
+- `contribution/reports/F1_REPORT.md` — this report

@@ -223,13 +223,13 @@ missing bridge is infinite and arithmetic.
 
 ## Executable evidence
 
-- `verify/primitive_uniform_obstruction.py` validates binary uniform
+- `contribution/code/fence/primitive_uniform_obstruction.py` validates binary uniform
   substitutions, decides 2-by-2 primitivity exactly, computes stationary
   one-frequencies as `Fraction`, certifies the bundled bounds on
   \(\log_3 2\), and emits finite factor/discrepancy controls.
-- `verify/test_primitive_uniform_obstruction.py` checks the named controls,
+- `contribution/code/fence/test_primitive_uniform_obstruction.py` checks the named controls,
   invalid inputs, deterministic CLI output, and exact-bound certificates.
-- `verify/primitive_uniform_results.json` is the generated read-back record.
+- `contribution/code/fence/primitive_uniform_results.json` is the generated read-back record.
 
 The finite factor counts do not prove the theorem. They test the machinery and
 named examples. The proof above carries the infinite conclusion.

@@ -106,6 +106,6 @@ An anomaly is a noteworthy result, not a test failure.
 
 ## Files
 
-- `fold/f1_word_calculus.py` — library
-- `fold/test_f1.py` — tests + report emitter
-- `fold/F1_REPORT.md` — this report
+- `contribution/code/f1_word_calculus.py` — library
+- `contribution/code/test_f1.py` — tests + report emitter
+- `contribution/reports/F1_REPORT.md` — this report

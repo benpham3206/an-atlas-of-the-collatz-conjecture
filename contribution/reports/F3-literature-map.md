@@ -10,7 +10,7 @@ labeled **VERIFIED** (source confirmed by search this session) or **RECALLED**
 
 | Result | Cite | Status | Exact statement | Relevance |
 |---|---|---|---|---|
-| Stopping times & parity words | Terras 1976, *Acta Arith.* 30, "A stopping time problem on the positive integers" | RECALLED (venue/title), statement machine-verified by F1 | For the accelerated map T, the length-k parity word of n depends only on n mod 2^k, and residues mod 2^k ↔ words of length k is a bijection | F1's D2 check — **independently re-verified computationally for k ≤ 20 in fold/test_f1.py** |
+| Stopping times & parity words | Terras 1976, *Acta Arith.* 30, "A stopping time problem on the positive integers" | RECALLED (venue/title), statement machine-verified by F1 | For the accelerated map T, the length-k parity word of n depends only on n mod 2^k, and residues mod 2^k ↔ words of length k is a bijection | F1's D2 check — **independently re-verified computationally for k ≤ 20 in contribution/code/test_f1.py** |
 | Independent proof of same | Everett 1977, *Adv. Math.* 25 | RECALLED | Almost all n have finite stopping time (via parity-word counting) | historical anchor for F1 |
 
 ## 2. 2-adic structure

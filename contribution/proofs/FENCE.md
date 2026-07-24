@@ -77,7 +77,7 @@ refinement depth is exactly `s=t`. The `196/196` machine comparison is not a
 premise.
 
 This closes the stated written-proof gap in Lemma 2. It does not automatically
-accept every downstream conjugacy assertion in `fold/note/NOTE.md`; preservation
+accept every downstream conjugacy assertion in `contribution/note/NOTE.md`; preservation
 of the chosen symbolic branch partition under the draft's notion of affine
 conjugacy remains a separate proof obligation.
 
@@ -108,16 +108,16 @@ a minimal universality theorem.
 ## 4. Empirical phase map
 
 The failed Grok packet and the inline exact scan are recorded under
-[`verify/`](verify/):
+[`contribution/code/fence/`](../code/fence):
 
-- [`GROK_PACKET_RESULT.md`](verify/GROK_PACKET_RESULT.md): verbatim delegate
+- [`GROK_PACKET_RESULT.md`](../reports/GROK_PACKET_RESULT.md): verbatim delegate
   failure;
-- [`fence_phase.py`](verify/fence_phase.py): exact scanner;
-- [`test_fence_phase.py`](verify/test_fence_phase.py): property and read-back
+- [`fence_phase.py`](../code/fence/fence_phase.py): exact scanner;
+- [`test_fence_phase.py`](../code/fence/test_fence_phase.py): property and read-back
   checks;
-- [`phase_results.json`](verify/phase_results.json): machine-readable
+- [`phase_results.json`](../code/fence/phase_results.json): machine-readable
   certificate; and
-- [`PHASE_TABLE.md`](verify/PHASE_TABLE.md): all 25 rows, cycles, and witnesses.
+- [`PHASE_TABLE.md`](../reports/PHASE_TABLE.md): all 25 rows, cycles, and witnesses.
 
 Grid: `a,b in {1,3,5,7,9}`; every `1 <= n < 1,000,000`; exact integers;
 unresolved at 10,000 new steps or current bit length greater than 64.
@@ -145,7 +145,7 @@ this table proves convergence, divergence, decidability, or universality.
 | Free matrix-semigroup transfer | unrestricted products of `M_0,M_1`; generic mortality | **BLOCKED after two gaps** | Gap 1: witness words ignore the parity guard. Gap 2: generic hardness changes generators/dimension, while this fixed pair is invertible. |
 | Minimal generalized-map threshold | restrict modulus, branch count, coefficients, and guards in Conway/Kurtz–Simon compilers | **LIVE — rank 3** | Produce an explicit deterministic compiler at a stated parameter point or a decidability theorem below it. “Generalized maps are universal” is too coarse. |
 | Fold/renormalization complexity | first-return branch languages and cross-depth laws | **CLOSED FOR THIS QUESTION** | It measures the free finite-word side. No link to positive-integer computational encoding has been proved. |
-| Finite parameter sweep | phase table in `verify/` | **COMPLETE AS TEXTURE** | No larger bound without a new invariant; finite-bound extrapolation is forbidden. |
+| Finite parameter sweep | phase table in `contribution/code/fence/` | **COMPLETE AS TEXTURE** | No larger bound without a new invariant; finite-bound extrapolation is forbidden. |
 
 ## 6. Precise obstruction that remains
 
@@ -249,7 +249,7 @@ cycles/cap exits and creates a theorem-sized classification question.
    orbit embedding, decidable-target reachability, and fixed-target-to-`1`
    simulation have different consequences. The last would already imply a
    counterexample to Collatz.
-3. **Antihydra coefficient mismatch.** `fold/F3-literature-map.md` says the
+3. **Antihydra coefficient mismatch.** `contribution/reports/F3-literature-map.md` says the
    odd-step count merely exceeds the even-step count. The current Busy Beaver
    Cryptids page states the termination condition as `O > 2E`. Until the
    variable conventions are reconciled, only the qualitative parity-count
@@ -273,15 +273,15 @@ cycles/cap exits and creates a theorem-sized classification question.
 - Faraz Ghahremani, Edon Kelmendi, and Joël Ouaknine, [“Reachability in Injective Piecewise Affine Maps”](https://arxiv.org/abs/2301.09752) (2023).
 - Busy Beaver Challenge, [BB(6)](https://wiki.bbchallenge.org/wiki/BB%286%29) and [Cryptids](https://wiki.bbchallenge.org/wiki/Cryptids), current pages checked 2026-07-18.
 - Repo-local citation status and neighboring Collatz results:
-  [`../F3-literature-map.md`](../F3-literature-map.md).
+  [`contribution/reports/F3-literature-map.md`](../reports/F3-literature-map.md).
 
 ## 10. Reproduction
 
 ```bash
-python3 fold/fence/verify/fence_phase.py
-python3 fold/fence/verify/test_fence_phase.py
+python3 contribution/code/fence/fence_phase.py
+python3 contribution/code/fence/test_fence_phase.py
 ```
 
 The first command regenerates only the two derived artifacts under
-`fold/fence/verify/`. No existing repo file is edited.
+`contribution/code/fence/`. No existing repo file is edited.
 

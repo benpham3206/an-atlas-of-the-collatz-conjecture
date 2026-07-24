@@ -106,11 +106,11 @@ incremental, and machine-checkable. It does not make the decision problem easy.
 
 Files:
 
-- `verify/transcript_lift_oracle.py` — quotient recurrence plus independent
+- `contribution/code/fence/transcript_lift_oracle.py` — quotient recurrence plus independent
   modular-series path;
-- `verify/test_transcript_lift_oracle.py` — exhaustive direct Terras oracle for
+- `contribution/code/fence/test_transcript_lift_oracle.py` — exhaustive direct Terras oracle for
   all words through length 10 and positive integers `1..1000`;
-- `verify/lift_results.json` — exact structured-prefix readout.
+- `contribution/code/fence/lift_results.json` — exact structured-prefix readout.
 
 The two production paths share only input bits:
 
