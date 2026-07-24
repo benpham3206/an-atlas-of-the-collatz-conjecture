@@ -1,0 +1,117 @@
+{
+  "dk2_fit_crossing_0.95": 32.19697809169713,
+  "dk2_fit_prediction": 0.8516397162960851,
+  "dk2_layers": [
+    7,
+    10,
+    13,
+    16,
+    18,
+    20,
+    21
+  ],
+  "dk2_parities": [
+    "even",
+    "odd"
+  ],
+  "law": "dk(n) >= 2 <=> p_2(n) > p_2(n-1)",
+  "law_holds": "15/15",
+  "observed_latest": 0.8872812875738992,
+  "odd_branch_fit_prediction": 0.7421844666983508,
+  "packet": "2026-07-24-streaming-depth-21",
+  "smallest_abs_dp2": 0.01930311288312314,
+  "status": "k(n) exact; p_2 float64 measurement; not a theorem",
+  "transitions": [
+    {
+      "dk": 2,
+      "dp2": 0.15484274828236821,
+      "law_holds": true,
+      "n": 7
+    },
+    {
+      "dk": 1,
+      "dp2": -0.030736861814987804,
+      "law_holds": true,
+      "n": 8
+    },
+    {
+      "dk": 1,
+      "dp2": -0.01930311288312314,
+      "law_holds": true,
+      "n": 9
+    },
+    {
+      "dk": 2,
+      "dp2": 0.19072038516163548,
+      "law_holds": true,
+      "n": 10
+    },
+    {
+      "dk": 1,
+      "dp2": -0.0645857510074086,
+      "law_holds": true,
+      "n": 11
+    },
+    {
+      "dk": 1,
+      "dp2": -0.0546889684573435,
+      "law_holds": true,
+      "n": 12
+    },
+    {
+      "dk": 2,
+      "dp2": 0.14739040633062672,
+      "law_holds": true,
+      "n": 13
+    },
+    {
+      "dk": 1,
+      "dp2": -0.08396936653366349,
+      "law_holds": true,
+      "n": 14
+    },
+    {
+      "dk": 1,
+      "dp2": -0.07013848293472547,
+      "law_holds": true,
+      "n": 15
+    },
+    {
+      "dk": 2,
+      "dp2": 0.10316315001693377,
+      "law_holds": true,
+      "n": 16
+    },
+    {
+      "dk": 1,
+      "dp2": -0.0779173669798836,
+      "law_holds": true,
+      "n": 17
+    },
+    {
+      "dk": 2,
+      "dp2": 0.091280236143784,
+      "law_holds": true,
+      "n": 18
+    },
+    {
+      "dk": 1,
+      "dp2": -0.07902869862542383,
+      "law_holds": true,
+      "n": 19
+    },
+    {
+      "dk": 2,
+      "dp2": 0.0800111912128032,
+      "law_holds": true,
+      "n": 20
+    },
+    {
+      "dk": 2,
+      "dp2": 0.08599999752689902,
+      "law_holds": true,
+      "n": 21
+    }
+  ],
+  "violations": []
+}

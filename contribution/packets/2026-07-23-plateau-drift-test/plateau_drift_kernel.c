@@ -37,6 +37,7 @@ typedef struct {
     uint64_t lo_size;
     double norm;
     uint64_t j0, j1;      /* output index range for this thread */
+    uint64_t out_base;    /* Cnew[0] corresponds to output index out_base */
 } job_t;
 
 static void run_range(job_t *J)
@@ -89,10 +90,48 @@ static void run_range(job_t *J)
             }
             nuv[a] = nu;
         }
-        J->Cnew[2 * j] = J->norm * accr;
-        J->Cnew[2 * j + 1] = J->norm * acci;
+        uint64_t o = j - J->out_base;
+        J->Cnew[2 * o] = J->norm * accr;
+        J->Cnew[2 * o + 1] = J->norm * acci;
     }
     (void)two_mod_old;
+}
+
+/* Compute outputs j in [jlo, jhi) only, writing them to Cnew_chunk at
+ * relative position (j - jlo).  Output element j depends only on j (the
+ * nu_a carry is re-seeded by exact integer arithmetic at each thread's
+ * start), so for any partition of [0, h_new) the concatenated results are
+ * BIT-IDENTICAL to a single full-width transport() call.  This is what
+ * makes the layer streamable: the caller can consume each chunk by
+ * reduction and never materialise the full 3^(n-1) state.
+ */
+void transport_range(const double *Cold, double *Cnew_chunk,
+                     uint64_t mod_old, uint64_t mod_new,
+                     uint64_t jlo, uint64_t jhi,
+                     const uint64_t *u, const double *w, int taps,
+                     const double *Thi, const double *Tlo, uint64_t lo_size,
+                     double norm, int nthreads)
+{
+    pthread_t tid[32];
+    job_t jobs[32];
+    if (nthreads < 1) nthreads = 1;
+    if (nthreads > 32) nthreads = 32;
+    if (jhi <= jlo) return;
+    uint64_t span = jhi - jlo;
+    uint64_t chunk = (span + (uint64_t)nthreads - 1) / (uint64_t)nthreads;
+    int n = 0;
+    for (int t = 0; t < nthreads; t++) {
+        uint64_t j0 = jlo + (uint64_t)t * chunk;
+        uint64_t j1 = j0 + chunk;
+        if (j0 >= jhi) break;
+        if (j1 > jhi) j1 = jhi;
+        jobs[n] = (job_t){Cold, Cnew_chunk, mod_old, mod_new, u, w, taps,
+                          Thi, Tlo, lo_size, norm, j0, j1, jlo};
+        pthread_create(&tid[n], NULL, (void *(*)(void *))run_range, &jobs[n]);
+        n++;
+    }
+    for (int t = 0; t < n; t++)
+        pthread_join(tid[t], NULL);
 }
 
 void transport(const double *Cold, double *Cnew,
@@ -101,22 +140,6 @@ void transport(const double *Cold, double *Cnew,
                const double *Thi, const double *Tlo, uint64_t lo_size,
                double norm, int nthreads)
 {
-    pthread_t tid[32];
-    job_t jobs[32];
-    if (nthreads < 1) nthreads = 1;
-    if (nthreads > 32) nthreads = 32;
-    uint64_t chunk = (h_new + (uint64_t)nthreads - 1) / (uint64_t)nthreads;
-    int n = 0;
-    for (int t = 0; t < nthreads; t++) {
-        uint64_t j0 = (uint64_t)t * chunk;
-        uint64_t j1 = j0 + chunk;
-        if (j0 >= h_new) break;
-        if (j1 > h_new) j1 = h_new;
-        jobs[n] = (job_t){Cold, Cnew, mod_old, mod_new, u, w, taps,
-                          Thi, Tlo, lo_size, norm, j0, j1};
-        pthread_create(&tid[n], NULL, (void *(*)(void *))run_range, &jobs[n]);
-        n++;
-    }
-    for (int t = 0; t < n; t++)
-        pthread_join(tid[t], NULL);
+    transport_range(Cold, Cnew, mod_old, mod_new, 0, h_new,
+                    u, w, taps, Thi, Tlo, lo_size, norm, nthreads);
 }
