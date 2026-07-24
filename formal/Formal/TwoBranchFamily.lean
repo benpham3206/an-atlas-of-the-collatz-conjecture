@@ -189,3 +189,19 @@ theorem twoBranch_periodic_tail {b : Nat} (hb : 0 < b) {n : Nat} (hn : 0 < n) :
     _ = orbit b n (h + k) := (orbit_add b n h k).symm
 
 end TwoBranchFamily
+
+-- Axiom audit: none of these may list `sorryAx`. Everything below must stay
+-- inside the classical triple {propext, Classical.choice, Quot.sound}.
+-- Measured 2026-07-24: `orbit_add` and `orbit_succ` use no axioms at all;
+-- `twoBranch_eventually_periodic`, `twoBranch_periodic_tail`, and the
+-- pigeonhole lemma use the full triple; the rest use [propext, Quot.sound].
+#print axioms TwoBranchFamily.S_lt_of_lt
+#print axioms TwoBranchFamily.S_pos
+#print axioms TwoBranchFamily.twoBranch_invariant
+#print axioms TwoBranchFamily.orbit_add
+#print axioms TwoBranchFamily.orbit_succ
+#print axioms TwoBranchFamily.orbit_in_band
+#print axioms TwoBranchFamily.twoBranch_enters_finite_set
+#print axioms TwoBranchFamily.twoBranch_eventually_periodic
+#print axioms TwoBranchFamily.twoBranch_periodic_tail
+#print axioms CollatzAtlas.exists_eq_of_forall_lt
