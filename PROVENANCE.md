@@ -72,8 +72,12 @@ show its corrections.
    Corrected this commit.
 3. **`STATE.md` dates drifted** — it was headed 2026-07-23 while carrying
    2026-07-24 results.
-4. **No priority search has been run for any result.** Every packet says so
-   individually. Novelty is therefore unestablished, not established.
+4. **Priority search run 2026-07-25 — two headline results retired.** See
+   [`PRIORITY.md`](PRIORITY.md). The supercritical exclusion is subsumed by
+   López–Stoll 2021; the contraction-onset bound is a refresh of Terras 1976 /
+   Garner 1981. The factor-complexity lower bound (κ = 1.7095…) is the one
+   result nothing was found against, and it is provisional. All other packets
+   remain unsearched.
 
 ## Rule for future packets
 

@@ -72,7 +72,7 @@ Let `q` be its parity word, `s_L` the number of ones in the first `L` symbols,
 |---|---|---|
 | 1 | `q` is **not eventually periodic** — an eventually periodic transcript gives an eventually periodic orbit, i.e. a cycle | `PARTIAL_THEOREMS.md` Thm 3 |
 | 2 | `Φ(q) ∈ ℤ_{>0}` — the lift digits `ε_L` are eventually zero and the residue stabilises above 0 | `PARTIAL_THEOREMS.md` Thm 2, `LIFT_COCYCLE.md` |
-| 3 | `liminf_L s_L/L ≥ α` | drift wall, Thm 1 |
+| 3 | `liminf_L s_L/L` **= α exactly** — not merely ≥. Below α: drift wall. Strictly above α: López–Stoll 2021. Only the critical value survives | drift wall Thm 1 + [arXiv:2101.12747](https://arxiv.org/abs/2101.12747) |
 | 4 | `limsup_k p_q(k)/k ≥ κ = 1.7095112913…` | landmark memo, Cor 4 |
 | 5 | if its one-density `β` exists and its complexity constant `C` is finite: `(β − α)·C ≥ α` | landmark memo, Cor 7 |
 | 6 | if its critical block discrepancy is bounded: **full binary factor entropy**, `limsup log₂p_q(k)/k = 1` | landmark memo, Cor 6 |
@@ -125,6 +125,12 @@ Every entry is a proved exclusion, not a heuristic.
   rational. The full shift on `ℤ₂` is free; positivity is the entire content
   (Bernstein–Lagarias, and `FENCE.md`).
 
+**The band collapses.** Constraint 3 is the strongest single statement in this
+file: combining the repository's drift wall with López–Stoll 2021, a divergent
+orbit's parity word must have `liminf s_L/L` equal to `log₃2` **exactly**. Both
+strict inequalities are closed. Every frequency-based argument is therefore
+exhausted, and only complexity-based ones can still bite.
+
 ### Still open, and now named
 
 - the 10 remaining ternary-coded uniform-morphism words;
@@ -132,8 +138,9 @@ Every entry is a proved exclusion, not a heuristic.
 - the general 2-automatic statement, which is *provably* not reachable by the
   factor-complexity method (it saturates at two states) and *provably* not
   reachable by any averaged-density argument (rigidity packet, Thm 3);
-- everything with high complexity and supercritical density — which is where
-  the answer actually lives.
+- everything at the **exact critical density** `liminf s_L/L = log₃2` with
+  high factor complexity — which, after López–Stoll, is precisely and only
+  where the answer can live.
 
 ---
 

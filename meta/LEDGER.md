@@ -106,7 +106,17 @@ parallel instead of serially.
 
 **Mistakes.**
 
-- None caught yet this session. That is not the same as none made.
+- **Eleven packets were written before a single priority search.** The search
+  took one session and retired two headline results. The cost was not the
+  search; it was everything built on top of unsearched claims — memo prose,
+  STATE entries, a ranked target list, and a PR body all had to be corrected.
+- Guessed in the contraction-onset memo that Lemma 1 was "very likely
+  folklore" and shipped it as a guess. It is not folklore; it is Terras's
+  named `κ(n) ≤ σ(n)`, published 1976. A guess in a novelty section is a
+  claim, and should have been either checked or omitted.
+- Never cited López & Stoll 2021 despite citing their 2009 paper in the
+  repository's own reference list. The relevant paper was one author-search
+  away for months.
 
 **Lessons.**
 
@@ -116,6 +126,13 @@ parallel instead of serially.
   measurements get laundered into theorems.
 - **A "no" from an independent audit is a result.** Commission audits with an
   explicit licence to return nothing, or they will find something.
+- **Run the priority search BEFORE writing the memo, not after.** It is the
+  cheapest possible step and it determines whether the memo is a result or a
+  re-derivation. New standing rule: no packet is complete without one.
+- **A negative priority result is not a loss.** López–Stoll 2021 narrowed the
+  remaining gap from "the supercritical stratum" to the single critical
+  density — a sharper and more useful frontier than the repository had. The
+  search gave more than it took.
 - **Separate strategy from proofwork physically.** Three of the four
   most expensive mistakes in this project's history were strategic and no
   verifier could have caught any of them.

@@ -101,7 +101,15 @@ a premise. This remains the only live route whose success condition is
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
   2-automatic orbit. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
-- **Supercritical stratum: 99 of 109 closed.** The enumerated supercritical
+- **⚠ SUBSUMED — supercritical stratum.** The exclusion below is superseded:
+  López–Stoll ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747), 2021)
+  already prove that aperiodic q with liminf s_L/L > log₃2 has Φ(q) ∉ ℚ_odd,
+  which kills all 109 survivors directly. **The remaining gap is now the
+  single critical density liminf s_L/L = log₃2 exactly** — everything strictly
+  above and strictly below is closed. See [`PRIORITY.md`](PRIORITY.md) §1.
+  Retained below for the machinery, which is still the only tool that bites at
+  the critical density.
+- **Supercritical stratum: 99 of 109 closed (machinery, not conclusion).** The enumerated supercritical
   survivors are excluded by a *proved* upper bound on the factor-complexity
   constant C = limsup p_q(k)/k, computed from the exact factor language of
   each fixed point (Lemma D) and fed into the landmark packet's existing
@@ -111,6 +119,9 @@ a premise. This remains the only live route whose success condition is
   their exact p(1537)/1537 already exceeds α/(ρ−α). Witness 1 of the
   rigidity packet (σ(0)=11, σ(1)=10, ρ=2/3) dies on the single integer
   comparison 3²⁷ < 2⁴³. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
+- **⚠ REFRESH, not new — contraction onset.** Re-derives Terras (1976)
+  coefficient stopping time; Garner (1981) reached κ(n) < 105,000. This is the
+  same argument with Bařina's 2^71 in place of 2×10⁹. See [`PRIORITY.md`](PRIORITY.md) §5.
 - **Contraction onset, h ≤ 10⁶.** A minimal counterexample `m` satisfies
   `2^(A_h) ≤ 3^h` for every `h ≤ 1,000,000` Syracuse steps — every prefix of
   its parity word is supercritical over the first ~1.58 × 10⁶ Terras steps,
@@ -173,6 +184,12 @@ a premise. This remains the only live route whose success condition is
   finite-check-at-one-layer plus phase-blind propagation argument can
   establish w_n(ε) ≥ w > 0; the missing input is the intrinsic chain phase
   pattern at every layer. [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
+- **The critical density, liminf s_L/L = log₃2 exactly.** The whole remaining
+  gap on the symbolic side, once López–Stoll 2021 is combined with the drift
+  wall. Frequency-based arguments are vacuous there by construction; the
+  factor-complexity bound is the only instrument that still bites, and it is
+  also the one thing in this repository the priority search did not find in
+  prior art. [`PRIORITY.md`](PRIORITY.md)
 - **Supercritical automatic stratum.** Still open as a *class* statement —
   "no divergent Collatz orbit has a 2-automatic parity word" is unproved,
   and no density argument can close it (Theorem 3 of the rigidity packet).

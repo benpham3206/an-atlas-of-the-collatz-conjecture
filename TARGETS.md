@@ -43,10 +43,22 @@ that on the smallest non-trivial case first and stop if it fires.
 
 ---
 
-## 2. The Gap, in full
+## 2. The critical density — the whole remaining symbolic gap
 
-> **Statement.** No divergent Collatz orbit has a 2-automatic parity
-> transcript.
+> **Statement.** No divergent Collatz orbit has a parity word with
+> `liminf s_L/L = log₃2` exactly.
+
+**⚠ Rewritten 2026-07-25 after the priority search.** This target used to read
+"the 2-automatic Gap in full". That framing was too broad: López–Stoll 2021
+([arXiv:2101.12747](https://arxiv.org/abs/2101.12747)) close every word with
+`liminf > α`, and the drift wall closes every word with `liminf < α`. **Only
+the exact critical density remains**, for any word — automatic or not.
+
+That is a much smaller and better-defined target than "the supercritical
+stratum", and it explains why every frequency-based instrument is now
+exhausted: at `liminf = α` they are all vacuous by construction. The
+factor-complexity bound is the only surviving tool, and it is also the only
+result the priority search did not find in prior art.
 
 **Why second.** This is the repository's stated single best target. The
 rigidity packet proves it is *exactly* the whole remaining gap for the
