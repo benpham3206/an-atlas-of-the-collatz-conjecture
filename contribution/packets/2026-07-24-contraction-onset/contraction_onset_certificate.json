@@ -1,0 +1,103 @@
+{
+  "barina_limit": "2^71 = 2361183241434822606848",
+  "cocycle_and_lemma_controls": {
+    "affine_identities_checked": 600000,
+    "descents_observed": 9998,
+    "lemma2_bounds_checked": 24611,
+    "odd_starts": 10000,
+    "orbits_with_both_events": 9998,
+    "steps_per_orbit": 60
+  },
+  "conclusion": "A minimal Collatz counterexample m satisfies 2^{A_h} <= 3^h for every h <= 1000000: at a first contracting index h it would need m <= M(h) <= 984572779224 < 2^71, contradicting Barina's verification. Separately, no odd x with 1 < x <= 7795715 contracts before it descends, so the trivial 1-cycle is the only surviving ceiling-active branch at every depth the scan decides.",
+  "env": {
+    "VCO_HMAX": 1000000,
+    "VCO_ORBITS": 20000,
+    "VCO_XSCAN": 7795715
+  },
+  "named_controls": {
+    "1": {
+      "first_contracting_index": 1,
+      "first_descent_index": null,
+      "verdict": "survives"
+    },
+    "27": {
+      "first_contracting_index": 37,
+      "first_descent_index": 37,
+      "verdict": "dies"
+    },
+    "3": {
+      "first_contracting_index": 2,
+      "first_descent_index": 2,
+      "verdict": "dies"
+    },
+    "7": {
+      "first_contracting_index": 4,
+      "first_descent_index": 4,
+      "verdict": "dies"
+    },
+    "703": {
+      "first_contracting_index": 51,
+      "first_descent_index": 51,
+      "verdict": "dies"
+    }
+  },
+  "odd_x_scan": {
+    "bound": 7795715,
+    "depths_fully_decided": "every h whose M(h) <= 7795715; with the table above that includes all h <= 10000",
+    "odd_x_checked": 3897857,
+    "survivors_above_1": []
+  },
+  "onset_bound": {
+    "H_MAX": 1000000,
+    "argmax_h": 190537,
+    "max_M": 984572779224,
+    "max_M_below_2^71": true,
+    "orders_of_magnitude_of_slack": 10,
+    "samples": {
+      "1": {
+        "A_star": 2,
+        "M": 1
+      },
+      "2": {
+        "A_star": 4,
+        "M": 0
+      },
+      "5": {
+        "A_star": 8,
+        "M": 31
+      },
+      "12": {
+        "A_star": 20,
+        "M": 4
+      },
+      "41": {
+        "A_star": 65,
+        "M": 1185
+      },
+      "53": {
+        "A_star": 85,
+        "M": 17
+      },
+      "306": {
+        "A_star": 485,
+        "M": 99729
+      },
+      "665": {
+        "A_star": 1055,
+        "M": 221
+      },
+      "15601": {
+        "A_star": 24727,
+        "M": 285814986
+      },
+      "1000000": {
+        "A_star": 1584963,
+        "M": 806113
+      }
+    },
+    "statement": "every x with a first contracting index h <= 1000000 and no descent at h satisfies x <= 984572779224 < 2^71",
+    "two_pow_71": 2361183241434822606848
+  },
+  "packet": "2026-07-24-contraction-onset",
+  "scope": "exact integer arithmetic only; no floats anywhere"
+}

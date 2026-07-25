@@ -1,0 +1,13 @@
+# Extended odd-x scan, reproduce with:
+#   VCO_XSCAN=1447674322 python3 verify_contraction_onset.py
+# (the standalone scanner below is the same criterion, run to 1.45e9)
+
+odd x in [3, 1447674322) checked: 723837160
+  Class-A survivors (first-active < first-descent): 0
+  never descended within the step cap: 0
+  x = 1 control: classify(1) = (1, None)   (active at 1, never descends)
+
+CONCLUSION: for every odd x in the range above with x > 1, the first ceiling-active
+index equals the first descent index, so no dangerous exponent word other than
+the all-twos word survives its first ceiling-active index.
+EXIT=0

@@ -96,6 +96,16 @@ it is decided by depth measurements, not by a new idea.
   their exact p(1537)/1537 already exceeds α/(ρ−α). Witness 1 of the
   rigidity packet (σ(0)=11, σ(1)=10, ρ=2/3) dies on the single integer
   comparison 3²⁷ < 2⁴³. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
+- **Contraction onset, h ≤ 10⁶.** A minimal counterexample `m` satisfies
+  `2^(A_h) ≤ 3^h` for every `h ≤ 1,000,000` Syracuse steps — every prefix of
+  its parity word is supercritical over the first ~1.58 × 10⁶ Terras steps,
+  unconditionally and with no liminf. Two elementary lemmas (descent requires
+  contraction; `C_h ≤ h·3^(h-1)` before onset) bound `m` by
+  `M(h) = ⌊h·3^(h-1)/(2^(A*(h)) − 3^h)⌋`, whose max over that range is
+  `9.85 × 10¹¹` — nine orders below Bařina's `2^71`. Records of `M` sit at the
+  convergents and semiconvergents of `log₂3`, i.e. the resonance lattice.
+  Separately, no odd `x > 1` up to `1.45 × 10⁹` contracts before it descends.
+  [`contribution/packets/2026-07-24-contraction-onset/`](contribution/packets/2026-07-24-contraction-onset/)
 - **Plateau-escape-weight reduction.** Uniform decay of M_n reduced, with a
   proved tight rate, to the integer length L(n) of the bad chain interval per
   layer (P1–P4, P6); bounds on L(n) of log type imply decay past Tao's
@@ -167,6 +177,19 @@ it is decided by depth measurements, not by a new idea.
   formalization — both future work. [`formal/`](formal/)
 
 ## NEXT
+
+**Ranked attack targets with odds, fallbacks and kill criteria:
+[`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
+ranking by importance-if-landed: (1) amplification — the only never-entered
+half of the architecture; (2) the 2-automatic Gap in full; (3) the Gap for
+DFAOs with ≤ N states — **run 2026-07-24, N = 2; the complexity method
+saturates at two states and does not scale, which retires (2) by that route**;
+(4) morphic transcripts of linear complexity; (5) the ten remaining automata;
+(6) contraction onset to infinity — **closed door**, capped by construction at
+~10¹⁰ steps regardless of Diophantine input; (7) the formal-conjectures port.
+
+The individual entries below remain accurate; `TARGETS.md` orders them and
+adds the ones that were missing.
 
 - **formal-conjectures contribution.** Target: the Collatz section of
   google-deepmind/formal-conjectures (one file today: bare `collatzStep` +
