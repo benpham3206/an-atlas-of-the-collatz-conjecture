@@ -4,7 +4,7 @@ Frontier of the fold program: what is established, what is blocked, and what
 runs next. Proved statements use exact integer/rational arithmetic; float64
 outputs are measurements, not theorems, and are labelled as such. The Collatz
 conjecture remains open; nothing here proves or disproves it. Updated
-2026-07-23.
+2026-07-25.
 
 ## PROOF ARCHITECTURE (which branch each result serves)
 
@@ -58,15 +58,30 @@ been corrected twice** (2026-07-24 streaming packet):
   is fixed by Δk, not by n, so a linear-in-n fit could not have tested
   anything. On the correct subsequence the 0.95 crossing sits near n ≈ 32 and
   n = 21 is *above* trend, at an all-time high of 0.887281;
-- the M_n decay law, compared directly for the first time, favours
-  **branch (ii)** — Tao-strength — by ΔAIC +30.0, and adding n = 21 made that
-  stronger, not weaker.
+- the M_n decay law, compared directly for the first time, fits
+  **branch (ii)** — Tao-strength — better: sum of squared residuals
+  **6.52× smaller** than branch (i) over n = 6..21 (16 points), and 4.22×
+  smaller on n ≥ 13. Adding n = 21 made the gap larger, not smaller.
+
+**Read that as a fit quality, not as evidence about the branch.** ⚠ The
+packet also reports this as "ΔAIC +30.0", and that number carries no
+information the ratio does not: the code computes
+`ΔAIC = N·ln(SSR_i/SSR_ii)` exactly, so it is the SSR ratio in a likelihood
+costume. The likelihood is fictional here — M_n is an exact deterministic
+max-reduction with no sampling noise, and the residuals are misspecification,
+not scatter (they drift monotonically). An information criterion that
+multiplies by N inflates a highly-correlated 16-point fit. The defensible
+statement is the SSR ratio plus a held-out check, not a model-selection
+verdict.
 
 So the earlier "mild evidence toward the stronger-than-Tao branch" does not
-survive the comparison. Neither resolution is confirmed, and the window is
-finite; but the current direction of evidence is branch (ii). This remains
-the only live route in the repo whose success condition is "beats Tao", and
-it is decided by depth measurements, not by a new idea.
+survive the comparison, and the current direction of *fit* is branch (ii).
+Neither resolution is confirmed. Branch (ii) is a statement about the
+asymptotics of L(n) for all n; **no float64 fit over n ≤ 21 can constrain
+it**, and any downstream packet that cites this section rather than the
+streaming packet's §5 "Honest scope" would be laundering a measurement into
+a premise. This remains the only live route whose success condition is
+"beats Tao", and it is decided by depth measurements, not by a new idea.
 
 ## ESTABLISHED
 
@@ -177,6 +192,10 @@ it is decided by depth measurements, not by a new idea.
   formalization — both future work. [`formal/`](formal/)
 
 ## NEXT
+
+**Session method, lessons and transfer audits: [`meta/`](meta/README.md).**
+Every session ends with a `meta/LEDGER.md` entry — strategy, what worked, what
+failed, mistakes, lesson. A session without one produces no compounding.
 
 **Ranked attack targets with odds, fallbacks and kill criteria:
 [`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
