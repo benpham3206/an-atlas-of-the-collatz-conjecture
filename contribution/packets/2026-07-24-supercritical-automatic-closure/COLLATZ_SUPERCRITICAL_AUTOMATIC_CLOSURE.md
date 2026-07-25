@@ -6,6 +6,32 @@ word. **Not** a proof of the Collatz conjecture, **not** a counterexample,
 and **not** a closure of the supercritical automatic stratum — 10 explicit
 words survive and are named in §8. No literature-priority claim is made.
 
+> ## ⚠ PRIORITY CORRECTION (25 July 2026) — this result is subsumed
+>
+> A literature search run after this packet was written found that **all 109
+> words were already excluded in 2021**, by a theorem this repository had not
+> cited.
+>
+> López & Stoll, *The 3x+1 Periodicity Conjecture in ℝ*,
+> [arXiv:2101.12747](https://arxiv.org/abs/2101.12747), prove: `Φ` maps an
+> aperiodic `v` to an **aperiodic** (i.e. irrational, i.e. `∉ ℚ_odd`) 2-adic
+> integer whenever `liminf s_L/L > log₃2`.
+>
+> Every survivor here has an exact rational density `ρ > α`, certified in §8 by
+> an integer witness `3^a > 2^b`. Their liminf is `ρ`. So all 109 fall to that
+> theorem directly — **no complexity bound, no Lemma D, no computation.**
+>
+> The conclusion of this packet is therefore not new, and "99 of 109
+> supercritical survivors closed" is retired as a headline claim. What remains
+> of value: Lemma D and the exact factor-language machinery (still needed at
+> the critical density, where every density argument is vacuous), the measured
+> saturation of the method, and the verifier.
+>
+> **The more important consequence** is in `PRIORITY.md` §1: combined with the
+> drift wall, López–Stoll narrows the entire remaining gap from "the
+> supercritical stratum" to the single critical density
+> `liminf s_L/L = log₃2` **exactly**.
+
 **Companion executable evidence:** `verify_supercritical_closure.py`,
 `test_verify_supercritical_closure.py`, `verify_supercritical_closure.out`,
 `supercritical_closure_certificate.json`, and the zero-`sorry` Lean module

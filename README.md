@@ -12,8 +12,8 @@ conjecture remains open.
 | A parity transcript q is realized by a positive integer iff Φ(q) ∈ ℤ_{>0} | derivation in `contribution/proofs/PARTIAL_THEOREMS.md` |
 | No nontrivial positive cycle with ≤ 20 odd members | exact search + independent oracle: `contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md` and `contribution/packets/2026-07-23-cycle-exclusion-extension/` |
 | Rational Φ with odd denominator forces complexity pressure; Sturmian excluded | pointwise memo in `contribution/packets/2026-07-22-landmark-pointwise/` |
-| 99 of the 109 enumerated supercritical 2-automatic survivors have Φ(q) ∉ ℤ_{>0} | proved, one exact integer certificate per word: `contribution/packets/2026-07-24-supercritical-automatic-closure/` |
-| A minimal counterexample has 2^(A_h) ≤ 3^h for every h ≤ 10⁶ Syracuse steps | proved from two elementary lemmas + Bařina's 2^71 limit: `contribution/packets/2026-07-24-contraction-onset/` |
+| 99 of the 109 enumerated supercritical survivors have Φ(q) ∉ ℤ_{>0} | proved here, but **subsumed** by López–Stoll 2021 — see [`PRIORITY.md`](PRIORITY.md) |
+| A minimal counterexample has 2^(A_h) ≤ 3^h for every h ≤ 10⁶ Syracuse steps | proved, but a **quantitative refresh** of Terras 1976 / Garner 1981 — see [`PRIORITY.md`](PRIORITY.md) |
 | Terras bijection, two-branch-family non-universality, parity-block collision principle | zero-sorry Lean 4 certificates: `formal/` |
 | Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
 
@@ -21,6 +21,10 @@ conjecture remains open.
 **Repo frontier (established / blocked / next):** [`STATE.md`](STATE.md)  
 **Ranked attack targets (odds, fallbacks, kill criteria):** [`TARGETS.md`](TARGETS.md)  
 **Fresh-agent hail-mary brief:** [`HAIL_MARY_PROMPT.md`](HAIL_MARY_PROMPT.md)  
+**What a counterexample must / cannot look like:** [`COUNTEREXAMPLE_SHAPE.md`](COUNTEREXAMPLE_SHAPE.md)  
+**Agent conduct — read before working:** [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md)  
+**Literature priority, and what it retired:** [`PRIORITY.md`](PRIORITY.md)  
+**Who did what, and which check backs it:** [`PROVENANCE.md`](PROVENANCE.md) · [`CONTRIBUTORS.md`](CONTRIBUTORS.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
 
 ## Maps and notation
@@ -54,8 +58,8 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/code/`](contribution/code/) | Exact-arithmetic implementations and executable checks |
 | [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/) | Landmark strategy, strategy machine, resonance lattice, prefix-return barrier, rational finite verifier |
 | [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/) | Automatic-transcript trichotomy, density-wall impossibility witnesses, 514-word exact hunt |
-| [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) | Exact factor-language complexity bound (Lemma D); 99 of the 109 supercritical survivors proved non-realizable; frontier reduced to 10 named automata |
-| [`contribution/packets/2026-07-24-contraction-onset/`](contribution/packets/2026-07-24-contraction-onset/) | Descent requires contraction; onset bound M(h); a minimal counterexample cannot contract before 10⁶ Syracuse steps |
+| [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) | Exact factor-language complexity bound (Lemma D). Its **conclusion is subsumed** by López–Stoll 2021; the machinery is retained because it is the only tool that bites at the critical density |
+| [`contribution/packets/2026-07-24-contraction-onset/`](contribution/packets/2026-07-24-contraction-onset/) | Descent requires contraction; onset bound M(h). A **quantitative refresh** of Terras 1976 / Garner 1981, not a new theorem |
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
@@ -70,6 +74,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 | [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier (exploratory; provenance chatgpt-thread-1784792218410; not cited as a result) |
+| [`meta/`](meta/README.md) | Strategy research, not proofwork: session ledger, simple questions, agent conduct, transfer audits. **Never cited as evidence for a mathematical claim** |
 | [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
 | [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes. **Read [`graphify-out/README.md`](graphify-out/README.md) first** — the map does not separate `contribution/` from `exploratory/` and `quarantine/`, so its connectivity ranking puts non-evidence drafts near the top |
 
@@ -92,6 +97,11 @@ External papers are linked below and are not included in the repository.
 |---|---|---|
 | Parity words ↔ residues mod 2^k (bijection); stopping times | Terras, 1976 | [Acta Arith. 30](https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/30/3/101028/a-stopping-time-problem-on-the-positive-integers) |
 | Almost all n have finite stopping time | Everett, 1977 | [DOI](https://doi.org/10.1016/0001-8708(77)90087-1) |
+| Coefficient stopping time κ(n) ≤ σ(n); κ = σ for κ ≤ 2593 | Terras, 1976 | Acta Arith. 30 |
+| κ = σ for κ < 105,000 via convergents of log₂3 | Garner, 1981 | [DOI](https://doi.org/10.1090/S0002-9939-1981-0603593-2) |
+| **Aperiodic q with liminf s_L/L > log₃2 ⟹ Φ(q) irrational**; a non-cyclic rational trajectory forces liminf = log₃2 exactly | López–Stoll, 2021 | [arXiv:2101.12747](https://arxiv.org/abs/2101.12747) |
+| liminf h/ℓ ≥ log₃2 for divergent rationals | Monks–Yazinski | [PDF](https://monks.scranton.edu/files/pubs/AutoConjV13.pdf) |
+| 2-adic continued-fraction expansion of Φ over a Sturmian word | López–Stoll, 2009 | [INTEGERS 9, A13](https://math.colgate.edu/~integers/j13/j13.pdf) |
 | 2-adic extension conjugate to the shift map | Bernstein–Lagarias, 1996 | [Canad. J. Math. 48](https://doi.org/10.4153/CJM-1996-060-x) |
 
 ### Statistical results

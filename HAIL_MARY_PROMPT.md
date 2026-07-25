@@ -84,12 +84,23 @@ read §4 before spending anything on the cycle branch.
 
 ---
 
+## 2a. Conduct
+
+**Persist through difficulty. When a problem gets tough, keep going.
+Frustration or failure means you need a different perspective or approach — not
+permission to stall, quit, or substitute made-up results for real tool
+output.**
+
+Full version, including the three ways that rule gets broken here:
+[`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md). Read it.
+
 ## 3. Read the repository first
 
 The supporting repository is `benpham3206/an-atlas-of-the-collatz-conjecture`.
 Read every file before proposing anything. Suggested order: `MOTIVATION.md`,
-`README.md`, `STATE.md`, `TARGETS.md`, `COLLATZ_ONE_PAGE.md`, then all of
-`contribution/proofs/`, then all of `contribution/packets/`, then `formal/`.
+`README.md`, `STATE.md`, `TARGETS.md`, `COUNTEREXAMPLE_SHAPE.md`,
+`COLLATZ_ONE_PAGE.md`, `meta/`, then all of `contribution/proofs/`, then all of
+`contribution/packets/`, then `formal/`.
 
 **Tier discipline is not optional.** `contribution/` is evidence.
 `exploratory/` is explicitly **not cited as results**. `quarantine/` is **not

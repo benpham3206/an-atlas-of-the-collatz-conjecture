@@ -3,8 +3,40 @@
 **Date:** 24 July 2026
 **Status:** two elementary lemmas, one theorem, one corollary that consumes
 Bařina's verification limit, plus an exhaustive exact scan. **Not** a proof of
-the Collatz conjecture and **not** a counterexample. No literature-priority
-claim is made.
+the Collatz conjecture and **not** a counterexample.
+
+> ## ⚠ PRIORITY CORRECTION (25 July 2026)
+>
+> A literature search run after this packet was written found that **its
+> mathematical content is known, and has been since 1976.** The packet is
+> retained as a quantitative refresh, not as a new theorem. Specifically:
+>
+> - **Lemma 1 is Terras's inequality `κ(n) ≤ σ(n)`.** Terras (1976) defines the
+>   **coefficient stopping time** `κ(n)` — the least `k` with the multiplier
+>   `α = 3^{a}/2^{k} < 1`, which is exactly "the first contracting index" here.
+>   That descent forces contraction, because the additive term `β` is positive,
+>   is his observation and is stated in Lagarias's annotated bibliography as
+>   "it is clear that `κ(n) ≤ σ(n)`".
+> - **The `M(h)` bound is Terras's own proof method** — upper-bound `β`,
+>   lower-bound `1 − α`, conclude `n ≤ β/(1−α)`. Terras proved
+>   `κ(n) = σ(n)` for `κ(n) ≤ 2593`; **Garner (1981)** extended it to
+>   `κ(n) < 105,000` using the same bound plus continued-fraction convergents
+>   of `log₂3` and machine verification to `2 × 10⁹`.
+> - **Therefore §7's corollary is a quantitative refresh of Garner 1981**: the
+>   same argument with Bařina's `2^71` in place of `2 × 10⁹`, reaching
+>   `h ≤ 10⁶` rather than `κ < 105,000`. About 9.5× further in `h`, from a
+>   verification bound roughly 10¹² times larger — which is itself a useful
+>   datum about how slowly `M(h)` grows.
+>
+> **Not checked:** whether anyone has already published a post-2020 numerical
+> extension of the coefficient-stopping-time verification using a Bařina-class
+> bound. Until that is checked, **no novelty is claimed for the `10⁶` figure
+> either.**
+>
+> What survives as this packet's own contribution: the exact `M(h)` table and
+> its record structure at the convergents *and semiconvergents* of `log₂3`,
+> the odd-`x` scan to 1.45 × 10⁹, and the verifier. See
+> [`PRIORITY.md`](../../../PRIORITY.md).
 
 **Companion executable evidence:** `verify_contraction_onset.py`,
 `test_verify_contraction_onset.py`, `verify_contraction_onset.out`,
@@ -250,13 +282,45 @@ Verifier runtime ~5.5 min (the `M(h)` table to 10^6 dominates; use `VCO_HMAX=300
 `contraction_onset_certificate.json`. Knobs: `VCO_HMAX`, `VCO_XSCAN`,
 `VCO_ORBITS`, `VCO_REDUCED`, `VCO_OUT`.
 
-## 12. Related work
+## 12. Related work — corrected 25 July 2026
 
-The offset recurrence and the exact window `3^m < 2^K ≤ (22/7)^m` are the
-atlas's own ([`EXACT_COUNTEREXAMPLE_SEARCH.md`](../../proofs/EXACT_COUNTEREXAMPLE_SEARCH.md)).
-Bařina, *Improved verification limit for the convergence of the Collatz
-conjecture* (2025), [DOI](https://doi.org/10.1007/s11227-025-07337-0), supplies
-the `2^71` input. The near-resonance reading is the continued-fraction
-structure used by Simons–de Weger (*Acta Arith.* 117, 2005) and by the
-landmark memo's resonance lattice. Lemma 1 is elementary and is very likely
-folklore; no priority search was made.
+**This packet re-derives Terras (1976) and refreshes Garner (1981).** The
+original text of this section guessed that "Lemma 1 is elementary and is very
+likely folklore; no priority search was made." The search was then made, and
+the guess understated it: the concept is named, published, and central.
+
+| This packet | Prior art |
+|---|---|
+| "first contracting index" — least `h` with `2^{A_h} > 3^h` | **coefficient stopping time** `κ(n)`, Terras (1976) |
+| Lemma 1, descent requires contraction | `κ(n) ≤ σ(n)`, Terras (1976) |
+| Theorem, `x ≤ M(h)` at the first contracting index | Terras's proof method: bound `β`, lower-bound `1−α`, get `n ≤ β/(1−α)` |
+| §7 corollary at `h ≤ 10⁶` via Bařina `2^71` | same argument; Garner (1981) reached `κ(n) < 105,000` via verification to `2 × 10⁹` |
+
+- R. Terras, *A stopping time problem on the positive integers*, **Acta Arith.
+  30** (1976), 241–252 — introduces `κ(n)`, proves `κ(n) ≤ σ(n)`, and proves
+  `κ = σ` for `κ(n) ≤ 2593`.
+- L. E. Garner, *On the Collatz 3n+1 algorithm*, **Proc. AMS 82** (1981),
+  19–22, [DOI](https://doi.org/10.1090/S0002-9939-1981-0603593-2) — extends to
+  `κ(n) < 105,000` using continued-fraction convergents of `log₂3`.
+- J. C. Lagarias, [annotated bibliography](https://arxiv.org/abs/math/0309224)
+  entry 143, and [*The 3x+1 Problem: An Overview*](https://arxiv.org/abs/2111.02635)
+  — the survey statements of the cocycle and of the coefficient stopping time.
+  Theorems C and E there bound the same object more sharply than a naive
+  `M(h)`, and should be read before any further work on this line.
+- D. Bařina (2025), [DOI](https://doi.org/10.1007/s11227-025-07337-0) — the
+  `2^71` input.
+- Simons–de Weger (*Acta Arith.* 117, 2005) — the continued-fraction structure
+  behind the near-resonance reading.
+
+The offset recurrence and the window `3^m < 2^K ≤ (22/7)^m` remain the atlas's
+own presentation of standard material
+([`EXACT_COUNTEREXAMPLE_SEARCH.md`](../../proofs/EXACT_COUNTEREXAMPLE_SEARCH.md)).
+
+**What is genuinely this packet's own, pending its own check:** the exact
+`M(h)` table to `h ≤ 10⁶` with its record structure at convergents *and*
+semiconvergents; the observation that `M(h)` grows slowly enough that a
+10¹²-fold better verification bound buys only ~9.5× in `h`; and the exhaustive
+odd-`x` scan to 1.45 × 10⁹ showing first-contraction and first-descent coincide
+for every `x > 1`. That last statement is the coefficient-stopping-time
+conjecture `κ = σ` restricted to first indices — **so it, too, is a known
+conjecture and the scan is a verification of it, not a discovery.**

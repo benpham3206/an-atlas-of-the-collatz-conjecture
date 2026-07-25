@@ -4,7 +4,7 @@ Frontier of the fold program: what is established, what is blocked, and what
 runs next. Proved statements use exact integer/rational arithmetic; float64
 outputs are measurements, not theorems, and are labelled as such. The Collatz
 conjecture remains open; nothing here proves or disproves it. Updated
-2026-07-23.
+2026-07-25.
 
 ## PROOF ARCHITECTURE (which branch each result serves)
 
@@ -58,15 +58,30 @@ been corrected twice** (2026-07-24 streaming packet):
   is fixed by Δk, not by n, so a linear-in-n fit could not have tested
   anything. On the correct subsequence the 0.95 crossing sits near n ≈ 32 and
   n = 21 is *above* trend, at an all-time high of 0.887281;
-- the M_n decay law, compared directly for the first time, favours
-  **branch (ii)** — Tao-strength — by ΔAIC +30.0, and adding n = 21 made that
-  stronger, not weaker.
+- the M_n decay law, compared directly for the first time, fits
+  **branch (ii)** — Tao-strength — better: sum of squared residuals
+  **6.52× smaller** than branch (i) over n = 6..21 (16 points), and 4.22×
+  smaller on n ≥ 13. Adding n = 21 made the gap larger, not smaller.
+
+**Read that as a fit quality, not as evidence about the branch.** ⚠ The
+packet also reports this as "ΔAIC +30.0", and that number carries no
+information the ratio does not: the code computes
+`ΔAIC = N·ln(SSR_i/SSR_ii)` exactly, so it is the SSR ratio in a likelihood
+costume. The likelihood is fictional here — M_n is an exact deterministic
+max-reduction with no sampling noise, and the residuals are misspecification,
+not scatter (they drift monotonically). An information criterion that
+multiplies by N inflates a highly-correlated 16-point fit. The defensible
+statement is the SSR ratio plus a held-out check, not a model-selection
+verdict.
 
 So the earlier "mild evidence toward the stronger-than-Tao branch" does not
-survive the comparison. Neither resolution is confirmed, and the window is
-finite; but the current direction of evidence is branch (ii). This remains
-the only live route in the repo whose success condition is "beats Tao", and
-it is decided by depth measurements, not by a new idea.
+survive the comparison, and the current direction of *fit* is branch (ii).
+Neither resolution is confirmed. Branch (ii) is a statement about the
+asymptotics of L(n) for all n; **no float64 fit over n ≤ 21 can constrain
+it**, and any downstream packet that cites this section rather than the
+streaming packet's §5 "Honest scope" would be laundering a measurement into
+a premise. This remains the only live route whose success condition is
+"beats Tao", and it is decided by depth measurements, not by a new idea.
 
 ## ESTABLISHED
 
@@ -86,7 +101,15 @@ it is decided by depth measurements, not by a new idea.
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
   2-automatic orbit. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
-- **Supercritical stratum: 99 of 109 closed.** The enumerated supercritical
+- **⚠ SUBSUMED — supercritical stratum.** The exclusion below is superseded:
+  López–Stoll ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747), 2021)
+  already prove that aperiodic q with liminf s_L/L > log₃2 has Φ(q) ∉ ℚ_odd,
+  which kills all 109 survivors directly. **The remaining gap is now the
+  single critical density liminf s_L/L = log₃2 exactly** — everything strictly
+  above and strictly below is closed. See [`PRIORITY.md`](PRIORITY.md) §1.
+  Retained below for the machinery, which is still the only tool that bites at
+  the critical density.
+- **Supercritical stratum: 99 of 109 closed (machinery, not conclusion).** The enumerated supercritical
   survivors are excluded by a *proved* upper bound on the factor-complexity
   constant C = limsup p_q(k)/k, computed from the exact factor language of
   each fixed point (Lemma D) and fed into the landmark packet's existing
@@ -96,6 +119,9 @@ it is decided by depth measurements, not by a new idea.
   their exact p(1537)/1537 already exceeds α/(ρ−α). Witness 1 of the
   rigidity packet (σ(0)=11, σ(1)=10, ρ=2/3) dies on the single integer
   comparison 3²⁷ < 2⁴³. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
+- **⚠ REFRESH, not new — contraction onset.** Re-derives Terras (1976)
+  coefficient stopping time; Garner (1981) reached κ(n) < 105,000. This is the
+  same argument with Bařina's 2^71 in place of 2×10⁹. See [`PRIORITY.md`](PRIORITY.md) §5.
 - **Contraction onset, h ≤ 10⁶.** A minimal counterexample `m` satisfies
   `2^(A_h) ≤ 3^h` for every `h ≤ 1,000,000` Syracuse steps — every prefix of
   its parity word is supercritical over the first ~1.58 × 10⁶ Terras steps,
@@ -158,6 +184,12 @@ it is decided by depth measurements, not by a new idea.
   finite-check-at-one-layer plus phase-blind propagation argument can
   establish w_n(ε) ≥ w > 0; the missing input is the intrinsic chain phase
   pattern at every layer. [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
+- **The critical density, liminf s_L/L = log₃2 exactly.** The whole remaining
+  gap on the symbolic side, once López–Stoll 2021 is combined with the drift
+  wall. Frequency-based arguments are vacuous there by construction; the
+  factor-complexity bound is the only instrument that still bites, and it is
+  also the one thing in this repository the priority search did not find in
+  prior art. [`PRIORITY.md`](PRIORITY.md)
 - **Supercritical automatic stratum.** Still open as a *class* statement —
   "no divergent Collatz orbit has a 2-automatic parity word" is unproved,
   and no density argument can close it (Theorem 3 of the rigidity packet).
@@ -177,6 +209,10 @@ it is decided by depth measurements, not by a new idea.
   formalization — both future work. [`formal/`](formal/)
 
 ## NEXT
+
+**Session method, lessons and transfer audits: [`meta/`](meta/README.md).**
+Every session ends with a `meta/LEDGER.md` entry — strategy, what worked, what
+failed, mistakes, lesson. A session without one produces no compounding.
 
 **Ranked attack targets with odds, fallbacks and kill criteria:
 [`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
