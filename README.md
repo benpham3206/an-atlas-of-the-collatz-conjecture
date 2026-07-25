@@ -19,6 +19,7 @@ conjecture remains open.
 
 **Start here for agent handoff:** [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md)  
 **Repo frontier (established / blocked / next):** [`STATE.md`](STATE.md)  
+**Ranked attack targets (odds, fallbacks, kill criteria):** [`TARGETS.md`](TARGETS.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
 
 ## Maps and notation

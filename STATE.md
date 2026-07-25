@@ -178,6 +178,18 @@ it is decided by depth measurements, not by a new idea.
 
 ## NEXT
 
+**Ranked attack targets with odds, fallbacks and kill criteria:
+[`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
+ranking by importance-if-landed: (1) amplification — the only never-entered
+half of the architecture; (2) the 2-automatic Gap in full; (3) the Gap for
+DFAOs with ≤ N states — highest expected value, and the one to run first;
+(4) morphic transcripts of linear complexity; (5) the ten remaining automata;
+(6) contraction onset to infinity — **closed door**, capped by construction at
+~10¹⁰ steps regardless of Diophantine input; (7) the formal-conjectures port.
+
+The individual entries below remain accurate; `TARGETS.md` orders them and
+adds the ones that were missing.
+
 - **formal-conjectures contribution.** Target: the Collatz section of
   google-deepmind/formal-conjectures (one file today: bare `collatzStep` +
   conjecture). Route: port the zero-sorry Lean proofs (Terras bijection
