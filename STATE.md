@@ -182,7 +182,8 @@ it is decided by depth measurements, not by a new idea.
 [`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
 ranking by importance-if-landed: (1) amplification — the only never-entered
 half of the architecture; (2) the 2-automatic Gap in full; (3) the Gap for
-DFAOs with ≤ N states — highest expected value, and the one to run first;
+DFAOs with ≤ N states — **run 2026-07-24, N = 2; the complexity method
+saturates at two states and does not scale, which retires (2) by that route**;
 (4) morphic transcripts of linear complexity; (5) the ten remaining automata;
 (6) contraction onset to infinity — **closed door**, capped by construction at
 ~10¹⁰ steps regardless of Diophantine input; (7) the formal-conjectures port.

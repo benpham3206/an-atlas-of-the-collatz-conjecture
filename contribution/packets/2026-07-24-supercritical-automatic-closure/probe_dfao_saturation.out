@@ -1,0 +1,2 @@
+d=2: distinct words=     10  killed_by_drift=      7  killed_by_cor7=     3  SURVIVORS=    0  max C bound=55/32  [0.1s]
+d=3: distinct words=    228  killed_by_drift=    137  killed_by_cor7=    65  SURVIVORS=   26  max C bound=261/32  [6.9s]
