@@ -93,10 +93,11 @@ exact complexity bound on whatever survives.
 I estimated `N = 4–5`. Measured, over genuine 2-DFAOs (2-uniform morphisms on
 `d` states with `σ(0)[0] = 0`, all non-constant codings, deduplicated):
 
-| states `d` | distinct words | killed by drift wall | killed by Cor 7 | **survivors** |
-|---:|---:|---:|---:|---:|
-| 2 | 10 | 7 | 3 | **0** |
-| 3 | 228 | 137 | 65 | **26** |
+| states `d` | distinct words | killed by drift wall | killed by Cor 7 | **survivors** | survival rate |
+|---:|---:|---:|---:|---:|---:|
+| 2 | 10 | 7 | 3 | **0** | 0% |
+| 3 | 228 | 137 | 65 | **26** | 11% |
+| 4 | 9,148 | 6,049 | 1,146 | **1,953** | **21%** |
 
 So the theorem is:
 
@@ -108,6 +109,13 @@ surviving complexity constants sit above the threshold — several survivors
 have maximal factor density exactly `1` (arbitrarily long all-ones runs), where
 `α/(β−α)` degenerates to `κ = 1.7095…` and the density refinement buys nothing
 over Corollary 4.
+
+The `d = 4` census makes it worse rather than neutral: survival roughly
+doubles per state, the max proved complexity bound climbs `1.72 → 8.2 → 15.0`
+while the threshold it must beat stays fixed, and the *cheap* screen (the
+drift wall) does most of the killing at every size — 70%, 60%, 66% — while
+Corollary 7's share falls from 30% to 13%. The expensive machinery contributes
+less as the class grows, not more.
 
 **The method saturates immediately. It does not scale with automaton size,
 and no compute budget rescues it.** That retires target 2 as reachable by this
@@ -135,9 +143,9 @@ provably out of reach of the complexity inequality. They belong with target 5.
 python3 contribution/packets/2026-07-24-supercritical-automatic-closure/probe_dfao_saturation.py 3
 ```
 
-Output recorded in `probe_dfao_saturation.out`. The probe reuses that packet's
-exact factor-language machinery; `d = 4` takes substantially longer and does
-not change the verdict.
+Output recorded in `probe_dfao_saturation.out`, which includes the `d = 4`
+census (~7 min). The probe reuses that packet's exact factor-language
+machinery.
 
 ---
 

@@ -1,2 +1,18 @@
 d=2: distinct words=     10  killed_by_drift=      7  killed_by_cor7=     3  SURVIVORS=    0  max C bound=55/32  [0.1s]
 d=3: distinct words=    228  killed_by_drift=    137  killed_by_cor7=    65  SURVIVORS=   26  max C bound=261/32  [6.9s]
+     survivor sigma=((0, 1), (0, 2), (1, 0)) coding=(1, 1, 0) B=215/256 C<=263/64
+     survivor sigma=((0, 1), (0, 2), (1, 1)) coding=(1, 1, 0) B=55/64 C<=233/64
+     survivor sigma=((0, 1), (0, 2), (2, 0)) coding=(1, 1, 0) B=385/512 C<=191/32
+     survivor sigma=((0, 1), (0, 2), (2, 0)) coding=(1, 0, 1) B=385/512 C<=191/32
+     survivor sigma=((0, 1), (0, 2), (2, 2)) coding=(0, 0, 1) B=1 C<=7/2
+     survivor sigma=((0, 1), (0, 2), (2, 2)) coding=(1, 0, 1) B=1 C<=7/2
+     ... and 20 more
+d=4: distinct words=   9148  killed_by_drift=   6049  killed_by_cor7=  1146  SURVIVORS= 1953  max C bound=957/64  [441.5s]
+     survivor sigma=((0, 1), (0, 2), (0, 3), (0, 0)) coding=(1, 1, 0, 0) B=205/256 C<=121/32
+     survivor sigma=((0, 1), (0, 2), (0, 3), (0, 0)) coding=(1, 1, 1, 0) B=239/256 C<=121/32
+     survivor sigma=((0, 1), (0, 2), (0, 3), (0, 0)) coding=(1, 1, 0, 1) B=111/128 C<=121/32
+     survivor sigma=((0, 1), (0, 2), (0, 3), (0, 1)) coding=(1, 1, 1, 0) B=119/128 C<=11/4
+     survivor sigma=((0, 1), (0, 2), (0, 3), (1, 0)) coding=(1, 1, 0, 0) B=101/128 C<=313/64
+     survivor sigma=((0, 1), (0, 2), (0, 3), (1, 0)) coding=(1, 1, 1, 0) B=477/512 C<=313/64
+     ... and 1947 more
+DONE
