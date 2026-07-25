@@ -9,6 +9,26 @@ hypothesis** on the parity word, and combines it with the packet's
 complexity-pressure theorem into a two-wall screen for every possible
 counterexample transcript. No literature-priority claim is made.
 
+> ## ⚠ PRIORITY CORRECTION (25 July 2026) — prior art
+>
+> Theorem 1 (`liminf s_L/L ≥ log₃2` for a divergent positive orbit) is **not
+> new**. Lagarias's Relation 2.31 and **Monks & Yazinski**, *The Autoconjugacy
+> of the 3x+1 Function*, Thm 2.7(b)
+> ([PDF](https://monks.scranton.edu/files/pubs/AutoConjV13.pdf)) give
+> `liminf h/ℓ ≥ ln2/ln3` for divergent **rationals** — strictly more general
+> than the positive-integer case here. The §6 named-family eliminations follow
+> from it and are therefore also not new.
+>
+> The complementary half is also now closed: López–Stoll
+> ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747), 2021) handle
+> `liminf > α`. Together the whole remaining gap is `liminf = α` **exactly**,
+> where this theorem is vacuous by construction.
+>
+> What remains this packet's own: the pointwise, structure-free presentation,
+> the exact verifier, and the two-wall screen of §5 — whose *complexity* half
+> (Corollary 4 of the landmark memo) is the one component the priority search
+> did not find in prior art. See [`PRIORITY.md`](../../../PRIORITY.md).
+
 **Companion executable evidence:** `verify_drift_wall.py`,
 `test_verify_drift_wall.py`, `verify_drift_wall.out`,
 `drift_wall_certificate.json`.

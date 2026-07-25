@@ -152,10 +152,16 @@ is a finite certificate; divergence is not.
 |---|---|---|
 | Generalized Collatz maps undecidable | Conway, 1972 | [PDF](https://gwern.net/doc/cs/computable/1972-conway.pdf) |
 | Generalized Collatz problem Π⁰₂-complete (not the fixed 3n+1 map) | Kurtz–Simon, 2007 | [PDF](https://people.cs.uchicago.edu/~simon/RES/collatz.pdf) |
-| BB(6) reduces to a Collatz-like machine (Antihydra) | bbchallenge, 2024 | [wiki](https://wiki.bbchallenge.org/wiki/BB%286%29) |
+| BB(5) = 47,176,870, settled with a Rocq/Coq proof | bbchallenge (mxdys), 2024 | [wiki](https://wiki.bbchallenge.org/wiki/BB%285%29) |
+| BB(6) open; S(6) > Σ(6) > 2↑↑↑5 | mxdys, June 2025 | [wiki](https://wiki.bbchallenge.org/wiki/BB%286%29) |
+| Antihydra: a₀=8, a←⌊3a/2⌋, halts iff O > 2E. **Iterates ⌊3a/2⌋, not 3n+1** | mxdys, 2024 | [bbchallenge](https://bbchallenge.org/antihydra) · [wiki](https://wiki.bbchallenge.org/wiki/Antihydra) |
+| TMs simulating 3x+1 on a given input (not blank-tape halting) | Michel, 2014 | [arXiv:1409.7322](https://arxiv.org/abs/1409.7322) |
 
-Decidability of the fixed 3n+1 map is open. See
-[`contribution/proofs/FENCE.md`](contribution/proofs/FENCE.md).
+Decidability of the fixed 3n+1 map is open. **No small Turing machine is known
+whose halting is equivalent to the fixed 3n+1 conjecture**; Antihydra iterates a
+different map, and Conway / Kurtz–Simon concern the parameterized family.
+See [`contribution/proofs/FENCE.md`](contribution/proofs/FENCE.md) §1 and §8,
+and [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md) §8.
 
 ## Constraint retained by reformulations
 

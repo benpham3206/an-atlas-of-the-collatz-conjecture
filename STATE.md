@@ -101,6 +101,15 @@ a premise. This remains the only live route whose success condition is
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
   2-automatic orbit. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
+- **The critical density is the whole symbolic gap; and 2-automatic divergent
+  transcripts have no natural density.** Combining the drift wall
+  (liminf < α closed), López–Stoll 2021 (liminf > α closed) and the rigidity
+  packet's Theorem 2 (no 2-automatic word has natural density exactly α):
+  a divergent orbit's parity word has liminf s_L/L = log₃2 **exactly**, and if
+  it is 2-automatic it has **no natural one-density at all**. This retires the
+  entire natural-density case for automatic words, including the rigidity
+  packet's own Witness 2. Deduction from three cited inputs, no new mechanism.
+  [`PRIORITY.md`](PRIORITY.md) §7
 - **⚠ SUBSUMED — supercritical stratum.** The exclusion below is superseded:
   López–Stoll ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747), 2021)
   already prove that aperiodic q with liminf s_L/L > log₃2 has Φ(q) ∉ ℚ_odd,

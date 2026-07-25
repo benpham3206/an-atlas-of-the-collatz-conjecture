@@ -10,6 +10,40 @@ the 2-automatic class is shown to be nonempty and exactly equivalent to
 theorem is proved for every 2-automatic word outside that stratum. No
 literature-priority claim is made.
 
+> ## ⚠ PRIORITY CORRECTION (25 July 2026) — the framing is superseded
+>
+> This memo's central claim is that the **supercritical stratum is "exactly the
+> whole remaining gap"**. That is no longer accurate, and the correction is
+> favourable.
+>
+> López & Stoll, *The 3x+1 Periodicity Conjecture in ℝ*,
+> [arXiv:2101.12747](https://arxiv.org/abs/2101.12747) (2021), prove that `Φ`
+> maps an aperiodic `v` to an **aperiodic** (irrational, so `∉ ℚ_odd`) 2-adic
+> integer whenever `liminf s_L/L > log₃2`. Combined with the drift wall
+> (`liminf < α`), **both strict inequalities are closed**, and the whole
+> remaining gap is the single critical density `liminf s_L/L = log₃2` exactly —
+> for any word, automatic or not.
+>
+> Consequences for this memo specifically:
+>
+> - **Case (S) of Theorem 1 is closed except at the critical density.** All 109
+>   supercritical survivors of §9 have exact rational `ρ > α` and fall to
+>   López–Stoll directly.
+> - **Theorem 3 stands and is now more pointed.** Its witnesses show no
+>   *averaged-density* argument closes the stratum; López–Stoll close it by a
+>   liminf argument, which is consistent — and what remains at `liminf = α`
+>   exactly is where density arguments are vacuous by construction.
+> - **Theorem 2 stands** (no 2-automatic word has natural density exactly `α`,
+>   since automatic densities are rational and `α` is transcendental). Note the
+>   sharp consequence: **a 2-automatic word cannot sit at the critical density
+>   with a natural density at all** — so the surviving case needs a word whose
+>   natural density does not exist, like this memo's own Witness 2.
+> - The `ℓ ≤ 4` sweep is labelled "2-automatic"; for `ℓ = 3` those fixed points
+>   are 3-automatic, and by Cobham 1969 not 2-automatic unless eventually
+>   periodic.
+>
+> See [`PRIORITY.md`](../../../PRIORITY.md).
+
 **Companion executable evidence:** `verify_automatic_rigidity.py`,
 `test_verify_automatic_rigidity.py`, `verify_automatic_rigidity.out`,
 `automatic_rigidity_certificate.json`.

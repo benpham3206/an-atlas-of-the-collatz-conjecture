@@ -510,6 +510,19 @@ Then \(2^{k_N}>2H_N\), so Lemma 2 gives \(p_q(k_N)\ge N+1\). Since
 
 (5.1) follows. \(\square\)
 
+> **⚠ Priority note (25 July 2026).** Corollary 4 above is **the one result in
+> this repository that a literature search failed to find in prior art** — every
+> prior partial result toward the Bernstein–Lagarias periodicity conjecture
+> constrains letter frequency, not factor complexity. Treat it as the centre of
+> the programme, and as provisional novelty pending a real review.
+>
+> Corollary 5 below is **partly known**: a Sturmian word of slope `θ` has letter
+> density `θ`, so López–Stoll 2021 covers every `θ > log₃2` and Monks–Yazinski
+> every `θ < log₃2`. It is new only at the single slope `θ = log₃2`, which
+> Corollary 4 reaches because it is insensitive to density. The Fibonacci and
+> golden-angle codings have slope `1/φ² ≈ 0.382 < log₃2`, so those were already
+> known. See [`PRIORITY.md`](../../../PRIORITY.md) §2 and §4.
+
 ## Corollary 5. Sturmian rationality obstruction
 
 Every Sturmian word satisfies
