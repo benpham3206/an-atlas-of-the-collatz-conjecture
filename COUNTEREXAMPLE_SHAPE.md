@@ -77,10 +77,11 @@ Let `q` be its parity word, `s_L` the number of ones in the first `L` symbols,
 | 5 | if its one-density `β` exists and its complexity constant `C` is finite: `(β − α)·C ≥ α` | landmark memo, Cor 7 |
 | 6 | if its critical block discrepancy is bounded: **full binary factor entropy**, `limsup log₂p_q(k)/k = 1` | landmark memo, Cor 6 |
 | 7 | at its tail minima, the blow-up limit lies in `S_ρ` — every prefix expansive, `3^{s_L} > 2^L` for all `L` | landmark memo, Thm 6.1 |
+| 8 | if `q` is 2-automatic, it has **no natural one-density** | `PRIORITY.md` §7 |
 
 And, for a **least** counterexample specifically:
 
-| 8 | `2^{A_h} ≤ 3^h` for every `h ≤ 10⁶` Syracuse steps — every prefix supercritical over the first ~1.58 × 10⁶ Terras steps | `2026-07-24-contraction-onset` |
+| 9 | `2^{A_h} ≤ 3^h` for every `h ≤ 10⁶` Syracuse steps — every prefix supercritical over the first ~1.58 × 10⁶ Terras steps | `2026-07-24-contraction-onset` |
 
 Constraint 8 is the strongest finite-window statement available and is
 unconditional: not a liminf, not almost-all, no structural hypothesis. It is

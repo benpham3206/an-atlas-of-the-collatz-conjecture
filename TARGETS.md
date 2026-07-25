@@ -60,6 +60,14 @@ exhausted: at `liminf = α` they are all vacuous by construction. The
 factor-complexity bound is the only surviving tool, and it is also the only
 result the priority search did not find in prior art.
 
+**Sharper still for automatic words.** By the rigidity packet's Theorem 2, no
+2-automatic word has natural density exactly `α`. So a divergent 2-automatic
+transcript has **no natural one-density at all** (`PRIORITY.md` §7). The
+automatic sub-target is therefore: *a 2-automatic word with no natural density
+whose `liminf s_L/L` is exactly `log₃2`*. Whether one exists is open, and
+Theorem 2's proof suggests it is tightly constrained — this is the sharpest
+concrete question in the rigidity branch.
+
 **Why second.** This is the repository's stated single best target. The
 rigidity packet proves it is *exactly* the whole remaining gap for the
 automatic class, and that Theorem 3's witnesses make it **density-proof** —

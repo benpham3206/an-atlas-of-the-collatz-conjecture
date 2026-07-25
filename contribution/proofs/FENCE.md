@@ -249,11 +249,28 @@ cycles/cap exits and creates a theorem-sized classification question.
    orbit embedding, decidable-target reachability, and fixed-target-to-`1`
    simulation have different consequences. The last would already imply a
    counterexample to Collatz.
-3. **Antihydra coefficient mismatch.** `contribution/reports/F3-literature-map.md` says the
-   odd-step count merely exceeds the even-step count. The current Busy Beaver
-   Cryptids page states the termination condition as `O > 2E`. Until the
-   variable conventions are reconciled, only the qualitative parity-count
-   reduction is load-bearing here.
+3. **Antihydra coefficient mismatch — RESOLVED 2026-07-25.** The Cryptids page
+   was right and `contribution/reports/F3-literature-map.md` was wrong. The
+   exact statement, from
+   [bbchallenge](https://bbchallenge.org/antihydra) and the
+   [wiki](https://wiki.bbchallenge.org/wiki/Antihydra):
+
+   > `a₀ = 8`, `a_{i+1} = ⌊3a_i/2⌋`; a counter `b₀ = 0` gains 2 on even `a_i`
+   > and loses 1 on odd `a_i`; **the machine halts iff `b` reaches −1.**
+
+   Equivalently it halts iff at some prefix `O > 2E`, where `O` and `E` count
+   odd and even terms — **the factor 2 sits on the even count**, i.e.
+   `2E − O < 0`. Sligocki's transition rules confirm it:
+   `A(2n,b) → A(3n,b+2)`, `A(2n+1,b+1) → A(3n+1,b)`, `A(2n+1,0) → Halt`.
+   The `F3-literature-map.md` phrasing "odd-step count merely exceeds the
+   even-step count" should be corrected to `O > 2E`.
+
+   **The more important correction is qualitative.** Antihydra iterates
+   `⌊3a/2⌋`, **not** `3n+1`. Its halting is a statement about the single orbit
+   of 8 under a *different* map, and is **not equivalent to any statement about
+   the fixed `3n+1` map** in either direction. It belongs in this file as
+   evidence that Collatz-*like* problems obstruct BB(6), and for no stronger
+   purpose. See [`COLLATZ_ONE_PAGE.md`](../../COLLATZ_ONE_PAGE.md) §8.
 4. **Lemma 2 does not by itself certify the whole fold theorem.** It proves the
    symbolic cylinder count. The draft's claim that affine conjugacy preserves
    that branch partition requires its own precise partition/maximality proof.

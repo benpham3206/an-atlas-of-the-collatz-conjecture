@@ -151,6 +151,50 @@ unstated, but a referee would call it folklore.
 
 ---
 
+## 7. A new consequence, not just a correction
+
+Combining López–Stoll 2021 with the repository's own Theorem 2 gives a sharper
+statement than either alone. It is worth stating as a result.
+
+> **Corollary (25 July 2026).** A divergent Collatz orbit whose parity word is
+> 2-automatic has **no natural one-density**.
+
+**Proof.** Let `q` be the parity word of a divergent positive orbit, so `q` is
+aperiodic and `Φ(q) = n ∈ ℤ_{>0} ⊂ ℚ_odd`.
+
+1. The drift wall gives `liminf s_L/L ≥ α`.
+2. López–Stoll 2021 gives: aperiodic and `liminf s_L/L > α` implies
+   `Φ(q) ∉ ℚ_odd`. So `liminf s_L/L ≤ α`.
+3. Hence `liminf s_L/L = α` exactly.
+4. Suppose `q` is 2-automatic and its natural density `ρ` exists. Then
+   `ρ = liminf s_L/L = α`.
+5. But Theorem 2 of `2026-07-22-automatic-transcript-rigidity` says no
+   2-automatic word has natural density exactly `α` — automatic densities are
+   rational (Cobham) and `α = log₃2` is transcendental (Gelfond–Schneider).
+
+Contradiction, so `ρ` does not exist. ∎
+
+**Why this matters.** It removes the *entire* natural-density case from the
+2-automatic Gap. What survives is exactly the regime of that packet's own
+**Witness 2** — `q(n) = 1` iff `n` is even or `bitlength(n)` is odd, whose
+`s_L/L` oscillates between `2/3` and `5/6` and has no limit. The target is no
+longer "the supercritical stratum" or even "the critical density"; for
+2-automatic words it is:
+
+> words with no natural one-density, whose `liminf s_L/L` is exactly `log₃2`.
+
+That is a very small and very specific object. Witness 2 itself has
+`liminf = 2/3 > α`, so **López–Stoll kills Witness 2 too** — the packet's
+flagship density-proof witness is no longer a survivor. Whether any 2-automatic
+word achieves `liminf = α` exactly while having no natural density is now the
+open question, and Theorem 2's proof suggests it is tightly constrained.
+
+**Status.** This is a deduction from three published/proved inputs, all cited.
+No new mechanism. But it is the sharpest available statement of the 2-automatic
+gap and it did not exist before today.
+
+---
+
 ## What this changes
 
 **The claim ledger.** The headline "99 of 109 supercritical survivors closed"

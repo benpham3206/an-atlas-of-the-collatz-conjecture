@@ -13,7 +13,11 @@ supplies a *tool* or only a *mood*. Full audits live in
 | Hercher (2023), Bařina (2025) | The two numbers that dominate every cycle bound. | essential |
 | Hofstadter, *GEB*, **Ch. XIII + "Aria with Diverse Variations"** | Collatz by name; BlooP/FlooP and the Π₁ vs Π₂ distinction. Explains what an independence result would and would not buy. | real tool |
 | Hofstadter, *GEB*, **Ch. III "Figure and Ground"** | r.e. sets whose complement is not r.e. The formal reason "characterise the counterexamples" is not symmetric with "characterise the survivors". | real tool |
-| Allouche & Shallit, *Automatic Sequences* | Ch. 6 and §8.4 underpin every substitutive exclusion here. | essential for the rigidity branch |
+| Allouche & Shallit, *Automatic Sequences* | Ch. 6 and §8.4 underpin every substitutive exclusion here; Thm 10.3.1 is Lemma D's prior art. | essential for the rigidity branch |
+| **López & Stoll, *The 3x+1 Periodicity Conjecture in ℝ*** ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747)) | Closes `liminf > log₃2` entirely. Subsumes this repo's supercritical work and defines the remaining gap. Should have been read first. | **essential** |
+| Monks & Yazinski, *The Autoconjugacy of the 3x+1 Function* ([PDF](https://monks.scranton.edu/files/pubs/AutoConjV13.pdf)) | Thm 2.7(b) is the drift wall, for rationals, and predates it. | essential |
+| Terras (1976), Garner (1981) | Coefficient stopping time. Read before touching the contraction-onset line. | essential for that line |
+| bbchallenge wiki: [BB(5)](https://wiki.bbchallenge.org/wiki/BB%285%29), [BB(6)](https://wiki.bbchallenge.org/wiki/BB%286%29), [Antihydra](https://wiki.bbchallenge.org/wiki/Antihydra) | Accurate, current, and the model for distributed formally-verified work. Read for the method as much as the content. | real tool |
 
 ## Read only for a specific purpose
 
@@ -31,6 +35,7 @@ supplies a *tool* or only a *mood*. Full audits live in
 | Hofstadter, *GEB*, Ch. XV "Jumping out of the System" | Rhetorically appealing, technically thin. Ch. I already gives the usable half. |
 | Bui-Thanh's inverse-problems corpus | Audited 2026-07-25: nothing transfers. Every method presumes a differentiable forward map with low-rank structure — a *low-complexity* requirement, pointed the wrong way. |
 | Anything invoking "chaos" without an invariant measure | The 2-adic shift already has full topological entropy. Chaos is free here and explains nothing. `RATIONAL_IRRATIONAL_SHADOW.md` says so with a proof. |
+| Antihydra as evidence about Collatz | It iterates `⌊3a/2⌋`, not `3n+1`. It shows BB(6) is hard. It says nothing about the fixed map. `COLLATZ_ONE_PAGE.md` §8. |
 
 ## The pattern in the negatives
 
