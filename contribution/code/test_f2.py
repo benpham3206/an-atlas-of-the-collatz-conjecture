@@ -8,6 +8,7 @@ Run:
 
 from __future__ import annotations
 
+import bisect
 import os
 import random
 import sys
@@ -201,30 +202,74 @@ def test_signature_multiset():
         assert a <= t
 
 
+_REV8 = [int(format(i, "08b")[::-1], 2) for i in range(256)]
+
+
+def _bitrev(u: int, s: int) -> int:
+    """Reverse the low `s` bits of `u` (s <= 32)."""
+    r = (
+        (_REV8[u & 0xFF] << 24)
+        | (_REV8[(u >> 8) & 0xFF] << 16)
+        | (_REV8[(u >> 16) & 0xFF] << 8)
+        | _REV8[(u >> 24) & 0xFF]
+    )
+    return r >> (32 - s)
+
+
+def _dyadic(s: int, u: int, scale: int):
+    """The cylinder m ≡ u (mod 2^s) as a half-open dyadic interval, at
+    `scale` binary places. Digits are read low-bit-first, so the interval
+    length 2^{scale-s} is exactly the branch mass 2^{-s} rescaled."""
+    lo = _bitrev(u, s) << (scale - s)
+    return lo, lo + (1 << (scale - s))
+
+
 def test_domains_partition_unit_interval():
     """
-    Resolved branches' domains must be pairwise disjoint (cylinder sets).
-    Check pairwise: two domains m≡u1 mod 2^{s1}, m≡u2 mod 2^{s2} overlap
-    iff u1 ≡ u2 (mod 2^{min(s1,s2)}).
+    Resolved branches' domains must be pairwise disjoint (cylinder sets),
+    and no unresolved leaf may meet a resolved domain.
+
+    Two dyadic cylinders overlap iff one contains the other, so the family
+    is laminar: "pairwise disjoint" is equivalent to "no interval starts
+    before the previous one ends" once the cylinders are sorted as dyadic
+    intervals. That replaces the O(n^2) pairwise scan (n reaches 367,684
+    resolved branches and 1,250,508 unresolved leaves at k=3, i.e. ~10^13
+    comparisons) with an O(n log n) sort plus a binary search per leaf.
     """
     for k in range(1, 4):
         for r in range(1 << k):
             cr = get_class(k, r)
             domains = [(s, u) for s, u, *_ in cr.branches]
-            for i in range(len(domains)):
-                s1, u1 = domains[i]
-                for j in range(i + 1, len(domains)):
-                    s2, u2 = domains[j]
-                    m = min(s1, s2)
-                    assert (u1 % (1 << m)) != (u2 % (1 << m)), (
-                        f"overlap k={k} r={r}: ({s1},{u1}) vs ({s2},{u2})"
+            leaves = [(leaf.s, leaf.u) for leaf in cr.unresolved]
+            scale = max([s for s, _ in domains] + [s for s, _ in leaves] + [1])
+
+            res = sorted(_dyadic(s, u, scale) for s, u in domains)
+            end = -1
+            prev = None
+            for iv in res:
+                assert iv[0] >= end, (
+                    f"overlap k={k} r={r}: {prev} vs {iv} (dyadic, scale {scale})"
+                )
+                end = iv[1]
+                prev = iv
+
+            # unresolved leaves must not nest inside a resolved domain, nor
+            # contain one: with `res` disjoint and sorted, both directions are
+            # decided by the neighbours of the leaf's start point.
+            los = [lo for lo, _ in res]
+            for s, u in leaves:
+                lo, hi = _dyadic(s, u, scale)
+                i = bisect.bisect_right(los, lo) - 1
+                if i >= 0:
+                    assert res[i][1] <= lo, (
+                        f"unres/resol overlap k={k} r={r}: leaf ({s},{u}) "
+                        f"inside resolved {res[i]}"
                     )
-            # unresolved leaves must not nest inside a resolved domain either
-            for leaf in cr.unresolved:
-                for s, u in domains:
-                    m = min(s, leaf.s)
-                    assert (u % (1 << m)) != (leaf.u % (1 << m)), (
-                        f"unres/resol overlap k={k} r={r}"
+                j = bisect.bisect_left(los, lo)
+                if j < len(res):
+                    assert res[j][0] >= hi, (
+                        f"unres/resol overlap k={k} r={r}: leaf ({s},{u}) "
+                        f"contains resolved {res[j]}"
                     )
 
 
