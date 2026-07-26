@@ -12,6 +12,20 @@ certificates.
 [`COUNTEREXAMPLE_SHAPE.md`](COUNTEREXAMPLE_SHAPE.md) ·
 [`TARGETS.md`](TARGETS.md)
 
+> ## Before you trust a green test suite
+>
+> Every error found in this repository was caught by **changing audience or
+> direction** — never by verification, which was green throughout each one:
+> two headline results that were prior art, a false claim in two entry-point
+> files, an unproved lemma carrying 114 of 116 kills, a theorem that restates
+> its own hypothesis, and a class-membership error. Not one arithmetic mistake
+> among them.
+>
+> Exact verification checks whether a computation is right. It cannot check
+> whether a claim is novel, load-bearing on something proved, or a tautology.
+> Read [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md) §"Hidden insights"
+> before you add anything here.
+
 > ## The single most important fact on this page
 >
 > **The remaining symbolic gap is one number.** For the parity word `q` of a
@@ -149,9 +163,14 @@ this repository that a priority search failed to find in prior art.** Every
 prior partial result toward the Bernstein–Lagarias periodicity conjecture —
 Lagarias's Relation 2.31, Monks–Yazinski Thm 2.7(b), López–Stoll 2021 Thm 1 —
 constrains **letter frequency**, an abelian one-dimensional statistic. This
-constrains **factor complexity**, which is strictly more information, by a
-different mechanism: pigeonhole on distinct length-`k` factors under
-`(3/2)`-affine state growth.
+constrains **factor complexity**. The two are *logically independent*, not
+nested: for every irrational slope `θ` there is a Sturmian word of one-density
+`θ` with `p(k) = k+1`, so complexity does not determine density, and no
+frequency hypothesis determines complexity. The mechanism is different too —
+pigeonhole on distinct length-`k` factors under `(3/2)`-affine state growth.
+What matters is not that complexity is "more information" (it is not) but that
+Corollary 4 **is not a consequence of any frequency result, and is non-vacuous
+exactly where all of them are vacuous.**
 
 **And it is insensitive to density.** That is why it is the only instrument that
 still bites at `liminf = α`, where the problem now demonstrably sits. Treat it

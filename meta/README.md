@@ -36,3 +36,5 @@ five-minute strategy check. That check is what this directory is for.
 
 Anything here that goes three sessions without either killing a route or
 feeding a `contribution/` packet gets moved to `exploratory/` or deleted.
+
+**Start with [`AGENT_CONDUCT.md`](AGENT_CONDUCT.md) §"Hidden insights: the failure classes verification cannot catch".** It is the most reused thing in this directory: every error found in this repository was caught by changing audience or direction, never by verification.

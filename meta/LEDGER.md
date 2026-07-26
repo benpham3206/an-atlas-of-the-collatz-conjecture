@@ -136,3 +136,44 @@ parallel instead of serially.
 - **Separate strategy from proofwork physically.** Three of the four
   most expensive mistakes in this project's history were strategic and no
   verifier could have caught any of them.
+
+
+## 2026-07-25 (afternoon) — four parallel probes: three negatives and a measurement
+
+**Meta-strategy.** Run four independent lines at once, three in subagents, and
+accept negatives as the primary product. Continues the priority-search shift
+from generation to digestion.
+
+**Wins.**
+- Exact rational bracket for the dimension of the surviving set,
+  `H(α) ∈ (0.949952152, 0.949957233)`, certified by integer comparisons only.
+  Yields the sharpest statement yet of *why* amplification has never been
+  entered: the gap is measure-zero, so density methods cannot see it, and
+  dimension ≥ 0.95, so it cannot be dismissed.
+- A referee-ready note on Corollary 4 — the first artifact aimed at an external
+  human rather than at the repository.
+
+**Mistakes caught, both mine.**
+- **"Factor complexity is strictly more information than letter frequency" is
+  false.** Sturmian words realise every irrational density at `p(k) = k+1`, so
+  neither statistic determines the other; they are *logically independent*. The
+  load-bearing claim survives the correction — Corollary 4 is still not a
+  consequence of any frequency result, and is still non-vacuous exactly where
+  they are all vacuous — but the false version was in two entry-point files and
+  a referee would have caught it in one line.
+- **Corollary 7 is unproved and carries most of the weight.** 114 of 116 kills
+  route through a corollary the landmark memo states without proof. I built on
+  it for two days without checking.
+
+**Kills, honestly reported.**
+- Shadow-barrier: its Theorem 2 is an algebraic restatement of its own
+  hypothesis, so it is passed by construction and excludes nothing.
+- The complexity-consuming instrument does not exist in the literature, and the
+  reason is structural rather than a gap in effort.
+- Heinis gap probe: proposed, tested, dead in one command — the survivors'
+  complexity bounds are 3.16 to 6.06, far above the `(1,2)` window.
+
+**Lesson.** Three of four probes returned negatives, and the negatives were more
+useful than the measurement. The two errors were both found by *writing for an
+outside reader* — neither surfaced during two days of internal verification.
+That is the strongest evidence so far that Tao's slide-48 test is the right gate.

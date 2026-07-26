@@ -22,7 +22,7 @@ conjecture remains open.
 **Ranked attack targets (odds, fallbacks, kill criteria):** [`TARGETS.md`](TARGETS.md)  
 **Fresh-agent hail-mary brief:** [`HAIL_MARY_PROMPT.md`](HAIL_MARY_PROMPT.md)  
 **What a counterexample must / cannot look like:** [`COUNTEREXAMPLE_SHAPE.md`](COUNTEREXAMPLE_SHAPE.md)  
-**Agent conduct — read before working:** [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md)  
+**Agent conduct — read before working:** [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md) — start with §"Hidden insights: the failure classes verification cannot catch"  
 **Literature priority, and what it retired:** [`PRIORITY.md`](PRIORITY.md)  
 **Who did what, and which check backs it:** [`PROVENANCE.md`](PROVENANCE.md) · [`CONTRIBUTORS.md`](CONTRIBUTORS.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
@@ -73,7 +73,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras bijection; two-branch family; parity-block collision principle) |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
-| [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier (exploratory; provenance chatgpt-thread-1784792218410; not cited as a result) |
+| [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier — **KILLED 2026-07-25**: its Theorem 2 restates its own hypothesis, so it excludes nothing. Retained as a correct note on the affine identity |
 | [`meta/`](meta/README.md) | Strategy research, not proofwork: session ledger, simple questions, agent conduct, transfer audits. **Never cited as evidence for a mathematical claim** |
 | [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
 | [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes. **Read [`graphify-out/README.md`](graphify-out/README.md) first** — the map does not separate `contribution/` from `exploratory/` and `quarantine/`, so its connectivity ranking puts non-evidence drafts near the top |

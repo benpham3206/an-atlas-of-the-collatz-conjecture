@@ -145,6 +145,29 @@ exhausted, and only complexity-based ones can still bite.
 
 ---
 
+## 3a. How big is the surviving set?
+
+Not a constraint on the counterexample, but a measurement of the space it must
+live in — and it explains which methods can never find it.
+
+The surviving symbolic set is `G = { q : liminf s_L/L = α }`.
+
+| property | value | consequence |
+|---|---|---|
+| Bernoulli(1/2) measure | **0** | density and measure arguments, including Tao's, are structurally blind to it |
+| Hausdorff dimension | **≥ H(α) ∈ (0.949952152, 0.949957233)** | it is not thin; it cannot be dismissed as degenerate |
+
+Lower bound via Besicovitch (1934) / Eggleston (1949): `G` contains the level
+set on which the frequency exists and equals `α`, whose dimension is the binary
+entropy `H(α)`. Bounds are exact rationals certified by integer comparisons;
+verifier [`contribution/code/dimension_bracket.py`](contribution/code/dimension_bracket.py).
+
+**The reading.** A counterexample transcript lives in a set that is invisible to
+measure and nearly full in dimension. Any instrument that finds it must be
+pointwise and arithmetic. Statistical instruments are not weak here — they are
+looking at a null set.
+
+
 ## 4. What a *proof* cannot look like
 
 The dual question, and the more useful one for allocating effort. Each of these

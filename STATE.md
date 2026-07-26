@@ -187,7 +187,38 @@ a premise. This remains the only live route whose success condition is
   crosswalk. Each states explicitly that it is **not** a stronger density
   theorem than Tao's. [`.../2026-07-22-tao-structural-refinement/`](contribution/packets/2026-07-22-tao-structural-refinement/), [`.../2026-07-22-syracuse-fourier/`](contribution/packets/2026-07-22-syracuse-fourier/), [`.../2026-07-22-scalar-phase-second-moment/`](contribution/packets/2026-07-22-scalar-phase-second-moment/), [`.../2026-07-22-structure-randomness-transfer/`](contribution/packets/2026-07-22-structure-randomness-transfer/)
 
+- **Dimension of the surviving set.** `G = {q : liminf s_L/L = α}` has
+  Bernoulli(1/2) measure **zero** but Hausdorff dimension
+  **≥ H(α) ∈ (0.949952152, 0.949957233)**, by containment of the
+  Besicovitch–Eggleston level set. Exact rational bounds, each certified by one
+  integer comparison. Consequence: density and measure arguments — Tao's
+  included — are **structurally blind** to the remaining gap, and it is far too
+  large to dismiss as degenerate. [`contribution/code/dimension_bracket.py`](contribution/code/dimension_bracket.py)
+- **Corollary 4 referee note.** Self-contained statement, proof, prior-art
+  separation and four referee questions for the one result the priority search
+  did not find in prior art. The externalization artifact. [`REFEREE_NOTE.md`](REFEREE_NOTE.md)
+
 ## BLOCKED
+
+- **No complexity-consuming instrument exists.** Searched 2026-07-25. Every
+  saturation in `TARGETS.md` has one cause — Corollary 4 is a *lower* bound, so
+  it kills only simple objects — and the literature has no converse. Structural
+  reason: factor complexity is an invariant of the **orbit closure**, while
+  `Φ(q) ∈ ℚ_odd` is a condition on a **single point**; high complexity makes the
+  closure large and the arithmetic hypothesis invisible. ×2×3 rigidity
+  (Furstenberg, Rudolph, EKL) needs a jointly invariant measure of positive
+  entropy — which is what one would be proving. **Redirect:** change the
+  hypothesis from "low complexity" to "automatic/morphic" and switch to
+  **Mahler's method**, which is indifferent to complexity level. Two bounded
+  checks first: the mixed-base `(2,3)` functional equation, and a 2-adic form of
+  the Adamczewski–Faverjon dichotomy. [`TARGETS.md`](TARGETS.md)
+- **Corollary 7 is unproved.** The landmark memo states it without proof, and
+  `2026-07-24-supercritical-automatic-closure` routes **114 of its 116 kills**
+  through it (only 30 through the proved Corollary 4). The reconstruction is
+  believed routine but must be written out before publication.
+- **Shadow-barrier: killed.** Its Theorem 2 restates its own hypothesis, so it
+  excludes nothing; its regime `s_L/L − α = o(1/L)` is strictly narrower than
+  the surviving gap and is assumed, not proved. [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/)
 
 - **Phase-blind propagation.** Proved impossible (P2, P5): no
   finite-check-at-one-layer plus phase-blind propagation argument can
