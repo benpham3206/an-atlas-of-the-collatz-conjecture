@@ -1,0 +1,40 @@
+negative controls: {'equation_fails_without_y_substitution': True, 'phi_changes_on_a_flipped_bit': True, 'known_attracted_word_is_not_stalled': True}
+==========================================================================
+A. functional equation  f = Q . (f o subst)   [exact, mod 2^160]
+==========================================================================
+  240/240 random (morphism, unit point) pairs satisfy it exactly
+
+==========================================================================
+B. Phi via the system  vs  Phi via the Bernstein-Lagarias series
+==========================================================================
+  240/240 agree mod 2^160
+  closed forms: {'all_ones_is_minus_one': True, 'all_zeros_is_zero': True}
+
+==========================================================================
+C. attraction verdict for the ten remaining supercritical survivors
+==========================================================================
+sigma      seed   tau   rho  verdict   AWC  decided by
+--------------------------------------------------------------------------
+01,02,10      0   110   5/6  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+01,02,20      0   110   3/4  ATTRACTED False C1 proof-nilpotent (Mbar^d = 0 over F_2)
+01,02,20      0   101   3/4  ATTRACTED False C1 proof-nilpotent (Mbar^d = 0 over F_2)
+01,02,20      2   110   3/4  ATTRACTED False C1 proof-nilpotent (Mbar^d = 0 over F_2)
+01,02,20      2   101   3/4  ATTRACTED False C1 proof-nilpotent (Mbar^d = 0 over F_2)
+01,12,00      0   110   4/5  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+01,12,00      1   110   4/5  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+01,20,00      0   110   6/7  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+01,20,10      0   110   5/6  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+01,20,11      0   110   4/5  STALLED   False C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned
+--------------------------------------------------------------------------
+  ATTRACTED 4/10    STALLED 6/10    AWC 0/10
+
+==========================================================================
+D. census over all 2-uniform morphisms, d <= 4
+==========================================================================
+ d    words   attracted   stalled  undecided   Mbar nilp      AWC
+--------------------------------------------------------------------------
+ 2       24          12        12          0          12       24
+ 3     3078        1122      1956          0         798     1278
+ 4   627200      166280    459480       1440       89600   124736
+
+certificate written: /Users/benjaminpham/Documents/an-atlas-collatz-push/contribution/packets/2026-07-25-mahler-tower/mahler_tower_certificate.json

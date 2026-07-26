@@ -60,6 +60,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/) | Automatic-transcript trichotomy, density-wall impossibility witnesses, 514-word exact hunt |
 | [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) | Exact factor-language complexity bound (Lemma D). Its **conclusion is subsumed** by López–Stoll 2021; the machinery is retained because it is the only tool that bites at the critical density |
 | [`contribution/packets/2026-07-24-contraction-onset/`](contribution/packets/2026-07-24-contraction-onset/) | Descent requires contraction; onset bound M(h). A **quantitative refresh** of Terras 1976 / Garner 1981, not a new theorem |
+| [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/) | Φ(q) as the value of an explicit Mahler-type system for uniform-morphic q. The mixed bases 2 and 3 obstruct the **evaluation point**, not the equation; splits the ten remaining survivors 4/6 and closes none |
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
@@ -264,6 +265,8 @@ python3 contribution/packets/2026-07-24-supercritical-automatic-closure/verify_s
 python3 contribution/packets/2026-07-24-supercritical-automatic-closure/test_verify_supercritical_closure.py  # runs standalone or under pytest
 python3 contribution/packets/2026-07-24-contraction-onset/verify_contraction_onset.py                         # ~5.5 min (VCO_HMAX=300000 for ~23 s)
 python3 contribution/packets/2026-07-24-contraction-onset/test_verify_contraction_onset.py
+python3 contribution/packets/2026-07-25-mahler-tower/verify_mahler_tower.py                                    # ~40 s (--dmax 3 for ~4 s)
+python3 contribution/packets/2026-07-25-mahler-tower/test_verify_mahler_tower.py                               # 16 tests, 4 RED mutants
 ```
 
 `test_f2.py`'s runtime is dominated by the `k ≤ 5` class-cache warm-up
