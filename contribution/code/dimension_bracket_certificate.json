@@ -1,0 +1,20 @@
+{
+  "H_alpha_bracket": {
+    "hi": "2475803048489/2606225800000",
+    "hi_decimal": "0.949957233",
+    "lo": "18204336817/19163425000",
+    "lo_decimal": "0.949952152",
+    "note": "decimals are renderings of the exact rational bounds, not the certificate"
+  },
+  "alpha_bracket": {
+    "hi": "665/1054",
+    "hi_witness": "3^665 > 2^1054",
+    "lo": "15601/24727",
+    "lo_witness": "3^15601 < 2^24727"
+  },
+  "float64_control": "0.949955527188",
+  "guess_denominator": 200000,
+  "method": "every bound certified by an integer comparison: a/b < log_3 2 iff 3^a < 2^b; -log_2(p/q) >= c/d iff p^d * 2^c <= q^d",
+  "packet": "dimension of the surviving set",
+  "statement": "G = {q : liminf s_L/L = alpha} contains the Besicovitch-Eggleston level set {q : lim s_L/L = alpha}, whose Hausdorff dimension is H(alpha); hence dim_H(G) >= H(alpha)."
+}

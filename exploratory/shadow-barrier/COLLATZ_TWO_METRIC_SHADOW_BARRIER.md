@@ -1,5 +1,47 @@
 # Collatz rational shadows: an exact two-metric barrier
 
+> ## ⚠ KILLED (25 July 2026) — do not promote, do not build on
+>
+> Reviewed against the collapsed gap (`liminf s_L/L = α` exactly) and killed.
+> Three failure points, in order of severity:
+>
+> 1. **Theorem 2 excludes nothing.** Its equation (7),
+>    `x_L − N = (T^L(N) − N)/(1 − λ_L) ≥ 2^L/D_L`, is an algebraic restatement
+>    of its own hypothesis. Theorem 1 makes `x_L − N` and `T^L(N) − N` the same
+>    quantity up to the positive factor `1 − λ_L`, so any `N` satisfying the
+>    hypothesis satisfies (7) automatically. The memo's claim that it "gives an
+>    exact test that every candidate must pass" is wrong in the way that
+>    matters: it is a test passed by construction.
+> 2. **Its regime is strictly narrower than the surviving gap, and is
+>    assumed rather than proved.** Near-neutrality means
+>    `s_L/L − α = o(1/L)`; the surviving case only gives
+>    `liminf s_L/L = α`, which permits `s_L/L − α = ε_L` with `ε_L → 0` but
+>    `ε_L·L → ∞`. The packet's own `PROVENANCE.md` concedes: *"Near-neutrality
+>    is assumed, not proved."* Nothing in `liminf = α` supplies it.
+> 3. **Its one usable result is a known finite sieve.** Equation (4) is the
+>    classical Terras coefficient-stopping-time criterion in exact form, at
+>    cost `2^L`.
+>
+> Equation (6) is Bernstein/Terras cylinder nesting, already
+> `contribution/proofs/RATIONAL_IRRATIONAL_SHADOW.md` Theorem 2. So the
+> "two-metric barrier" is (known 2-adic convergence) + (restated hypothesis).
+>
+> **What was checked.** Theorem 1 and (7) were independently re-derived on all
+> 8,190 words through `L = 12` with three lifts each: zero violations. The
+> arithmetic is sound and exact; the mathematics does not do what was claimed.
+>
+> **Retained** as a correct note on the affine identity, and equation (4) as an
+> exact oracle. It would become interesting only if someone proved a divergent
+> orbit must meet infinitely many contractive convergent-aligned prefixes — and
+> that theorem, not this packet, would be the result.
+>
+> Distinct from the real-convergence boundary observation in `MOTIVATION.md`
+> §3.9: both live near `2^A ≈ 3^h`, but the packet's blow-up comes from the
+> denominator `D_L` shrinking (strong resonance) and the other from term
+> magnitude (weak resonance). Do not conflate them.
+
+
+
 **Date:** 2026-07-23  
 **Status:** proved finite-word theorem and exact verifier. No Collatz proof,
 counterexample, or novelty claim.

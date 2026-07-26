@@ -12,7 +12,7 @@ are not cited as evidence for the results in
 | [`LANGUAGE.md`](LANGUAGE.md) | Candidate terminology and symbolic formulations |
 | [`LENSES.md`](LENSES.md) | Alternative reformulations |
 | [`compression-framework-notes.md`](compression-framework-notes.md) | Compression-framework notes |
-| [`shadow-barrier/`](shadow-barrier/) | Two-metric rational-shadow barrier; provenance in [`shadow-barrier/PROVENANCE.md`](shadow-barrier/PROVENANCE.md) |
+| [`shadow-barrier/`](shadow-barrier/) | Two-metric rational-shadow barrier — **KILLED 2026-07-25**: its Theorem 2 restates its own hypothesis. Retained as a correct note on the affine identity. See the banner in the memo. |
 
 **Path note.** `ELEMENTS.md`, `LENSES.md`, `ARCHITECTURE.md`, and
 `METADYNAMICAL_GEOMETRY.md` were written inside an earlier research repository

@@ -85,3 +85,17 @@ A packet is not complete until it appears in this table with a named
 independent check. "Ran the verifier twice" is not a check. If no independent
 check exists, write `none` — an honest gap is auditable, an implied check is
 not.
+
+
+## 2026-07-25 (afternoon) — dimension, referee note, instrument hunt
+
+| Artifact | Direction | Executed by | Independent check |
+|---|---|---|---|
+| `contribution/code/dimension_bracket.py` | Ben Pham | Claude Opus 5 | float64 control asserted inside the exact bracket; bounds certified by integer comparison |
+| `REFEREE_NOTE.md` | Ben Pham | Claude Opus 5 (subagent) | found two errors in the source material; both corrected at source |
+| `TARGETS.md` instrument-hunt section | Ben Pham | Claude Opus 5 (subagent) | Heinis probe tested and rejected against the certificate |
+| shadow-barrier kill | Ben Pham | Claude Opus 5 (subagent) | Theorem 1 and (7) re-derived on all 8,190 words through L=12 |
+
+Corrections made to previously committed work: the "strictly more information"
+claim (false, in `PRIORITY.md` and `COLLATZ_ONE_PAGE.md`) and the unproved
+status of Corollary 7 (now flagged in the landmark memo).

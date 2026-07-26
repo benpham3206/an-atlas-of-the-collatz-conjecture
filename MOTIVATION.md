@@ -128,6 +128,62 @@ solution does more than answer one question. It shows that we have learned a
 new way to reason about a class of problems that current methods cannot
 reach.
 
+## 3.9 The shape of what is left, measured
+
+The 2026-07-25 priority search collapsed the remaining symbolic gap to a
+single number. Write `s_L` for the number of ones in the first `L` symbols of
+a parity word and `α = log₃2`. The band `liminf s_L/L < α` is closed
+(drift wall; Monks–Yazinski) and the band `liminf s_L/L > α` is closed
+(López–Stoll 2021). What survives is the set
+
+```
+G = { q ∈ {0,1}^ℕ  :  liminf_L s_L(q)/L = α }.
+```
+
+`G` can be measured, and the measurement is worth stating because it explains
+the failure of an entire class of method.
+
+**It is null.** Under the uniform Bernoulli measure on `{0,1}^ℕ` — equivalently
+Lebesgue measure on `[0,1]` under binary expansion — almost every word has
+one-density `1/2 ≠ α`. So `G` has measure zero.
+
+**It is nearly full-dimensional.** `G` contains the Besicovitch–Eggleston level
+set `{q : lim s_L/L = α}`, whose Hausdorff dimension is the binary entropy
+`H(α)` (Besicovitch 1934; Eggleston 1949). Hence
+
+```
+dim_H(G)  ≥  H(α)  ∈  ( 0.949952152 , 0.949957233 ).
+```
+
+Those bounds are exact rationals, each certified by a single integer
+comparison — `a/b < log₃2 ⟺ 3^a < 2^b` for `α`, and
+`−log₂(p/q) ≥ c/d ⟺ p^d·2^c ≤ q^d` for the entropy terms. The decimals are
+renderings of the exact bounds, not the certificate.
+Verifier: [`contribution/code/dimension_bracket.py`](contribution/code/dimension_bracket.py).
+
+**Why this matters.** The two facts together are a structural diagnosis, not a
+curiosity:
+
+- **Density and measure methods are blind to `G` by construction.** Tao's
+  theorem is a statement about logarithmic density; `G` is null. No sharpening
+  of a density estimate can ever see a null set. This is a category mismatch,
+  not a weak constant — and it is the precise reason the amplification branch
+  of the proof architecture has never been entered.
+- **`G` is not thin enough to dismiss.** Dimension at least `0.9499…` out of a
+  possible `1`. One cannot argue that the survivors are degenerate or
+  exceptional in any dimensional sense.
+
+A set that is invisible to measure and nearly full in dimension is exactly the
+kind of object for which one needs a pointwise, arithmetic instrument rather
+than a statistical one. That is the whole reason this repository's surviving
+result constrains factor complexity rather than letter frequency.
+
+**Not established.** Results on irregular sets (Barreira–Schmeling 2000) suggest
+`dim_H(G)` may be exactly `1`, since `G` contains words whose Birkhoff average
+does not exist. This repository has not verified a citation giving that for
+this specific level set. The lower bound `H(α)` is the part that is solid.
+
+
 ## 4. Origin
 
 The problem first appeared on a whiteboard. The place was a multivariable

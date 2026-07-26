@@ -586,6 +586,17 @@ The reverse inequality is automatic because \(p_q(k)\le2^k\). \(\square\)
 
 Thus a rationally realizable critical survivor cannot be quasiperiodic, substitutive with low entropy, or symbolically sparse. It must exhibit full binary factor entropy.
 
+> **⚠ PROOF GAP (25 July 2026).** Corollary 7 below is **stated without
+> proof** — the text gives the statement and then jumps to the Sturmian
+> consequence. This matters more than it looks: the
+> `2026-07-24-supercritical-automatic-closure` packet routes **114 of its 116
+> kills** through Corollary 7 and only 30 through the proved Corollary 4, so
+> the unproved corollary carries the bulk of the computational weight in this
+> repository. The reconstruction is believed routine — the ones-cap turns the
+> growth bound into `H_N ≲ poly(N)·2^{gN}` with `g = β log₂3 − 1`, the additive
+> term contributing only a polynomial factor — but it must be written out
+> before anything here is published. See `REFEREE_NOTE.md` §2.
+
 ## Corollary 7. Balanced supercritical words require large complexity
 
 Suppose that, for constants \(\beta>\alpha\) and \(C\), every factor of length \(\ell\) has at most \(\beta\ell+C\) ones. Put

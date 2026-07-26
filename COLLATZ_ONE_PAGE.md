@@ -149,9 +149,14 @@ this repository that a priority search failed to find in prior art.** Every
 prior partial result toward the Bernstein–Lagarias periodicity conjecture —
 Lagarias's Relation 2.31, Monks–Yazinski Thm 2.7(b), López–Stoll 2021 Thm 1 —
 constrains **letter frequency**, an abelian one-dimensional statistic. This
-constrains **factor complexity**, which is strictly more information, by a
-different mechanism: pigeonhole on distinct length-`k` factors under
-`(3/2)`-affine state growth.
+constrains **factor complexity**. The two are *logically independent*, not
+nested: for every irrational slope `θ` there is a Sturmian word of one-density
+`θ` with `p(k) = k+1`, so complexity does not determine density, and no
+frequency hypothesis determines complexity. The mechanism is different too —
+pigeonhole on distinct length-`k` factors under `(3/2)`-affine state growth.
+What matters is not that complexity is "more information" (it is not) but that
+Corollary 4 **is not a consequence of any frequency result, and is non-vacuous
+exactly where all of them are vacuous.**
 
 **And it is insensitive to density.** That is why it is the only instrument that
 still bites at `liminf = α`, where the problem now demonstrably sits. Treat it

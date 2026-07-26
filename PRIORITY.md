@@ -74,7 +74,9 @@ and the base-3/2 representation literature.
 toward the Bernstein–Lagarias periodicity conjecture constrains **letter
 frequency** — an abelian, one-dimensional statistic. Lagarias's Relation 2.31,
 Monks–Yazinski Thm 2.7(b), and López–Stoll Thm 1 are all of that type. Corollary
-4 constrains **factor complexity**, which is strictly more information, and its
+4 constrains **factor complexity** — a *logically independent* statistic, not a
+stronger one (Sturmian words realise every irrational density at `p(k)=k+1`, so
+neither determines the other; corrected 2026-07-25) — and its
 mechanism is different: pigeonhole on distinct length-`k` factors under
 `(3/2)`-affine state growth, rather than `2^ℓ/3^h → 0`.
 
