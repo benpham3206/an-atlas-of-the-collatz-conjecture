@@ -339,6 +339,40 @@ than research programmes:
    `ℤ₂`. p-adic Mahler-method analogues exist in the Nishioka lineage; whether
    one covers this case is the **first thing to check**, and it is cheap.
 
+**RUN 2026-07-25. Check 1 is answered, and the guess above was wrong.**
+See [`2026-07-25-mahler-tower`](contribution/packets/2026-07-25-mahler-tower/).
+
+The functional system **exists, for every uniform morphism**. Writing
+`c_a(n) = #{i<n : u_i = a}` and `f_b(z,y) = Σ_{u_n=b} z^n Π_a y_a^{c_a(n)}`,
+
+```
+f_b(z, y) = Σ_a Q_{a,b}(z, y) · f_a(z^k, y^M),        Φ(q) = −(1/3) Σ_{τ(b)=1} f_b(2, 3^{−τ})
+```
+
+with `M` the incidence matrix. The mixed bases are **absorbed by the monomial
+substitution `y ↦ y^M`** — they never obstruct the equation. Verified exactly
+mod `2^160` on 240 random instances, against an independent re-implementation
+of `Φ`.
+
+**The obstruction moved, and it is sharper than the guess.** Iterating sends
+`z_e = 2^{k^e} → 0` but `y_e(b) = 3^{−|τσ^e(b)|_1}`, which is a **2-adic unit
+for every `e`**. Every form of Mahler's method — real or `p`-adic — requires the
+point strictly inside the unit disc. Our point sits exactly on the excluded
+boundary in the `y`-directions, and that is inherent: base 3 is a unit in the
+base-2 metric.
+
+Consequence for check 2: **a 2-adic dichotomy is not sufficient.** What is
+needed is a Mahler-type theorem tolerating boundary points in the non-driving
+variables. Nothing searched provides one.
+
+**A new split of the ten survivors, for free.** The induced one-variable tower
+converges iff `τ M^e → 0` in `ℤ₂^d`. Proved (F₂ pigeonhole, not measured):
+**6 of the 10 fail this and 4 satisfy it.** The four are convergent
+deformations of the classical automatic Mahler system; the six have no limiting
+Mahler system at all. The stalled fraction *grows* with alphabet size — 50%,
+64%, 73% at `d = 2,3,4` — the same direction as every other saturation in this
+file. No survivor satisfies the two-variable collapse condition (0/10).
+
 Also flagged as genuinely pointwise, unlike the entire ×2×3 shelf:
 Flatto–Lagarias–Pollington, *On the range of fractional parts `{ξ(p/q)ⁿ}`*,
 Acta Arith. 70 (1995)

@@ -1,0 +1,339 @@
+{
+ "census": [
+  {
+   "attracted": 12,
+   "awc": 24,
+   "d": 2,
+   "mbar_nilpotent": 12,
+   "stalled": 12,
+   "undecided": 0,
+   "words": 24
+  },
+  {
+   "attracted": 1122,
+   "awc": 1278,
+   "d": 3,
+   "mbar_nilpotent": 798,
+   "stalled": 1956,
+   "undecided": 0,
+   "words": 3078
+  },
+  {
+   "attracted": 166280,
+   "awc": 124736,
+   "d": 4,
+   "mbar_nilpotent": 89600,
+   "stalled": 459480,
+   "undecided": 1440,
+   "words": 627200
+  }
+ ],
+ "closed_forms": {
+  "all_ones_is_minus_one": true,
+  "all_zeros_is_zero": true
+ },
+ "conclusion": "For every letter-coding of a fixed point of a k-uniform morphism, Phi(q) is the value at (z,y)=(2,3^{-tau}) of an explicit d-dimensional functional system with substitution (z,y) -> (z^k, y^M). The mixed bases 2 and 3 do not obstruct the equation. They obstruct the evaluation point: the y-coordinates are 2-adic units, so the point lies on the boundary excluded by every form of Mahler's method, and the induced one-variable tower converges only when tau M^e -> 0. Six of the ten remaining supercritical survivors fail that condition.",
+ "env": {
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3"
+ },
+ "functional_equation": {
+  "failures": 0,
+  "trials": 240
+ },
+ "knobs": {
+  "descent_max_rounds": 64,
+  "dmax": 4,
+  "precision": 160,
+  "profile_steps": 80
+ },
+ "negative_controls": {
+  "equation_fails_without_y_substitution": true,
+  "known_attracted_word_is_not_stalled": true,
+  "phi_changes_on_a_flipped_bit": true
+ },
+ "packet": "2026-07-25-mahler-tower",
+ "phi_bridge": {
+  "failures": 0,
+  "trials": 240
+ },
+ "precision_bits": 160,
+ "scope": "exact integer arithmetic in Z/2^N and F_2 on every certificate path; no proved statement depends on a float",
+ "survivors": {
+  "attracted": 4,
+  "awc": 0,
+  "records": [
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "5/6",
+    "seed": 0,
+    "sigma": "01,02,10",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C1 proof-nilpotent (Mbar^d = 0 over F_2)",
+    "rho": "3/4",
+    "seed": 0,
+    "sigma": "01,02,20",
+    "v2_profile_first_16": [
+     0,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "verdict": "ATTRACTED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "101",
+    "decided_by": "C1 proof-nilpotent (Mbar^d = 0 over F_2)",
+    "rho": "3/4",
+    "seed": 0,
+    "sigma": "01,02,20",
+    "v2_profile_first_16": [
+     0,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "verdict": "ATTRACTED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C1 proof-nilpotent (Mbar^d = 0 over F_2)",
+    "rho": "3/4",
+    "seed": 2,
+    "sigma": "01,02,20",
+    "v2_profile_first_16": [
+     0,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "verdict": "ATTRACTED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "101",
+    "decided_by": "C1 proof-nilpotent (Mbar^d = 0 over F_2)",
+    "rho": "3/4",
+    "seed": 2,
+    "sigma": "01,02,20",
+    "v2_profile_first_16": [
+     0,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "verdict": "ATTRACTED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "4/5",
+    "seed": 0,
+    "sigma": "01,12,00",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "4/5",
+    "seed": 1,
+    "sigma": "01,12,00",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "6/7",
+    "seed": 0,
+    "sigma": "01,20,00",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "5/6",
+    "seed": 0,
+    "sigma": "01,20,10",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   },
+   {
+    "awc_collapse_to_two_variables": false,
+    "coding": "110",
+    "decided_by": "C2 descent, round 0: F_2 orbit closed away from 0, so v_2 is pinned",
+    "rho": "4/5",
+    "seed": 0,
+    "sigma": "01,20,11",
+    "v2_profile_first_16": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "verdict": "STALLED"
+   }
+  ],
+  "stalled": 6
+ }
+}

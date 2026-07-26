@@ -194,6 +194,20 @@ a premise. This remains the only live route whose success condition is
   integer comparison. Consequence: density and measure arguments — Tao's
   included — are **structurally blind** to the remaining gap, and it is far too
   large to dismiss as degenerate. [`contribution/code/dimension_bracket.py`](contribution/code/dimension_bracket.py)
+- **The Mahler tower, and where it breaks.** For every letter-coding of a
+  fixed point of a k-uniform morphism, Φ(q) is the value at the rational point
+  (z,y) = (2, 3^(−τ)) of an explicit d-dimensional functional system with
+  substitution (z,y) ↦ (z^k, y^M), M the incidence matrix. **The mixed bases 2
+  and 3 do not obstruct the equation** — they are absorbed by the monomial
+  substitution. They obstruct the **evaluation point**: the y-coordinates are
+  2-adic units, the boundary case excluded by every form of Mahler's method,
+  and the induced one-variable tower converges iff τM^e → 0 in ℤ₂^d. Of the ten
+  remaining supercritical survivors, **6 fail that condition and 4 satisfy it**
+  — a split no previous instrument here could see. All ten verdicts are proved
+  (F₂ pigeonhole, not an extrapolation). Closes `TARGETS.md` bounded check 1
+  affirmatively and relocates the obstruction. Prior art searched: nothing
+  found connecting Φ to Mahler functions.
+  [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/)
 - **Corollary 4 referee note.** Self-contained statement, proof, prior-art
   separation and four referee questions for the one result the priority search
   did not find in prior art. The externalization artifact. [`REFEREE_NOTE.md`](REFEREE_NOTE.md)
@@ -212,6 +226,14 @@ a premise. This remains the only live route whose success condition is
   **Mahler's method**, which is indifferent to complexity level. Two bounded
   checks first: the mixed-base `(2,3)` functional equation, and a 2-adic form of
   the Adamczewski–Faverjon dichotomy. [`TARGETS.md`](TARGETS.md)
+  **⚠ Check 1 is now run (2026-07-25) and the framing was wrong.** The
+  functional equation exists for every uniform morphism; the mixed bases are
+  absorbed by a monomial substitution. The obstruction is the evaluation point,
+  which sits on the excluded unit-disc boundary because 3 is a 2-adic unit. So
+  check 2 is not sufficient either: what is needed is a Mahler-type theorem
+  tolerating **boundary points in the non-driving variables**, which no
+  searched source provides. See
+  [`2026-07-25-mahler-tower`](contribution/packets/2026-07-25-mahler-tower/).
 - **Corollary 7 is unproved.** The landmark memo states it without proof, and
   `2026-07-24-supercritical-automatic-closure` routes **114 of its 116 kills**
   through it (only 30 through the proved Corollary 4). The reconstruction is

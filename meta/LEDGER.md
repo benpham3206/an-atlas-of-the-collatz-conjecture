@@ -14,6 +14,66 @@ note, not a lesson.
 
 ---
 
+## 2026-07-25 — The Mahler tower: the guessed obstruction was in the wrong place
+
+**Strategy.** Run the cheapest check the frontier file itself nominated, and
+run it as *algebra first, literature second, opinion never*. `TARGETS.md`
+named two bounded checks and asserted which one was blocked ("the mixed bases
+2 and 3 are the obstruction"). Rather than argue about the assertion, derive
+the functional equation and see whether it exists.
+
+**Worked.**
+
+- **Deriving instead of estimating.** The mixed-base obstruction was a
+  plausible guess that had never been tested by writing the equation down. It
+  took one reindexing — sum over positions rather than over ranks of ones — to
+  see that the base-3 weight is absorbed by a monomial substitution `y ↦ y^M`.
+  The equation exists for *every* uniform morphism. This is the same lesson as
+  2026-07-24's `N = 4–5` versus `N = 2`, from the opposite direction: the
+  estimate was wrong about a **blocker**, not about a reach.
+- **Refusing to accept a soft verdict.** The first attraction test had three
+  branches and one of them was unsound — it inferred convergence from
+  `τM^e ≡ 0 mod 2`, which only bounds the valuation below by 1. Replacing it
+  with a descent whose every answer is a proof changed the census by hundreds
+  of words and turned an 80-step measurement into a finite pigeonhole argument.
+- **Keeping the scratch implementation and disagreeing with it.** The corrected
+  verifier's `stalled` counts matched the throwaway heuristic exactly at every
+  `d`, and the `attracted` gap was exactly the new `undecided` column. Two
+  methods agreeing on the decidable part and differing precisely on the
+  undecidable part is worth more than either alone.
+
+**Failed.**
+
+- No survivor was closed. The packet splits the ten 4/6 and closes none.
+- Check 2 (a 2-adic dichotomy) was *not* answered, and is now known to be
+  insufficient even if answered — the point sits on the excluded boundary, so
+  the missing theorem is about boundary points, not about `p`-adics.
+
+**Mistakes.**
+
+- Wrote a test asserting the Thue–Morse `F₂` orbit never vanishes. It vanishes
+  at `e = 2`; `M = [[1,1],[1,1]]`. The test was wrong, not the code. Caught
+  immediately because the test ran — but it is a reminder that an expectation
+  typed from memory is not a check.
+- Claimed a 4-minute runtime in the memo before timing it. It is 40 seconds.
+  Corrected. Numbers in prose are claims and get verified like any other.
+
+**Lesson.**
+
+> **A stated obstruction is a hypothesis, and it is usually cheaper to test
+> than to reason about.** `TARGETS.md` carried "the mixed bases 2 and 3 are the
+> obstruction" as settled context for a full day. It cost one reindexing to
+> falsify. The obstruction was real but sitting one level down — at the
+> evaluation point, not at the equation — and no amount of arguing about the
+> original sentence would have found that. **Write the object down before
+> deciding it cannot be written down.**
+
+> Corollary, transferable: when a frontier file says "X is the obstruction",
+> that sentence has the same epistemic status as an unproved lemma. Trace it to
+> a proof or a computation, or mark it as a guess.
+
+---
+
 ## 2026-07-24 — Complexity bounds, contraction onset, and two informative failures
 
 **Strategy.** Attack a *listed-open* stratum rather than the headline problem.
