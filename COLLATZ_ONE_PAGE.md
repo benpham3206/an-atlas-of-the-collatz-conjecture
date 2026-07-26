@@ -12,6 +12,20 @@ certificates.
 [`COUNTEREXAMPLE_SHAPE.md`](COUNTEREXAMPLE_SHAPE.md) ·
 [`TARGETS.md`](TARGETS.md)
 
+> ## Before you trust a green test suite
+>
+> Every error found in this repository was caught by **changing audience or
+> direction** — never by verification, which was green throughout each one:
+> two headline results that were prior art, a false claim in two entry-point
+> files, an unproved lemma carrying 114 of 116 kills, a theorem that restates
+> its own hypothesis, and a class-membership error. Not one arithmetic mistake
+> among them.
+>
+> Exact verification checks whether a computation is right. It cannot check
+> whether a claim is novel, load-bearing on something proved, or a tautology.
+> Read [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md) §"Hidden insights"
+> before you add anything here.
+
 > ## The single most important fact on this page
 >
 > **The remaining symbolic gap is one number.** For the parity word `q` of a

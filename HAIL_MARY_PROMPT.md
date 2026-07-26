@@ -94,6 +94,15 @@ output.**
 Full version, including the three ways that rule gets broken here:
 [`meta/AGENT_CONDUCT.md`](meta/AGENT_CONDUCT.md). Read it.
 
+**And read its section "Hidden insights: the failure classes verification
+cannot catch".** Every error found in this repository was caught by changing
+audience or direction — never by verification, which was green throughout each
+one. A green test suite cannot fail on a tautology, on prior art, or on an
+unproved lemma carrying most of the weight. Budget for those checks explicitly:
+search the literature first, trace every claim to something proved, ask whether
+your conclusion could fail on any input, and draft for a reader who does not
+have this repository.
+
 ## 3. Read the repository first
 
 The supporting repository is `benpham3206/an-atlas-of-the-collatz-conjecture`.
