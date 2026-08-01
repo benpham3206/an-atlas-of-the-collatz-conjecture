@@ -42,7 +42,7 @@ each of the following was true:
 |---|---|---|
 | Two headline results were prior art (drift wall; Sturmian at all but one slope) | 3 days | reading the literature |
 | "Factor complexity is strictly more information than letter frequency" — **false**; Sturmian words realise every irrational density at `p(k)=k+1`, so neither statistic determines the other | 1 day, in two entry-point files | writing a note for an outside reader |
-| Corollary 7 is stated without proof, and carries **114 of 116** kills while the proved Corollary 4 carries 30 | 2 days | writing a note for an outside reader |
+| Corollary 7 is stated without proof, and carries **114 of 116** kills while the proved Corollary 4 carries 30 | 2 days; **closed 2026-08-01** (`2026-08-01-corollary-7-proof`) | writing a note for an outside reader |
 | Shadow-barrier's Theorem 2 restates its own hypothesis, so it excludes nothing | months | re-reading it against a changed frontier |
 | The `ℓ = 3` sweep is 3-automatic, not 2-automatic (Cobham 1969) | 2 days | enumerating the genuine 2-DFAO class |
 | Estimated the complexity method would reach `N = 4–5` states; it reaches `N = 2` | — | running it instead of estimating |

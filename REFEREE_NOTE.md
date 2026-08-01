@@ -132,8 +132,9 @@ carries at most \(\beta\ell+C_0\) ones for some \(\beta>\alpha:=\log_3 2\), then
 growth bound (2.2) improves to \(H_N\le \mathrm{poly}(N)\cdot 2^{gN}\) with
 \(g=\beta\log_2 3-1>0\), and the same argument gives
 \(\limsup p_q(k)/k\ \ge\ 1/g=\alpha/(\beta-\alpha)\). Setting \(\beta=1\) recovers
-Corollary 4. **Caveat:** the source memo states Corollary 7 without proof; the
-reconstruction just sketched is mine and should be written out before publication.
+Corollary 4. **Status (1 August 2026): proved** — full write-up and exact
+verifier in
+[`contribution/packets/2026-08-01-corollary-7-proof/`](contribution/packets/2026-08-01-corollary-7-proof/).
 
 ---
 
@@ -297,7 +298,8 @@ load-bearing for the subsumption findings in §4 and its full text has not been 
 human in this project.
 
 What is **proved** here: Lemma 1, Lemma 2, the growth bound, Corollary 4, Corollary 5.
-Corollary 7 is stated in the source without proof; §2 sketches one.
+Corollary 7 is proved in `contribution/packets/2026-08-01-corollary-7-proof/`;
+§2 sketches the rate.
 What is **measured**: the sweep numbers in §4, exact-integer with certificates.
 What is **asserted**: that Corollary 4 is new, and that it is the only non-vacuous
 instrument at the critical density. The second assertion is only as strong as the claim

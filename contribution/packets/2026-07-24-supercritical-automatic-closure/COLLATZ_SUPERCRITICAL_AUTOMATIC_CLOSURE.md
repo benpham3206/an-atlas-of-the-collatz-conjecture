@@ -102,8 +102,10 @@ that bite exactly here. For `q` not eventually periodic with
 
 Neither had ever been applied to the stratum, for one reason: **nobody had a
 bound on `C`.** The rigidity packet computes densities, periods and lift
-bits; it never computes factor complexity. Corollary 7 in particular is
-stated but, as far as this repository goes, unused.
+bits; it never computes factor complexity. Corollary 7 in particular was
+stated without a written proof at the time of this packet (proved later in
+`../2026-08-01-corollary-7-proof/`; this packet's kill arithmetic is
+unchanged).
 
 So the gap was not a missing theorem. It was a missing *number* — and the
 number is finitely computable.
