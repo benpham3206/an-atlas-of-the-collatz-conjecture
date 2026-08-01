@@ -1,5 +1,12 @@
 # The Mahler tower of a uniform-morphic transcript, and where it breaks
 
+> **Superseded target notice (2026-08-01).** The functional-system theorems
+> below remain valid. The ten Collatz test words are no longer open: every
+> uniform-morphic word is automatic, Bell 2020 makes its lower density
+> rational, and López–Stoll 2021 require the irrational lower density
+> `log₃2` for a rational non-cyclic trajectory. See
+> `../2026-08-01-automatic-density-closure/AUTOMATIC_DENSITY_CLOSURE.md`.
+
 **Date.** 2026-07-25.
 **Branch served.** Rigidity.
 **Target.** `TARGETS.md` § "The redirect that follows", bounded check 1 —

@@ -10,6 +10,8 @@ conjecture remains open.
 |---|---|
 | No folds at distinct depths k, k′ ≤ 10 are affinely conjugate | proof, exact-arithmetic screen, and independent reimplementation |
 | A parity transcript q is realized by a positive integer iff Φ(q) ∈ ℤ_{>0} | derivation in `contribution/proofs/PARTIAL_THEOREMS.md` |
+| No rational non-cyclic trajectory has an automatic parity word (in any base) | López–Stoll 2021 + Bell 2020; `contribution/packets/2026-08-01-automatic-density-closure/` |
+| A rational non-cyclic trajectory with a morphic parity word has no natural one-frequency | López–Stoll 2021 + algebraicity of existing morphic frequencies; same packet |
 | No nontrivial positive cycle with ≤ 20 odd members | exact search + independent oracle: `contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md` and `contribution/packets/2026-07-23-cycle-exclusion-extension/` |
 | Rational Φ with odd denominator forces complexity pressure; Sturmian excluded | pointwise memo in `contribution/packets/2026-07-22-landmark-pointwise/` |
 | 99 of the 109 enumerated supercritical survivors have Φ(q) ∉ ℤ_{>0} | proved here, but **subsumed** by López–Stoll 2021 — see [`PRIORITY.md`](PRIORITY.md) |
@@ -26,6 +28,82 @@ conjecture remains open.
 **Literature priority, and what it retired:** [`PRIORITY.md`](PRIORITY.md)  
 **Who did what, and which check backs it:** [`PROVENANCE.md`](PROVENANCE.md) · [`CONTRIBUTORS.md`](CONTRIBUTORS.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
+
+## Agent resolution contract
+
+Use the exact map and the positive-integer domain stated below. Preserve that
+domain in every reformulation. A result about a generalized map, a 2-adic
+state, an odd-denominator rational, or a finite range is not a result about the
+Collatz conjecture unless a proved reduction preserves positive integers.
+
+### What a proof must contain
+
+An affirmative proof must show that, for **every** integer `n >= 1`, some
+iterate of `T` is `1`. It must close both possible failure modes:
+
+1. no nontrivial positive cycle exists;
+2. no positive orbit is unbounded.
+
+A finite computation, an almost-all theorem, or a result for one symbolic
+class does not supply the universal quantifier. A valid descent proof can
+instead give a well-founded quantity that decreases for every orbit outside
+the trivial cycle. A Tao-compatible proof can rule out divergence by proving
+that one divergent positive orbit would generate a positive-logarithmic-density
+exceptional family; cycle exclusion remains a separate obligation.
+
+### What a counterexample must contain
+
+A disproof has one of two accepted forms:
+
+1. **Cycle:** an explicit finite list of positive integers, closed under `T`,
+   outside the trivial cycle. Verify it with exact integer arithmetic and
+   direct iteration.
+2. **Divergence:** one explicit positive integer and a proved infinite
+   certificate that its orbit never enters a bounded set. A long trajectory,
+   a search-cap exit, or finite non-stabilization is not such a certificate.
+
+The full current constraint list is in
+[`COUNTEREXAMPLE_SHAPE.md`](COUNTEREXAMPLE_SHAPE.md). In particular, a
+divergent candidate must have a non-eventually-periodic parity word, positive
+integer lift `Φ(q)`, lower parity density exactly `log_3(2)`, sufficient
+factor complexity, and no automatic presentation in any base.
+
+### Connections to watch
+
+| Connection | Missing theorem or certificate | Consequence if completed |
+|---|---|---|
+| Arithmetic amplification + Tao | One divergent positive orbit forces a positive-logarithmic-density family of positive exceptional starts | Excludes divergent positive orbits; cycles still need exclusion |
+| Critical-density realizability | No nonperiodic `q` with `Φ(q) ∈ ℤ_{>0}` and `liminf s_L/L = log_3(2)` exists | Excludes divergent positive orbits |
+| Automatic and morphic dynamics | Automatic words are closed here. The open morphic case has no natural one-frequency | A closure of that residual morphic case excludes another structured class, not all orbits |
+| Cycle arithmetic | Exclude every admissible valuation word, or give one exact divisible cycle word | Proves the cycle branch impossible, or disproves Collatz |
+| Pointwise descent or Lyapunov theory | An integer-preserving, well-founded decrease valid for every positive start outside the trivial cycle | Proves Collatz directly |
+| 2-adic, symbolic, or undecidability transfer | A fixed-map reduction that preserves ordinary positive-integer realizability | Only then can the external theorem decide Collatz |
+
+For each proposed connection, state the exact implication, its domain, and the
+missing lemma. Check that the hard positive-integer realizability condition did
+not disappear. Classify each claim as a theorem, calculation, heuristic, or
+open question. Read the literature before computation. Give every experiment
+a kill criterion.
+
+### Source-use rule
+
+Every source used in a claim must appear in this README or in the internal
+proof index below. Add `Last checked: YYYY-MM-DD` when you open and use it.
+Update that date when you check the source again. Do not copy an old access
+date. Record the theorem, corollary, section, or page that carries the claim.
+If a source is not available for read-back, label the claim as unverified.
+
+### Required result artifact
+
+Do not report a resolution only in chat, a ledger, or a status file. If an
+affirmative proof is found, create `PROOF.md`. If a disproof is found, create
+`COUNTEREXAMPLE.md`. The file must contain the full statement, definitions,
+lemmas, proof or certificate, exact verification steps, dependencies, and the
+remaining assumptions. An independent checker must be able to evaluate it
+without private context. Until that file passes adversarial read-back, keep
+the claim labeled as a candidate.
+
+No complete proof or counterexample is present in this repository.
 
 ## Maps and notation
 
@@ -60,7 +138,8 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/) | Automatic-transcript trichotomy, density-wall impossibility witnesses, 514-word exact hunt |
 | [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) | Exact factor-language complexity bound (Lemma D). Its **conclusion is subsumed** by López–Stoll 2021; the machinery is retained because it is the only tool that bites at the critical density |
 | [`contribution/packets/2026-07-24-contraction-onset/`](contribution/packets/2026-07-24-contraction-onset/) | Descent requires contraction; onset bound M(h). A **quantitative refresh** of Terras 1976 / Garner 1981, not a new theorem |
-| [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/) | Φ(q) as the value of an explicit Mahler-type system for uniform-morphic q. The mixed bases 2 and 3 obstruct the **evaluation point**, not the equation; splits the ten remaining survivors 4/6 and closes none |
+| [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/) | Φ(q) as the value of an explicit Mahler-type system for uniform-morphic q. The mixed bases 2 and 3 obstruct the **evaluation point**, not the equation; the later automatic-density corollary closes its ten test words without Mahler theory |
+| [`contribution/packets/2026-08-01-automatic-density-closure/`](contribution/packets/2026-08-01-automatic-density-closure/) | Bell's rational lower-density theorem combined with López–Stoll closes every automatic parity transcript for a rational non-cyclic trajectory |
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
@@ -80,6 +159,38 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes. **Read [`graphify-out/README.md`](graphify-out/README.md) first** — the map does not separate `contribution/` from `exploratory/` and `quarantine/`, so its connectivity ranking puts non-evidence drafts near the top |
 
 External papers are linked below and are not included in the repository.
+
+### Internal proof index
+
+These are the proof files used by the README and research packets. Packet-local
+proofs and verifiers are linked from [`contribution/README.md`](contribution/README.md).
+
+| Proof file | Subject |
+|---|---|
+| [`PARTIAL_THEOREMS.md`](contribution/proofs/PARTIAL_THEOREMS.md) | Parity words, realizability, and eventual periodicity |
+| [`LEMMA2_PROOF.md`](contribution/proofs/LEMMA2_PROOF.md) | Counting law used by the fold screen |
+| [`FENCE.md`](contribution/proofs/FENCE.md) | Encoding boundaries, non-universality, and route registry |
+| [`LIFT_COCYCLE.md`](contribution/proofs/LIFT_COCYCLE.md) | Positive-integer lift stabilization |
+| [`PRIMITIVE_UNIFORM_OBSTRUCTION.md`](contribution/proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md) | Primitive uniform subcritical obstruction |
+| [`RATIONAL_IRRATIONAL_SHADOW.md`](contribution/proofs/RATIONAL_IRRATIONAL_SHADOW.md) | Rational shadows and their limits |
+| [`EXACT_COUNTEREXAMPLE_SEARCH.md`](contribution/proofs/EXACT_COUNTEREXAMPLE_SEARCH.md) | Exact finite cycle certificate and search |
+| [`FORMALIZATION.md`](contribution/proofs/FORMALIZATION.md) | Scope of the Lean certificates |
+
+The new automatic-density proof is in
+[`AUTOMATIC_DENSITY_CLOSURE.md`](contribution/packets/2026-08-01-automatic-density-closure/AUTOMATIC_DENSITY_CLOSURE.md).
+
+### Sources used in the 2026-08-01 update
+
+| Claim used | Source location | Last checked |
+|---|---|---|
+| A rational non-cyclic trajectory has lower parity density `log_3(2)` | López and Stoll, [arXiv:2101.12747](https://arxiv.org/abs/2101.12747), abstract and stated constraint | 2026-08-01 |
+| Automatic sets have rational lower and upper asymptotic densities | Bell, [Corollary 1.2](https://doi.org/10.5802/jtnb.1135) | 2026-08-01 |
+| An existing letter frequency in a morphic word is algebraic | Allouche and Shallit, *Automatic Sequences*, Theorem 8.4.5; [author book page](https://cs.uwaterloo.ca/~shallit/asas.html) | 2026-08-01 |
+| Every morphic word has logarithmic letter and factor frequencies | Bell, [Theorem 1.1](https://doi.org/10.5802/jtnb.625) | 2026-08-01 |
+
+The elementary irrationality of `log_3(2)` follows from unique factorization.
+Its transcendence follows from the Gelfond-Schneider theorem. These steps are
+written out in the automatic-density packet.
 
 ## Literature references
 
@@ -101,6 +212,7 @@ External papers are linked below and are not included in the repository.
 | Coefficient stopping time κ(n) ≤ σ(n); κ = σ for κ ≤ 2593 | Terras, 1976 | Acta Arith. 30 |
 | κ = σ for κ < 105,000 via convergents of log₂3 | Garner, 1981 | [DOI](https://doi.org/10.1090/S0002-9939-1981-0603593-2) |
 | **Aperiodic q with liminf s_L/L > log₃2 ⟹ Φ(q) irrational**; a non-cyclic rational trajectory forces liminf = log₃2 exactly | López–Stoll, 2021 | [arXiv:2101.12747](https://arxiv.org/abs/2101.12747) |
+| Lower and upper asymptotic densities of every automatic set are computable rational numbers | Bell, 2020 | [DOI 10.5802/jtnb.1135](https://doi.org/10.5802/jtnb.1135) |
 | liminf h/ℓ ≥ log₃2 for divergent rationals | Monks–Yazinski | [PDF](https://monks.scranton.edu/files/pubs/AutoConjV13.pdf) |
 | 2-adic continued-fraction expansion of Φ over a Sturmian word | López–Stoll, 2009 | [INTEGERS 9, A13](https://math.colgate.edu/~integers/j13/j13.pdf) |
 | 2-adic extension conjugate to the shift map | Bernstein–Lagarias, 1996 | [Canad. J. Math. 48](https://doi.org/10.4153/CJM-1996-060-x) |
@@ -224,10 +336,12 @@ Established in the repository:
 - Pointwise complexity-pressure consequences for rational Φ, prefix-return
   barrier, rational-shadow deletion, and a primitive-uniform subcritical
   obstruction class (see packet + fence proofs).
-- Non-realizability of 99 of the 109 enumerated supercritical 2-automatic
-  words, via an exact computable bound on factor complexity. This shrinks a
-  listed-open stratum; it does not close it (10 named words remain) and does
-  not settle the general 2-automatic question.
+- No rational non-cyclic trajectory has an automatic parity word in any base.
+  This subsumes the earlier exact non-realizability result for 99 of 109
+  enumerated supercritical 2-automatic words and closes the ten named
+  survivors.
+- A rational non-cyclic trajectory with a morphic parity word cannot have an
+  existing natural one-frequency. The morphic no-frequency case remains open.
 
 Not established:
 
