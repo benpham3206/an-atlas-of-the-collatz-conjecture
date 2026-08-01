@@ -26,7 +26,13 @@ Use these terms exactly. Anything else is not a verification claim.
 
 | Packet | Direction | Executed by | Independent check | Commits |
 |---|---|---|---|---|
-| `proofs/` (fold, Terras, realizability, fence) | Ben Pham | Claude Fable 5 | second implementation of the counting-law screen; 196/196 direct enumeration match | pre-`8861f9e` |
+| `proofs/` (initial fold construction, Terras calculus, realizability note) | Ben Pham | Claude Fable 5 | later independent screen by GPT-5.6 Sol / Codex; see the next row | pre-`8861f9e` |
+| `reports/VERIFICATION.md`, `reports/screen_k10_results.md`, `proofs/LEMMA2_PROOF.md` | Ben Pham | GPT-5.6 Sol (OpenAI / Codex) | independent re-implementation: 510/510 classes through k ≤ 8; extension to 2,046 classes through k ≤ 10; corrected first-return formula matched 196/196 direct terms | pre-`8861f9e` |
+| `proofs/FORMALIZATION.md`, `proofs/PARTIAL_THEOREMS.md`, `proofs/FENCE.md`, `proofs/LIFT_COCYCLE.md` | Ben Pham | GPT-5.6 Sol (OpenAI / Codex) | exact: quotient recurrence and modular-series lift paths agree; exhaustive direct Terras check for all words through length 10 and positive integers 1–1,000 | pre-`8861f9e` |
+| `proofs/PRIMITIVE_UNIFORM_OBSTRUCTION.md` | Ben Pham | GPT-5.6 Sol (OpenAI / Codex) | exact matrix and inequality certificates; primitivity checked by a separate predicate | `d413439` |
+| `proofs/EXACT_COUNTEREXAMPLE_SEARCH.md` and its verifier | Ben Pham | Grok Build (initial implementation); GPT-5.6 Sol / Codex (proof, correction, integration, independent re-implementation) | exact: 44,558,430 ordered valuation words and 2,578,829 cyclic classes through m ≤ 18; separate combinations enumerator found zero nontrivial cycles | `d413439` |
+| `proofs/RATIONAL_IRRATIONAL_SHADOW.md` and its verifier | Ben Pham | GPT-5.6 Sol (OpenAI / Codex) | exact affine identity, direct rational iteration, and modular-series agreement for every word through length 9 | `d413439` |
+| `COLLATZ_ONE_PAGE.md` (initial research brief) | Ben Pham | GPT-5.6 Sol (OpenAI / Codex) | none (documentation only; source links and file references checked) | `d413439` |
 | `2026-07-22-landmark-pointwise` | Ben Pham | Claude Fable 5 | DGG counterexample certificate independently verified | pre-`8861f9e` |
 | `2026-07-22-automatic-transcript-rigidity` | Ben Pham | Claude Fable 5 | exact `Fraction` eigenvectors; Φ-engine cross-checked against true orbits mod 2⁶⁴ | pre-`8861f9e` |
 | `2026-07-22` analytic packets (drift wall, Fourier, plateau, structure–randomness) | Ben Pham | Claude Fable 5 | exact controls per packet; all disclaim beating Tao | pre-`8861f9e` |
@@ -87,6 +93,14 @@ show its corrections.
    by Claude Fable 5 / Codex as the table first recorded. Direction and
    acceptance were Ben Pham's in all cases; the independent checks named in
    the corrected rows were actually run and are unchanged.
+6. **OpenAI executor under-attribution, corrected 2026-08-01.** The original
+   `proofs/` row combined Claude Fable 5's initial fold construction with
+   GPT-5.6 Sol / Codex's independent screen, corrected first-return formula,
+   general Lemma 2 proof, lift oracle, and fence formalization. It also omitted
+   the role split for the exact cycle search: Grok Build supplied the initial
+   implementation; Codex supplied the proof, correction, integration, and
+   independent combinations-based enumerator. The corrected rows separate
+   these roles. The mathematical claims and named checks are unchanged.
 
 ## Rule for future packets
 
