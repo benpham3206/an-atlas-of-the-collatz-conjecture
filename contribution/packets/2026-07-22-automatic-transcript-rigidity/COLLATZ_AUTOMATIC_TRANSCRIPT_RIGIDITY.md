@@ -1,5 +1,11 @@
 # Automatic transcript rigidity: the subcritical and critical strata are closed, the supercritical stratum is provably the whole gap
 
+> **Superseded frontier notice (2026-08-01).** The automatic class is closed
+> in every base. Bell 2020 proves that every automatic set has rational lower
+> density. López–Stoll 2021 require lower parity density `log₃2` for a rational
+> non-cyclic trajectory, and this number is irrational. See
+> `../2026-08-01-automatic-density-closure/AUTOMATIC_DENSITY_CLOSURE.md`.
+
 **Date:** 22 July 2026
 **Status:** five proved statements (Lemmas A–C, Theorems 1–4) + one exact
 counterexample hunt over all small 2-automatic words. **Not** a proof of

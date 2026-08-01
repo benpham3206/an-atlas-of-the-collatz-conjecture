@@ -1,5 +1,20 @@
 # Priority search
 
+## 0. CLOSED — every automatic parity transcript
+
+Bell (2020), Corollary 1.2, proves that the lower density of every
+`k`-automatic set is rational. López–Stoll (2021) prove that a rational
+2-adic integer with a non-cyclic `3x+1` trajectory must have lower parity
+density exactly `log₃2`. That number is irrational. Therefore no rational
+non-cyclic trajectory has an automatic parity word in any base.
+
+This strictly strengthens §7 below. The absence of a natural density is not a
+surviving case because Bell controls `liminf` directly. See
+[`contribution/packets/2026-08-01-automatic-density-closure/`](contribution/packets/2026-08-01-automatic-density-closure/).
+
+**Priority status.** The two inputs are prior work. A targeted search found no
+source stating this direct Collatz corollary. That is not a novelty claim.
+
 Eleven packets carried the line "no literature-priority claim is made" or "no
 priority search was made". This is the first search actually run, on
 2026-07-25. It should have been run first.
@@ -154,6 +169,11 @@ unstated, but a referee would call it folklore.
 ---
 
 ## 7. A new consequence, not just a correction
+
+> **Superseded 2026-08-01.** Bell's 2020 theorem makes the lower density of
+> every automatic set rational. The residual no-natural-density case below is
+> therefore impossible at the irrational value `log₃2`. Section 0 gives the
+> complete closure.
 
 Combining López–Stoll 2021 with the repository's own Theorem 2 gives a sharper
 statement than either alone. It is worth stating as a result.

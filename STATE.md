@@ -101,15 +101,20 @@ a premise. This remains the only live route whose success condition is
   2-automatic parity words closed (Lemmas A–C, Theorems 1–4); the
   supercritical stratum is nonempty and exactly equivalent to a divergent
   2-automatic orbit. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/)
-- **The critical density is the whole symbolic gap; and 2-automatic divergent
-  transcripts have no natural density.** Combining the drift wall
-  (liminf < α closed), López–Stoll 2021 (liminf > α closed) and the rigidity
-  packet's Theorem 2 (no 2-automatic word has natural density exactly α):
-  a divergent orbit's parity word has liminf s_L/L = log₃2 **exactly**, and if
-  it is 2-automatic it has **no natural one-density at all**. This retires the
-  entire natural-density case for automatic words, including the rigidity
-  packet's own Witness 2. Deduction from three cited inputs, no new mechanism.
-  [`PRIORITY.md`](PRIORITY.md) §7
+- **Automatic transcripts closed in every base.** López–Stoll 2021 force a
+  rational non-cyclic trajectory to have lower parity density exactly
+  `log₃2`. Bell 2020 proves that the lower density of every `k`-automatic set
+  is rational. Since `log₃2` is irrational, no rational non-cyclic trajectory
+  has a `k`-automatic parity word for any `k ≥ 2`. This includes all divergent
+  positive orbits and all uniform-morphic parity words. The critical-density
+  gap remains open only for non-automatic words.
+  [`contribution/packets/2026-08-01-automatic-density-closure/`](contribution/packets/2026-08-01-automatic-density-closure/)
+- **Morphic transcripts with natural frequency closed.** If a morphic parity
+  word has a natural one-frequency, that frequency is algebraic. López–Stoll
+  force a rational non-cyclic trajectory's lower frequency to be `log₃2`,
+  which is transcendental. Therefore any morphic parity word of a rational
+  non-cyclic trajectory must have no natural one-frequency. Non-uniform
+  morphic words without natural frequency remain open. Same packet.
 - **⚠ SUBSUMED — supercritical stratum.** The exclusion below is superseded:
   López–Stoll ([arXiv:2101.12747](https://arxiv.org/abs/2101.12747), 2021)
   already prove that aperiodic q with liminf s_L/L > log₃2 has Φ(q) ∉ ℚ_odd,
@@ -202,11 +207,12 @@ a premise. This remains the only live route whose success condition is
   substitution. They obstruct the **evaluation point**: the y-coordinates are
   2-adic units, the boundary case excluded by every form of Mahler's method,
   and the induced one-variable tower converges iff τM^e → 0 in ℤ₂^d. Of the ten
-  remaining supercritical survivors, **6 fail that condition and 4 satisfy it**
+  then-open supercritical survivors, **6 fail that condition and 4 satisfy it**
   — a split no previous instrument here could see. All ten verdicts are proved
   (F₂ pigeonhole, not an extrapolation). Closes `TARGETS.md` bounded check 1
-  affirmatively and relocates the obstruction. Prior art searched: nothing
-  found connecting Φ to Mahler functions.
+  affirmatively and relocates the obstruction. The 2026-08-01 automatic-density
+  corollary now closes all ten without Mahler theory. Prior art searched:
+  nothing found connecting Φ to Mahler functions.
   [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/)
 - **Corollary 4 referee note.** Self-contained statement, proof, prior-art
   separation and four referee questions for the one result the priority search
@@ -252,14 +258,6 @@ a premise. This remains the only live route whose success condition is
   factor-complexity bound is the only instrument that still bites, and it is
   also the one thing in this repository the priority search did not find in
   prior art. [`PRIORITY.md`](PRIORITY.md)
-- **Supercritical automatic stratum.** Still open as a *class* statement —
-  "no divergent Collatz orbit has a 2-automatic parity word" is unproved,
-  and no density argument can close it (Theorem 3 of the rigidity packet).
-  What changed 2026-07-24: the *enumerated* part of the stratum is no longer
-  109 words but **10 named ternary-coded automata**, because the obstruction
-  there was complexity, not density. The general statement needs a bound on
-  C for automata that are not codings of uniform-morphism fixed points; no
-  such bound exists here. [`contribution/packets/2026-07-22-automatic-transcript-rigidity/`](contribution/packets/2026-07-22-automatic-transcript-rigidity/), [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
 - **No bound on L(n).** No proved bound on L(n) beyond n ≤ 13; measurements
   run to n = 20 (drift-test packet). [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/)
 - **Cycle exclusion wall at m = 21.** The next layer (21, 34) has
@@ -279,12 +277,11 @@ failed, mistakes, lesson. A session without one produces no compounding.
 **Ranked attack targets with odds, fallbacks and kill criteria:
 [`TARGETS.md`](TARGETS.md).** Read it before choosing work. Summary of the
 ranking by importance-if-landed: (1) amplification — the only never-entered
-half of the architecture; (2) the 2-automatic Gap in full; (3) the Gap for
-DFAOs with ≤ N states — **run 2026-07-24, N = 2; the complexity method
-saturates at two states and does not scale, which retires (2) by that route**;
-(4) morphic transcripts of linear complexity; (5) the ten remaining automata;
-(6) contraction onset to infinity — **closed door**, capped by construction at
-~10¹⁰ steps regardless of Diophantine input; (7) the formal-conjectures port.
+half of the architecture; (2) the critical-density gap for arbitrary
+non-automatic words; (3) non-uniform morphic transcripts; (4) contraction
+onset to infinity — **closed door**, capped by construction at ~10¹⁰ steps
+regardless of Diophantine input; (5) the formal-conjectures port. Automatic
+and uniform-morphic transcripts are closed by the 2026-08-01 density corollary.
 
 The individual entries below remain accurate; `TARGETS.md` orders them and
 adds the ones that were missing.
@@ -294,11 +291,6 @@ adds the ones that were missing.
   conjecture). Route: port the zero-sorry Lean proofs (Terras bijection
   first, then two-branch family, now also the collision principle) into
   their mathlib-based style and open the required pre-PR issue. [`formal/`](formal/)
-- **The ten remaining supercritical automata.** Each needs a genuinely
-  different argument: their factor-complexity constants are exactly computed
-  and sit *above* α/(ρ−α), so no sharpening of Lemma D reaches them. Either
-  find a second inequality that consumes complexity rather than requiring it,
-  or decide the lift-digit question for these ten words directly. [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/)
 - **Shadow-barrier exploratory integration.** Exact two-metric barrier for
   rational shadows (real divergence vs 2-adic convergence along near-neutral
   contractive subsequences), integrated under exploratory/ with verbatim

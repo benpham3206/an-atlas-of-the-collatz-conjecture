@@ -237,3 +237,32 @@ from generation to digestion.
 useful than the measurement. The two errors were both found by *writing for an
 outside reader* — neither surfaced during two days of internal verification.
 That is the strongest evidence so far that Tao's slide-48 test is the right gate.
+
+---
+
+## 2026-08-01 — automatic-density closure
+
+**Strategy.** Re-read the exact critical-density target and search for a
+finite-state theorem about `liminf`, rather than extend the repository's
+complexity computations.
+
+**Worked.** Bell 2020 proves that the lower density of every automatic set is
+rational. López–Stoll 2021 force the lower parity density of a rational
+non-cyclic trajectory to equal the irrational number `log₃2`. Their direct
+synthesis closes automatic parity words in every base. The same check closes
+all uniform-morphic test words and all bounded-DFAO survivors. The algebraic
+frequency theorem for morphic words also closes every morphic transcript whose
+natural one-frequency exists.
+
+**Failed / stopped.** The morphic extension stops when natural frequency does
+not exist. Bell 2008 gives logarithmic frequency, but López–Stoll constrain
+lower natural frequency. These quantities cannot be identified without a new
+argument.
+
+**Mistake found.** The previous priority audit used Cobham's theorem only when
+natural density exists. It did not search for a theorem about lower density.
+That left a class marked open even though Bell had closed the needed invariant
+in 2020.
+
+**Lesson.** When a target contains `liminf`, search for a theorem about the
+liminf itself. A theorem about the full limit can leave a false residual case.
