@@ -9,7 +9,7 @@ knows which quality guarantee applies to which artifact.
 | Role | Who | What it covers |
 |---|---|---|
 | **Direction, target selection, acceptance** | Ben Pham | Which problem, which target, which route to kill. Every decision about what counts as progress. Final gate on every claim. |
-| **Certificate generation, formalization, enumeration** | Claude (Anthropic), GPT-5.x (OpenAI) | Proof drafting, exact-arithmetic verifiers, Lean formalization, exhaustive enumeration, packet prose. |
+| **Certificate generation, formalization, enumeration** | Claude (Anthropic), GPT-5.x (OpenAI), Kimi (Moonshot AI), Grok (xAI) | Proof drafting, exact-arithmetic verifiers, Lean formalization, exhaustive enumeration, packet prose. |
 | **Independent verification** | a second model, or a second implementation | Re-derivation of load-bearing formulas, second implementations that share only input bits, adversarial audit of a completed packet. |
 
 Model contributions are recorded per commit with a `Co-Authored-By` trailer
