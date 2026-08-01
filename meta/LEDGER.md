@@ -322,3 +322,59 @@ in 2020.
 
 **Lesson.** When a target contains `liminf`, search for a theorem about the
 liminf itself. A theorem about the full limit can leave a false residual case.
+
+---
+
+## 2026-08-01 — amplification: the proposed bridge is killed at the handoff
+
+**Strategy.** Take `TARGETS.md` §1 at its word: it named the bridge ("the
+inverse/cylinder family of a single survivor") and named a kill criterion with
+an instruction to test it on the smallest case first. Rather than attempt a
+Tao-strength theorem, measure whether the two named families can supply the
+exceptional set at all.
+
+**Worked.**
+
+- **Writing the identity down before arguing about it.** The tracking identity
+  `T^i(y + 2^L m) = T^i(y) + 3^{s_i} 2^{L−i} m` (i ≤ L) makes the whole route
+  computable in one line: control time equals `v₂(x − y)` exactly, and at the
+  handoff the difference is an odd multiple of `3^{s_L}` — unit 2-adic
+  distance, zero further forced symbols. Both legs of the no-go are corollaries
+  of folklore (Terras affine form; isometry of the Bernstein–Lagarias
+  conjugacy). The same lesson as the Mahler session: a stated bridge is a
+  hypothesis, and it was cheaper to test than to reason about.
+- **The smallest case did the work.** `x = 27 + 2²⁰` tracks above `2²⁰` for
+  exactly 20 steps, drops below at step 34, reaches 1. One exact instance
+  confirmed what the identity already proved structurally: the circularity
+  criterion fires at the handoff state.
+- **The outcome is a sharper gap, not just a negative.** The missing
+  implication is now named precisely: permanence past the 2-adic proximity
+  scale. Provably-high excursions at positive density are free
+  (Corollary A1); persistence is the entire remaining content.
+
+**Failed.**
+
+- No entry into the amplification branch: no theorem turning one divergent
+  orbit into a positive-log-density exceptional family. The branch remains
+  open; only its two natural mechanisms are dead.
+- The morphic lower-density question (Target 4's residual) is blocked on a
+  named open problem: Bell 2020 §6 explicitly asks whether morphic lower/upper
+  densities are algebraic. Not available off the shelf; recorded so it is not
+  re-searched.
+
+**Mistakes.**
+
+- First version of the verifier's affine recurrence carried `c' = 3c + 2^{i+1}`
+  instead of `3c + 2^i`; caught instantly by the independent direct-iteration
+  path. Two-path verification paying for itself again — the error was in the
+  *checker*, which is exactly where single-path setups hide theirs.
+
+**Lesson.**
+
+> **A kill criterion with a named smallest case is a task, not a warning.**
+> `TARGETS.md` §1 carried its circularity criterion for a week with the test
+> unrun. Running it cost one session and converted "no theorem exists" into
+> "these two mechanisms provably cannot work, and here is the exact lemma that
+> remains". When a frontier file ships both a bridge and a kill test for that
+> bridge, the kill test is the higher-EV action: either outcome (route survives
+> the smallest case / route dies on it) is a result.
