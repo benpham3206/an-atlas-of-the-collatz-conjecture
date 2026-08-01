@@ -189,6 +189,16 @@ Assigning agents to them is how the session fails.
 - **Density strengthenings of the automatic-transcript walls.** Theorem 3 of
   `2026-07-22-automatic-transcript-rigidity` proves no averaged-density
   argument can close the supercritical stratum.
+- **Cylinder or inverse-tree amplification.** Tracking time equals 2-adic
+  proximity exactly: a perturbation `2^L m` buys exactly `L` steps and expires
+  at unit 2-adic distance from the orbit; inverse-tree elements get a free
+  descent to the join point (`min-orbit(2^j y) ≤ 2^{−j}·x`). The circularity
+  kill criterion in `TARGETS.md` §1 fired on the smallest case (2026-08-01).
+  Reopen only with a permanence lemma or a non-cylinder mechanism.
+- **Restating Corollary 7 as a gap.** The ones-capped complexity floor
+  `limsup p_q(k)/k ≥ α/(β−α)` is proved as of 2026-08-01
+  (`2026-08-01-corollary-7-proof`). At `β = α` it is vacuous (`g = 0`) — the
+  same structural wall as every frequency instrument, not a new opening.
 
 ---
 
@@ -342,6 +352,11 @@ version:
 - The factor-complexity method that closed 99 of 109 enumerated supercritical
   words **saturates at two-state automata**; see `TARGETS.md` §3. It does not
   consume the arbitrary critical-density set.
+- The inverse/cylinder bridge into the amplification branch is now closed as
+  well (2026-08-01): tracking time equals 2-adic proximity, the smallest-case
+  test fired the circularity criterion, and the remaining missing implication
+  is a permanence lemma past the handoff state. See `TARGETS.md` §1 and
+  `contribution/packets/2026-08-01-amplification-cylinder-nogo/`.
 
 Do not treat this section as a constraint on where to look. It is a record of
 where the walls were found, so that agents spend their budget on new ones.

@@ -49,6 +49,24 @@ control of the orbit of one fixed integer rather than of a set, the argument
 is circular — it assumes the pointwise statement it is meant to supply. Test
 that on the smallest non-trivial case first and stop if it fires.
 
+**RUN 2026-08-01. The kill criterion fired — for the two families this entry
+proposed.** The bridge named above was "the inverse/cylinder family of a
+single survivor". Tested on the smallest case (`y = 27`, `L = 20`, `m = 1`)
+and in general:
+
+- inverse tree: preimages get a free descent to the join point
+  (`min-orbit(2^j y) ≤ 2^{−j}·x`) — they are Tao's *good* set, not an
+  exceptional family;
+- forward cylinders `y + 2^L m`: tracking is exact and free but lasts exactly
+  `v₂(x − y)` steps and expires at 2-adic unit distance from the orbit
+  (tracking time = 2-adic proximity). The missing step is a **permanence
+  lemma** over individual handoff states — pointwise control of one fixed
+  integer's orbit. Circular, per the criterion.
+
+The route is **blocked**, not the branch: a mechanism that consumes positive
+entropy directly, not via cylinders or inverse trees, is untouched.
+[`contribution/packets/2026-08-01-amplification-cylinder-nogo/`](contribution/packets/2026-08-01-amplification-cylinder-nogo/)
+
 ---
 
 ## 2. The critical density — the whole remaining symbolic gap

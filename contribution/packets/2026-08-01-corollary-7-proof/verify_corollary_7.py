@@ -172,10 +172,15 @@ def bound_4_3(y_i: int, d: int, N: int, beta: Fraction, C: int) -> int:
          + d * 3^C * (N/2) * (3^beta/2)^{N-1}
 
     With beta = p/q, replace 3^{p m / q} by 3^{ceil(p m / q)} (looser, valid).
-    Clear the remaining factor 1/2 by writing over denominator 2^{N+1}:
+    Clear the remaining factors by writing over denominator 2^{N+1}:
 
       total <= [ 2 * 3^{C+ceil(pN/q)} |y_i|
-               + d * 3^C * N * 3^{ceil(p(N-1)/q)} ] / 2^{N+1}
+               + 2 * d * 3^C * N * 3^{ceil(p(N-1)/q)} ] / 2^{N+1}
+
+    (The second numerator carries a factor 2: T2 = d*3^C*N*3^{beta(N-1)}/2^N
+    = 2*d*3^C*N*3^{beta(N-1)}/2^{N+1}. An earlier version of this function
+    omitted it and tested the stronger, unproved bound T1 + T2/2; corrected
+    2026-08-01 after independent audit.)
     """
     need(N >= 1, "N>=1")
     need(C >= 0, "C>=0")
@@ -184,7 +189,7 @@ def bound_4_3(y_i: int, d: int, N: int, beta: Fraction, C: int) -> int:
     exp3_Nm1 = 0 if N == 1 else (p * (N - 1) + q - 1) // q
     num = (
         2 * (3 ** (C + exp3_N)) * abs(y_i)
-        + d * (3 ** C) * N * (3 ** exp3_Nm1)
+        + 2 * d * (3 ** C) * N * (3 ** exp3_Nm1)
     )
     den = 2 ** (N + 1)
     return (num + den - 1) // den  # ceil(num/den)

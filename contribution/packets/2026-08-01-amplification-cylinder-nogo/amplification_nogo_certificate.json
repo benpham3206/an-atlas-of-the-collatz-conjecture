@@ -1,0 +1,41 @@
+{
+  "all_ok": true,
+  "checks": {
+    "handoff_distance": {
+      "handoffs_checked": 2000,
+      "ok": true
+    },
+    "inverse_family_doubling": {
+      "bound_y": 27,
+      "j": 40,
+      "min_orbit": 1,
+      "ok": true,
+      "relative_min_exponent": 40,
+      "x": 29686813949952,
+      "y": 27
+    },
+    "isometry": {
+      "ok": true,
+      "pairs_checked": 3000
+    },
+    "named_case_y27_L20_m1": {
+      "T^L(y)": 395,
+      "first_drop_below_floor_step": 34,
+      "first_drop_below_floor_value": 638467,
+      "floor_2^L_m": 1048576,
+      "handoff_v2_distance": 0,
+      "handoff_z": 14349302,
+      "min_states_0_to_L": 1048603,
+      "ok": true,
+      "tracking_floor_holds": true,
+      "x": 1048603,
+      "y27_prefixes_supercritical_to_40": true
+    },
+    "tracking_identity": {
+      "identities_checked": 49195,
+      "ok": true
+    }
+  },
+  "packet": "2026-08-01-amplification-cylinder-nogo",
+  "scope": "exact integer arithmetic only; no floats anywhere"
+}

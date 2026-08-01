@@ -248,6 +248,14 @@ a premise. This remains the only live route whose success condition is
 - **Shadow-barrier: killed.** Its Theorem 2 restates its own hypothesis, so it
   excludes nothing; its regime `s_L/L − α = o(1/L)` is strictly narrower than
   the surviving gap and is assumed, not proved. [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/)
+- **Amplification via inverse/cylinder families: killed.** Tracking time equals
+  2-adic proximity exactly (Theorem A, folklore strength); inverse-tree
+  elements get a free descent to the join point (Theorem B). Both natural
+  families fail provably, the `TARGETS.md` §1 circularity criterion fired on
+  the smallest case (`y=27, L=20`), and the missing implication is named:
+  permanence past the handoff state. The branch itself remains open and
+  unentered — only the mechanism is dead.
+  [`contribution/packets/2026-08-01-amplification-cylinder-nogo/`](contribution/packets/2026-08-01-amplification-cylinder-nogo/)
 
 - **Phase-blind propagation.** Proved impossible (P2, P5): no
   finite-check-at-one-layer plus phase-blind propagation argument can
