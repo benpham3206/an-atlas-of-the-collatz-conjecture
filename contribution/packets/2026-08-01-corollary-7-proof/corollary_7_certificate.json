@@ -69,7 +69,7 @@
   },
   "claim": "Corollary 7: ones-capped factors force limsup p(k)/k >= 1/g",
   "packet": "2026-08-01-corollary-7-proof",
-  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
-  "python": "3.14.3",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.12.13",
   "verdict": "PASS"
 }

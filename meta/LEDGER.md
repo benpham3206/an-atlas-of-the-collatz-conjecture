@@ -378,3 +378,17 @@ exceptional set at all.
 > remains". When a frontier file ships both a bridge and a kill test for that
 > bridge, the kill test is the higher-EV action: either outcome (route survives
 > the smallest case / route dies on it) is a result.
+
+**Addendum — audit of the Corollary 7 proof (same day).** Asked to double-check
+PR #18. The proof is sound end-to-end (statement match with the landmark memo,
+contrapositive direction, boundary at `β = α`, `1/g = α/(β−α)` exact); a third
+implementation confirmed (3.1) on 4,000 adversarial words, Lemma 1 on 465,868
+equal-factor pairs, and (4.3) on 34,055 full-cap instances at 88% tightness.
+One real finding: the verifier's `bound_4_3` dropped a factor 2 on the
+inhomogeneous term and tested the stronger unproved bound `T1 + T2/2` — benign
+direction (stricter test, still validates (4.3)), but a checker/proof mismatch.
+Fixed at source; correction note left in the packet. **Lesson:** audit the
+*checker* against the *statement*, not only the statement against the
+literature — the two factor-of-2 slips this week (mine in the affine
+recurrence, this one in the bound) were both in verification code, and both
+were invisible to the test suites themselves.

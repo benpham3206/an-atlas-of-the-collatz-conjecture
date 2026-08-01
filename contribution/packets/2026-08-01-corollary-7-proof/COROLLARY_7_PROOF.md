@@ -255,6 +255,17 @@ novelty** — a negative search is not a priority claim.
 No float on any acceptance path. float64 appears only as a non-load-bearing
 display of `κ` and `1/g`.
 
+**Correction (2026-08-01, independent audit).** The first version of
+`bound_4_3` dropped a factor 2 when clearing the inhomogeneous term to the
+common denominator `2^{N+1}`; it tested `|y| ≤ T1 + T2/2`, a bound *stronger*
+than (4.3). The direction was benign — a stricter test passing still
+validates (4.3) on those instances — and an adversarial hunt (~38,000
+full-cap instances, including cap-saturating all-ones words; max ratio to the
+true bound 0.884) never made the stricter bound fail. Fixed at source; the
+coded formula now equals (4.3) exactly. The proof itself was not affected.
+The audit also independently re-checked (3.1) on 4,000 adversarial words and
+Lemma 1 on 465,868 equal-factor pairs, with zero failures.
+
 Reproduce:
 
 ```bash
