@@ -155,7 +155,7 @@ For aperiodic `q` with `Φ(q) ∈ ℚ_odd`:
 
 ```
 C := limsup_k p_q(k)/k  ≥  κ = 1/log₂(3/2) = 1.7095112913…      (Corollary 4)
-C ≥ α/(β − α)   for any β with  f(ℓ) ≤ βℓ + O(1)                (Corollary 7)
+C ≥ α/(β − α)   for any β with  f(ℓ) ≤ βℓ + O(1)                (Corollary 7 — proved 2026-08-01)
 ```
 
 `β = 1` in the second recovers the first. **Corollary 4 is the only result in
@@ -183,6 +183,10 @@ That machinery closed 99 of 109 enumerated supercritical words, **a conclusion
 since found to be subsumed by López–Stoll 2021**; the machinery itself is
 retained because it is what works at the critical density.  
 Machinery + certificates: [`contribution/packets/2026-07-24-supercritical-automatic-closure/`](contribution/packets/2026-07-24-supercritical-automatic-closure/) · priority: [`PRIORITY.md`](PRIORITY.md)
+
+**Corollary 7 is proved (2026-08-01).** Full write-up and exact verifier:
+[`contribution/packets/2026-08-01-corollary-7-proof/`](contribution/packets/2026-08-01-corollary-7-proof/).
+The 2026-07-25 "stated without proof" gap is retired.
 
 ### 2.9a Drift wall (prior art — cite, do not claim)
 

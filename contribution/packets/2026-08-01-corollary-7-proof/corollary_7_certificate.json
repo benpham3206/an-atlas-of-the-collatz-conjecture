@@ -1,0 +1,75 @@
+{
+  "A_unroll_vs_recursion": {
+    "status": "pass",
+    "trials": 200
+  },
+  "B_growth_bound": {
+    "accepted_orbits": 450,
+    "betas": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6",
+      "1"
+    ],
+    "status": "pass",
+    "trials": 450
+  },
+  "C_rate_algebra": {
+    "samples": {
+      "1": {
+        "beta": "1",
+        "cmp_to_alpha": 1,
+        "g_positive": true
+      },
+      "12/19": {
+        "beta": "12/19",
+        "cmp_to_alpha": 1,
+        "g_positive": true
+      },
+      "2/3": {
+        "beta": "2/3",
+        "cmp_to_alpha": 1,
+        "g_positive": true
+      },
+      "3/4": {
+        "beta": "3/4",
+        "cmp_to_alpha": 1,
+        "g_positive": true
+      },
+      "5/6": {
+        "beta": "5/6",
+        "cmp_to_alpha": 1,
+        "g_positive": true
+      },
+      "5/8": {
+        "beta": "5/8",
+        "cmp_to_alpha": -1,
+        "g_positive": false
+      }
+    },
+    "status": "pass"
+  },
+  "D_independent_unroll": {
+    "status": "pass",
+    "trials": 200
+  },
+  "E_boundary": {
+    "status": "pass",
+    "subcritical_betas": [
+      "5/8",
+      "41/65",
+      "306/485"
+    ],
+    "supercritical_betas": [
+      "2/3",
+      "12/19",
+      "53/84"
+    ]
+  },
+  "claim": "Corollary 7: ones-capped factors force limsup p(k)/k >= 1/g",
+  "packet": "2026-08-01-corollary-7-proof",
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "python": "3.14.3",
+  "verdict": "PASS"
+}

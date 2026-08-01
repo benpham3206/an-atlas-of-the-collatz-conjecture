@@ -20,6 +20,7 @@ disprove the Collatz conjecture.
 | [`packets/2026-07-22-landmark-pointwise/`](packets/2026-07-22-landmark-pointwise/) | Landmark strategy, strategy machine, resonance lattice, prefix-return barrier, rational finite verifier | complete research packet |
 | [`packets/2026-07-23-cycle-exclusion-extension/`](packets/2026-07-23-cycle-exclusion-extension/) | Cycle exclusion extended to ≤ 20 odd members (dual-enumerator scan, zero hits) | verified bounded exclusion |
 | [`packets/2026-08-01-automatic-density-closure/`](packets/2026-08-01-automatic-density-closure/) | No rational non-cyclic trajectory has an automatic parity word; morphic natural-frequency corollary | proved synthesis of published theorems |
+| [`packets/2026-08-01-corollary-7-proof/`](packets/2026-08-01-corollary-7-proof/) | Corollary 7 proved: ones-capped factors force `limsup p(k)/k ≥ 1/g` | proof + exact verifier |
 | [`code/`](code/) | Exact-arithmetic implementations and executable checks | executable evidence |
 | [`reports/`](reports/) | Recorded outputs and independent verification | verification records |
 | [`DEFINITIONS.md`](DEFINITIONS.md) | Definitions used by the fold program | definitions |
@@ -54,6 +55,8 @@ Each `test_*.py` recomputes the values it checks.
 6. Automatic-density closure in every base, plus the morphic
    natural-frequency corollary:
    `packets/2026-08-01-automatic-density-closure/`.
+7. Corollary 7 (density-refined complexity floor) fully proved:
+   `packets/2026-08-01-corollary-7-proof/`.
 
 Independent verification: `reports/VERIFICATION.md` (GPT-5.6 Sol).
 Agent one-pager: [`../COLLATZ_ONE_PAGE.md`](../COLLATZ_ONE_PAGE.md).

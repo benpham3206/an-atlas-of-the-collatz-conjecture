@@ -98,4 +98,15 @@ not.
 
 Corrections made to previously committed work: the "strictly more information"
 claim (false, in `PRIORITY.md` and `COLLATZ_ONE_PAGE.md`) and the unproved
-status of Corollary 7 (now flagged in the landmark memo).
+status of Corollary 7 (flagged in the landmark memo on that day; **proved
+2026-08-01** — see below).
+
+## 2026-08-01 — Corollary 7 proof
+
+| Artifact | Direction | Executed by | Independent check |
+|---|---|---|---|
+| `packets/2026-08-01-corollary-7-proof/` | Ben Pham | Grok Build | exact unrolling identity vs recursive orbit (200 trials); independent Green reimplementation (200 trials); ones-cap growth bound on real orbits (450 accepts); rate algebra + α-boundary by integer comparison `3^a ? 2^b` |
+
+Closes the 2026-07-25 proof gap. Does **not** restore novelty of the
+supercritical-automatic-closure kills (still subsumed by López–Stoll 2021).
+Does **not** prove or disprove Collatz.

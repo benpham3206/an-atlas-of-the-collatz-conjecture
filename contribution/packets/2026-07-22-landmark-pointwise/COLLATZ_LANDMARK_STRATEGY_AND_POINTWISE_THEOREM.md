@@ -586,16 +586,11 @@ The reverse inequality is automatic because \(p_q(k)\le2^k\). \(\square\)
 
 Thus a rationally realizable critical survivor cannot be quasiperiodic, substitutive with low entropy, or symbolically sparse. It must exhibit full binary factor entropy.
 
-> **⚠ PROOF GAP (25 July 2026).** Corollary 7 below is **stated without
-> proof** — the text gives the statement and then jumps to the Sturmian
-> consequence. This matters more than it looks: the
-> `2026-07-24-supercritical-automatic-closure` packet routes **114 of its 116
-> kills** through Corollary 7 and only 30 through the proved Corollary 4, so
-> the unproved corollary carries the bulk of the computational weight in this
-> repository. The reconstruction is believed routine — the ones-cap turns the
-> growth bound into `H_N ≲ poly(N)·2^{gN}` with `g = β log₂3 − 1`, the additive
-> term contributing only a polynomial factor — but it must be written out
-> before anything here is published. See `REFEREE_NOTE.md` §2.
+> **✓ PROVED (1 August 2026).** Corollary 7 below is fully proved in
+> [`../2026-08-01-corollary-7-proof/COROLLARY_7_PROOF.md`](../2026-08-01-corollary-7-proof/COROLLARY_7_PROOF.md),
+> with an exact-arithmetic verifier. The 2026-07-25 gap note is retired: the
+> `2026-07-24-supercritical-automatic-closure` packet's 114/116 kills that
+> route through Corollary 7 now rest on a written proof, not a sketch.
 
 ## Corollary 7. Balanced supercritical words require large complexity
 
@@ -613,6 +608,13 @@ If \(q\) is aperiodic and \(\Phi(q)\in\mathbb Q_{\mathrm{odd}}\), then
 }
 \tag{5.4}
 \]
+
+**Proof.** See
+[`../2026-08-01-corollary-7-proof/COROLLARY_7_PROOF.md`](../2026-08-01-corollary-7-proof/COROLLARY_7_PROOF.md).
+Outline: unroll the integer recursion to the Green identity (3.1); feed the
+ones-cap into every term to obtain \(H_N\le K(N+1)\,2^{gN}\); choose
+\(k_N=\lceil gN+\log_2(2K(N+1))\rceil+1\); apply Lemma 2. At \(\beta=1\) this
+recovers Corollary 4. ∎
 
 For a Sturmian word, \(p_q(k)/k\to1\), while \(g<\log_2 3-1<1\), so the inequality is impossible. This is the pressure-refined version of Corollary 5.
 

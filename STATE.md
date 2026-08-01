@@ -4,7 +4,7 @@ Frontier of the fold program: what is established, what is blocked, and what
 runs next. Proved statements use exact integer/rational arithmetic; float64
 outputs are measurements, not theorems, and are labelled as such. The Collatz
 conjecture remains open; nothing here proves or disproves it. Updated
-2026-07-25.
+2026-08-01.
 
 ## PROOF ARCHITECTURE (which branch each result serves)
 
@@ -217,6 +217,11 @@ a premise. This remains the only live route whose success condition is
 - **Corollary 4 referee note.** Self-contained statement, proof, prior-art
   separation and four referee questions for the one result the priority search
   did not find in prior art. The externalization artifact. [`REFEREE_NOTE.md`](REFEREE_NOTE.md)
+- **Corollary 7 proved.** Density-refined complexity floor
+  `limsup p_q(k)/k ≥ α/(β−α)` under a uniform ones-cap `β > α`. Same mechanism
+  as Corollary 4 with the Green unrolling + ones-cap. Exact verifier
+  (unroll identity, growth bound, rate algebra, boundary).
+  [`contribution/packets/2026-08-01-corollary-7-proof/`](contribution/packets/2026-08-01-corollary-7-proof/)
 
 ## BLOCKED
 
@@ -240,10 +245,6 @@ a premise. This remains the only live route whose success condition is
   tolerating **boundary points in the non-driving variables**, which no
   searched source provides. See
   [`2026-07-25-mahler-tower`](contribution/packets/2026-07-25-mahler-tower/).
-- **Corollary 7 is unproved.** The landmark memo states it without proof, and
-  `2026-07-24-supercritical-automatic-closure` routes **114 of its 116 kills**
-  through it (only 30 through the proved Corollary 4). The reconstruction is
-  believed routine but must be written out before publication.
 - **Shadow-barrier: killed.** Its Theorem 2 restates its own hypothesis, so it
   excludes nothing; its regime `s_L/L − α = o(1/L)` is strictly narrower than
   the surviving gap and is assumed, not proved. [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/)

@@ -14,6 +14,62 @@ note, not a lesson.
 
 ---
 
+## 2026-08-01 — Corollary 7 written out (the gap that carried 114 kills)
+
+**Strategy.** After syncing to `origin/main`, read the hail-mary / STATE /
+TARGETS stack and pick the highest-EV *finite* obligation rather than the
+headline problem. Amplification is still the most important open half, but it
+has no theorem and no session-sized entry point. Corollary 7 was flagged
+unproved while carrying **114 of 116** supercritical-closure kills — a
+dependency-graph finding from 2026-07-25 that had never been closed. Write the
+proof, not a new instrument.
+
+**Worked.**
+
+- **Tracing weight before inventing.** The AGENT_CONDUCT instrument "trace
+  every claim to something proved; count how much weight each dependency
+  carries" named the target before any algebra: Cor 7 was the single unproved
+  lemma with almost all the kill weight.
+- **Green unrolling first.** Once the integer recursion is written as
+  `2^N y_N = 3^s y_0 + d Σ …`, the ones-cap inserts term-by-term and the rate
+  `2^{gN}` is forced. The "believed routine" reconstruction was, in fact,
+  routine — but only after the identity was written down.
+- **Parity-consistent test orbits.** The first verifier failed because it fed
+  random bitstrings into an integer orbit that requires `q_j ≡ y_j (mod 2)`.
+  Fixing that (derive the word from the state) is the same discipline as
+  never treating a free 2-adic transcript as a positive integer.
+
+**Failed.**
+
+- No progress on amplification, the critical-density gap, or the morphic
+  residual (log-frequency vs natural liminf). Literature check on morphic
+  log-frequency algebraicity returned existence (Bell 2008) but not
+  algebraicity of the value — so the automatic-density style synthesis does
+  not lift.
+- Collatz remains open. This session is an outcome-3/5 under the hail-mary
+  ranking (exact obstruction written; infrastructure gap closed), not a
+  resolution.
+
+**Mistakes.**
+
+- First verifier used free words; parity invariant broke. Caught by the
+  verifier itself, not by re-reading the proof.
+- Mis-classified continued-fraction convergents of `log₃2` as subcritical
+  twice (12/19 and 53/84 are above α). Integer witness `3^a ? 2^b` is the
+  only check; memory of the alternation pattern is not.
+
+**Lesson.**
+
+> **An unproved lemma that already carries the weight of a published packet is
+> higher EV than a new attack on the headline gap.** Closing Cor 7 did not
+> move the Collatz frontier outward, but it stopped 114 kills from resting on
+> a sketch. The compounding object was the *dependency graph*, not a new
+> density regime. Separately: when testing an identity on "words", use the
+> words the dynamics actually produces — free symbolic inputs silently leave
+> the integer model.
+
+---
+
 ## 2026-07-25 — The Mahler tower: the guessed obstruction was in the wrong place
 
 **Strategy.** Run the cheapest check the frontier file itself nominated, and
