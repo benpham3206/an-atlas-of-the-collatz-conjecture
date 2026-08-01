@@ -115,7 +115,7 @@ Does **not** prove or disprove Collatz.
 
 | Artifact | Direction | Executed by | Independent check |
 |---|---|---|---|
-| `packets/2026-08-01-chain-exponent-law/` | Ben Pham | Kimi (Moonshot AI) | exact `Fraction` LP for Beatty infeasibility; exact Sturmian-balance enumeration; CF of log₂3 by exact integer arithmetic; chain recursion cross-validated against three independent certificates (k(n) exact at 16 layers, M_n to 7.5 × 10⁻¹⁴) | `6e38247` |
+| `packets/2026-08-01-chain-exponent-law/` | Ben Pham | Kimi (Moonshot AI) | exact `Fraction` LP for Beatty infeasibility; exact Sturmian-balance enumeration; CF of log₂3 by exact integer arithmetic; chain recursion cross-validated against three independent certificates (k(n) exact at 16 layers, M_n to 7.5 × 10⁻¹⁴) | `d1dc067` |
 
 Kills the Beatty/rotation hypothesis for the chain peak exponent exactly
 (all three pre-registered criteria fire) and replaces it with an exact
