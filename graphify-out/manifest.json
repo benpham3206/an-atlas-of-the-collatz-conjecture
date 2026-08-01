@@ -265,8 +265,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785613912.963761,
-    "ast_hash": "fa5202368dfb03a1cc430542343f78e2",
+    "mtime": 1785618861.9019377,
+    "ast_hash": "dbc27dd3aad103a6d59889a9ee549e27",
     "semantic_hash": ""
   },
   "contribution/DEFINITIONS.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "STATE.md": {
-    "mtime": 1785616865.9246528,
-    "ast_hash": "a3a06a89458976b0de63173dbd835237",
+    "mtime": 1785618826.0450988,
+    "ast_hash": "86473cf80048d6c1972e63b0a71fd803",
     "semantic_hash": ""
   },
   "contribution/packets/2026-07-23-plateau-drift-test/COLLATZ_PLATEAU_DRIFT_TEST.md": {
@@ -714,8 +714,23 @@
     "ast_hash": "5755100dbe0c3d1bd1f20530f282c118",
     "semantic_hash": ""
   },
+  "contribution/packets/2026-08-01-chain-exponent-law/chain_exponent_law_results.json": {
+    "mtime": 1785618736.0982053,
+    "ast_hash": "6eec49cdd3071b6f7cbdb58131ee3b6e",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-08-01-chain-exponent-law/test_chain_exponent_law.py": {
+    "mtime": 1785618634.374769,
+    "ast_hash": "46fb6601ccf6c077fb697f2101b98f9c",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-08-01-chain-exponent-law/verify_chain_exponent_law.py": {
+    "mtime": 1785618505.8212562,
+    "ast_hash": "82cdbd7985eb8053b1445e03aa77d8ee",
+    "semantic_hash": ""
+  },
   "contribution/packets/2026-08-01-corollary-7-proof/corollary_7_certificate.json": {
-    "mtime": 1785616865.9270036,
+    "mtime": 1785618695.4295645,
     "ast_hash": "f297604b3a14a181203876484fbf8b4c",
     "semantic_hash": ""
   },
@@ -735,8 +750,8 @@
     "semantic_hash": ""
   },
   "CONTRIBUTORS.md": {
-    "mtime": 1785616944.6420293,
-    "ast_hash": "62051784b58a3b4d79108702ac8232f5",
+    "mtime": 1785618034.5035596,
+    "ast_hash": "a3f8664db20f8887e3b55c4d406c3fc5",
     "semantic_hash": ""
   },
   "COUNTEREXAMPLE_SHAPE.md": {
@@ -755,8 +770,8 @@
     "semantic_hash": ""
   },
   "PROVENANCE.md": {
-    "mtime": 1785616934.3014767,
-    "ast_hash": "a2b559e1493b6be4a54edfe1026cb4cc",
+    "mtime": 1785618835.2308462,
+    "ast_hash": "eca011a6ded68226cda6eb59a2d06600",
     "semantic_hash": ""
   },
   "REFEREE_NOTE.md": {
@@ -792,6 +807,11 @@
   "contribution/packets/2026-08-01-amplification-cylinder-nogo/AMPLIFICATION_CYLINDER_NOGO.md": {
     "mtime": 1785616865.9253473,
     "ast_hash": "479c6e4a1cd0c1346e05a1301b060b6b",
+    "semantic_hash": ""
+  },
+  "contribution/packets/2026-08-01-chain-exponent-law/COLLATZ_CHAIN_EXPONENT_LAW.md": {
+    "mtime": 1785618604.8266952,
+    "ast_hash": "08023329794861897023238ee4c08c1d",
     "semantic_hash": ""
   },
   "contribution/packets/2026-08-01-corollary-7-proof/COROLLARY_7_PROOF.md": {
