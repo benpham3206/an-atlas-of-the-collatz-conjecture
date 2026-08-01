@@ -110,3 +110,15 @@ status of Corollary 7 (flagged in the landmark memo on that day; **proved
 Closes the 2026-07-25 proof gap. Does **not** restore novelty of the
 supercritical-automatic-closure kills (still subsumed by López–Stoll 2021).
 Does **not** prove or disprove Collatz.
+
+## 2026-08-01 — chain exponent law
+
+| Artifact | Direction | Executed by | Independent check |
+|---|---|---|---|
+| `packets/2026-08-01-chain-exponent-law/` | Ben Pham | Kimi (Moonshot AI) | exact `Fraction` LP for Beatty infeasibility; exact Sturmian-balance enumeration; CF of log₂3 by exact integer arithmetic; chain recursion cross-validated against three independent certificates (k(n) exact at 16 layers, M_n to 7.5 × 10⁻¹⁴) | `d1dc067` |
+
+Kills the Beatty/rotation hypothesis for the chain peak exponent exactly
+(all three pre-registered criteria fire) and replaces it with an exact
+closed chain recursion (odometer with Δk ∈ {1,2}). Records chain closure
+and a = 1 dominance as theorem candidates. Does **not** prove or disprove
+Collatz.
