@@ -10,6 +10,14 @@ Its portfolio-management and adversarial-audit machinery is kept, in places
 close to verbatim. **Four of its devices are deliberately inverted.** §1 says
 which and why. Do not restore them.
 
+This update also uses two OpenAI process sources:
+
+- [Ten Advances in Mathematics and Theoretical Computer Science](https://cdn.openai.com/pdf/ten-proofs-oai.pdf), especially the abstract and the theorem/proof introductions.
+- [How the Ideas Came Together: Mathematical Discovery Notes](https://cdn.openai.com/pdf/reasoning-walkthroughs.pdf), especially the abstract, §§1.2–1.4, §§2.4–2.5, §§8.1–8.6, and §11.8.
+
+They supply workflow guidance only. They are not evidence for any Collatz
+claim. Last checked: 2026-08-01.
+
 **Status of the source.** The CDC proof was announced in 2026 and, at the time
 of writing, had not been independently confirmed. The prompt is being copied
 for its search discipline, not because its output is validated.
@@ -29,6 +37,40 @@ Everything else from the CDC prompt — portfolio diversity, the approach-family
 registry, blocked-route marking, adversarial agents, the ban on status reports,
 the refusal to stop after the first wave — is kept and is the reason to use this
 scaffold at all.
+
+## 1a. Proof and reasoning practices adopted from the OpenAI sources
+
+Apply these rules to every approach. They sharpen the search discipline; they
+do not change the resolution gate in §2.
+
+1. **State the exact target before the search.** Write one claim with its
+   domain, quantifiers, and accepted witness. Label it `theorem`, `calculation`,
+   `heuristic`, or `open question`.
+2. **Separate the universal obstruction from the explicit witness.** A bound
+   for every candidate does not produce a witness. A construction for one
+   candidate does not cover a family. Keep those proof obligations in separate
+   rows and check both.
+3. **Preserve the quantity that carries the contradiction.** If a reduction
+   loses location, phase, integrality, a boundary condition, or another needed
+   invariant, record that loss. Do not optimize a surrogate and call it the
+   original problem without a proved transfer lemma.
+4. **Make failed routes useful.** For each discarded route, record the test,
+   the observed failure, and the exact missing statement. Change perspective
+   only when the new route supplies a new invariant or witness.
+5. **Protect quantifiers and models.** State whether a witness may depend on a
+   parameter. Keep dimensions and parameters distinct. A result in a modified
+   map, sampled model, or restricted class does not transfer by renaming.
+6. **Use proof-first computation.** Put exact inputs, equations, code paths,
+   and certificates next to every load-bearing computation. Label finite,
+   asymptotic, floating-point, and sampled results. Use an independent checker
+   for acceptance decisions.
+7. **Challenge the full object before acceptance.** Test boundary cases and
+   counterexamples. Do not replace an optimized object with one sample or an
+   endpoint. For measurements, use a held-out check when one is meaningful.
+8. **Keep the durable record concise.** Record hypotheses, decisive changes,
+   failed routes, and checks. Do not request or present private chain-of-thought
+   as evidence; a short proof sketch and a reproducible certificate are the
+   required record.
 
 ---
 
@@ -85,6 +127,8 @@ read §4 before spending anything on the cycle branch.
 ---
 
 ## 2a. Conduct
+
+Apply §1a on every route.
 
 **Persist through difficulty. When a problem gets tough, keep going.
 Frustration or failure means you need a different perspective or approach — not
@@ -244,6 +288,10 @@ repository's recorded failures, not invented.
   such failure: a linear extrapolation through a quantity that is actually a
   sawtooth driven by `Δk`, producing a meaningless "falsified prediction".
   Check what drives a quantity before fitting it.
+- **Obstruction/witness conflation.** A universal bound and an explicit
+  construction are separate obligations. Do not report one as the other.
+- **Surrogate transfer.** A reduction that drops integrality, phase, location,
+  or a boundary condition must name and prove the lemma that restores it.
 
 ---
 
@@ -252,8 +300,12 @@ repository's recorded failures, not invented.
 Produce, in the repository's packet format, dated, under
 `contribution/packets/`:
 
+- an approach card written before the build: one numbered claim, its domain and
+  quantifiers, source list, status label, and kill criterion;
 - a memo stating **exactly one atomic claim with a number in it**, its proof or
   its exact remaining gap, and its limitations;
+- a failed-route record for each discarded approach: test, result, and missing
+  invariant or lemma;
 - kill criteria written **before** the build, and their outcomes;
 - executable verification using exact integer or rational arithmetic, with an
   independent re-implementation of anything load-bearing;
@@ -270,7 +322,7 @@ and say whether you proved it or assumed it.
 
 ---
 
-## 9. Current frontier, as of 2026-07-24
+## 9. Current frontier, as of 2026-08-01
 
 Read `TARGETS.md` for the ranked list with odds and kill criteria. The short
 version:
@@ -283,9 +335,13 @@ version:
 - Two independent routes now confirm that all difficulty sits in the region
   where the multiplier `3^h/2^{A_h}` never falls below 1 — equivalently, where
   every prefix of the parity word has one-density at least `log₃2`.
+- Automatic parity transcripts are now closed in every base by the
+  Bell–López–Stoll density argument recorded in
+  `contribution/packets/2026-08-01-automatic-density-closure/`. The remaining
+  symbolic gap is the arbitrary, non-automatic critical-density level set.
 - The factor-complexity method that closed 99 of 109 enumerated supercritical
   words **saturates at two-state automata**; see `TARGETS.md` §3. It does not
-  scale, and the full 2-automatic Gap is not reachable by that route.
+  consume the arbitrary critical-density set.
 
 Do not treat this section as a constraint on where to look. It is a record of
 where the walls were found, so that agents spend their budget on new ones.
