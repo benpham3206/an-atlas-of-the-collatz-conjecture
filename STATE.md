@@ -257,6 +257,21 @@ a premise. This remains the only live route whose success condition is
   unentered — only the mechanism is dead.
   [`contribution/packets/2026-08-01-amplification-cylinder-nogo/`](contribution/packets/2026-08-01-amplification-cylinder-nogo/)
 
+- **Beatty/rotation hypothesis for k(n): killed exactly.** The chain peak
+  exponent k(n) (n = 6..21: 6,8,9,10,12,13,14,16,17,18,20,21,23,24,26,28) is
+  not ⌊γn⌋ for any γ: exact `Fraction` LP over all 256 ordered pairs is
+  infeasible, witnesses force γ > 3/2 and γ < 11/8 simultaneously; Δk =
+  (2,1,1,2,1,1,2,1,1,2,1,2,1,2,2) fails Sturmian balance (contains both (1,1)
+  and (2,2) factors); 22/15 is not in the CF tree of log₂3 =
+  [1;1,1,2,2,3,1,5,2,23,…]. All three pre-registered kill criteria fire.
+  In its place the chain recursion is an **exact closed subsystem**:
+  dominant pullback is always a = 1, so x_n = 2^{k(n)−1}/3^n obeys the
+  odometer x_n = (2^{Δk}/3)·x_{n−1} with Δk ∈ {1,2}; reproduces k(n) and
+  M_n to 7.5 × 10⁻¹⁴ against the certified layer engines. The decay-rate
+  question is now the drift of δ(n) in k(n) = n·log₂3 − δ(n), δ ∈ [3.09,
+  6.12], measured drift ≈ 0.118n. a = 1 dominance and chain closure are
+  recorded as theorem candidates.
+  [`contribution/packets/2026-08-01-chain-exponent-law/`](contribution/packets/2026-08-01-chain-exponent-law/)
 - **Phase-blind propagation.** Proved impossible (P2, P5): no
   finite-check-at-one-layer plus phase-blind propagation argument can
   establish w_n(ε) ≥ w > 0; the missing input is the intrinsic chain phase
