@@ -1,16 +1,16 @@
-# Graph Report - collatz-atlas  (2026-08-01)
+# Graph Report - collatz-atlas  (2026-07-23)
 
 ## Corpus Check
-- 156 files · ~257,487 words
+- 112 files · ~186,309 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1946 nodes · 2867 edges · 116 communities (113 shown, 3 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.52)
+- 1424 nodes · 2178 edges · 80 communities (77 shown, 3 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 53 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `50556764`
+- Built from commit: `04efaa25`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -93,42 +93,6 @@
 - formal/ — Lean 4 certificates for the Collatz atlas
 - CycleSearchError
 - test_cli_subprocess_default_output_path
-- verify_supercritical_closure.py
-- verify_corollary_7.py
-- verify_mahler_tower.py
-- test_verify_supercritical_closure.py
-- test_verify_mahler_tower.py
-- dimension_bracket.py
-- 3. Why the problem is worth proving
-- verify_contraction_onset.py
-- test_verify_plateau_drift_test.py
-- test_verify_contraction_onset.py
-- test_streaming_depth_21.py
-- The Mahler tower of a uniform-morphic transcript, and where it breaks
-- Descent requires contraction: a minimal counterexample cannot contract in its first 1,000,000 Syracuse steps
-- streaming_layer.py
-- Hail-mary handoff: resolve Collatz, or produce the exact obstruction
-- Amplification: the inverse/cylinder route is killed at the handoff
-- Corollary 7 proved: ones-capped factors force a larger complexity floor
-- Agent conduct
-- What a counterexample must look like — and what it cannot
-- Can Bayesian theory be applied here?
-- F2 Report — Induced First-Return Maps + Collapse Search
-- Streaming depth 21: the memory ceiling removed, and a correction to the drift-test verdict
-- Contributors
-- Session ledger
-- Provenance
-- Thermo-Nuclear Review — Collatz Atlas
-- decay_model_test.py
-- meta/README.md
-- Simple questions with exact answers
-- c_at
-- probe_dfao_saturation.py
-- Reading list, with verdicts
-- profile_structure_test.py
-- run_streaming_depth.py
-- test_verify_corollary_7.py
-- chain_exponent
 
 ## God Nodes (most connected - your core abstractions)
 1. `Landmark Proof Architectures and a Collatz Continuation` - 37 edges
@@ -157,11 +121,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (116 total, 3 thin omitted)
+## Communities (80 total, 3 thin omitted)
 
 ### Community 0 - "test_f2.py"
 Cohesion: 0.06
-Nodes (75): BranchCanon, _apply_terras_step(), _assert_ints(), _branch_diff_count(), ClassResult, collapse_search(), compute_all_classes(), format_canonical() (+67 more)
+Nodes (71): BranchCanon, _apply_terras_step(), _assert_ints(), _branch_diff_count(), ClassResult, collapse_search(), compute_all_classes(), format_canonical() (+63 more)
 
 ### Community 1 - "f4_feature_regression.py"
 Cohesion: 0.06
@@ -181,7 +145,7 @@ Nodes (40): all_sigmas(), all_words(), block_oscillator(), classify_word(), cmp_
 
 ### Community 5 - "COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md"
 Cohesion: 0.04
-Nodes (45): 2. Near-neutral resonance tiles, Phase 4: globalize, 6. Smale 17: use the right condition metric and the right output notion, Part X. Parallel research programs, Lemma 2. Height-complexity collision principle, Part V. Consequences, 1. The true critical constants, Corollary 7. Balanced supercritical words require large complexity (+37 more)
+Nodes (46): 2. Near-neutral resonance tiles, Phase 4: globalize, 6. Smale 17: use the right condition metric and the right output notion, Part X. Parallel research programs, Lemma 2. Height-complexity collision principle, Part V. Consequences, 1. The true critical constants, Corollary 7. Balanced supercritical words require large complexity (+38 more)
 
 ### Community 6 - "rational_shadow.py"
 Cohesion: 0.15
@@ -216,8 +180,8 @@ Cohesion: 0.18
 Nodes (23): canonical_cycle(), classify_system(), contains_float(), main(), markdown_table(), Path, Exact finite phase scan for two-branch maps T_{a,b}.  This is an empirical class, Classify every seed in [1, seed_stop) under explicit finite caps. (+15 more)
 
 ### Community 14 - "test_exact_cycle_search.py"
-Cohesion: 0.15
-Nodes (23): canonical_composition_count(), canonical_rotation(), composition_count(), compositions_of(), fixed_point_fraction(), is_canonical_rotation(), Fraction, Return C_m / (2^K - 3^m) when 2^K != 3^m; else None. (+15 more)
+Cohesion: 0.19
+Nodes (19): canonical_composition_count(), canonical_rotation(), composition_count(), compositions_of(), is_canonical_rotation(), Stream all ordered compositions of K into m positive integer parts.      Count o, Lexicographically minimal cyclic rotation (unique cycle representative)., Number of positive compositions of K into m parts (before symmetry). (+11 more)
 
 ### Community 15 - "An Atlas of the Collatz Conjecture"
 Cohesion: 0.09
@@ -249,11 +213,11 @@ Nodes (11): char_function_max(), decay_table(), main(), oscillation(), One step 
 
 ### Community 22 - "CycleSearchError"
 Cohesion: 0.24
-Nodes (11): CycleSearchError, odd_only_step(), Exception, Direct exact orbit check for U under prescribed valuations.      Returns     ---, Raised for invalid CLI / parameter input with a structured payload., 2-adic valuation of a positive even integer; rejects non-positive., One step of U on a positive odd integer.      Returns ``(U(n), a)`` where ``a =, v2() (+3 more)
+Nodes (10): odd_only_step(), Odd-only accelerated Collatz map on positive odd integers., Direct exact orbit check for U under prescribed valuations.      Returns     ---, 2-adic valuation of a positive even integer; rejects non-positive., One step of U on a positive odd integer.      Returns ``(U(n), a)`` where ``a =, U(), v2(), verify_valuation_orbit() (+2 more)
 
 ### Community 23 - "exact_cycle_search.py"
-Cohesion: 0.22
-Nodes (9): CycleCandidate, evaluate_exponents(), One verified integral odd cycle for a valuation word (canonical form)., If a yields an exact positive odd integer fixed point, return (n, C_m, denom)., Build a CycleCandidate if the valuation word yields a verified integral cycle., rotations(), try_integral_fixed_point(), a = (2, 2) has m=2, K=4 and fixed point n=1 — not a counterexample. (+1 more)
+Cohesion: 0.33
+Nodes (5): CycleCandidate, evaluate_exponents(), One verified integral odd cycle for a valuation word (canonical form)., Build a CycleCandidate if the valuation word yields a verified integral cycle., rotations()
 
 ### Community 24 - "test_verify_syracuse_fourier.py"
 Cohesion: 0.16
@@ -280,8 +244,8 @@ Cohesion: 0.14
 Nodes (15): Elements of Metadynamical Geometry, Book 0 — Postulates, Book 0 — Common notions, Book III — Founding problems, Book 0 — Definitions, Proposition 2 — Finite observational collision is an equivalence relation, How to read this, Exploratory drafts (+7 more)
 
 ### Community 30 - "affine_CS"
-Cohesion: 0.22
-Nodes (10): affine_CS(), affine_fixed_point_via_direct_formula(), Odd-only accelerated Collatz map on positive odd integers., Compute (C_m, S_m) for exponent tuple a via the packet recurrence.      S_0 = 0,, Apply the composite odd-only map assuming valuations a hold: (3^m n + C_m) / 2^K, U(), Unit: C_m from the packet recurrence equals the offset of U^m when valuations ho, Independent expansion: apply (3x+1)/2^{a_j} symbolically via fractions-free ints (+2 more)
+Cohesion: 0.15
+Nodes (16): affine_CS(), affine_fixed_point_via_direct_formula(), fixed_point_fraction(), Fraction, Compute (C_m, S_m) for exponent tuple a via the packet recurrence.      S_0 = 0,, Return C_m / (2^K - 3^m) when 2^K != 3^m; else None., If a yields an exact positive odd integer fixed point, return (n, C_m, denom)., Apply the composite odd-only map assuming valuations a hold: (3^m n + C_m) / 2^K (+8 more)
 
 ### Community 31 - "Automatic transcript rigidity: the subcritical and critical strata are closed, the supercritical stratum is provably the"
 Cohesion: 0.15
@@ -376,8 +340,8 @@ Cohesion: 0.43
 Nodes (6): check_seed(), green_exact(), main(), orbit_and_parity(), Fraction, terras()
 
 ### Community 54 - "verify_rational_complexity_finite.py"
-Cohesion: 0.09
-Nodes (27): affine_constant(), check_case(), main(), Orbit, One Terras step for x=y/d with d positive odd; return (next_y, parity)., Return (number of ones, c) in 2^k y_k = 3^s y_0 + d*c., scaled_step(), Standalone tests for the amplification no-go verifier.  Runs under pytest or dir (+19 more)
+Cohesion: 0.36
+Nodes (7): affine_constant(), check_case(), main(), Orbit, One Terras step for x=y/d with d positive odd; return (next_y, parity)., Return (number of ones, c) in 2^k y_k = 3^s y_0 + d*c., scaled_step()
 
 ### Community 55 - "Deep Fourier scan: the resonance-chain structure at depth n = 17, and one measured law that needed restating"
 Cohesion: 0.29
@@ -412,8 +376,8 @@ Cohesion: 0.67
 Nodes (4): Rate collisions are not law collisions, F2b independent screen through k = 10, Exact law table, Verdict
 
 ### Community 67 - "verify_plateau_drift_test.py"
-Cohesion: 0.13
-Nodes (25): bad_half_indices(), bad_residues_from_half(), bad_residues_from_indices(), c_at_many(), escape_weight_candidates(), escape_weight_exact(), exact_chain_phases(), half_count() (+17 more)
+Cohesion: 0.06
+Nodes (46): dense_stack(), The candidate-set minimum (new, used at all depths) equals the     brute-force m, Synthetic bad block of length L on the chain: w = 2^-L - 2^-40     exactly, atta, The recursion identity, numpy path, against dense FFT ground truth     at every, The C transport kernel agrees with the numpy reference to 1e-13 at     every lay, Exact discrete-log certificate against a brute-force reference     (provenance:, test_c_kernel_matches_numpy(), test_chain_exponent_bsgs_vs_bruteforce() (+38 more)
 
 ### Community 68 - "collatz_shadow_barrier_verify.py"
 Cohesion: 0.21
@@ -432,12 +396,8 @@ Cohesion: 0.17
 Nodes (11): 1. The "Terence Method" as described in the thread, 2.1 Transcript-lift framework, 2.2 Structured low-complexity exclusions, 2.3 Shadow barrier, 2.4 Ghost words, 2.5 Lift digits as the residual wall, 2.6 Other concrete claims in the thread, 2. Claim-by-claim alignment with the atlas (+3 more)
 
 ### Community 72 - "Repository state"
-Cohesion: 0.07
-Nodes (25): 1. The statement, 2. The proof, 3. Why this is not the drift wall, 4. What is already known, and by whom, 5. The exact questions for the referee, 6. Status, A factor-complexity obstruction for rational states of the Terras conjugacy, BLOCKED (+17 more)
-
-### Community 73 - "plateau_drift_kernel.c"
-Cohesion: 0.50
-Nodes (4): run_range(), transport(), transport_range(), job_t
+Cohesion: 0.40
+Nodes (4): BLOCKED, ESTABLISHED, NEXT, Repository state
 
 ### Community 74 - "Provenance — shadow-barrier packet"
 Cohesion: 0.50
@@ -452,159 +412,19 @@ Cohesion: 0.15
 Nodes (12): Counterexample watch, Cross-validation evidence, Cycle exclusion extension: no nontrivial positive cycle with at most 20 odd members, Dominance note (why the enumeration stops being the frontier), Feasibility assessment (before running), Files, Limitations, Method (+4 more)
 
 ### Community 77 - "formal/ — Lean 4 certificates for the Collatz atlas"
-Cohesion: 0.20
-Nodes (9): Counterexample watch, formal/ — Lean 4 certificates for the Collatz atlas, How to build, Layout, Provenance: relationship to the formal-conjectures draft, Remaining `sorry`s, What is proved (plain language), What is proved (plain language) — collision principle (+1 more)
+Cohesion: 0.22
+Nodes (8): Counterexample watch, formal/ — Lean 4 certificates for the Collatz atlas, How to build, Layout, Provenance: relationship to the formal-conjectures draft, Remaining `sorry`s, What is proved (plain language), What is proved (plain language) — Terras bijection
+
+### Community 78 - "CycleSearchError"
+Cohesion: 0.29
+Nodes (5): CycleSearchError, Machine-checkable failure record., Raised for invalid CLI / parameter input with a structured payload., StructuredError, Exception
 
 ### Community 79 - "test_cli_subprocess_default_output_path"
 Cohesion: 0.50
 Nodes (4): Path, Subprocess run of the module writing the package default results path., test_cli_subprocess_default_output_path(), test_cli_writes_results_and_stdout_match()
 
-### Community 80 - "verify_supercritical_closure.py"
-Cohesion: 0.07
-Nodes (52): alpha_bracket(), analyse(), check_balance_bound(), check_collision_principle(), cmp_frac_alpha(), complexity_bound(), complexity_nodes(), enumerate_supercritical() (+44 more)
-
-### Community 81 - "verify_corollary_7.py"
-Cohesion: 0.13
-Nodes (34): bound_4_3(), cmp_beta_alpha(), Fail, g_positive(), main(), need(), orbit_from_state(), orbit_y() (+26 more)
-
-### Community 82 - "verify_mahler_tower.py"
-Cohesion: 0.11
-Nodes (33): attraction_verdict(), awc(), check_functional_equation(), counts(), f2_orbit_hits_zero(), f_series(), fixed_point(), incidence() (+25 more)
-
-### Community 83 - "test_verify_supercritical_closure.py"
-Cohesion: 0.06
-Nodes (24): B_ell = f(ell)/ell must sit above the exact Perron density rho and     approach, The endpoint identity that makes the density inequality contain the     landmark, The integer witnesses 3^x < 2^y must agree with the inequality they     stand fo, Corollary 4 is literally Corollary 7 at beta = 1 (every length-l     factor triv, f(m) <= (f(ell)/ell)*m + f(ell) -- the step that makes a single ell     an admis, A weaker (larger) complexity bound must never kill more., Sanity that the theorem's hypothesis excludes every actual orbit: a     positive, Witness 1 of the rigidity packet -- the memo's named example -- must     be kill (+16 more)
-
-### Community 84 - "test_verify_mahler_tower.py"
-Cohesion: 0.08
-Nodes (16): M and its transpose must not be interchangeable., Flipping one bit of q must change Phi., Every survivor verdict must match the independently computed profile., The packet's headline number., With two letters and a nonconstant coding, each tau-class is a     singleton, so, The F_2 orbit test must return a hitting time when one exists and None     when, The system route and the Bernstein-Lagarias series route must agree., Using y instead of y^M must break the functional equation.      Without this the (+8 more)
-
-### Community 85 - "dimension_bracket.py"
-Cohesion: 0.19
-Nodes (17): alpha_bracket(), _certified_lower(), _certified_upper(), cmp_frac_alpha(), entropy_bracket(), Fail, main(), need() (+9 more)
-
-### Community 86 - "3. Why the problem is worth proving"
-Cohesion: 0.11
-Nodes (17): 1. Purpose, 2. Why Collatz, 3.1 A simple problem that resists every known technique, 3.2 It shows the limits of current mathematics, 3.3 A model problem for deterministic complexity, 3.4 It connects many areas, 3.5 It tests methods for hard problems, 3.6 It teaches care about intuition (+9 more)
-
-### Community 87 - "verify_contraction_onset.py"
-Cohesion: 0.19
-Nodes (16): a_star(), check_cocycle_and_lemmas(), cocycle(), Fail, m_table(), main(), need(), Exception (+8 more)
-
-### Community 88 - "test_verify_plateau_drift_test.py"
-Cohesion: 0.15
-Nodes (11): dense_stack(), The candidate-set minimum (new, used at all depths) equals the     brute-force m, Synthetic bad block of length L on the chain: w = 2^-L - 2^-40     exactly, atta, The recursion identity, numpy path, against dense FFT ground truth     at every, The C transport kernel agrees with the numpy reference to 1e-13 at     every lay, Exact discrete-log certificate against a brute-force reference     (provenance:, test_c_kernel_matches_numpy(), test_chain_exponent_bsgs_vs_bruteforce() (+3 more)
-
-### Community 89 - "test_verify_contraction_onset.py"
-Cohesion: 0.13
-Nodes (8): M(h) sets records only at good rational approximations to log_2 3 from     above, The load-bearing elementary step: no descent without 2^A > 3^h., C_h <= h*3^(h-1) is claimed ONLY before the first contracting index.     Confirm, If h is the first contracting index and the orbit has not descended,     then x, test_lemma1_descent_requires_contraction(), test_lemma2_holds_before_onset_and_can_fail_after(), test_record_depths_are_convergents_and_semiconvergents(), test_theorem_bound_holds_on_real_orbits()
-
-### Community 90 - "test_streaming_depth_21.py"
-Cohesion: 0.14
-Nodes (14): layers(), RED/GREEN gate for the streaming layer engine.  The whole claim of streaming_lay, The downstream exact quantities are unchanged under streaming., Reference: the drift-test engine, layers materialised as usual., Chunked transport reproduces the full-width transport exactly., Output j depends only on j, so threading is not a source of drift., M_n, argmax and every bad set agree exactly with the resident scan., Named-unit evaluation equals the resident value bit for bit. (+6 more)
-
-### Community 91 - "The Mahler tower of a uniform-morphic transcript, and where it breaks"
-Cohesion: 0.13
-Nodes (14): 10. Prior art, 11. What this does not do, 12. Adversarial self-audit, 13. Reproduce, 1. The claim, 2. Kill criteria, written before the build, 3. Definitions, 4. Theorem 1 — the functional system (+6 more)
-
-### Community 92 - "Descent requires contraction: a minimal counterexample cannot contract in its first 1,000,000 Syracuse steps"
-Cohesion: 0.14
-Nodes (13): 10. Adversarial audit: which quantifier does the work?, 11. Reproduce, 12. Related work — corrected 25 July 2026, 1. The claim, 2. Kill criteria, written before the build, 3. Setup, 4. Lemma 1 — descent requires contraction, 5. Lemma 2 — the offset bound before onset (+5 more)
-
-### Community 93 - "streaming_layer.py"
-Cohesion: 0.26
-Nodes (11): _layer_params(), load_range_kernel(), point_values(), Streaming layer engine: certify one Syracuse-character layer without ever materi, Fill out[0:jhi-jlo] with layer-n outputs j in [jlo, jhi)., Certify layer n from layer n-1 without allocating layer n.      Two streaming pa, Exact layer-n values at named units, via 1-element kernel calls.      Uses the s, Compile the shared kernel and return the transport_range entry point.      Same (+3 more)
-
-### Community 94 - "Hail-mary handoff: resolve Collatz, or produce the exact obstruction"
-Cohesion: 0.17
-Nodes (12): 1. What was changed from the CDC prompt, and why, 1a. Proof and reasoning practices adopted from the OpenAI sources, 2. Task statement, 2a. Conduct, 3. Read the repository first, 4. Dominated work — do not spend agents here, 5. Search management, 6. Accepted outcomes, ranked (+4 more)
-
-### Community 95 - "Amplification: the inverse/cylinder route is killed at the handoff"
-Cohesion: 0.18
-Nodes (10): Amplification: the inverse/cylinder route is killed at the handoff, Approach card (written before the build), Failed-route records, Kill criteria and outcomes (all written before the build), Prior art and honesty notes, Related literature finding (Target 4 side-note), The atomic claim, The exact missing implication, named (+2 more)
-
-### Community 96 - "Corollary 7 proved: ones-capped factors force a larger complexity floor"
-Cohesion: 0.18
-Nodes (10): 0. Kill criteria (written before the build), 1. Statement, 2. Setup (same as Corollary 4), 3. Segment unrolling, 4. Ones-cap ⇒ exponential rate `2^{gN}`, 5. Proof of Corollary 7, 6. What this does and does not do, 7. Prior art (+2 more)
-
-### Community 97 - "Agent conduct"
-Cohesion: 0.18
-Nodes (11): Agent conduct, Before you claim, Before you start, Hidden insights: the failure classes verification cannot catch, Persist through difficulty, Report the true status, The instruments that do work, The rule (+3 more)
-
-### Community 98 - "What a counterexample must look like — and what it cannot"
-Cohesion: 0.20
-Nodes (9): 0. There are exactly two shapes, 1. If it is a cycle, 2. If it is a divergent orbit, 3. What it explicitly cannot be, 3a. How big is the surviving set?, 4. What a *proof* cannot look like, 5. The one-line version, Still open, and now named (+1 more)
-
-### Community 99 - "Can Bayesian theory be applied here?"
-Cohesion: 0.20
-Nodes (9): 1. The defect this audit found, 2. Where Bayesian reasoning is a category error, 3. Why the classical probabilistic heuristic is not a proof, 4.1 Experimental design for the next depth, 4.2 Search ordering for the surviving automata, 4. Where it is legitimate: allocation and ordering, 5. The rule, 6. A better default than AIC, if a fit is reported at all (+1 more)
-
-### Community 100 - "F2 Report — Induced First-Return Maps + Collapse Search"
-Cohesion: 0.22
-Nodes (8): Branch-count vs k (growth curve), Budgets, Collapse witnesses, F2 Report — Induced First-Return Maps + Collapse Search, Per-k statistics, Shortlist (equal signature, unequal form, different k), Unresolved mass, Verdict
-
-### Community 101 - "Streaming depth 21: the memory ceiling removed, and a correction to the drift-test verdict"
-Cohesion: 0.22
-Nodes (8): 1. The wall, and why it was the wrong kind of wall, 2. Bit-identity, not approximation, 3. The new layer, 4. Correction 1 — p₂ is driven by Δk, not by parity, 5. Correction 2 — the decay law points at the Tao-strength branch, 6. Reproduce, 7. What this does not do, Streaming depth 21: the memory ceiling removed, and a correction to the drift-test verdict
-
-### Community 102 - "Contributors"
-Cohesion: 0.25
-Nodes (5): Attribution norms, Citation, Contributors, Roles, What this means for a reader
-
-### Community 103 - "Session ledger"
-Cohesion: 0.25
-Nodes (8): 2026-07-24 — Complexity bounds, contraction onset, and two informative failures, 2026-07-25 (afternoon) — four parallel probes: three negatives and a measurement, 2026-07-25 — Attribution layer, meta directory, external transfer audits, 2026-07-25 — The Mahler tower: the guessed obstruction was in the wrong place, 2026-08-01 — amplification: the proposed bridge is killed at the handoff, 2026-08-01 — automatic-density closure, 2026-08-01 — Corollary 7 written out (the gap that carried 114 kills), Session ledger
-
-### Community 104 - "Provenance"
-Cohesion: 0.25
-Nodes (8): 2026-07-25 (afternoon) — dimension, referee note, instrument hunt, 2026-08-01 — Corollary 7 proof, External inputs consumed, not proved, Known provenance defects, Packet record, Provenance, Rule for future packets, Verification vocabulary
-
-### Community 105 - "Thermo-Nuclear Review — Collatz Atlas"
-Cohesion: 0.29
-Nodes (6): A. Exactness bar (repo-specific — presumptive blockers), B. Structure bar (generic — presumptive blockers), Checklist to run before approving, Review order, Thermo-Nuclear Review — Collatz Atlas, Tone
-
-### Community 106 - "decay_model_test.py"
-Cohesion: 0.43
-Nodes (6): compare(), fit(), load_points(), main(), Direct model test on M_n: exponential branch vs sqrt branch of P6.  WHY.  The pl, (n, M_n) from the drift certificate, plus any streamed layer.
-
-### Community 107 - "meta/README.md"
-Cohesion: 0.33
-Nodes (3): meta/ — strategy research, not proofwork, The standing rule, Why a meta directory at all
-
-### Community 108 - "Simple questions with exact answers"
-Cohesion: 0.29
-Nodes (7): Asked but not yet answered, Q1. Why does it cycle back to 4 → 2 → 1?, Q2. Why is there no cycle with exactly two odd members?, Q3. Why must every cycle state be at least 7?, Q4. What is special about 3? Would 5 do?, Q5. Why can't a simple energy function work?, Simple questions with exact answers
-
-### Community 109 - "c_at"
-Cohesion: 0.33
-Nodes (6): c_at(), half_index_of_unit(), Index of a unit 0 < mu < 3^n/2 within the half state., Complex value of c_n at any unit residue xi, via the half state     (conjugate s, max ||c_{n+1}(xi)|^2 - (diagonal + cross-term sum from layer n)|., s1_second_moment_check()
-
-### Community 110 - "probe_dfao_saturation.py"
-Cohesion: 0.53
-Nodes (5): analyse_d(), codings(), main(), morphisms(), 2-uniform morphisms on {0..d-1} with sigma(0)[0] = 0.
-
-### Community 111 - "Reading list, with verdicts"
-Cohesion: 0.33
-Nodes (5): Do not read for this purpose, Read only for a specific purpose, Read these, Reading list, with verdicts, The pattern in the negatives
-
-### Community 112 - "profile_structure_test.py"
-Cohesion: 0.60
-Nodes (4): linfit(), load_rows(), main(), What actually drives p_2, and why the n ~ 22 falsification was premature.  BACKG
-
-### Community 113 - "run_streaming_depth.py"
-Cohesion: 0.50
-Nodes (4): main(), measure_layer(), Certify one more layer of the Syracuse-character recursion by streaming.  Usage:, Reproduce the drift-test per-layer row from streamed reductions.
-
-### Community 114 - "test_verify_corollary_7.py"
-Cohesion: 0.40
-Nodes (3): Pytest wrapper for the Corollary 7 verifier., Hand check of identity (3.1) for N=1,2., test_unroll_small_hand()
-
-### Community 115 - "chain_exponent"
-Cohesion: 0.50
-Nodes (4): chain_exponent(), chain_log_bsgs(), Smallest k >= 0 with 2^k == xi (mod 3^n), or None.  Exact., Smallest k with 2^k == +xi or 2^k == -xi (mod 3^n), or None.
-
 ## Knowledge Gaps
-- **691 isolated node(s):** `Route`, `Commodity`, `A. Exactness bar (repo-specific — presumptive blockers)`, `B. Structure bar (generic — presumptive blockers)`, `Review order` (+686 more)
+- **534 isolated node(s):** `Route`, `Commodity`, `ESTABLISHED`, `BLOCKED`, `NEXT` (+529 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -612,16 +432,16 @@ Nodes (4): chain_exponent(), chain_log_bsgs(), Smallest k >= 0 with 2^k == xi (m
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Complete research packet — 2026-07-22` connect `Complete research packet — 2026-07-22` to `main`, `COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, `Landmark Proof Architectures and a Collatz Continuation`, `EXACT_COUNTEREXAMPLE_SEARCH.md`, `COLLATZ_PREFIX_RETURN_BARRIER.md`, `RATIONAL_IRRATIONAL_SHADOW.md`, `verify_dgg_counterexample.py`, `verify_complexity_pressure.py`, `verify_rational_complexity_finite.py`, `Lean blueprint: rational-lift complexity obstruction`, `PRIMITIVE_UNIFORM_OBSTRUCTION.md`, `Collatz attack packet — one page for Kimi K3 (and peers)`?**
-  _High betweenness centrality (0.169) - this node is a cross-community bridge._
-- **What connects `Route`, `Commodity`, `A. Exactness bar (repo-specific — presumptive blockers)` to the rest of the system?**
-  _691 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `Collatz attack packet — one page for Kimi K3 (and peers)` connect `Collatz attack packet — one page for Kimi K3 (and peers)` to `Complete research packet — 2026-07-22`, `COLLATZ_LANDMARK_STRATEGY_AND_POINTWISE_THEOREM.md`, `NOTE.md`, `contribution/README.md`, `EXACT_COUNTEREXAMPLE_SEARCH.md`, `COLLATZ_PREFIX_RETURN_BARRIER.md`, `An Atlas of the Collatz Conjecture`, `RATIONAL_IRRATIONAL_SHADOW.md`, `LEMMA2_PROOF.md`, `PARTIAL_THEOREMS.md`, `PRIMITIVE_UNIFORM_OBSTRUCTION.md`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `An Atlas of the Collatz Conjecture` connect `An Atlas of the Collatz Conjecture` to `Architecture — Collatz Atlas + MoO v0`, `NOTE.md`, `contribution/README.md`, `VERIFICATION.md`, `FENCE.md`, `Collatz attack packet — one page for Kimi K3 (and peers)`, `quarantine/README.md`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **What connects `Route`, `Commodity`, `ESTABLISHED` to the rest of the system?**
+  _534 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `test_f2.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.0558641975308642 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05980861244019139 - nodes in this community are weakly interconnected._
 - **Should `f4_feature_regression.py` be split into smaller, more focused modules?**
   _Cohesion score 0.060528559249786874 - nodes in this community are weakly interconnected._
 - **Should `test_f1.py` be split into smaller, more focused modules?**
   _Cohesion score 0.06603346901854365 - nodes in this community are weakly interconnected._
-- **Should `test_primitive_uniform_obstruction.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09154437456324249 - nodes in this community are weakly interconnected._
-- **Should `verify_automatic_rigidity.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.06588235294117648 - nodes in this community are weakly interconnected._
