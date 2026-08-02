@@ -429,3 +429,23 @@ indexes, no claim contradiction).
 > and its tests do not require the original HPC stack.** Keep exact integers
 > and a regenerable full run path; never force reviewers to download
 > multi-megabyte high-precision dumps to check structural invariants.
+
+## 2026-08-01 — standing rule: tests before final output
+
+**Strategy.** Bank the process failure mode “final claim without running the
+suite” as a hard gate, not a preference. Orthogonal to “green tests prove the
+math claim” (they do not).
+
+**Worked.** Rule written into `meta/AGENT_CONDUCT.md` and Kimi vault
+`collatz-atlas-standing-rules.md` so Desktop + CLI agents both see it.
+
+**Failed.** —
+
+**Mistakes.** —
+
+**Lesson.**
+
+> **Run the test surface before the final sentence.** Identify the suite
+> (lake build / packet `test_*.py` / verifier), run it, read pass/fail/skip,
+> then speak. A missing dep is a named skip, not a silent pass. Fabricating a
+> green line is fabrication.
