@@ -1,9 +1,0 @@
-# Local/cache — do not commit
-cache/
-.graphify_*/
-.graphify_*
-.needs_update
-.graphify_python
-.graphify_root
-*.bak
-query-memory.json

@@ -29,6 +29,27 @@ conjecture remains open.
 **Who did what, and which check backs it:** [`PROVENANCE.md`](PROVENANCE.md) · [`CONTRIBUTORS.md`](CONTRIBUTORS.md)  
 **Complete 2026-07-22 research packet:** [`contribution/packets/2026-07-22-landmark-pointwise/`](contribution/packets/2026-07-22-landmark-pointwise/)
 
+### Where is the Lean?
+
+**All machine-checked Lean 4 lives under [`formal/`](formal/)** — nowhere else.
+Plain Lean core (no mathlib). Build: `cd formal && lake build`.
+
+| File | What it certifies |
+|---|---|
+| [`formal/Formal.lean`](formal/Formal.lean) | Library root (imports everything below) |
+| [`formal/Formal/Pigeonhole.lean`](formal/Formal/Pigeonhole.lean) | Nat pigeonhole helper |
+| [`formal/Formal/TwoBranchFamily.lean`](formal/Formal/TwoBranchFamily.lean) | Two-branch family non-universality (Thm 4) |
+| [`formal/Formal/TerrasBijection.lean`](formal/Formal/TerrasBijection.lean) | Finite Terras parity ↔ residue bijection (Thm 1) |
+| [`formal/Formal/CollisionPrinciple.lean`](formal/Formal/CollisionPrinciple.lean) | Parity-block collision → height |
+| [`formal/Formal/ChainClosure.lean`](formal/Formal/ChainClosure.lean) | Chain closure (integer half of Syracuse Fourier) |
+| [`formal/Formal/BeattyKill.lean`](formal/Formal/BeattyKill.lean) | Beatty / Sturmian / CF kill for k(n) |
+| [`formal/Formal/ContractionOnset.lean`](formal/Formal/ContractionOnset.lean) | Syracuse cocycle, onset `M(h)` theorem |
+| [`formal/Formal/CycleExclusion.lean`](formal/Formal/CycleExclusion.lean) | Cycle equation + checker (kernel m ≤ 4) |
+| [`formal/lakefile.lean`](formal/lakefile.lean) · [`formal/lean-toolchain`](formal/lean-toolchain) | Lake package + pin `v4.31.0` |
+
+Scopes and plain-language proofs: [`formal/README.md`](formal/README.md).
+(There is no second Lean tree; packets hold Python/math memos only.)
+
 ## Agent resolution contract
 
 Use the exact map and the positive-integer domain stated below. Preserve that
@@ -159,7 +180,6 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier — **KILLED 2026-07-25**: its Theorem 2 restates its own hypothesis, so it excludes nothing. Retained as a correct note on the affine identity |
 | [`meta/`](meta/README.md) | Strategy research, not proofwork: session ledger, simple questions, agent conduct, transfer audits. **Never cited as evidence for a mathematical claim** |
 | [`quarantine/README.md`](quarantine/README.md) | Untrusted / disproven / high-risk material — **not evidence** |
-| [`graphify-out/`](graphify-out/) | Shareable agent map (report + interactive graph); rebuild after corpus changes. **Read [`graphify-out/README.md`](graphify-out/README.md) first** — the map does not separate `contribution/` from `exploratory/` and `quarantine/`, so its connectivity ranking puts non-evidence drafts near the top |
 
 External papers are linked below and are not included in the repository.
 

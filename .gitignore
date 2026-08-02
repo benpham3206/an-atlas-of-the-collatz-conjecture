@@ -13,3 +13,6 @@ formal/.lake/
 **/*.json.full.bak
 **/.odometer_checkpoint.pkl
 contribution/packets/2026-08-01-odometer-dominance/.odometer_checkpoint.pkl
+
+# Retired agent map (do not regenerate into git)
+graphify-out/

@@ -157,9 +157,8 @@ Read every file before proposing anything. Suggested order: `MOTIVATION.md`,
 
 **Tier discipline is not optional.** `contribution/` is evidence.
 `exploratory/` is explicitly **not cited as results**. `quarantine/` is **not
-evidence**. The generated map in `graphify-out/` flattens all three and ranks
-an `exploratory/` draft above the README — read `graphify-out/README.md`
-before trusting any ranking it produces. Never promote a claim across a tier
+evidence**. Navigate by `STATE.md` and the directory README tables — not by
+connectivity rankings or generated maps. Never promote a claim across a tier
 boundary without re-proving it.
 
 Run the verification commands in the README. If one fails, report that first;
