@@ -11,7 +11,7 @@ framework can look like progress while proving nothing.
 |---|---|
 | [`LEDGER.md`](LEDGER.md) | Per-session record: strategy used, what worked, what failed, mistakes, lessons. The flywheel's memory. |
 | [`SIMPLE_QUESTIONS.md`](SIMPLE_QUESTIONS.md) | Small, exactly-answerable questions, starting with "why does it cycle back to 4-2-1". |
-| [`AGENT_CONDUCT.md`](AGENT_CONDUCT.md) | How an agent should behave here. Read before working. |
+| [`AGENT_CONDUCT.md`](AGENT_CONDUCT.md) | How an agent should behave here. Read before working. Includes **tests before final output**. |
 | [`READING.md`](READING.md) | External reading, with honest verdicts on what transfers. |
 | [`TRANSFER_AUDITS.md`](TRANSFER_AUDITS.md) | Assessments of outside methods proposed for Collatz. Mostly negative, deliberately kept. |
 

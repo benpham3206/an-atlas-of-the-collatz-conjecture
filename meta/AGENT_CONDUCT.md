@@ -141,6 +141,52 @@ is entirely in its claim discipline.
 - Name the quantifier doing the work, and say whether you proved it or assumed
   it.
 
+## Before you give a final output (mandatory tests)
+
+**Do not ship a final answer, PR summary, “done,” or handoff until the
+cheapest real checks for the work have been run and their output read.**
+
+This is separate from “green tests prove the claim” (they do not — see Hidden
+insights above). This is the opposite failure: **claiming completion without
+running the suite at all.**
+
+### The gate
+
+1. **Identify the test surface** for what you touched:
+   - Lean under `formal/` → `cd formal && lake build` (must exit 0; scan log
+     for `sorryAx` — it must be absent).
+   - Packet with `test_*.py` → run that file (prefer
+     `python3 test_*.py` or `pytest`; dep-free structural suites first).
+   - Verifier / certificate → re-run the verifier or the structural
+     assertions against the committed JSON.
+   - Docs-only → no suite required; still re-read the changed claim against
+     `STATE.md` / `formal/README.md` scopes.
+2. **Run the checks.** Prefer the real command over “should pass.”
+3. **Read the output.** Pass counts, failures, skips. A skip that was
+   supposed to be a pass is a failure until explained.
+4. **Only then** write the final response, PR body, or “shipped” claim.
+   Put the evidence in the same breath: command + result (e.g. `12 passed`,
+   `lake build` green).
+
+### Failures
+
+- If tests fail: fix or report fail honestly. Do not rephrase as success.
+- If you cannot run a check (missing dep, no machine): say so, name the
+  skipped check, and do not upgrade the claim past what was actually run.
+- Fabricating a pass line is the fabrication ban under Persist through
+  difficulty — unrecoverable here.
+
+### Minimal default when unsure
+
+For any multi-file or certificate-touching session on this repo:
+
+```text
+cd formal && lake build
+# plus every test_*.py for packets you edited
+```
+
+No final output before those finish.
+
 ## When you are wrong
 
 Say so plainly and leave the correction visible. Two corrections are recorded
