@@ -16,7 +16,7 @@ conjecture remains open.
 | Rational Φ with odd denominator forces complexity pressure; Sturmian excluded | pointwise memo in `contribution/packets/2026-07-22-landmark-pointwise/` |
 | 99 of the 109 enumerated supercritical survivors have Φ(q) ∉ ℤ_{>0} | proved here, but **subsumed** by López–Stoll 2021 — see [`PRIORITY.md`](PRIORITY.md) |
 | A minimal counterexample has 2^(A_h) ≤ 3^h for every h ≤ 10⁶ Syracuse steps | proved, but a **quantitative refresh** of Terras 1976 / Garner 1981 — see [`PRIORITY.md`](PRIORITY.md) |
-| Terras bijection, two-branch-family non-universality, parity-block collision principle | zero-sorry Lean 4 certificates: `formal/` |
+| Terras bijection, two-branch-family non-universality, parity-block collision principle, chain closure (integer half), Beatty kill triple, contraction-onset lemmas + `M(h)` theorem, cycle-exclusion checker (kernel m ≤ 4) | zero-sorry Lean 4 certificates: `formal/` (scopes in `formal/README.md`; not the full packet bounds m ≤ 20 / h ≤ 10⁶) |
 | Collatz conjecture | neither proved nor disproved; no reduction from these results is established |
 
 **Start here for agent handoff:** [`COLLATZ_ONE_PAGE.md`](COLLATZ_ONE_PAGE.md)  
@@ -141,7 +141,8 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/packets/2026-07-25-mahler-tower/`](contribution/packets/2026-07-25-mahler-tower/) | Φ(q) as the value of an explicit Mahler-type system for uniform-morphic q. The mixed bases 2 and 3 obstruct the **evaluation point**, not the equation; the later automatic-density corollary closes its ten test words without Mahler theory |
 | [`contribution/packets/2026-08-01-automatic-density-closure/`](contribution/packets/2026-08-01-automatic-density-closure/) | Bell's rational lower-density theorem combined with López–Stoll closes every automatic parity transcript for a rational non-cyclic trajectory |
 | [`contribution/packets/2026-08-01-amplification-cylinder-nogo/`](contribution/packets/2026-08-01-amplification-cylinder-nogo/) | Amplification via inverse/cylinder families killed provably; tracking time = 2-adic proximity; the missing implication named (permanence past the handoff state) |
-| [`contribution/packets/2026-08-01-chain-exponent-law/`](contribution/packets/2026-08-01-chain-exponent-law/) | Beatty/rotation hypothesis for k(n) killed exactly (all three pre-registered criteria fire); replaced by an exact closed chain recursion — the odometer x_n = (2^Δk/3)·x_{n−1}, Δk ∈ {1,2}; decay rate reduced to δ(n) drift |
+| [`contribution/packets/2026-08-01-chain-exponent-law/`](contribution/packets/2026-08-01-chain-exponent-law/) | Beatty/rotation hypothesis for k(n) killed exactly (all three pre-registered criteria fire); replaced by an exact closed chain recursion — the odometer identity x_n = (2^Δk/3)·x_{n−1}, Δk ∈ {1,2}; decay rate reduced to δ(n) drift on the certified window |
+| [`contribution/packets/2026-08-01-odometer-dominance/`](contribution/packets/2026-08-01-odometer-dominance/) | a=1 dominance survives to n = 1000 (**measurement**); shallow-window δ≈0.118/layer does **not** persist; Δk=2 feed gap ρ≥0.94 and closing — no new theorem |
 | [`contribution/packets/2026-07-22-plateau-escape-weight/`](contribution/packets/2026-07-22-plateau-escape-weight/) | Decay reduced to layer loss L(n), phase-blind impossibility, dichotomy edge n* = 1776 |
 | [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/) | Resonance-chain measurements to n = 17, window-law boundary at n = 16 |
 | [`contribution/packets/2026-07-23-plateau-drift-test/`](contribution/packets/2026-07-23-plateau-drift-test/) | C-kernel scan to n = 20, n ≈ 22 crossing prediction falsified on trend |
@@ -152,7 +153,7 @@ n < 2^71 (Bařina 2025, [DOI](https://doi.org/10.1007/s11227-025-07337-0)).
 | [`contribution/packets/2026-07-22-scalar-phase-second-moment/`](contribution/packets/2026-07-22-scalar-phase-second-moment/) | Three exact reductions; uniform Fourier decay reduced to one 1-parameter profile on the 2–3 resonance chain |
 | [`contribution/packets/2026-07-22-structure-randomness-transfer/`](contribution/packets/2026-07-22-structure-randomness-transfer/) | Structure–randomness crosswalk; one proved theorem plus an isolated open test object |
 | [`contribution/packets/2026-07-22-pointwise-drift-wall/`](contribution/packets/2026-07-22-pointwise-drift-wall/) | Pointwise exclusion at critical drift α = log₃2, no structural hypothesis; two-wall transcript screen |
-| [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras bijection; two-branch family; parity-block collision principle) |
+| [`formal/`](formal/) | Zero-sorry Lean 4 certificates (Terras; two-branch; collision; chain closure integer half; Beatty kill; contraction-onset lemmas/`M(h)` theorem; cycle-exclusion checker m ≤ 4) |
 | [`contribution/reports/`](contribution/reports/) | Recorded outputs and independent verification |
 | [`exploratory/README.md`](exploratory/README.md) | Index of drafts that are not cited as results |
 | [`exploratory/shadow-barrier/`](exploratory/shadow-barrier/) | Two-metric rational-shadow barrier — **KILLED 2026-07-25**: its Theorem 2 restates its own hypothesis, so it excludes nothing. Retained as a correct note on the affine identity |

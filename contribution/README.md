@@ -21,6 +21,9 @@ disprove the Collatz conjecture.
 | [`packets/2026-07-23-cycle-exclusion-extension/`](packets/2026-07-23-cycle-exclusion-extension/) | Cycle exclusion extended to ≤ 20 odd members (dual-enumerator scan, zero hits) | verified bounded exclusion |
 | [`packets/2026-08-01-automatic-density-closure/`](packets/2026-08-01-automatic-density-closure/) | No rational non-cyclic trajectory has an automatic parity word; morphic natural-frequency corollary | proved synthesis of published theorems |
 | [`packets/2026-08-01-corollary-7-proof/`](packets/2026-08-01-corollary-7-proof/) | Corollary 7 proved: ones-capped factors force `limsup p(k)/k ≥ 1/g` | proof + exact verifier |
+| [`packets/2026-08-01-chain-exponent-law/`](packets/2026-08-01-chain-exponent-law/) | Beatty/rotation law for k(n) killed exactly; exact chain recursion Δk ∈ {1,2} | exact kill + measurement |
+| [`packets/2026-08-01-odometer-dominance/`](packets/2026-08-01-odometer-dominance/) | a=1 dominance to n = 1000; δ-drift fork; Δk=2 feed gap | **measurement** (slim-v1 JSON + tests) |
+| [`../formal/`](../formal/) | Zero-sorry Lean 4 certificates (Terras, two-branch, collision, chain integer half, Beatty kill, contraction onset lemmas, cycle checker m ≤ 4) | machine-checked |
 | [`code/`](code/) | Exact-arithmetic implementations and executable checks | executable evidence |
 | [`reports/`](reports/) | Recorded outputs and independent verification | verification records |
 | [`DEFINITIONS.md`](DEFINITIONS.md) | Definitions used by the fold program | definitions |
@@ -57,6 +60,12 @@ Each `test_*.py` recomputes the values it checks.
    `packets/2026-08-01-automatic-density-closure/`.
 7. Corollary 7 (density-refined complexity floor) fully proved:
    `packets/2026-08-01-corollary-7-proof/`.
+8. Beatty kill + chain recursion target (n = 6..21 window), then odometer
+   dominance measurement to n = 1000 (no new theorem):
+   `packets/2026-08-01-chain-exponent-law/`,
+   `packets/2026-08-01-odometer-dominance/`.
+9. Lean 4 zero-sorry certificates in `../formal/` (scopes in
+   `../formal/README.md` — not every packet bound is kernel-checked).
 
 Independent verification: `reports/VERIFICATION.md` (GPT-5.6 Sol).
 Agent one-pager: [`../COLLATZ_ONE_PAGE.md`](../COLLATZ_ONE_PAGE.md).
