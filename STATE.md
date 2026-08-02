@@ -156,10 +156,33 @@ a premise. This remains the only live route whose success condition is
   k(n) ∈ [n, n+3] falsified at n = 16 and restated as
   k(n) ≈ 1.343n − 1.774 (float64 measurement, not a theorem). [`contribution/packets/2026-07-22-deep-fourier-scan/`](contribution/packets/2026-07-22-deep-fourier-scan/)
 - **Lean 4 certificates (zero sorry).** `formal/` (plain Lean 4 core, no
-  mathlib, toolchain v4.31.0): the Terras bijection (Theorem 1) and the
-  two-branch-family non-universality (Theorem 4) compile with empty axiom
-  bases beyond the classical triple. First artifacts toward a
-  google-deepmind/formal-conjectures contribution. [`formal/`](formal/)
+  mathlib, toolchain v4.31.0): eight modules compile with empty axiom
+  bases beyond the classical triple — Terras bijection (Theorem 1),
+  two-branch-family non-universality (Theorem 4), parity-block collision
+  principle, pigeonhole, chain closure (the chain frequencies are an
+  invariant subsystem of the proved recursion; k ↦ k−a index dynamics),
+  the Beatty kill triple (phase-free LP infeasibility over ℚ, Sturmian
+  balance failure via a general lemma, exact CF enclosures of log₂3 with
+  a semiconvergent refinement pinning a₉ = 23), contraction onset
+  (cocycle identity 2^{A_h}·y = 3^h·x + C_h, Lemma 1, the M(h) onset
+  theorem), and cycle exclusion (cycle equation from the odd map,
+  sound verified exclusion checker, kernel-verified layers m ≤ 4). First
+  artifacts toward a google-deepmind/formal-conjectures contribution.
+  [`formal/`](formal/)
+- **Odometer dominance survives to n = 1000 (measurement).** The chain
+  recursion (4.1) at high precision: dominant pullback a = 1 at all 1000
+  layers (margin ≥ 0.239, w₁ ∈ [0.504, 0.647], flat tail slope
+  −2.7e-7/layer); Δk ∈ {1,2} throughout (578/419). **The drift fork
+  breaks toward slope log₂3:** the ≈0.118/layer δ drift does NOT
+  persist — full-range linear fit gives 4.35e-4/layer (tail 2.8e-5),
+  ranking log > sqrt > linear on both full range and tail; δ(n) ∈ [3.09,
+  7.26], implied k-slope 1.5845 vs log₂3 = 1.58496. The dominance ⇒
+  odometer gap is real but closing: on Δk = 2 layers the feed sits one
+  above the old peak with ρ_n ≥ 0.9387, fit slope +3.8e-6/layer. The
+  single-threshold rule dies for n ≥ 500. Non-resonant background decays
+  ~3^{−n/2} while M_n ~ e^{−2.48√n} — the peak separates exponentially;
+  no chain-escape signature.
+  [`contribution/packets/2026-08-01-odometer-dominance/`](contribution/packets/2026-08-01-odometer-dominance/)
 - **Plateau drift test to n = 20.** C-kernel layer recursion (n=17: 80 s →
   2.3 s); certified depth n = 20 with exact full-sweep escape weights. The
   n ≈ 22 p₂ > 0.95 crossing prediction **falsified on schedule** (p₂(20) =
@@ -266,12 +289,17 @@ a premise. This remains the only live route whose success condition is
   [1;1,1,2,2,3,1,5,2,23,…]. All three pre-registered kill criteria fire.
   In its place the chain recursion is an **exact closed subsystem**:
   dominant pullback is always a = 1, so x_n = 2^{k(n)−1}/3^n obeys the
-  odometer x_n = (2^{Δk}/3)·x_{n−1} with Δk ∈ {1,2}; reproduces k(n) and
-  M_n to 7.5 × 10⁻¹⁴ against the certified layer engines. The decay-rate
-  question is now the drift of δ(n) in k(n) = n·log₂3 − δ(n), δ ∈ [3.09,
-  6.12], measured drift ≈ 0.118n. a = 1 dominance and chain closure are
-  recorded as theorem candidates.
-  [`contribution/packets/2026-08-01-chain-exponent-law/`](contribution/packets/2026-08-01-chain-exponent-law/)
+  odometer identity x_n = (2^{Δk}/3)·x_{n−1} with Δk ∈ {1,2}; reproduces
+  k(n) and M_n to 7.5 × 10⁻¹⁴ against the certified layer engines on the
+  n = 6..21 window. Over that **shallow window only**, δ(n) in
+  k(n) = n·log₂3 − δ(n) drifted ≈ 0.118/layer with δ ∈ [3.09, 6.12]. That
+  linear-δ reading **does not survive** to n = 1000 — see ESTABLISHED
+  odometer-dominance (full-range slope ~4.35×10⁻⁴/layer; model ranking
+  prefers logarithmic δ). a = 1 dominance and chain-mass closure remain
+  theorem candidates; Lean certificates cover the Beatty kill and the
+  integer mass half of chain closure, not the analytic odometer.
+  [`contribution/packets/2026-08-01-chain-exponent-law/`](contribution/packets/2026-08-01-chain-exponent-law/),
+  [`contribution/packets/2026-08-01-odometer-dominance/`](contribution/packets/2026-08-01-odometer-dominance/)
 - **Phase-blind propagation.** Proved impossible (P2, P5): no
   finite-check-at-one-layer plus phase-blind propagation argument can
   establish w_n(ε) ≥ w > 0; the missing input is the intrinsic chain phase
@@ -287,10 +315,12 @@ a premise. This remains the only live route whose success condition is
 - **Cycle exclusion wall at m = 21.** The next layer (21, 34) has
   5.7 × 10⁸ valuation words per phase — feasible but not worthwhile: Hercher/Bařina
   dominate the atlas bound by ~11 orders of magnitude. [`contribution/packets/2026-07-23-cycle-exclusion-extension/`](contribution/packets/2026-07-23-cycle-exclusion-extension/)
-- **Full formalization.** Only Theorems 1 and 4 carry Lean certificates;
-  the realizability criterion Φ(q) needs 2-adic machinery (mathlib
-  `PadicInt`), and the fold non-conjugacy screen needs KMP-automaton
-  formalization — both future work. [`formal/`](formal/)
+- **Remaining formalization gaps.** The realizability criterion Φ(q)
+  needs 2-adic machinery (mathlib `PadicInt`), and the fold non-conjugacy
+  screen needs KMP-automaton formalization; cycle exclusion is
+  kernel-verified only to m ≤ 4 (m ≤ 20 remains external exact pipeline
+  + sound Lean checker awaiting certificate import); the analytic
+  results (Fourier decay, complexity floor) need reals. [`formal/`](formal/)
 
 ## NEXT
 

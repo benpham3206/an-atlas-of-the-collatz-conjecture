@@ -145,3 +145,16 @@ Kills the Beatty/rotation hypothesis for the chain peak exponent exactly
 closed chain recursion (odometer with Δk ∈ {1,2}). Records chain closure
 and a = 1 dominance as theorem candidates. Does **not** prove or disprove
 Collatz.
+
+## 2026-08-01 — formal expansion + odometer dominance (measurement)
+
+| Artifact | Direction | Executed by | Independent check |
+|---|---|---|---|
+| `formal/Formal/{ChainClosure,BeattyKill,ContractionOnset,CycleExclusion}.lean` | Ben Pham | Kimi (Moonshot AI) subagents; salvage/close by Grok Build | `lake build` green (v4.31.0); `#print axioms` on public theorems — classical triple only, **no `sorryAx`**; scopes: cycle kernel m ≤ 4; contraction onset numeric h ≤ 10⁶ table remains Python; odometer open as documented `Prop` in ChainClosure |
+| `packets/2026-08-01-odometer-dominance/` | Ben Pham | Kimi (Moonshot AI) | slim-v1 certificate: 1000 layers, kill criteria unfired; cert k(n) match n=6..21; structural tests `python3 test_odometer_dominance.py` (19/19, no mpmath required); live mpmath recompute optional |
+
+Formal modules machine-check integer content of named packet theorems; they
+do **not** re-prove external computational bounds (m ≤ 20 cycles, h ≤ 10⁶
+M(h) max, Bařina 2^71). Odometer packet is **measurement only** — no new
+theorem. Does **not** prove or disprove Collatz.
+

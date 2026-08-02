@@ -392,3 +392,40 @@ Fixed at source; correction note left in the packet. **Lesson:** audit the
 literature — the two factor-of-2 slips this week (mine in the affine
 recurrence, this one in the bound) were both in verification code, and both
 were invisible to the test suites themselves.
+
+## 2026-08-01 — salvage Kimi formal expansion + make odometer merge-safe
+
+**Strategy.** Resume a blocked Kimi Desktop session at the last durable write
+(README formal-row edit). Verify the four subagent Lean modules by `lake build`
+and axiom audit, close doc drift, then harden the co-shipped odometer
+**measurement** packet so a combined PR is reviewable (clone size, tests,
+indexes, no claim contradiction).
+
+**Worked.**
+
+- Four modules (`ChainClosure`, `BeattyKill`, `ContractionOnset`,
+  `CycleExclusion`) already complete on disk; build green; no `sorryAx`.
+- STATE/README claim language scoped: Lean is not m ≤ 20 or h ≤ 10⁶; 0.118
+  δ-drift is shallow-window only and is superseded by odometer n = 1000.
+- Odometer certificate slimmed **7.8 MB → ~0.45 MB** (`slim-v1`): integers
+  exact; measurements ~12 sig figs; exact \(x_n\) recovered from \((k,n)\).
+- Structural tests run without mpmath (`python3 test_odometer_dominance.py`,
+  19/19). Full bak moved to Trash; gitignored.
+
+**Failed.**
+
+- Could not re-run full 1000-layer mpmath pipeline in this environment
+  (mpmath/gmpy2 not installed). Relied on slim certificate + summary blocks
+  from the original analyze.
+
+**Mistakes.**
+
+- Initial PR-readiness assessment mixed two products without a packaging
+  plan for the 7.8 MB JSON — merge-safe only after slim + indexes.
+
+**Lesson.**
+
+> **A measurement packet is merge-safe when its certificate is clone-cheap
+> and its tests do not require the original HPC stack.** Keep exact integers
+> and a regenerable full run path; never force reviewers to download
+> multi-megabyte high-precision dumps to check structural invariants.

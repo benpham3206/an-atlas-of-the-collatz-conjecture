@@ -1,8 +1,10 @@
 # Collatz attack packet — one page for Kimi K3 (and peers)
 
-**Date:** 2026-07-25 (priority search run; two headline results retired)  
+**Date:** 2026-07-25 (priority search run; two headline results retired); formal/odometer salvage note 2026-08-01  
 **Repo:** [an-atlas-of-the-collatz-conjecture](https://github.com/benpham3206/an-atlas-of-the-collatz-conjecture)  
 **Status:** Collatz on positive integers remains **open**. Nothing below is a full proof or a counterexample.
+
+**Machine-checked certificates:** [`formal/`](formal/) — zero-sorry Lean 4 (Terras, two-branch, collision, chain integer half, Beatty kill, contraction-onset lemmas, cycle checker m ≤ 4). Scopes in `formal/README.md`. **Measurement only:** odometer dominance to n = 1000 in [`contribution/packets/2026-08-01-odometer-dominance/`](contribution/packets/2026-08-01-odometer-dominance/) (not a theorem).
 
 Use this file as the entry brief. Proofs and verifiers are linked; do not invent
 certificates.

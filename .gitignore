@@ -8,3 +8,8 @@ __pycache__/
 
 # Lean build artifacts
 formal/.lake/
+
+# Local full-precision odometer backups / run checkpoints (not for git)
+**/*.json.full.bak
+**/.odometer_checkpoint.pkl
+contribution/packets/2026-08-01-odometer-dominance/.odometer_checkpoint.pkl
