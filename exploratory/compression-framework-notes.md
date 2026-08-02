@@ -116,7 +116,7 @@ an atlas result — none found).
 | # | Thread claim | Verdict |
 |---|---|---|
 | 2.5.1 | "Equation (2) [`ε_L = 0` eventually], rather than finite parity compatibility, is the arithmetic wall" | **ALREADY IN ATLAS** — `contribution/proofs/LIFT_COCYCLE.md`; `contribution/packets/2026-07-22-structure-randomness-transfer/` (open `q*` lift-digit computations, explicitly labeled measurements); `contribution/packets/2026-07-22-syracuse-fourier/` (both Fourier routes "blocked at the lift digits") |
-| 2.5.2 | Target: complexity–lift dichotomy — permanent non-descent forces either a complexity–pressure contradiction or `ε_L = 1` infinitely often (thread eq. (25)) | **ALREADY IN ATLAS** as an open target — landmark packet program items; graphify-out cluster "lift digits as the final residual wall". Not a theorem anywhere. |
+| 2.5.2 | Target: complexity–lift dichotomy — permanent non-descent forces either a complexity–pressure contradiction or `ε_L = 1` infinitely often (thread eq. (25)) | **ALREADY IN ATLAS** as an open target — landmark packet program items; lift / residual wall framing in the landmark strategy memo. Not a theorem anywhere. |
 | 2.5.3 | Critical-lift obstruction: for one explicit balanced/finite-state transcript class at or above critical pressure, prove every compatible lift has infinitely many nonzero lift digits | **ALREADY IN ATLAS** as the named next target — `contribution/packets/2026-07-22-syracuse-fourier/COLLATZ_SYRACUSE_FOURIER.md` (blocked point); `contribution/packets/2026-07-22-automatic-transcript-rigidity/` (modular lift certificates). Open in both. |
 
 ### 2.6 Other concrete claims in the thread

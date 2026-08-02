@@ -46,7 +46,7 @@ Use these terms exactly. Anything else is not a verification claim.
 | `TARGETS.md`, target-3 saturation probe | Ben Pham | Claude Opus 5 | probe reuses the packet's exact factor-language machinery; result contradicted the author's own prior estimate and is recorded as such | `f1e26e7`, `e29eb09` |
 | `test_f2.py` cylinder-check rewrite | Ben Pham | Claude Opus 5 | new predicate compared against the old one on 4 000 random families, 3 255 containing a genuine overlap | `9353bdf` |
 | Attribution layer, `COUNTEREXAMPLE_SHAPE.md`, `meta/` | Ben Pham | Claude Opus 5 | four independent subagents: literature transfer, Bayesian audit, GEB audit, code-quality skill | this commit |
-| Docs/meta layer: `STATE.md` creation, README literature refs (Tao structure-and-randomness) + packet indexing, `exploratory/shadow-barrier/` integration (rerun byte-identical), `exploratory/compression-framework-notes.md`, graphify maps, formal-conjectures scouting | Ben Pham | Kimi (Moonshot AI) | none (documentation only; the shadow-barrier rerun is recorded in that packet's own PROVENANCE.md) | `c4cdc39`, `6541c48`, `eb81928`, `80cab83` |
+| Docs/meta layer: `STATE.md` creation, README literature refs (Tao structure-and-randomness) + packet indexing, `exploratory/shadow-barrier/` integration (rerun byte-identical), `exploratory/compression-framework-notes.md`, formal-conjectures scouting | Ben Pham | Kimi (Moonshot AI) | none (documentation only; the shadow-barrier rerun is recorded in that packet's own PROVENANCE.md) | `c4cdc39`, `6541c48`, `eb81928`, `80cab83` |
 
 ## External inputs consumed, not proved
 

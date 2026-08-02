@@ -449,3 +449,20 @@ math claim” (they do not).
 > (lake build / packet `test_*.py` / verifier), run it, read pass/fail/skip,
 > then speak. A missing dep is a named skip, not a silent pass. Fabricating a
 > green line is fabrication.
+
+## 2026-08-01 — retire graphify maps
+
+**Strategy.** Drop unused agent map surface (~10 MB `graphify-out/`) that
+blurred evidence tiers and that agents were not using. No corpus reorg.
+
+**Worked.** `git rm -r graphify-out`; docs/standing rules point at STATE +
+README Lean index only.
+
+**Failed.** —
+
+**Mistakes.** —
+
+**Lesson.**
+
+> **A map that mixes evidence tiers is worse than no map.** Prefer one board
+> (`STATE.md`) and explicit paths over generated connectivity rankings.
